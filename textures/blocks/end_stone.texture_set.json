@@ -1,8 +1,8 @@
 {
- "format_version": "1.16.100",
-  "minecraft:texture_set": {
-    "color": "textures/end_stone",
-    "metalness_emissive_roughness": "#100077",
-    "normal": "normals/end_stone"
-  }
+	"format_version": "1.16.100",
+	"minecraft:texture_set": {
+		"color": "textures/end_stone",
+		"metalness_emissive_roughness": "#0000aa",
+		"normal": "normals/end_stone"
+	}
 }
