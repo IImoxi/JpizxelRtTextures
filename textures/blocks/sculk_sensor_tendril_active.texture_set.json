@@ -1,0 +1,8 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:texture_set": {
+		"color": "textures/sculk_sensor_tendril_active",
+		"metalness_emissive_roughness": "mer/sculk_sensor_tendril_active",
+		"normal": "normals/glass"
+	}
+}

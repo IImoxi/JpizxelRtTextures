@@ -1,0 +1,139 @@
+{
+  "namespace": "furnace",
+
+
+  //---------------------------------------------------------------------------
+  // Furnace
+  //---------------------------------------------------------------------------
+
+// Furnace GUI
+
+	"furnace_gui": {
+		"type": "image",
+		"texture": "textures/gui/container/furnace",
+		"texture_width": 256,
+		"texture_height": 256,
+		"uv": [ 0, 0 ],
+		"uv_size": [ 176, 166 ]
+	},
+	
+// Furnace Elements
+
+	"furnace_panel_top_half": {
+		"type": "panel",
+		"size": [ 176, 83 ],
+		"anchor_to": "top_left", "anchor_from": "top_left",
+		"controls": [
+			// Ingrediant slot.
+			{ 
+				"ingredient_slot@common.container_item": {
+					"anchor_from": "top_left", "anchor_to": "top_left",
+					"offset": [ 55, 9],
+					"$item_collection_name": "furnace_ingredient_items", "$focus_id": "furnace_ingredient_item",
+					"$focus_override_left": "FOCUS_OVERRIDE_STOP", "$focus_override_left_binding_type": "none",
+					"$focus_override_up": "FOCUS_OVERRIDE_STOP", "$focus_override_up_binding_type": "none"
+				}
+			},
+			// The flame bar. Be careful, its hot.
+			{ 
+				"flame_full_image": {
+					"type": "image",
+					"texture": "textures/gui/container/furnace",
+					"anchor_from": "top_left",
+					"anchor_to": "top_left",
+					"size": [ 13, 13 ], "offset": [ 57, 30 ],
+					"layer": 3,
+					"clip_direction": "down",
+					"texture_width": 256, "texture_height": 256,
+					"uv": [ 176, 0 ], "uv_size": [ 13, 13 ] ,
+					"bindings": [
+						{ "binding_name": "#furnace_flame_ratio", "binding_name_override": "#clip_ratio", "binding_condition": "always" }
+					]
+				}
+			},
+			// Fuel slot.
+			{ 
+				"fuel_slot@common.container_item": {
+					"anchor_from": "top_left",
+					"anchor_to": "top_left",
+					"offset": [ 55, 45],
+					"$item_collection_name": "furnace_fuel_items", "$focus_id": "furnace_fuel_item", "$focus_override_right": "furnace_output_item",
+					"$focus_override_right_binding_type": "none", "$focus_override_left": "FOCUS_OVERRIDE_STOP", "$focus_override_left_binding_type": "none"
+				}
+			},
+			// Arrow bar
+			{
+				"furnace_arrow_full_image": {
+					"type": "image",
+					"layer": 3,
+					"texture": "textures/gui/container/furnace",
+					"anchor_from": "top_left", "anchor_to": "top_left",
+					"size": [ 24, 17 ], "offset": [ 79, 27 ],
+					"clip_direction": "left",
+					"texture_width": 256, "texture_height": 256,
+					"uv": [ 176, 14 ], "uv_size": [ 24, 17 ] ,
+					"bindings": [
+						{
+							"binding_name": "#furnace_arrow_ratio", "binding_name_override": "#clip_ratio", "binding_condition": "always"
+						}
+					]
+				}
+			},
+			// Outpot slot
+			{
+				"output_slot@common.container_item": {
+					"anchor_from": "top_left", "anchor_to": "top_left",
+					"size": [ 26, 26 ], "$cell_image_size": [ 26, 26 ],
+					"offset": [ 111, 23 ],
+					"$item_collection_name": "furnace_output_items",
+					"$focus_id": "furnace_output_item", "$focus_override_right_binding_type": "none", "$focus_override_right": "FOCUS_OVERRIDE_STOP",
+					"$focus_override_left_binding_type": "none", "$focus_override_left": "furnace_fuel_item"
+				}
+			}
+		]
+	},
+
+	"furnace_panel": {
+		"type": "panel",
+		"controls": [
+			{ "background@start.background": {} },
+			{ "container_gamepad_helpers@common.container_gamepad_helpers": {} },
+			{ "flying_item_renderer@common.flying_item_renderer": { "layer": 11 } },
+			{ "selected_item_details_factory@common.selected_item_details_factory": {} },
+			{ "item_lock_notification_factory@common.item_lock_notification_factory": {} },
+			{ "root_panel@common.root_panel": {
+				"layer": 1,
+				"controls": [
+					{ "common_panel@furnace.furnace_gui": {} },
+					{
+					"furnace_screen_inventory": { "type": "panel", "layer": 5,
+						"controls": [
+							{ "furnace_panel_top_half@furnace.furnace_panel_top_half": {} },
+							{ "inventory_panel_bottom_half_with_label@common.inventory_panel_bottom_half": {} },
+							{ "hotbar_grid@common.hotbar_grid_template": {} },
+							{ "inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {} }
+						]
+					}
+				},
+            { "inventory_selected_icon_button@common.inventory_selected_icon_button": {} },
+            { "gamepad_cursor@common.gamepad_cursor_button": {} }
+          ]
+        }
+      }
+    ]
+  },
+  "furnace_screen@common.inventory_screen_common": {
+    "$close_on_player_hurt|default": false,
+    "close_on_player_hurt": "$close_on_player_hurt",
+    "variables": [
+      {
+        "requires": "$desktop_screen",
+        "$screen_content": "furnace.furnace_panel"
+      },
+      {
+        "requires": "$pocket_screen",
+        "$screen_content": "furnace_pocket.furnace_panel"
+      }
+    ]
+  }
+}

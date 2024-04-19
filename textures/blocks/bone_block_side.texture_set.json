@@ -1,0 +1,8 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:texture_set": {
+		"color": "textures/bone_block_side",
+		"metalness_emissive_roughness": "#000099",
+		"normal": "normals/bone_block_side"
+	}
+}

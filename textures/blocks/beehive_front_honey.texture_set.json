@@ -1,0 +1,8 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:texture_set": {
+		"color": "textures/beehive_front_honey",
+		"metalness_emissive_roughness": "#0000e0",
+		"normal": "normals/beehive_front"
+	}
+}

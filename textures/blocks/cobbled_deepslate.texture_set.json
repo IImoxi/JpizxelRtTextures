@@ -1,0 +1,8 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:texture_set": {
+		"color": "textures/cobbled_deepslate",
+		"metalness_emissive_roughness": "mer/stone",
+		"normal": "normals/cobbled_deepslate"
+	}
+}

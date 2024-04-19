@@ -1,0 +1,8 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:texture_set": {
+		"color": "textures/cracked_deepslate_tiles",
+		"metalness_emissive_roughness": "mer/stone",
+		"normal": "normals/deepslate_tiles"
+	}
+}

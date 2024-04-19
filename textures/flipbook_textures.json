@@ -1,0 +1,27 @@
+[
+	{
+	"flipbook_texture": "textures/entity/experience_orb",
+	"atlas_tile": "xp_orb",
+	"frames": [ 0, 1 ],
+	"ticks_per_frame": 10,
+	"blend_frames": true
+	},
+	{
+	"flipbook_texture": "textures/blocks/lava_still",
+	"atlas_tile": "lava_still",
+	"frames": [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20 ],
+	"ticks_per_frame": 5
+	},
+	{
+	"flipbook_texture": "textures/blocks/fire_0",
+	"atlas_tile": "fire_0",
+	"frames": [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31 ],
+	"ticks_per_frame": 1
+	},
+	{
+	"flipbook_texture": "textures/blocks/fire_1",
+	"atlas_tile": "fire_1",
+	"frames": [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31 ],
+	"ticks_per_frame": 1
+	}
+]

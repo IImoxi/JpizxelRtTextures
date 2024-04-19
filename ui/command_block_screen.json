@@ -1,0 +1,413 @@
+/********************************************************
++*   (c) Mojang. All rights reserved                     *
++*   (c) Microsoft. All rights reserved.                 *
++*********************************************************/
+
+{
+	"namespace": "command_block",
+	
+	"dialog_title": {
+		"type": "label",
+		"layer": 10,
+		"text": "commandBlock.genericName",
+		"offset": [ 0, -86 ]
+	},
+	
+    "hover_note_text@common.text_edit_box": {
+
+		"size": [ 120, 16 ],
+		"offset": [ -110, -86 ],
+		"$focus_id": "hover_note_text",
+		"layer": 5,
+		"max_length": 512,
+		"$text_background_default": "",
+		"$text_background_hover": "",
+		"$text_box_name": "command_block.hover_note_textbox",
+		"$text_edit_box_content_binding_name": "#command_hover_note",
+		"$place_holder_text": "commandBlockScreen.hoverNote"
+    },
+	
+	"button_panel": {
+		"type": "panel",
+		"size": [ 340, 34 ],
+		"offset": [ 0, 7 ],
+		"controls": [
+			{
+				"previous_output_label_stack": {
+                    "type": "stack_panel",
+                    "orientation": "horizontal",
+					"anchor_from": "bottom_right",
+					"anchor_to": "bottom_right",
+                    "size": [ 170, 12 ],
+                    "offset": [ 2, 0 ],
+                    "controls": [
+						{
+							"show_output_toggle@settings_common.option_toggle": {
+								"size": [ 32, 12 ],
+								"$show_option_label": false,
+								"$focus_id": "show_output_toggle",
+								"$option_binding_name": "#track_output_binding",
+								"$option_enabled_binding_name": "#close_button_visible_binding_name",
+								"$toggle_name": "track_output"
+							}
+						},
+						{
+							"option_label": {
+								"type": "label",
+								"color": "$body_text_color",
+								"size": [ "100%", "default" ],
+								"layer": 2,
+								"text": "advMode.previousOutput",
+								"visible": true,
+								"locked_alpha": 0.5
+							}
+                        }
+                    ]
+                }
+			},
+			{
+				"tick_delay_panel": {
+					"type": "stack_panel",
+					"size": [ 169, 14 ],
+					"offset": [ 1, 0 ],
+					"orientation": "horizontal",
+					"anchor_from": "bottom_left",
+					"anchor_to": "bottom_left",
+					"controls": [
+					{
+						"execute_on_first_tick_toggle@settings_common.option_toggle": {
+							"$option_binding_name": "#execute_on_first_tick",
+							"size": [ 29, 16 ],
+							"anchor_from": "bottom_left",
+							"anchor_to": "bottom_left",
+							"$option_enabled_binding_name": "#execute_on_first_tick_enabled",
+							"$show_option_label": false,
+							"$toggle_name": "execute_on_first_tick",
+							"$toggle_binding_condition": "visible"
+						}
+					},
+					{
+						"tick_delay_offset_panel": {
+							"type": "panel",
+							"anchor_from": "bottom_left",
+							"anchor_to": "bottom_left",
+							"size": [ "100%c", 14 ],
+							"controls": [
+							{
+								"option_label_tick_delay": {
+									"type": "label",
+									"anchor_from": "bottom_left",
+									"anchor_to": "bottom_left",
+									"color": "$body_text_color",
+									"size": [ "default", 12 ],
+									"offset": [ 2, 0 ],
+									"layer": 1,
+									"text": "commandBlockScreen.tickDelay",
+									"visible": true,
+									"locked_alpha": 0.5
+								}
+							}
+							]
+						}
+					},
+					{
+						"tick_delay_text@common.text_edit_box": {
+							"anchor_from": "bottom_right",
+							"anchor_to": "bottom_right",
+							"size": [ "fill", 14 ],
+							"$focus_id": "tick_delay_text",
+							"$text_background_default": "",
+							"$text_background_hover": "",
+							"layer": 5,
+							"max_length": 5,
+							"$text_edit_box_text_type": "NumberChars",
+							"$text_box_name": "command_block.tick_delay_textbox",
+							"$text_edit_box_content_binding_name": "#command_tick_delay"
+						}
+					}
+					]
+				}
+			},
+			{
+				"redstone_mode_panel@settings_common.option_dropdown": {
+					"$focus_override_right":  "show_output_toggle",
+					"anchor_from": "top_right",
+					"anchor_to": "top_right",
+					"size": [ 110, 5 ],
+					"$option_dropdown_size": [ "100%", 17 ],
+					"offset": [ -1, 1 ],
+					"$dropdown_background_control": "start.top_background",
+					"$dropdown_content": "command_block.redstone_dropdown_content",
+					"$dropdown_area": "left_scrolling_panel",
+					"$dropdown_name": "redstone_dropdown",
+					"$option_enabled_binding_name": "#redstone_dropdown_enabled",
+					"$options_dropdown_toggle_label_binding": "#redstone_dropdown_toggle_label",
+					"$dropdown_scroll_content_size": [ "100%", 64 ]
+				}
+			},
+			{
+				"redstone_type_info": {
+					"type": "label",
+					"layer": 15,
+					"text": "#redstone_dropdown_toggle_label",
+					"anchor_from": "top_left",
+					"anchor_to": "top_left",
+					"offset": [ 233, 2 ],
+					"bindings": [ { "binding_name": "#redstone_dropdown_toggle_label" } ]
+				}
+			},
+			{
+				"condition_mode_panel@settings_common.option_dropdown": {
+					"anchor_from": "top_middle",
+					"anchor_to": "top_middle",
+					"size": [ 110, 5 ],
+					"$option_dropdown_size": [ "100%", 17 ],
+					"offset": [ 0, 1 ],
+					"$dropdown_background_control": "start.top_background",
+					"$focus_override_right": "show_output_toggle",
+    				"$dropdown_content": "command_block.condition_dropdown_content",
+    				"$dropdown_area": "left_scrolling_panel",
+    				"$dropdown_name": "condition_dropdown",
+    				"$option_enabled_binding_name": "#condition_dropdown_enabled",
+    				"$options_dropdown_toggle_label_binding": "#condition_dropdown_toggle_label",
+    				"$dropdown_scroll_content_size": [ "100%", 64 ]
+				}
+			},
+			{
+				"condition_type_info": {
+					"type": "label",
+					"layer": 15,
+					"text": "#condition_dropdown_toggle_label",
+					"anchor_from": "top_left",
+					"anchor_to": "top_left",
+					"offset": [ 119, 2 ],
+					"bindings": [ { "binding_name": "#condition_dropdown_toggle_label" } ]
+				}
+			},
+			{
+				"block_type_panel@settings_common.option_dropdown": {
+					"anchor_from": "top_left",
+					"anchor_to": "top_left",
+					"size": [ 110, 5 ],
+					"$option_dropdown_size": [ "100%", 17 ],
+					"offset": [ 1, 1 ],
+					"$dropdown_background_control": "start.top_background",
+					"$focus_override_right": "command_block_commands_text",
+					"$button_content": "command_block.icon_dropdown_toggle_button_state_content",
+					"$options_dropdown_label_color_binding_type": "global",
+					"$options_dropdown_label_color_binding": "#block_type_dropdown_label_color_binding",
+					"$dropdown_content": "command_block.blocktype_dropdown_content",
+					"$dropdown_area": "left_scrolling_panel",
+					"$dropdown_name": "block_type_dropdown",
+					"$option_enabled_binding_name": "#block_type_dropdown_enabled",
+					"$options_dropdown_toggle_label_binding": "#block_type_dropdown_toggle_label",
+					"$dropdown_scroll_content_size": [ "100%", 64 ]
+				}
+			},
+			{
+				"block_type_info": {
+					"type": "label",
+					"layer": 15,
+					"text": "#block_type_dropdown_toggle_label",
+					"anchor_from": "top_left",
+					"anchor_to": "top_left",
+					"offset": [ 5, 2 ],
+					"bindings": [ { "binding_name": "#block_type_dropdown_toggle_label" } ]
+				}
+			},
+			{
+				"maximise_button@common_buttons.light_text_button": {
+					"$pressed_button_name": "command_block.input_maximize",
+					"size": [ 15, 15 ],
+					"anchor_from": "bottom_right",
+					"anchor_to": "bottom_right",
+					"offset": [ -2, 0 ],
+					"bindings": [
+					{
+						"binding_name": "(not #maximized_input_visible)",
+						"binding_name_override": "#enabled"
+					}
+					],
+					"controls": [
+						{
+							"text": {
+								"type": "label",
+								"alpha": 0.8,
+								"text": "+",
+								"offset": [ 0, 0 ]
+							} 
+						},
+						{ "hover@start.divider": { "alpha": 0.2, "size": [ "100%", "100%"] } }
+					]
+				}
+			}
+		]
+	},
+
+	
+	"command_block_info": {
+		"layer": 30,
+		"$offset|default": [ 0, 0 ],
+		"offset": "$offset",
+		"$anchor_from|default": "",
+		"$anchor_to|default": "",
+		"anchor_from": "$anchor_from",
+		"anchor_to": "$anchor_to",
+		"type": "panel",
+		"$start_text|default": "",
+		"$text_binding_name|default": "",
+		"$text_color_binding_name|default": "",
+		"$bind_type|default": "none",
+		"controls": [
+		{
+			"start_label_dynamic_text": {
+				"type": "label",
+				"color": "$body_text_color",
+				"text": "#text",
+				"bindings": [
+				{
+					"binding_name": "$text_binding_name",
+					"binding_name_override": "#text"
+				},
+				{
+					"binding_name": "$text_color_binding_name",
+					"binding_type": "$bind_type",
+					"binding_name_override": "#color"
+				}
+				]
+			}
+		}
+		]
+	},
+
+	"command_block_commands_text@command_block.command_block_text_edit_box": {
+		"enabled_newline": true,
+		"anchor_from": "center",
+		"anchor_to": "center",
+		"offset": [ 0, -46 ],
+		"$focus_id": "command_block_commands_text",
+		"focus_change_left": "hover_note_text",
+		"focus_change_up": "hover_note_text",
+		"size": [ 340, 60 ],
+		"max_length": 32500,
+		"$text_box_name": "command_block.command_text",
+		"$text_edit_box_content_binding_name": "#command_text_edit",
+		"$place_holder_text": ""
+    },
+	
+	"command_output_text@command_block.command_block_multiline_text_edit_box": {
+		"anchor_from": "center",
+		"anchor_to": "center",
+		"offset": [ 0, 60 ],
+        "size": [ 340, 60 ],
+        "focus_enabled": false,
+		"$text_background_default": "start.background",
+		"$text_background_hover": "start.background",
+        "$text_box_name": "command_block.output_text",
+        "max_length": 32500,
+        "$text_edit_box_content_binding_name": "#command_output_text",
+        "$place_holder_text": "",
+		//we dont want selection on the output window
+		"button_mappings": [
+			{
+				"from_button_id": "button.menu_select",
+				"to_button_id": "button.menu_select",
+				"handle_select": false,
+				"handle_deselect": false,
+				"mapping_type": "pressed"
+			},
+			{
+				"from_button_id": "button.menu_ok",
+				"to_button_id": "button.menu_ok",
+				"handle_select": false,
+				"handle_deselect": false,
+				"mapping_type": "focused"
+			},
+			{
+				"from_button_id": "button.menu_cancel",
+				"to_button_id": "button.menu_cancel",
+				"handle_select": false,
+				"handle_deselect": false,
+				"mapping_type": "focused"
+			}
+		]
+    },
+	
+	"cancel_button@common_buttons.light_text_button": {
+		"$pressed_button_name": "button.menu_leave_screen",
+		"size": [ 58, 15 ],
+		"offset": [ 127, -87 ],
+		"controls": [
+			{
+				"text": {
+					"type": "label",
+					"alpha": 0.8,
+					"color": "$8_color_format",
+					"text": "gui.cancel",
+					"bindings": [ { "binding_name": "gui.cancel" } ] 
+				} 
+			},
+			{
+				"hover@start.divider": { "alpha": 0.1, "size": [ "100%", "100%"] }
+			}
+		]
+	},
+	
+	
+	"maximized_command_block_text@command_block.command_block_text_edit_box": {
+		"enabled_newline": true,
+		"anchor_from": "top_middle",
+		"anchor_to": "top_middle",
+		"layer": 20,
+		"size": [ 360, "100% - 30px" ],
+		"offset": [ 0, "23px" ],
+		"max_length": 32500,
+		"$text_box_name": "command_block.command_text",
+		"$text_edit_box_content_binding_name": "#command_text_edit",
+		"$place_holder_text": "Enter your command input here",
+		"$cancel_button_id": "command_block.input_minimize",
+		"bindings": [
+			{
+				"binding_name": "#maximized_input_visible",
+				"binding_name_override": "#visible"
+			}
+		]
+    },
+								
+	"command_block_screen_content@start.background": {
+		"controls": [
+			{
+				"background_divider@common.common_panel": {
+					"$dialog_background": "common.dialog_background_hollow_3",
+					"$fill_alpha": 1.0,
+					"size": [ 360, 200 ]
+				}
+			},
+			{ "dialog_title@command_block.dialog_title": {} },
+			{ "hover_note_text@command_block.hover_note_text": {} },
+			{ "top_panel@command_block.top_panel": {} },
+			{ "command_block_commands_text@command_block.command_block_commands_text": {} },
+			{ "command_output_text@command_block.command_output_text": {} },
+			{ "button_panel@command_block.button_panel": {} },
+			{ "maximized_command_block_text@command_block.maximized_command_block_text": {} },
+			{ "cancel_button@command_block.cancel_button": {} }
+		]
+	},
+
+  //////////////////////////////////////////////////////////////////////////////////////////
+  ////        Base Screen                                                           /////////
+  ///////////////////////////////////////////////////////////////////////////////////////////
+
+	"command_block_screen@common.base_screen": {
+		"$screen_content": "command_block.command_block_screen_content",
+		"button_mappings": [
+			{
+				"from_button_id": "button.menu_cancel",
+				"to_button_id": "button.menu_exit",
+				"mapping_type": "global"
+			}
+		]
+	}
+}
+
+//IImoxi@JPizxeL

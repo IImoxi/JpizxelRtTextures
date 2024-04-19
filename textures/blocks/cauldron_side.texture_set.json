@@ -1,0 +1,8 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:texture_set": {
+		"color": "textures/cauldron_side",
+		"metalness_emissive_roughness": "mer/cauldron_side",
+		"normal": "normals/cauldron_side"
+	}
+}

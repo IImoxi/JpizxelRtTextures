@@ -1,0 +1,8 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:texture_set": {
+		"color": "textures/jungle_log",
+		"metalness_emissive_roughness": "mer/jungle_log",
+		"normal": "normals/jungle_log"
+	}
+}

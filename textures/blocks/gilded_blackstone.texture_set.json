@@ -1,0 +1,8 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:texture_set": {
+		"color": "textures/gilded_blackstone",
+		"metalness_emissive_roughness": "mer/gilded_blackstone",
+		"normal": "normals/blackstone"
+	}
+}

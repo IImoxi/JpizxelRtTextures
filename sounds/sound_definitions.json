@@ -1,0 +1,43 @@
+{
+	"format_version" : "1.14.0",
+	"sound_definitions" : {
+		"random.click" : {
+			"__use_legacy_max_distance" : "true",
+			"category" : "ui",
+			"sounds" : [
+				{
+					"load_on_low_memory" : true,
+					"name" : "sounds/random/wood_click",
+					"volume" : 0.3
+				}
+			]
+		},
+		"ambient.creepy" : {
+			 "__use_legacy_max_distance" : "true",
+			 "category" : "neutral",
+			"sounds" : [
+				{
+					"load_on_low_memory" : true,
+					"name" : "sounds/ii/creepy_ambience",
+					"volume" : 1
+				}
+			]
+		},
+		"ii.tate.say" : {
+			"__use_legacy_max_distance" : "true",
+			"category" : "neutral",
+			"sounds" : [ "sounds/ii/tate/breathe_air", "sounds/ii/tate/how_can_woman_drive" ]
+		},
+		"ii.tate.theme_song" : {
+			"__use_legacy_max_distance" : "true",
+			"category" : "neutral",
+			"sounds" : [
+				{
+					"load_on_low_memory" : true,
+					"name" : "sounds/ii/tate/theme_song",
+					"volume" : 1
+				}
+			]
+		}
+	}
+}

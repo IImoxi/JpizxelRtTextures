@@ -1,0 +1,191 @@
+{
+  "namespace": "bed",
+
+  // Anims //
+
+  "ii_notify_bar_wait": {
+    "anim_type": "size",
+    "duration": 0.5,
+    "from": [ 150, 1 ],
+    "to": [ 150, 1 ],
+    "next": "load1@bed.ii_load_bar"
+  },
+
+  "ii_notify_wait": {
+    "anim_type": "wait",
+    "duration": 2.5,
+    "next": "load2@bed.notify_fade_out"
+  },
+
+  "ii_notify_text_wait": {
+    "anim_type": "wait",
+    "duration": 2.5,
+    "next": "load3@bed.notify_bar_fade_out"
+  },
+
+  "ii_load_bar": {
+    "anim_type": "size",
+    "easing": "out_quart",
+    "duration": 2,
+    "from": [ 150, 1 ],
+    "to": [ 1, 1 ],
+    "next": "load2@bed.notify_bar_fade_out"
+  },
+
+  "notify_bar_fade_out": {
+    "anim_type": "alpha",
+    "easing": "in_quart",
+    "duration": 1,
+    "from": 1,
+    "to": 0
+  },
+
+  "notify_fade_out": {
+    "anim_type": "alpha",
+    "easing": "in_quart",
+    "duration": 1,
+    "from": 0.4,
+    "to": 0
+  },
+
+  // Screen //
+
+  "in_bed_screen@common.base_screen": {
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_cancel",
+        "to_button_id": "button.wake_up_button",
+        "mapping_type": "global"
+      },
+      {
+        "from_button_id": "button.menu_exit",
+        "to_button_id": "button.wake_up_button",
+        "mapping_type": "global"
+      }
+    ],
+
+    "$screen_content": "bed.in_bed_screen_content",
+    "$screen_bg_content": "bed.background"
+  },
+
+  "in_bed_screen_content": {
+    "type": "panel",
+    "controls": [
+      {
+        "bed_notification@start.background": {
+          "size": [ 150, 20 ],
+          "anims": [ "ii_notify_wait" ],
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "offset": [ 0, 20 ],
+          "controls": [
+            {
+              "bed_notification_bar@start.divider": {
+                "size|default": [ 150, 1 ],
+                "alpha": 1,
+                "anchor_from": "bottom_left",
+                "anchor_to": "bottom_left",
+                "anims": [ "@ii_notify_bar_wait" ]
+              }
+            },
+            {
+              "bed_notification": {
+                "type": "label",
+                "text": "In Bed",
+                "offset": [ 0, 2 ],
+                "font_scale_factor": 2,
+                "anims": [ "ii_notify_text_wait" ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "wake_up_button_panel": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
+          "size": [ 128, "5%" ],
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+          "offset": [ 0, "-15.0%" ],
+          "controls": [
+            {
+              "wake_up_button@start.iibutton": {
+                "layer": 1,
+                "size": [ 60, 20 ],
+                "$button_text": "",
+                "controls": [
+                  {
+                    "leave_bed_label": {
+                      "type": "label",
+                      "alpha": 0.5,
+                      "text": "Leave bed"
+                    }
+                  },
+                  {
+                    "hover@start.iibutton1": {}
+                  },
+                  {
+                    "default@start.iibutton0": {}
+                  }
+                ],
+                "button_mappings": [
+                  {
+                    "from_button_id": "button.menu_select",
+                    "to_button_id": "button.wake_up_button",
+                    "mapping_type": "pressed"
+                  },
+                  {
+                    "from_button_id": "button.menu_ok",
+                    "to_button_id": "button.wake_up_button",
+                    "mapping_type": "pressed"
+                  }
+                ]
+              }
+            },
+            {
+              "spacer": {
+                "type": "panel",
+                "size": [ 20, 0 ]
+              }
+            },
+            {
+              "chat_button@start.iibutton": {
+                "layer": 1,
+                "size": [ 60, 20 ],
+                "$button_text": "",
+                "controls": [
+                  {
+                    "leave_bed_label": {
+                      "type": "label",
+                      "alpha": 0.5,
+                      "text": "Open chat"
+                    }
+                  },
+                  {
+                    "hover@start.iibutton1": {}
+                  },
+                  {
+                    "default@start.iibutton0": {}
+                  }
+                ],
+                "button_mappings": [
+                  {
+                    "from_button_id": "button.menu_select",
+                    "to_button_id": "button.chat",
+                    "mapping_type": "pressed"
+                  },
+                  {
+                    "from_button_id": "button.menu_ok",
+                    "to_button_id": "button.chat",
+                    "mapping_type": "pressed"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

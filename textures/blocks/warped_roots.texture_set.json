@@ -1,0 +1,7 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:texture_set": {
+		"color": "textures/warped_roots",
+		"metalness_emissive_roughness": "mer/warped_roots"
+	}
+}

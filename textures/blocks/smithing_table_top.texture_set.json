@@ -1,0 +1,8 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:texture_set": {
+		"color": "textures/smithing_table_top",
+		"metalness_emissive_roughness": "mer/smithing_table_top",
+		"normal": "normals/smithing_table_top"
+	}
+}

@@ -1,0 +1,8 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:texture_set": {
+		"color": "textures/iron_trapdoor",
+		"metalness_emissive_roughness": "#ff0077",
+		"normal": "normals/iron_trapdoor"
+	}
+}

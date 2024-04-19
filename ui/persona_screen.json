@@ -1,0 +1,47 @@
+//       <> Credits <>
+//
+//          /----\
+//<> - = - |<.js >| - = - <>
+//          \____/
+//
+// >> Created by omegadesu <<
+//
+//          /----\
+//<> - = - |<.js >| - = - <>
+//          \____/
+//
+//       <> Credits <>
+//cde
+
+
+{
+  "equip_button_always@common_buttons.light_text_button": {
+    "$pressed_button_name": "button.equip_skin",
+    "$button_text": "dr.equip_piece",
+  	"anchor_from": "top_middle",
+	  "anchor_to": "top_middle",
+  	"layer": 128,
+    "size": [ 420, 21 ],
+    "offset": [ 0, 0 ],
+    "bindings": [
+      {
+        "binding_name": "#is_skin_equip_visible",
+        "binding_name_override": "#visible"
+      }
+    ]
+  },
+
+  "persona_screen_content": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": [
+          {
+            "equip_button_always@persona.equip_button_always": { }
+          }
+        ]
+      }
+    ]
+  }
+}

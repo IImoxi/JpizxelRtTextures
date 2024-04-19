@@ -1,0 +1,8 @@
+{
+ "format_version": "1.16.100",
+  "minecraft:texture_set": {
+  "color": "textures/enchanting_table_side",
+  "metalness_emissive_roughness": "mer/enchanting_table_side",
+  "normal": "normals/enchanting_table_side"
+ }
+}

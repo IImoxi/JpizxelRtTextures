@@ -1,0 +1,7 @@
+{
+ "format_version": "1.16.100",
+  "minecraft:texture_set": {
+  "color": "textures/brewing_stand_base",
+  "metalness_emissive_roughness": "#9900e0"
+ }
+}

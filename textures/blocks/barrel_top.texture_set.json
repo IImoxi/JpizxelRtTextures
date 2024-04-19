@@ -1,0 +1,8 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:texture_set": {
+		"color": "textures/barrel_top",
+		"metalness_emissive_roughness": "#0000cc",
+		"normal": "normals/barrel_top"
+	}
+}

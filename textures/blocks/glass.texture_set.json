@@ -1,0 +1,8 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:texture_set": {
+		"color": "textures/glass",
+		"metalness_emissive_roughness": "#000000",
+		"normal": "normals/glass"
+	}
+}

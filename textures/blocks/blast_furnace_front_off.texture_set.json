@@ -1,0 +1,8 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:texture_set": {
+		"color": "textures/blast_furnace_front_off",
+		"metalness_emissive_roughness": "#0000e0",
+		"normal": "normals/blast_furnace_front"
+	}
+}

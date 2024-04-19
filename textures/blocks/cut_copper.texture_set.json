@@ -1,0 +1,8 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:texture_set": {
+		"color": "textures/cut_copper",
+		"metalness_emissive_roughness": "mer/cut_copper",
+		"normal": "normals/cut_copper"
+	}
+}

@@ -1,0 +1,8 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:texture_set": {
+		"color": "textures/light_blue_terracotta",
+		"metalness_emissive_roughness": "#0000f0",
+		"normal": "normals/terracotta"
+	}
+}

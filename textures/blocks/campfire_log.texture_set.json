@@ -1,0 +1,7 @@
+{
+ "format_version": "1.16.100",
+  "minecraft:texture_set": {
+  "color": "textures/campfire_log",
+  "metalness_emissive_roughness": "#0000d0"
+ }
+}

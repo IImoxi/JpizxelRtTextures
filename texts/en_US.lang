@@ -1,0 +1,269 @@
+## Edited by IImoxi, JPvP
+
+menu.globalpacks=Resource packs	#
+
+deathScreen.message=§cWASTED	#
+deathScreen.quit=Main menu	#
+
+death.attack.anvil=§l§6%1$s §r7was squashed by a falling anvil	#
+death.attack.mob=§l§6%1$s §r§7was slain by §l§6%2$s	#
+death.attack.onFire=§l§6%1$s §r§7burned to death	#
+death.attack.onFire.player=§l§6%1$s §r§7was burnt to a crisp whilst fighting §r§6%2$s	#
+death.fell.accident.generic=§6§l%1$s §r§7fell from a high place	#
+death.attack.outOfWorld=§l§6%1$s §r§7fell out of the world	#
+death.attack.player=§l§6%1$s §r§7was slain by §l§6%2$s	#
+death.attack.player.item=§l§6%1$s §r§7was slain by §l§6%2$s §r§7using §6%3$s	#
+death.attack.generic=§l§6%1$s §r§7died	#
+death.attack.explosion=§l§6%1$s §r§7blew up
+death.attack.inWall=§6%1$s §r§7suffocated in a wall...	#
+
+death.attack.lava=§l§6%1$s §r§7tried to swim in lava	#
+death.attack.inFire=§l§6%1$s §r§7went up in flames	#
+
+death.attack.magic=§l§6%1$s §r§7was killed by magic	#
+death.attack.indirectMagic=§l§6%1$s §r§7was killed by §l§6%2$s §r§7using magic	#
+
+map.position=§6%s§8, §6%s§8, §6%s	#
+
+options.raytracing.disabled.upsell.unsupported_platform=Unsupported platform or device! http://aka.ms/ray-tracing-FAQ	#
+options.fancyskies=Custom Sky	#
+options.fov.toggle=Dynamic FOV	#
+options.uiprofile.classic=Default §8(Recommended)	#
+options.uiprofile.pocket=Pocket §8(Unsupported on this pack)	#
+
+accessibility.chat.howtoopen=§7Welcome! Press §6%s §7to open chat. 	#
+
+disconnectionScreen.cantConnect=Connection refused	#
+disconnectionScreen.serverFull=Server full	#
+disconnectionScreen.serverFull.title=§7Server full	#
+disconnectionScreen.sessionNotFound=§7Server offline	#
+disconnectionScreen.timeout=§7Timed out connection	#
+
+attribute.name.minecraft:attack_damage=§7Melee Damage	#
+attribute.name.minecraft:follow_range=§7Mob Follow Range	#
+attribute.name.minecraft:knockback_resistance=§7Knockback Reduction	#
+attribute.name.generic.maxHealth=§7Max Health	#
+attribute.name.generic.attackDamage=§7Melee Damage	#
+attribute.name.generic.knockbackResistance=§7Knockback Reduction	#
+attribute.name.minecraft:movement=§7Speed	#
+attribute.name.horse.jumpStrength=§7Horse Jump Strength	#
+attribute.name.zombie.spawnReinforcements=§7Zombie Reinforcements	#
+
+store.title=§6Marketplace	#
+
+chat.type.text=§f%s§7: %s	#
+chat.type.admin=§f%s§7: %s	#
+chat.stream.text=(%s) §f%s§7: %s	#
+
+menu.settings=Settings	#
+menu.play=Play	#
+menu.returnToGame=Resume Game	#
+
+multiplayer.player.joined=§8[§6+§8] §6%s	#
+multiplayer.player.joined.renamed=§8 §6%s §7(formerly known as %s) joined	#
+multiplayer.player.joined.realms=§8[§6+§8] §6%s	#
+multiplayer.player.joined.realms.renamed=§8+ §6%s §7(formerly known as %s) joined	#
+multiplayer.player.left=§8[§6-§8] §6%s	#
+multiplayer.player.left.realms=§8[§6-§8] §6%s	#
+multiplayer.player.changeToPersona=§6%s §7edited the character appearance	#
+multiplayer.player.changeToSkin=§6%s §7has changed to %s skin	#
+
+permissions.kickplayer=Kick Out Player	#
+permissions.kickplayer.reason=§cYou have been KICKED from the server!	#
+permissions.kickplayer.message=§7Are you sure you want to kick %s from the world?	#
+permissions.kickplayer.message.dedicatedserver=§7Are you sure you want to remove %s from the world?	#
+permissions.kickplayer.title=Kick Out Player?	#
+permissions.banplayer=Ban Player	#
+permissions.banplayer.reason=§cYou have been BANNED from the server!	#
+permissions.banplayer.message=§7Are you sure you want to ban %s from the world?	#
+permissions.banplayer.title=Ban Player?	#
+permissions.ability.teleport=Teleport	#
+permissions.NeedPermission=§7You do not have permission to do this!	#
+
+item.ender_pearl.name=Ender Pearl	#
+item.bow.name=Bow	#
+item.golden_apple.name=Golden Apple	#
+
+tile.end_bricks.name=End Bricks	#
+tile.planks.acacia.name=Acacia Planks	#
+tile.planks.big_oak.name=Dark Oak Planks	#
+tile.planks.birch.name=Birch Planks	#
+tile.planks.jungle.name=Jungle Planks	#
+tile.planks.oak.name=Oak Planks	#
+tile.planks.spruce.name=Spruce Planks	#
+tile.wooden_slab.acacia.name=Acacia Slab	#
+tile.wooden_slab.big_oak.name=Dark Oak Slab	#
+tile.wooden_slab.birch.name=Birch Slab	#
+tile.wooden_slab.jungle.name=Jungle Slab	#
+tile.wooden_slab.name=Wooden Slab	#
+tile.wooden_slab.oak.name=Oak Slab	#
+tile.wooden_slab.spruce.name=Spruce Slab	#
+
+tile.bed.respawnSet=§7Respawn point set.	#
+tile.bed.notValid=§7Your home bed was missing or obstructed.	#
+tile.bed.noSleep=§7You can only sleep at night.	#
+tile.bed.obstructed=§7Bed is obstructed.	#
+tile.bed.tooFar=§7Bed is too far away.	#
+tile.bed.notSafe=§7You may not rest now, there are monsters nearby.	#
+
+tile.brick_block.name=Bricks	#
+item.cooked_beef.name=Steak
+item.cooked_chicken.name=Cooked Chicken	#
+
+commands.kick.no.host=§7You cannot kick the server host!	#
+
+commands.replaceitem.failed=§7Could not replace %s slot §6%d §cwith §l§6%dx %s§r§7.	#
+commands.replaceitem.keepFailed=§7There is already an item occupying §6%s §7slot §6%d§7.	#
+commands.replaceitem.noContainer=§7Block at §6%s §7is not a container	#
+commands.replaceitem.badSlotNumber=§7Could not replace slot §6%d§7, must be a value between §6%d §7and §6%d§7.	#
+commands.replaceitem.success=§7Replaced %s slot §6%d §7with §l§6%dx %s§r§7.	#
+commands.replaceitem.success.entity=§7Replaced %s slot §6%d §7of §6§l%s §r§7with §6§l%dx %s§r§7.	#
+
+commands.help.header=§7Showing help page §l§6%1$d §r§7of §l§6%2$d §r§7| /help <page>	#
+commands.help.footer=§7Use the §l§6<tab> §r§7key while typing a command to auto-complete the command or its arguments.	#
+
+commands.gamerule.success=§7Game rule §l§6%1$s §r§7has been updated to §l§6%2$s§r§7.	#
+
+commands.gamemode.success.other=§7Set %2$s's gamemode to §l§6%1$s§r§7.	#
+commands.gamemode.success.self=§7Set own gamemode to §l§6%1$s§r§7.	#
+commands.gamemode.fail.invalid=§7Unknown gamemode!	#
+commands.generic.disabled=§7You do not have permission to use this command!	#
+
+commands.setmaxplayers.success=§7Set max players to §l§6%1$d§r§7.	#
+
+commands.give.block.notFound=§cThere is no such block with name %3$d.	#
+commands.give.item.invalid=§cInvalid command syntax: %s does not exist with that data value.	#
+commands.give.item.notFound=§cUnknown item with name %1$d.	#
+commands.give.map.invalidData=§cInvalid map data provided.	#
+commands.give.map.featureNotFound=§cCould not make exploration map. Feature not found on this dimension.	#
+commands.give.success=§7Gave §6§l%2$dx %1$s §r§7to §l§6%3$s§r§7.	#
+commands.give.successRecipient=§7You have been given §6§l%2$dx %1$s§r§7.	#
+commands.give.tagError=§cData tag parsing failed: %1$s.	#
+
+commands.kill.successful.edu=§7Removed %1$s.	#
+commands.kill.successful=§7Killed %1$s.	#
+
+commands.message.display.incoming=%2$s	#
+commands.message.display.outgoing=§r§7[To §6§l%1$s§r§7] %2$s	#
+commands.message.sameTarget=§cYou can't send a private message to yourself!	#
+
+commands.tp.success=§7Teleported §6%1$s §7to §6§l%2$s§r§7.	#
+commands.tp.successVictim=§7You have been teleported to §l§6%1$s§r§7.	#
+commands.tp.success.coordinates=§7Teleported §6%1$s §7to §6%2$s§7, §6%3$s§7, §6%4$s§7.	#
+
+commands.xp.failure.widthdrawXp=§cCannot give player negative experience points!	#
+commands.xp.success=§7Gave §6%1$d §7experience to §l§6%2$s§r§7.	#
+commands.xp.success.levels=§7Gave §6%1$d §7levels to §l§6%2$s§r§7.	#
+commands.xp.success.negative.levels=§7Taken §6%1$d §7levels from §6%2$s§7.	#
+
+commands.weather.clear=§7Changing to §6§lClear §r§7weather.§r	#
+commands.weather.rain=§7Changing to §6§lRainy §r§7weather.§r	#
+commands.weather.thunder=§7Changing to §6§lRain and Thunder§r§7.§r	#
+
+commands.setblock.success=§7Block placed.§r	#
+
+commands.summon.success=§7Object summoned.§r	#
+
+commands.kick.success=§7Kicked §l§6%1$s §r§7from the game!§r	#
+
+commands.time.added=§7Added §6%1$d §7to the time.	#
+commands.time.query.day=§7Day is §6%d§7.	#
+commands.time.query.daytime=§7Daytime is §6%d§7.	#
+commands.time.query.gametime=§7Gametime is §6%d§7.	#
+commands.time.set=§7Set the time to §6%1$d§7.	#
+commands.time.stop=§7Time §6%1$s§7.	#
+
+commands.fill.success=§6§l%1$d §r§7blocks filled.§r	#
+commands.fill.failed=§7No blocks filled.§r	#
+
+commands.clear.failure.no.items=§7Removed no items from §l§6%1$s§r§7.§r	#
+commands.clear.success=§7Removed §6%2$d §7items from §l§6%1$s§r§7.§r	#
+
+commands.enchant.success=§7Enchanting succeeded for §l§6%1$s§r§7.§r	#
+commands.enchant.cantEnchant=§7Enchant failed for §l§6%1$s§c.§r	#
+commands.enchant.noItem=§7Player §l§6%1$s §r§7is not holding an item.§r	#
+commands.enchant.invalidLevel=§7Enchantment level out of range.§r	#
+
+commands.generic.double.tooBig=§7Value §6%.2f§7 exceeds the maximum value of §6%.2f§7!§r	#
+commands.generic.double.tooSmall=§7Value §6%.2f§7 does not exceed the minimum value of %.2f§7!§r	#
+commands.generic.num.invalid=§7Invalid number for '§6%1$s§7'§r 	#
+commands.generic.num.tooBig=§7Value §6%1$d§7 exceeds the maximum value of %2$d§7!§r	#
+commands.generic.num.tooSmall=§7Value §6%1$d§7 does not exceed the minimum value of %2$d§7!§r	#
+commands.generic.syntax=§7Syntax error: Unexpected '§6%2$s§7' at '§6%1$s%2$s%3$s§7'§r
+commands.generic.noTargetMatch=§7No targets matched selector.§r	#
+
+enchantment.level.1=1	#
+enchantment.level.10=10	#
+enchantment.level.2=2	#
+enchantment.level.3=3	#
+enchantment.level.4=4	#
+enchantment.level.5=5	#
+enchantment.level.6=6	#
+enchantment.level.7=7	#
+enchantment.level.8=8	#
+enchantment.level.9=9	#
+
+enchantment.arrowDamage=§7Power§6	#
+enchantment.arrowFire=§7Flame§6§6	#
+enchantment.arrowInfinite=§7Infinity§6§6	#
+enchantment.arrowKnockback=§7Punch§6§6	#
+enchantment.crossbowMultishot=§7Multishot§6§6	#
+enchantment.crossbowPiercing=§7Piercing§6§6	#
+enchantment.crossbowQuickCharge=§7Quick Charge§6§6	#
+enchantment.curse.binding=Curse of Binding§6§6	#
+enchantment.curse.vanishing=Curse of Vanishing§6§6	#
+enchantment.damage.all=§7Sharpness§6§6	#
+enchantment.damage.arthropods=§7Bane of Arthropods§6§6	#
+enchantment.damage.undead=§7Smite§6§6	#
+enchantment.digging=§7Efficiency§6§6	#
+enchantment.durability=§7Unbreaking§6§6	#
+enchantment.fire=§7Fire Aspect§6§6	#
+enchantment.fishingSpeed=§7Lure§6§6	#
+enchantment.frostwalker=§7Frost Walker§6§6	#
+enchantment.knockback=§7Knockback§6§6	#
+enchantment.lootBonus=§7Looting§6§6	#
+enchantment.lootBonusDigger=§7Fortune§6§6	#
+enchantment.lootBonusFishing=§7Luck of the Sea§6§6	#
+enchantment.mending=§7Mending§6§6	#
+enchantment.oxygen=§7Respiration§6§6	#
+enchantment.protect.all=§7Protection§6§6	#
+enchantment.protect.explosion=§7Blast Protection§6§6	#
+enchantment.protect.fall=§7Feather Falling§6§6	#
+enchantment.protect.fire=§7Fire Protection§6§6	#
+enchantment.protect.projectile=§7Projectile Protection§6§6	#
+enchantment.soul_speed=§7Soul Speed§6§6	#
+enchantment.thorns=§7Thorns§6§6	#
+enchantment.untouching=§7Silk Touch§6§6	#
+enchantment.waterWalker=§7Depth Strider§6§6	#
+enchantment.waterWorker=§7Aqua Affinity§6§6	#
+enchantment.tridentChanneling=§7Channelling§6§6	#
+enchantment.tridentLoyalty=§7Loyalty§6§6	#
+enchantment.tridentRiptide=§7Riptide§6§6	#
+enchantment.tridentImpaling=§7Impaling§6§6	#
+
+potion.potency.0=§61	#
+potion.potency.1=§62	#
+potion.potency.2=§63	#
+potion.potency.3=§64	#
+potion.potency.4=§65	#
+potion.potency.5=§66	#
+
+progressScreen.cantConnect=§7Unable to conect to server.	#
+
+craftingScreen.tab.search=§7All	#
+craftingScreen.tab.search.filter=§7Craftable	#
+craftingScreen.tab.construction=§7Construction	#
+craftingScreen.tab.nature=§7Nature	#
+craftingScreen.tab.equipment=§7Equipment	#
+craftingScreen.tab.items=§7Items	#
+craftingScreen.tab.survival=§7Inventory	#
+craftingScreen.tab.armor=§7Armour	#
+
+gameMode.adventure=Adventure Mode	#
+gameMode.changed=§7Your game mode has been updated to §l§6%s§7.	#
+gameMode.creative=Creative Mode	#
+gameMode.hardcore=Hardcore Mode	#
+gameMode.spectator=Spectator Mode	#
+gameMode.survival=Survival Mode	#
+
+trial.survival.welcome=Welcome to your Minecraft Trial! 	#

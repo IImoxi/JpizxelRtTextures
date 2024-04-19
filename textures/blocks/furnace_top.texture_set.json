@@ -1,0 +1,8 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:texture_set": {
+		"color": "textures/furnace_top",
+		"metalness_emissive_roughness": "mer/furnace_top",
+		"normal": "normals/furnace_top"
+	}
+}

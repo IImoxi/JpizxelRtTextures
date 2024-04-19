@@ -1,0 +1,7 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:texture_set": {
+		"color": "textures/small_amethyst_bud",
+		"metalness_emissive_roughness": "mer/small_amethyst_bud"
+	}
+}

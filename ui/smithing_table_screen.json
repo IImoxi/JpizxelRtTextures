@@ -1,0 +1,56 @@
+
+// Copyright (c) Mojang AB.  All rights reserved.
+
+{
+	"namespace": "smithing_table",
+
+  //---------------------------------------------------------------------------
+  // #region icon and text area (top quarter of screen)
+  //---------------------------------------------------------------------------
+  
+	"icon_and_text_panel": {
+		"type": "panel",
+		"anchor_from": "top_left",
+		"anchor_to": "top_left",
+		"size": [ "65%", "40%" ],
+		"offset": [ 0, 0 ]
+	},
+	
+	"top_half_panel": {
+		"type": "panel",
+		"anchor_from": "top_left",
+		"anchor_to": "top_left",
+		"size": [ "100% - 14px", "50% - 14px" ],
+		"offset": [ 7, 7 ],
+		"controls": [
+			{ "recipe_panel@smithing_table_2.recipe_panel": {} }
+		]
+	},
+
+	"smithing_table_screen@common.inventory_screen_common": {
+		"$close_on_player_hurt": false,
+		"close_on_player_hurt": "",
+		"variables": [
+			{
+				"requires": "($desktop_screen and not $use_smithing_table_2_ui)",
+				"$screen_content": "smithing_table.smithing_table_panel"
+			},
+			{
+				"requires": "($pocket_screen and not $use_smithing_table_2_ui)",
+				"$screen_content": "smithing_table_pocket.smithing_table_panel"
+			},
+			{
+				"requires": "($desktop_screen and $use_smithing_table_2_ui)",
+				"$screen_content": "smithing_table_2.smithing_table_panel",
+				"$screen_bg_content": "start.background"
+			},
+			{
+				"requires": "($pocket_screen and $use_smithing_table_2_ui)",
+				"$screen_content": "smithing_table_2_pocket.smithing_table_panel",
+				"$screen_bg_content": "start.background"
+			}
+		]
+	}
+}
+
+// #endregion

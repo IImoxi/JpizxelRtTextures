@@ -1,0 +1,8 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:texture_set": {
+		"color": "textures/redstone_lamp_on",
+		"metalness_emissive_roughness": "mer/redstone_lamp_on",
+		"normal": "normals/redstone_lamp"
+	}
+}

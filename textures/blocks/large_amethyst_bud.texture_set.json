@@ -1,0 +1,7 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:texture_set": {
+		"color": "textures/large_amethyst_bud",
+		"metalness_emissive_roughness": "mer/large_amethyst_bud"
+	}
+}

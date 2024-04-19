@@ -1,0 +1,8 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:texture_set": {
+		"color": "textures/overgrown_grass_side",
+		"metalness_emissive_roughness": "mer/grass_top",
+		"normal": "normals/grass_top"
+	}
+}

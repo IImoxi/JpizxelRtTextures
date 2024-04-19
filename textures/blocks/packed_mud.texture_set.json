@@ -1,0 +1,8 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:texture_set": {
+		"color": "textures/packed_mud",
+		"metalness_emissive_roughness": "#0000cc",
+		"normal": "normals/packed_mud"
+	}
+}

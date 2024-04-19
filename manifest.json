@@ -1,0 +1,42 @@
+{
+	"format_version": 2,
+	"header": {
+		"description": "§rIImoxi | Modifies the look of minecraft with an option to enable Ray Tracing. (May boost FPS) (Recommended for PC/Mouse and keyboard only!)",
+		"name": "§r§6JPizxeL RT Textures",
+		"uuid": "bd3398a9-0fe7-4195-8a6b-6334b76fc5fb",
+		"version": [ 1, 0, 0 ],
+		"min_engine_version": [ 1, 16, 0 ]
+	},
+	"capabilities": [ 
+		"pbr",
+		"raytraced" 
+	],
+	"subpacks": [
+		{
+		"folder_name": "supported, 100", "name": "§r§7§lDefault with RTX support, Default chat scale§r", "memory_tier": 1
+		},
+		{
+		"folder_name": "supported, 66", "name": "§r§7§lDefault with RTX support, 66% Chat scale§r", "memory_tier": 1
+		},
+		{
+		"folder_name": "supported, 50", "name": "§r§7§lDefault with RTX support, 50% Chat scale§r", "memory_tier": 1
+		},
+		{
+		"folder_name": "varied, 50", "name": "§r§7§lVaried Textures, 50% chat scale§r", "memory_tier": 0
+		},
+		{
+		"folder_name": "varied, 66", "name": "§r§7§lVaried Textures, 66% Chat scale§r", "memory_tier": 0
+		},
+		{
+		"folder_name": "varied, 100", "name": "§r§7§lVaried Textures, Default chat scale§r", "memory_tier": 0
+		}
+	],
+	"modules": [
+		{
+			"description": "§4II§1mox§4i",
+			"type": "resources",
+			"uuid": "62fd1c95-57a2-4e33-bd30-fb708c16db0e",
+			"version": [ 1, 0, 0 ]
+		}
+	]
+}

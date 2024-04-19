@@ -1,0 +1,7 @@
+{
+ "format_version": "1.16.100",
+  "minecraft:texture_set": {
+  "color": "textures/door_birch_upper",
+  "metalness_emissive_roughness": "#0000cc"
+ }
+}

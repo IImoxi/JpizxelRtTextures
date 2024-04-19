@@ -1,0 +1,8 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:texture_set": {
+		"color": "textures/nether_wart_block",
+		"metalness_emissive_roughness": "#400077",
+		"normal": "normals/bedrock"
+	}
+}

@@ -1,0 +1,488 @@
+// Edited by moxi#7684
+
+{
+  "namespace": "pause",
+
+  "menu_section": {
+    "type": "panel",
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "size": [ 150, 100 ],
+    "controls": [
+      {
+        "world_name@pause.players_label": {
+          "size": [ "default", 10 ],
+          "offset": [ 0, -27 ],
+          "text_alignment": "center"
+        }
+      },
+      {
+        "invite_players_button@pause.invites": { "offset": [ 0, 30 ] }
+      },
+      {
+        "return_to_game_button@pause.return_to_game_button": {
+          "size": [ 150, 16 ],
+          "$button_text": "",
+          "offset": [ 0, 32 ],
+          "controls": [
+            { "iibutton0@start.iibutton": {} },
+            { "resume_txt@pause.resume_txt": {} }
+          ]
+        }
+      },
+      {
+        "quit_button@pause.quit_button": {
+          "size": [ 150, 16 ],
+          "offset": [ 0, 54 ],
+          "$button_text": "Quit game",
+          "controls": [
+            { "iibutton0@start.iibutton": { "sound_pitch": 0.5 } },
+            { "quit_txt@pause.quit_txt": {} }
+          ]
+        }
+      }
+    ]
+  },
+
+  "resume_txt": {
+
+    "type": "label",
+    "size": [ "default", 10 ],
+    "offset": [ 0, -2.5 ],
+    "text": "Back to game",
+    "layer": 15,
+    "font_type": "MinecraftTen"
+  },
+
+  "quit_txt": {
+
+    "type": "label",
+    "size": [ "default", 10 ],
+    "offset": [ 0, -2.5 ],
+    "text": "Save and quit",
+    "layer": 15,
+    "font_type": "MinecraftTen"
+  },
+
+	// Bottom Bar
+
+	"bottom_bar": {
+		"type": "panel",
+		"anchor_from": "bottom_left",
+		"anchor_to": "bottom_left",
+		"size": [ "100%", 35 ],
+		"controls": [
+			{
+				"bar_store@start.ii_icon_button": {
+					"$ii_icon_button_text": "Marketplace",
+					"$ii_icon_button_texture": "client/marketplace_icon",
+					"$pressed_button_name": "button.menu_store",
+					"size": [ 18, 18 ],
+					"offset": [ -50, -9 ]
+				}
+			},
+			{
+				"feedback_button@common_buttons.hyperlink_content_button": {
+					"size": [ 18, 18 ],
+					"$button_text": "",
+					"offset": [ -25, -9 ],
+					"property_bag": { "#hyperlink": "https://aka.ms/minecraftfb" },
+					"$button_content": "start.feedback_icon",
+					"controls": [
+						{ "default@start.iibutton0": {} },
+						{ "hover@start.iibutton1": { "controls": [ { "iitxt@start.ii_hover_text_label": { "$ii_icon_button_text": "Feedback" } } ] } },
+						{ "feedback_icon": {"type": "image", "texture": "client/feedback_icon"} }
+					]
+				}
+			},
+			{
+				"bar_settings@start.ii_icon_button": {
+					"$ii_icon_button_text": "Settings",
+					"$ii_icon_button_texture": "client/settings_icon",
+					"$pressed_button_name": "button.menu_settings",
+					"size": [ 18, 18 ], "offset": [ 0, -9 ]
+				}
+			},
+			{
+				"bar_achievements@start.ii_icon_button": {
+					"$ii_icon_button_text": "Achievements",
+					"$ii_icon_button_texture": "client/achievements_icon",
+					"$pressed_button_name": "button.menu_achievements",
+					"size": [ 18, 18 ], "offset": [ 25, -9 ]
+				}
+			},
+			{
+				"bar_profile@start.ii_icon_button": {
+					"$ii_icon_button_text": "Profile",
+					"$ii_icon_button_texture": "client/profile_icon",
+					"$pressed_button_name": "button.to_profile_or_skins_screen",
+					"size": [ 18, 18 ], "offset": [ 50, -9 ]
+				}
+			}
+		]
+	},
+
+  "invites": {
+    "type": "panel",
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "size": [ 80, 16 ],
+    "controls": [
+      {
+        "pause.invite_text": {
+          "type": "label",
+          "layer": 2,
+          "font_type": "smooth",
+          "text": "Invite to game",
+          "alpha": 0.5,
+          "size": [ "default", 10 ]
+        }
+      },
+      {
+        "ii_invite_button@pause.grid_button_template": {
+          "size": [ 80, 16 ],
+          "$pressed_button_name": "button.menu_invite_players",
+          "focus_change_down": "FOCUS_OVERRIDE_STOP",
+          "$focus_override_right": "FOCUS_OVERRIDE_STOP",
+          "controls": [
+            {
+              "none": {}
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "take_screenshot_button@common_buttons.light_glyph_button": {
+    "ignored": "($is_holographic)",
+    "$pressed_button_name": "button.screenshot",
+    "$button_tts_header": "key.screenshot",
+    "size": [ 24, 24 ],
+    "$button_content": "pause.take_screenshot_icon",
+    "$pressed_alpha": 0.65,
+    "sound_name": "random.screenshot",
+    "sound_volume": 1.0,
+    "sound_pitch": 1.0
+  },
+
+  "pause_screen@common.base_screen": {
+	"low_frequency_rendering": true,
+	"send_telemetry": false
+  },
+
+  "pause_screen_content": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "layer": 1,
+    "controls": [
+      { "background@start.background": {} },
+      { "menu_section@pause.menu_section": {} },
+      { "bottom_bar@pause.bottom_bar": {} },
+      { "ii_player_list_panel@pause.ii_player_list_panel": {} },
+      { "gamepad_helpers@pause.gamepad_helpers": {} },
+      { "keyboard_helpers@pause.keyboard_helpers": {} }
+    ]
+  },
+
+  "ii_player_list_panel": {
+    "type": "panel",
+    "size": [ 120, "100% - 24px" ],
+    "anchor_from": "right_middle",
+    "anchor_to": "right_middle",
+    "controls": [
+      { "player_list@pause.player_list_scrolling_panel": {} }
+    ]
+  },
+
+  "player_list_scrolling_panel@common.scrolling_panel": {
+    "size": [ 128, "100%" ],
+    "offset": [ 0, 0 ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "$show_background": false,
+    "$scroll_track_size": [ 0, 0 ],
+    "$scroll_track_offset|default": [ 0, 0 ],
+    "$scrolling_content": "pause.player_lists"
+  },
+
+  "player_lists": {
+    "type": "panel",
+    "size": [ "100%", "100%c" ],
+    "controls": [
+      {
+        "normal_list@pause.ii_player_list": {
+          "bindings": [
+            {
+              "binding_name": "(not #list_has_display_objective)",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "scoreboard_list@scoreboard.scoreboard_player_list": {
+          "size": [ 120, "100%" ],
+          "bindings": [
+            {
+              "binding_name": "#list_has_display_objective",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "ii_player_list": {
+    "type": "stack_panel",
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "size": [ "100%", "100%c" ],
+    "focus_container": true,
+    "use_last_focus": true,
+    "focus_nagivation_mode_right": "contained",
+    "controls": [
+      {
+        "players_grid_panel@pause.ii_player_grid": {}
+      }
+    ]
+  },
+
+  "ii_player_grid": {
+    "type": "grid",
+    "size": [ "100%", "default" ],
+    "grid_item_template": "pause.player_grid_item",
+    "grid_dimension_binding": "#players_grid_dimension",
+    "collection_name": "players_collection",
+    "anchor_to": "top_left",
+    "anchor_from": "top_left",
+    "bindings": [
+      {
+        "binding_name": "#players_grid_dimension",
+        // Necessary do to a bug with grid item bindings not refreshing when the grid is inside a stack panel
+        "binding_condition": "always"
+      }
+    ]
+  },
+
+  "player_grid_item": {
+    "type": "panel",
+    "size": [ 120, 12 ],
+    "controls": [
+      { "player_grid_item_content@pause.player_grid_item_content": {} }
+    ]
+  },
+
+  "player_grid_item_content": {
+    "type": "panel",
+
+    "controls": [
+      {
+        "player_button@pause.player_button": {}
+      },
+      {
+        "player_permission_button_panel": {
+          "type": "panel",
+          "anchor_to": "top_right",
+          "anchor_from": "top_right",
+          "size": [ 16, "100%" ],
+          "controls": [
+            { "player_permission_button@pause.player_permission_button": {} }
+          ],
+          "bindings": [
+            {
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "player_permission_button@common_buttons.dark_content_button": {
+    "size": [ 16, "100%" ],
+    "$button_tts_header": "accessibility.pause.permissions",
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_select",
+        "to_button_id": "button.menu_permission",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_ok",
+        "to_button_id": "button.menu_permission",
+        "mapping_type": "focused"
+      }
+    ],
+    "bindings": [
+      {
+        "binding_type": "collection_details",
+        "binding_collection_name": "players_collection"
+      }
+    ],
+    "controls": [
+      {
+        "permission_button_content@pause.player_permission_button_content": { "layer": 2 }
+      },
+      {
+        "default@start.background": {
+          "size": [ "100%", "100%" ],
+          "layer": 1
+        }
+      },
+      {
+        "hover@start.divider": {
+          "layer": 1,
+          "size": [ "100%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "player_permission_button_content": {
+    "type": "panel",
+    "size": [ 16, 12 ],
+    "controls": [
+      {
+        "permission_icon_image": {
+          "type": "image",
+          "texture": "#player_permission_level_icon_texture",
+          "size": [ 10, 10 ],
+          "bindings": [
+            {
+              "binding_name": "#player_permission_level_icon_texture",
+              "binding_name_override": "#texture",
+              "binding_type": "collection",
+              "binding_collection_name": "players_collection"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "player_button@common_buttons.dark_content_button": {
+    "size": [ "100% - 16px", "100%" ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_select",
+        "to_button_id": "button.player_profile_card",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_ok",
+        "to_button_id": "button.player_profile_card",
+        "mapping_type": "focused"
+      }
+    ],
+    "bindings": [
+      {
+        "binding_type": "collection_details",
+        "binding_collection_name": "players_collection"
+      }
+    ],
+    "controls": [
+      {
+        "player_button_content@pause.player_button_content": {}
+      },
+      {
+        "default@start.background": { "size": [ "100%", "100%" ] }
+      },
+      {
+        "hover@start.divider": { "size": [ "100%", "100%" ] }
+      }
+    ]
+  },
+
+  "player_pic_panel": {
+    "type": "panel",
+    "offset": [ 0, 0 ],
+    "size": [ 12, 12 ],
+    "anchor_to": "top_left",
+    "anchor_from": "top_left",
+    "ignored": "$education_edition",
+    "controls": [
+      { "player_gamer_pic@pause.player_gamer_pic": {} }
+    ]
+  },
+
+  "player_gamer_pic": {
+    "type": "image",
+    "texture": "#texture",
+    "size": [ 10, 10 ],
+    "layer": 1,
+    "texture_file_system": "#texture_source",
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "bindings": [
+      {
+        "binding_name": "#texture",
+        "binding_type": "collection",
+        "binding_collection_name": "players_collection"
+      },
+      {
+        "binding_name": "#texture_source",
+        "binding_name_override": "#texture_file_system",
+        "binding_type": "collection",
+        "binding_collection_name": "players_collection"
+      },
+      {
+        "binding_name": "#gamerpic_visible",
+        "binding_type": "collection",
+        "binding_collection_name": "players_collection",
+        "binding_name_override": "#visible"
+      }
+    ]
+  },
+
+  "player_gamertag": {
+    "type": "label",
+    "color": "$main_header_text_color",
+    "text": "#gamertag",
+    "anchor_from": "left_middle",
+    "anchor_to": "left_middle",
+    "offset": [ 13, 0.33 ],
+    "size": [ "100% - 14px", 10 ],
+    "alpha": 0.8,
+    "layer": 2,
+    "bindings": [
+      {
+        "binding_name": "#gamertag",
+        "binding_type": "collection",
+        "binding_collection_name": "players_collection"
+      }
+    ]
+  },
+
+  "player_button_content": {
+    "type": "panel",
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "size": [ "100%", "100%" ],
+    "offset": [ 0, 0 ],
+    "layer": 3,
+    "controls": [
+      {
+        "player_pic_panel@pause.player_pic_panel": {
+          "layer": 1
+        }
+      },
+      {
+        "player_gamertag@pause.player_gamertag": {
+          "layer": 1
+        }
+      },
+      {
+        "platform_icon@pause.platform_icon_panel": {
+          "layer": 1
+        }
+      }
+    ]
+  }
+}
+
+// Edited by moxi#7684

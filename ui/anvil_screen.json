@@ -1,0 +1,250 @@
+// edit @iimoxi JPvP
+
+{
+	"namespace": "anvil",
+	
+	// \/ Images / Textures \/
+	
+	"anvil_gui": {
+		"type": "image",
+		"texture": "textures/gui/container/anvil",
+		"texture_width": 256,
+		"texture_height": 256,
+		"uv": [ 0, 0 ],
+		"uv_size": [ 176, 166 ]
+	},
+	
+	"anvil_default_button": {
+		"type": "image",
+		"texture": "textures/gui/container/anvil",
+		"texture_width": 256,
+		"texture_height": 256,
+		"uv": [ 0, 182 ],
+		"uv_size": [ 110, 16 ]
+	},
+	
+	"anvil_hover_button": {
+		"type": "image",
+		"texture": "textures/gui/container/anvil",
+		"texture_width": 256,
+		"texture_height": 256,
+		"uv": [ 0, 166 ],
+		"uv_size": [ 110, 16 ]
+	},
+	
+	// /\ Images / Textures /\
+	// \/   Top half panel     \/
+	
+	"top_half_panel": {
+		"type": "panel",
+		"anchor_from": "top_left",
+		"anchor_to": "top_left",
+		"size": [ 176, 83 ],
+		"controls": [
+			{ 
+				"text_edit_panel": {
+					"type": "panel",
+					"anchor_from": "top_left",
+					"anchor_to": "top_left",
+					"size": [ 110, 16 ],
+					"offset": [ 52, 13 ],
+					"controls": [ { "text_edit_control@anvil.text_edit_control": { } } ]
+				}
+			},
+			{
+				"input_item_slot@common.container_item": {
+					"anchor_from": "top_left",
+					"anchor_to": "top_left",
+					"offset": [ 19, 39 ],
+					"$item_collection_name": "anvil_input_items",
+
+					"$focus_id_binding_type": "none",
+					"$focus_id": "anvil_input",
+
+					"$focus_override_right_binding_type": "none",
+					"$focus_override_right": "anvil_material"
+				}
+			},
+			{
+				"material_item_slot@common.container_item": {
+					"anchor_from": "top_left",
+					"anchor_to": "top_left",
+					"offset": [ 68, 39 ],
+					"$item_collection_name": "anvil_material_items",
+
+					"$focus_id_binding_type": "none",
+					"$focus_id": "anvil_material",
+
+					"$focus_override_left_binding_type": "none",
+					"$focus_override_left": "anvil_input",
+
+					"$focus_override_right_binding_type": "none",
+					"$focus_override_right": "anvil_result"
+				}
+			},
+			{
+				"result_item_slot@common.container_item": {
+					"anchor_from": "top_left",
+					"anchor_to": "top_left",
+					"offset": [ 126, 39 ],
+					"$item_collection_name": "anvil_result_items",
+					"$button_ref": "anvil.anvil_output_slot_button",
+
+					"$focus_id_binding_type": "none",
+					"$focus_id": "anvil_result",
+
+					"$focus_override_left_binding_type": "none",
+					"$focus_override_left": "anvil_material"
+				}
+			},
+			{
+				"cost_label_0@anvil.cost_label": {
+					"color": "$anvil_cost_fail_text_color",
+					"bindings": [
+						{
+							"binding_name": "#cost_text",
+							"binding_name_override": "#text"
+						},
+						{
+							"binding_name": "#cost_text_red",
+							"binding_name_override": "#visible"
+						}
+					]
+				}
+			},
+			{
+				"cost_label_1@anvil.cost_label": {
+					"color": "$anvil_cost_success_text_color",
+					"bindings": [
+						{
+							"binding_name": "#cost_text",
+							"binding_name_override": "#text"
+						},
+						{
+							"binding_name": "#cost_text_green",
+							"binding_name_override": "#visible"
+						}
+					]
+				}
+			}
+		]
+	},
+	
+	"cost_label@anvil.generic_label": {
+		"layer": 2,
+		"shadow": true,
+		"anchor_from": "top_middle",
+		"anchor_to": "top_middle",
+		"offset": [ -4, 60 ],
+		"color": "$anvil_cost_success_text_color",
+		"text": "#text",
+		"controls": [ {} ]
+	},
+	
+	// Recipe panels
+	
+	"recipe_panel": {
+		"type": "panel",
+		"anchor_from": "top_left",
+		"anchor_to": "top_left",
+		"size": [ "100%", "60%" ],
+		"offset": [ 0, "40%" ],
+		"controls": [
+      { "recipe_grid@anvil.recipe_grid": { } },
+      {
+        "cost_label_0@anvil.cost_label": {
+          "color": "$anvil_cost_fail_text_color",
+          "bindings": [
+            {
+              "binding_name": "#cost_text",
+              "binding_name_override": "#text"
+            },
+            {
+              "binding_name": "#cost_text_red",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "cost_label_1@anvil.cost_label": {
+          "color": "$anvil_cost_success_text_color",
+          "bindings": [
+            {
+              "binding_name": "#cost_text",
+              "binding_name_override": "#text"
+            },
+            {
+              "binding_name": "#cost_text_green",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  },
+	
+	// Anvil name editor length d.30
+	
+	"text_edit_control@common.text_edit_box": {
+		"property_bag": {
+			"#property_field": "#item_name"
+		},
+		"$text_background_default": "anvil.anvil_default_button",
+		"$text_background_hover": "anvil.anvil_hover_button",
+		"max_length": 11001,
+		"$text_edit_binding_name": "#text_box_item_name",
+		"$text_edit_box_label_size": [ "default", 10 ]
+	},
+
+	
+	// The panel for everything
+	
+	"anvil_panel": {
+		"type": "panel",
+		"controls": [ 
+			{ "background@start.background": {} },
+			{ "container_gamepad_helpers@common.container_gamepad_helpers": {} },
+			{ "flying_item_renderer@common.flying_item_renderer": { "layer": 8 } },
+			{ "selected_item_details_factory@common.selected_item_details_factory": {} },
+			{ "item_lock_notification_factory@common.item_lock_notification_factory": {} },
+			{
+				"root_panel@common.root_panel": {
+					"layer": 1,
+					"controls": [
+						{ "common_panel@anvil.anvil_gui": {} },
+						{
+							"anvil_screen_inventory": {
+								"type": "panel",
+								"layer": 2,
+								"controls": [
+									{ "top_half_panel@anvil.top_half_panel": {} },
+									{ "inventory_panel_bottom_half@common.inventory_panel_bottom_half": {} },
+									{ "hotbar_grid@common.hotbar_grid_template": {} },
+									{ "inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {} }
+								]
+							}
+						},
+						{ "inventory_selected_icon_button@common.inventory_selected_icon_button": {} },
+						{ "gamepad_cursor@common.gamepad_cursor_button": {} }
+					]
+				}
+			}
+		]
+	},
+  "anvil_screen@common.inventory_screen_common": {
+    "$close_on_player_hurt|default": false,
+    "close_on_player_hurt": "$close_on_player_hurt",
+    "variables": [
+      {
+        "requires": "$desktop_screen",
+        "$screen_content": "anvil.anvil_panel",
+        "$screen_bg_content": ""
+      },
+      {
+        "requires": "$pocket_screen",
+        "$screen_content": "anvil_pocket.anvil_panel"
+      }
+    ]
+  }
+}

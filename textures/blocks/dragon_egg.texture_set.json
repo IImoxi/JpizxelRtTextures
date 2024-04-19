@@ -1,0 +1,7 @@
+{
+ "format_version": "1.16.100",
+  "minecraft:texture_set": {
+  "color": "textures/dragon_egg",
+  "metalness_emissive_roughness": "#0000ff"
+ }
+}

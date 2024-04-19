@@ -1,0 +1,8 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:texture_set": {
+		"color": "textures/anvil_top_damaged_2",
+		"metalness_emissive_roughness": "#990077",
+		"normal": "normals/netherrack"
+	}
+}

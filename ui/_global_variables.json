@@ -1,0 +1,102 @@
+// edit @iimoxi JPvP
+
+{
+  "$pack_version": "ODI v2.07.20",
+  "$item_stack_count_color": [ 0.9, 0.9, 0.9 ],
+  "$selected_item_stack_count_color": [ 0.9, 0.9, 0.9 ],
+
+  "$transition_time_push_size": 0.0,
+  "$transition_time_pop_size": 0.0,
+  "$transition_time_push": 0.10,
+  "$transition_time_pop": 0.0,
+  "$container_transition_time_push": 0,
+  "$container_transition_time_pop": 0.0,
+  "$loading_bar_transition": 1,
+
+  "$pocket_item_details_color": [ 0.9, 0.9, 0.9 ],
+
+  "$enchanting_runes_color": [ 0.26, 0.62, 1 ],
+  "$enchanting_runes_fail_color": [ 0.408, 0.368, 0.29 ],
+
+  "$enchanting_cost_success_color": [ 0.5, 1, 0.125 ],
+  "$enchanting_cost_fail_color": [ 0.54, 0.37, 0.36 ],
+
+  "$chat_text_color": [ 0.9, 0.9, 0.9 ],
+
+  "$hud_gamertag_color": [ 0.9, 0.9, 0.9 ],
+
+  "$realms_text_color": [ 0.57, 0.29, 0.67 ],
+
+  "$death_text_color": [ 0.9, 0.9, 0.9 ],
+
+  "$loading_text_color": [ 0.9, 0.9, 0.9 ],
+
+  "$experience_text_color": [ 0.9, 0.9, 0.9 ],
+
+  //////// Color format colors ////////
+  "$3_color_format": [ 0.16, 0.192, 0.463 ], // Accent Color
+  
+  "$0_color_format": [ 0.0, 0.0, 0.0 ], // Black
+  "$1_color_format": [ 0.16, 0.16, 0.94 ], // Dark Blue
+  "$2_color_format": [ 0.05, 0.7, 0.05 ], // Dark Green
+  "$3_color_format": [ 0.0, 0.50, 0.84 ], // Dark Aqua
+  "$4_color_format": [ 0.667, 0.0, 0.0 ], // Dark Red
+  "$5_color_format": [ 0.4, 0.2, 0.7 ], // Dark Purple
+  "$6_color_format": [ 1.0, 0.667, 0.0 ], // Gold
+  "$7_color_format": [ 0.667, 0.667, 0.667 ], // Gray
+  "$8_color_format": [ 0.333, 0.333, 0.333 ], // Dark Gray
+  "$9_color_format": [ 0.337, 0.337, 1 ], // Blue
+  "$a_color_format": [ 0.300, 1.0, 0.6 ], // Green
+  "$b_color_format": [ 0.337, 0.693, 1.00 ], // Aqua
+  "$c_color_format": [ 1.0, 0.55, 0.55 ], // Red
+  "$d_color_format": [ 0.99, 0.6, 0.97 ], // Light Purple
+  "$e_color_format": [ 1.0, 1.0, 0.5 ], // Yellow
+  "$f_color_format": [ 0.9, 0.9, 0.9 ], // White
+
+  //////// Dropdown divider line color ////////
+  "$dropdown_divider_color": [ 0.0, 0.0, 0.0 ],
+
+  //////// Gradient colors ////////
+  "$transparent_dark_gradient_start_color": [ 0.1, 0.1, 0.1, 1.0 ],
+  "$transparent_dark_gradient_end_color": [ 0.1, 0.1, 0.1, 0.0 ],
+
+  //////// Scoreboard colors ////////
+  "$player_name_color": [ 0.9, 0.9, 0.9, 1.0 ],
+  "$objective_title_color": [ 0.9, 0.9, 0.9, 1.0 ],
+  "$player_score_color": [ 0.9, 0.9, 0.9, 1.0 ],
+  "$player_list_score_color": [ 0.9, 0.9, 0.9, 1.0 ],
+  "$player_list_rank_color": [ 0.9, 0.9, 0.9, 1.0 ],
+  
+  "$sidebar_bg_color": [ 0, 0, 0 ],
+
+  //////// Panel colors ////////
+  "$dark_panel_color": [ 0.082, 0.082, 0.09, 0.0 ],
+
+  //////// Dropdown item background colors ////////
+  "$dropdown_radio_background_unchecked_color": [ 0.082, 0.082, 0.09 ],
+  "$dropdown_radio_background_checked_color": [ 0.082, 0.082, 0.09 ],
+  "$dropdown_radio_background_hover_color": [ 0.12, 0.48, 0 ],
+
+  //////// Store colors ////////
+  "$coin_color": [ 0.9, 0.9, 0.9, 1.0 ],
+
+  "$nested_transparent_label_alpha": 0.3,
+  "$nested_transparent_label_default_color": [ 0.082, 0.082, 0.09 ],
+  "$nested_transparent_label_default_pressed_color": [ 0.1, 0.1, 0.1 ],
+
+  "$nested_transparent_green_label_color": [ 0.0, 0.451, 0.02 ],
+  "$nested_transparent_green_label_pressed_color": [ 0.0, 0.26, 0.0 ],
+
+  "$nested_transparent_purple_label_color": [ 0.247, 0.098, 0.616 ],
+  "$nested_transparent_purple_label_pressed_color": [ 0.179, 0.094, 0.389 ],
+
+  "$nested_content_unfocused_overlay_alpha": 0.3,
+  "$nested_overlay_clickable_alpha": 0.4,
+
+  "$nested_one_pixel_padding": [ "100%sm", 1 ],
+  "$nested_no_padding": [ "100%sm", 0 ],
+
+  "$realmsplus_exclamation_mark_color": [ 0.9, 0.9, 0.9 ]
+ 
+}
+

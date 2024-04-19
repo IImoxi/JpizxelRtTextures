@@ -1,0 +1,8 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:texture_set": {
+		"color": "textures/budding_amethyst",
+		"metalness_emissive_roughness": "mer/budding_amethyst",
+		"normal": "normals/amethyst_block"
+	}
+}

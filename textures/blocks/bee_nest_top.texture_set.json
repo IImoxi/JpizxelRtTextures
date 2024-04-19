@@ -1,0 +1,8 @@
+{
+ "format_version": "1.16.100",
+	"minecraft:texture_set": {
+		"color": "textures/bee_nest_top",
+		"metalness_emissive_roughness": "#000099",
+		"normal": "normals/bee_nest_top"
+	}
+}

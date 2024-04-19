@@ -1,0 +1,8 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:texture_set": {
+		"color": "textures/quartz_block_side",
+		"metalness_emissive_roughness": "mer/quartz_bottom",
+		"normal": "normals/polished_stone"
+	}
+}

@@ -1,0 +1,8 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:texture_set": {
+		"color": "textures/bookshelf",
+		"metalness_emissive_roughness": "mer/bookshelf",
+		"normal": "normals/bookshelf"
+	}
+}

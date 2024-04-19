@@ -1,0 +1,8 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:texture_set": {
+		"color": "textures/spruce_leaves",
+		"metalness_emissive_roughness": "mer/spruce_leaves",
+		"normal": "normals/spruce_leaves"
+	}
+}

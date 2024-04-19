@@ -1,0 +1,1419 @@
+/********************************************************
++*   (c) Mojang. All rights reserved                       *
++*   (c) Microsoft. All rights reserved.                   *
++*********************************************************/
+
+{
+  "namespace": "brewing_stand",
+  
+  //-----------------------------------------------------------
+  // Images
+  //-----------------------------------------------------------
+  
+  "brewing_stand_gui": {
+		"type": "image",
+		"texture": "textures/gui/container/brewing_stand",
+		"texture_width": 256,
+		"texture_height": 256,
+		"uv": [ 0, 0 ],
+		"uv_size": [ 176, 168 ]
+	},
+  
+	"title_txt": {
+		"type": "label",
+		"anchor_from": "top_left",
+		"anchor_to": "top_left",
+		"size": [ "default", 10 ],
+		"alpha": 0.5,
+		"offset": [ 6, 6 ]
+	},
+	
+	"item1": {
+		"type": "label",
+		"anchor_from": "top_left",
+		"anchor_to": "top_left",
+		"size": [ "default", 10 ],
+		"alpha": 0.5,
+		"offset": [ 24, 22 ]
+	},
+	
+	"item2": {
+		"type": "label",
+		"anchor_from": "top_left",
+		"anchor_to": "top_left",
+		"size": [ "default", 10 ],
+		"alpha": 0.5,
+		"offset": [ 24, 40 ]
+	},
+	
+	"result": {
+		"type": "label",
+		"anchor_from": "top_left",
+		"anchor_to": "top_left",
+		"size": [ "default", 10 ],
+		"alpha": 0.5,
+		"offset": [ 24, 62 ]
+	},
+	
+	"add1": {
+		"type": "label",
+		"anchor_from": "top_left",
+		"anchor_to": "top_left",
+		"size": [ "default", 10 ],
+		"alpha": 0.5,
+		"offset": [ 24, 84 ]
+	},
+	
+	"add2": {
+		"type": "label",
+		"anchor_from": "top_left",
+		"anchor_to": "top_left",
+		"size": [ "default", 10 ],
+		"alpha": 0.5,
+		"offset": [ 24, 102 ]
+	},
+  
+// -=- NIGHT VISION
+
+	"night_vision_button@common_buttons.light_text_button" : {
+		"layer": 3,
+		"size": [ 18, 18 ],
+		"anchor_from": "right_middle",
+		"anchor_to": "right_middle ",
+		"text": "",
+		"controls": [
+			{
+				"default@start.iibutton0": { "controls": [ { "icon0@brewing_stand.night_vision_icon":{} } ] }
+			},
+			{
+				"hover@brewing_stand.night_vision_hover": {}
+			},
+			{
+				"pressed@brewing_stand.night_vision_hover": {}
+			}
+		]
+	},
+	
+	"night_vision_hover@start.iibutton1": {
+		"controls": [
+			{
+				"0b@start.iibutton0": 
+				{
+					"size": [ 160, 102 ], "anchor_from": "top_left", "anchor_to": "top_left", "offset": [ 20, 0 ],
+					"controls": [
+					{
+						"0nv@brewing_stand.title_txt": { "text": "Night Vision" }
+					},
+					{
+						"1nv@brewing_stand.item1": { "text": "Awkward Potion +" }
+					},
+					{
+						"2nv@brewing_stand.item2": { "text": "Golden Carrot" }
+					},
+					{
+						"3nv@brewing_stand.result": { "text": "Night Vision (3:00)" }
+					},
+					{
+						"4nv@brewing_stand.add1": { "text": "> (8:00)" }
+					},
+					{
+						"golden_carrot": { "type": "image", "layer": 5, "anchor_from": "top_left", "anchor_to": "top_left", "size": [ 16, 16 ], "texture": "textures/items/carrot_golden", "offset": [ 5, 36 ] }
+					},
+					{
+						"water_bottle": { "type": "image", "layer": 5, "anchor_from": "top_left", "anchor_to": "top_left", "size": [ 16, 16 ], "texture": "client/water_bottle", "offset": [ 5, 18 ] }
+					},
+					{
+						"5nv@start.divider": { "size": [ "90%", 1 ], "anchor_from": "top_middle", "anchor_to": "top_middle", "offset": [ 0, 54 ] }
+					},
+					{
+						"6nv@brewing_stand.night_vision_icon": { "anchor_from": "top_left", "anchor_to": "top_left", "offset": [ 5, 58 ] }
+					},
+					{
+						"7nv@start.divider": { "size": [  "90%", 1 ], "anchor_from": "top_middle", "anchor_to": "top_middle", "offset": [ 0, 76 ] }
+					},
+					{
+						"redstone": { "type": "image", "layer": 5, "anchor_from": "top_left", "anchor_to": "top_left", "size": [ 16, 16 ], "texture": "textures/items/redstone_dust", "offset": [ 5, 80 ] }
+					}
+					]
+				}
+			},
+			{
+				"0nvi@brewing_stand.night_vision_icon":{}
+			}
+		]
+	},
+	
+	"night_vision_icon": {
+		"type": "image",
+		"layer": 5,
+		"size": [ 16, 16 ],
+		"texture": "client/night_vision"
+	},
+	
+// -=- INVISIBILITY
+		
+	"invis_button@common_buttons.light_text_button" : {
+		"layer": 3,
+		"size": [ 18, 18 ],
+		"anchor_from": "right_middle",
+		"anchor_to": "right_middle ",
+		"text": "",
+		"controls": [
+			{
+				"default@start.iibutton0": { "controls": [ { "icon1@brewing_stand.invis_icon":{} } ] }
+			},
+			{
+				"hover@brewing_stand.invis_hover": {}
+			},
+			{
+				"pressed@brewing_stand.invis_hover": {}
+			}
+		]
+	},
+	
+	"invis_hover@start.iibutton1": {
+		"controls": [
+			{
+				"1b@start.iibutton0": 
+				{
+					"size": [ 160, 102 ], "anchor_from": "top_left", "anchor_to": "top_left", "offset": [ 20, -20 ],
+					"controls": [
+					{
+						"1i@brewing_stand.title_txt": { "text": "Invisibility" }
+					},
+					{
+						"2i@brewing_stand.item1": { "text": "Night Vision (3:00/8:00) +" }
+					},
+					{
+						"3i@brewing_stand.item2": { "text": "Fermented spider eye" }
+					},
+					{
+						"4i@brewing_stand.result": { "text": "Invisibility (3:00/8:00)" }
+					},
+					{
+						"5i@brewing_stand.add1": { "text": "> (8:00)" }
+					},
+					{
+						"6i@brewing_stand.night_vision_icon": { "anchor_from": "top_left", "anchor_to": "top_left", "size": [ 16, 16 ], "offset": [ 5, 18 ] }
+					},
+					{
+						"fermented_spider_eye": { "type": "image", "layer": 5, "anchor_from": "top_left", "anchor_to": "top_left", "size": [ 16, 16 ], "texture": "textures/items/spider_eye_fermented", "offset": [ 5, 36 ] }
+					},
+					{
+						"7i@start.divider": { "size": [ "90%", 1 ], "anchor_from": "top_middle", "anchor_to": "top_middle", "offset": [ 0, 54 ] }
+					},
+					{
+						"8i@brewing_stand.invis_icon": { "anchor_from": "top_left", "anchor_to": "top_left", "offset": [ 5, 58 ] }
+					},
+					{
+						"9i@start.divider": { "size": [  "90%", 1 ], "anchor_from": "top_middle", "anchor_to": "top_middle", "offset": [ 0, 76 ] }
+					},
+					{
+						"redstone": { "type": "image", "layer": 5, "anchor_from": "top_left", "anchor_to": "top_left", "size": [ 16, 16 ], "texture": "textures/items/redstone_dust", "offset": [ 5, 80 ] }
+					}
+					]
+				}
+				
+			},
+			{
+				"0ii@brewing_stand.invis_icon":{}
+			}
+		]
+	},
+	
+	"invis_icon": {
+		"type": "image",
+		"layer": 5,
+		"size": [ 16, 16 ],
+		"texture": "client/invisibility"
+	},
+	
+// -=- LEAPING
+
+	"leap_button@common_buttons.light_text_button" : {
+		"layer": 3,
+		"size": [ 18, 18 ],
+		"anchor_from": "right_middle",
+		"anchor_to": "right_middle ",
+		"text": "",
+		"controls": [
+			{
+				"default@start.iibutton0": { "controls": [ { "icon2@brewing_stand.leap_icon":{} } ] }
+			},
+			{
+				"hover@brewing_stand.leap_hover": {}
+			},
+			{
+				"pressed@brewing_stand.leap_hover": {}
+			}
+		]
+	},
+	
+	"leap_hover@start.iibutton1": {
+		"controls": [
+			{
+				"2b@start.iibutton0": 
+				{
+					"size": [ 160, 120 ], "anchor_from": "top_left", "anchor_to": "top_left", "offset": [ 20, -40 ],
+					"controls": [
+					{
+						"0l@brewing_stand.title_txt": { "text": "Leaping" }
+					},
+					{
+						"1l@brewing_stand.item1": { "text": "Awkward Potion +" }
+					},
+					{
+						"2l@brewing_stand.item2": { "text": "Rabbit's Foot" }
+					},
+					{
+						"3l@brewing_stand.result": { "text": "Leaping (3:00)" }
+					},
+					{
+						"4l@brewing_stand.add1": { "text": "> I (8:00)" }
+					},
+					{
+						"5l@brewing_stand.add2": { "text": "> II (1:30)" }
+					},
+					{
+						"water_bottle": { "type": "image", "layer": 5, "anchor_from": "top_left", "anchor_to": "top_left", "size": [ 16, 16 ], "texture": "client/water_bottle", "offset": [ 5, 18 ] }
+					},
+					{
+						"rabbit_foot": { "type": "image", "layer": 5, "anchor_from": "top_left", "anchor_to": "top_left", "size": [ 16, 16 ], "texture": "textures/items/rabbit_foot", "offset": [ 5, 36 ] }
+					},
+					{
+						"6l@start.divider": { "size": [ "90%", 1 ], "anchor_from": "top_middle", "anchor_to": "top_middle", "offset": [ 0, 54 ] }
+					},
+					{
+						"7l@brewing_stand.leap_icon": { "anchor_from": "top_left", "anchor_to": "top_left", "offset": [ 5, 58 ] }
+					},
+					{
+						"8l@start.divider": { "size": [  "90%", 1 ], "anchor_from": "top_middle", "anchor_to": "top_middle", "offset": [ 0, 76 ] }
+					},
+					{
+						"redstone": { "type": "image", "layer": 5, "anchor_from": "top_left", "anchor_to": "top_left", "size": [ 16, 16 ], "texture": "textures/items/redstone_dust", "offset": [ 5, 80 ] }
+					},
+					{
+						"glowstone": { "type": "image", "layer": 5, "anchor_from": "top_left", "anchor_to": "top_left", "size": [ 16, 16 ], "texture": "textures/items/glowstone_dust", "offset": [ 5, 98 ] }
+					}
+					]
+				}
+				
+			},
+			{
+				"0li@brewing_stand.leap_icon":{}
+			}
+		]
+	},
+		
+	"leap_icon": {
+		"type": "image",
+		"layer": 5,
+		"size": [ 16, 16 ],
+		"texture": "client/leaping"
+	},
+		
+// -=- FIRE RESISTANCE
+
+	"fire_res_button@common_buttons.light_text_button" : {
+		"layer": 3,
+		"size": [ 18, 18 ],
+		"anchor_from": "right_middle",
+		"anchor_to": "right_middle ",
+		"text": "",
+		"controls": [
+			{
+				"default@start.iibutton0": { "controls": [ { "icon3@brewing_stand.fire_res_icon":{} } ] }
+			},
+			{
+				"hover@brewing_stand.fire_res_hover": {}
+			},
+			{
+				"pressed@brewing_stand.fire_res_hover": {}
+			}
+		]
+	},
+	
+	"fire_res_hover@start.iibutton1": {
+		"controls": [
+			{
+				"3b@start.iibutton0": 
+				{
+					"size": [ 160, 102 ], "anchor_from": "left_middle", "anchor_to": "left_middle", "offset": [ 20, 0 ],
+					"controls": [
+					{
+						"0fr@brewing_stand.title_txt": { "text": "Fire Resistance" }
+					},
+					{
+						"1fr@brewing_stand.item1": { "text": "Awkward Potion +" }
+					},
+					{
+						"2fr@brewing_stand.item2": { "text": "Magma Cream" }
+					},
+					{
+						"3fr@brewing_stand.result": { "text": "Fire Resistance (3:00)" }
+					},
+					{
+						"4fr@brewing_stand.add1": { "text": "> (8:00)" }
+					},
+					{
+						"magma_cream": { "type": "image", "layer": 5, "anchor_from": "top_left", "anchor_to": "top_left", "size": [ 16, 16 ], "texture": "textures/items/magma_cream", "offset": [ 5, 36 ] }
+					},
+					{
+						"water_bottle": { "type": "image", "layer": 5, "anchor_from": "top_left", "anchor_to": "top_left", "size": [ 16, 16 ], "texture": "client/water_bottle", "offset": [ 5, 18 ] }
+					},
+					{
+						"5fr@start.divider": { "size": [ "90%", 1 ], "anchor_from": "top_middle", "anchor_to": "top_middle", "offset": [ 0, 54 ] }
+					},
+					{
+						"6fr@brewing_stand.fire_res_icon": { "anchor_from": "top_left", "anchor_to": "top_left", "offset": [ 5, 58 ] }
+					},
+					{
+						"7fr@start.divider": { "size": [  "90%", 1 ], "anchor_from": "top_middle", "anchor_to": "top_middle", "offset": [ 0, 76 ] }
+					},
+					{
+						"redstone": { "type": "image", "layer": 5, "anchor_from": "top_left", "anchor_to": "top_left", "size": [ 16, 16 ], "texture": "textures/items/redstone_dust", "offset": [ 5, 80 ] }
+					}
+					]
+				}
+			},
+			{
+				"0fri@brewing_stand.fire_res_icon":{}
+			}
+		]
+	},
+	
+	"fire_res_icon": {
+		"type": "image",
+		"layer": 5,
+		"size": [ 16, 16 ],
+		"texture": "client/fire_res"
+	},
+	
+// -=- SLOWNESS
+
+	"slowness_button@common_buttons.light_text_button" : {
+		"layer": 3,
+		"size": [ 18, 18 ],
+		"anchor_from": "right_middle",
+		"anchor_to": "right_middle ",
+		"text": "",
+		"controls": [
+			{
+				"default@start.iibutton0": { "controls": [ { "icon4@brewing_stand.slowness_icon":{} } ] }
+			},
+			{
+				"hover@brewing_stand.slowness_hover": {}
+			},
+			{
+				"pressed@brewing_stand.slowness_hover": {}
+			}
+		]
+	},
+	
+	"slowness_hover@start.iibutton1": {
+		"controls": [
+			{
+				"4b@start.iibutton0": 
+				{
+					"size": [ 160, 102 ], "anchor_from": "left_middle", "anchor_to": "left_middle", "offset": [ 20, 0 ],
+					"controls": [
+					{
+						"0s@brewing_stand.title_txt": { "text": "Slowness" }
+					},
+					{
+						"1s@brewing_stand.item1": { "text": "Swift/Fire Res/Leap +" }
+					},
+					{
+						"2s@brewing_stand.item2": { "text": "Fermented spider eye" }
+					},
+					{
+						"3s@brewing_stand.result": { "text": "Slowness (1:30/4:00)" }
+					},
+					{
+						"4s@brewing_stand.add1": { "text": "> (4:00)" }
+					},
+					{
+						"fermented_spider_eye": { "type": "image", "layer": 5, "anchor_from": "top_left", "anchor_to": "top_left", "size": [ 16, 16 ], "texture": "textures/items/spider_eye_fermented", "offset": [ 5, 36 ] }
+					},
+					{
+						"5s@brewing_stand.fire_res_icon": { "anchor_from": "top_left", "anchor_to": "top_left", "offset": [ 3, 17 ] }
+					},
+					{
+						"6s@brewing_stand.swiftness_icon": { "anchor_from": "top_left", "anchor_to": "top_left", "offset": [ 6, 20 ] }
+					},
+					{
+						"7s@start.divider": { "size": [ "90%", 1 ], "anchor_from": "top_middle", "anchor_to": "top_middle", "offset": [ 0, 54 ] }
+					},
+					{
+						"8s@brewing_stand.slowness_icon": { "anchor_from": "top_left", "anchor_to": "top_left", "offset": [ 5, 58 ] }
+					},
+					{
+						"9s@start.divider": { "size": [  "90%", 1 ], "anchor_from": "top_middle", "anchor_to": "top_middle", "offset": [ 0, 76 ] }
+					},
+					{
+						"redstone": { "type": "image", "layer": 5, "anchor_from": "top_left", "anchor_to": "top_left", "size": [ 16, 16 ], "texture": "textures/items/redstone_dust", "offset": [ 5, 80 ] }
+					}
+					]
+				}
+			},
+			{
+				"0si@brewing_stand.slowness_icon":{}
+			}
+		]
+	},
+	
+	"slowness_icon": {
+		"type": "image",
+		"layer": 5,
+		"size": [ 16, 16 ],
+		"texture": "client/slowness"
+	},
+	
+// -=- SWIFTNESS
+
+	"swiftness_button@common_buttons.light_text_button" : {
+		"layer": 3,
+		"size": [ 18, 18 ],
+		"anchor_from": "right_middle",
+		"anchor_to": "right_middle ",
+		"text": "",
+		"controls": [
+			{
+				"default@start.iibutton0": { "controls": [ { "icon5@brewing_stand.swiftness_icon":{} } ] }
+			},
+			{
+				"hover@brewing_stand.swiftness_hover": {}
+			},
+			{
+				"pressed@brewing_stand.swiftness_hover": {}
+			}
+		]
+	},
+	
+	"swiftness_hover@start.iibutton1": {
+		"controls": [
+			{
+				"5b@start.iibutton0": 
+				{
+					"size": [ 160, 120 ], "anchor_from": "left_middle", "anchor_to": "left_middle", "offset": [ 20, 0 ],
+					"controls": [
+					{
+						"0ss@brewing_stand.title_txt": { "text": "Swiftness" }
+					},
+					{
+						"1ss@brewing_stand.item1": { "text": "Awkward Potion +" }
+					},
+					{
+						"2ss@brewing_stand.item2": { "text": "Sugar" }
+					},
+					{
+						"3ss@brewing_stand.result": { "text": "Swiftness (3:00)" }
+					},
+					{
+						"4ss@brewing_stand.add1": { "text": "> I (8:00)" }
+					},
+					{
+						"5ss@brewing_stand.add2": { "text": "> II (1:30)" }
+					},
+					{
+						"ssugar": { "type": "image", "layer": 5, "anchor_from": "top_left", "anchor_to": "top_left", "size": [ 16, 16 ], "texture": "textures/items/sugar", "offset": [ 5, 36 ] }
+					},
+					{
+						"swater_bottle": { "type": "image", "layer": 5, "anchor_from": "top_left", "anchor_to": "top_left", "size": [ 16, 16 ], "texture": "client/water_bottle", "offset": [ 5, 18 ] }
+					},
+					{
+						"6ss@start.divider": { "size": [ "90%", 1 ], "anchor_from": "top_middle", "anchor_to": "top_middle", "offset": [ 0, 54 ] }
+					},
+					{
+						"7ss@brewing_stand.swiftness_icon": { "anchor_from": "top_left", "anchor_to": "top_left", "offset": [ 5, 58 ] }
+					},
+					{
+						"8ss@start.divider": { "size": [  "90%", 1 ], "anchor_from": "top_middle", "anchor_to": "top_middle", "offset": [ 0, 76 ] }
+					},
+					{
+						"redstone": { "type": "image", "layer": 5, "anchor_from": "top_left", "anchor_to": "top_left", "size": [ 16, 16 ], "texture": "textures/items/redstone_dust", "offset": [ 5, 80 ] }
+					},
+					{
+						"glowstone": { "type": "image", "layer": 5, "anchor_from": "top_left", "anchor_to": "top_left", "size": [ 16, 16 ], "texture": "textures/items/glowstone_dust", "offset": [ 5, 98 ] }
+					}
+					]
+				}
+			},
+			{
+				"0ssi@brewing_stand.swiftness_icon":{}
+			}
+		]
+	},
+	
+	"swiftness_icon": {
+		"type": "image",
+		"layer": 5,
+		"size": [ 16, 16 ],
+		"texture": "client/swiftness"
+	},
+
+// -=- WATER BREATHING
+
+	"water_breathing_button@common_buttons.light_text_button" : {
+		"layer": 3,
+		"size": [ 18, 18 ],
+		"anchor_from": "right_middle",
+		"anchor_to": "right_middle ",
+		"text": "",
+		"controls": [
+			{
+				"default@start.iibutton0": { "controls": [ { "icon6@brewing_stand.water_breathing_icon":{} } ] }
+			},
+			{
+				"hover@brewing_stand.water_breathing_hover": {}
+			},
+			{
+				"pressed@brewing_stand.water_breathing_hover": {}
+			}
+		]
+	},
+	
+	"water_breathing_hover@start.iibutton1": {
+		"controls": [
+			{
+				"6b@start.iibutton0": 
+				{
+					"size": [ 160, 102 ], "anchor_from": "left_middle", "anchor_to": "left_middle", "offset": [ 20, 0 ],
+					"controls": [
+					{
+						"0wb@brewing_stand.title_txt": { "text": "Water Breathing" }
+					},
+					{
+						"1wb@brewing_stand.item1": { "text": "Awkward Potion +" }
+					},
+					{
+						"2wb@brewing_stand.item2": { "text": "Pufferfish" }
+					},
+					{
+						"3wb@brewing_stand.result": { "text": "Water Breathing (3:00)" }
+					},
+					{
+						"4wb@brewing_stand.add1": { "text": "> (8:00)" }
+					},
+					{
+						"pufferfish": { "type": "image", "layer": 5, "anchor_from": "top_left", "anchor_to": "top_left", "size": [ 16, 16 ], "texture": "textures/items/fish_pufferfish_raw", "offset": [ 5, 36 ] }
+					},
+					{
+						"water_bottle": { "type": "image", "layer": 5, "anchor_from": "top_left", "anchor_to": "top_left", "size": [ 16, 16 ], "texture": "client/water_bottle", "offset": [ 5, 18 ] }
+					},
+					{
+						"5wb@start.divider": { "size": [ "90%", 1 ], "anchor_from": "top_middle", "anchor_to": "top_middle", "offset": [ 0, 54 ] }
+					},
+					{
+						"6wb@brewing_stand.water_breathing_icon": { "anchor_from": "top_left", "anchor_to": "top_left", "offset": [ 5, 58 ] }
+					},
+					{
+						"7wb@start.divider": { "size": [  "90%", 1 ], "anchor_from": "top_middle", "anchor_to": "top_middle", "offset": [ 0, 76 ] }
+					},
+					{
+						"redstone": { "type": "image", "layer": 5, "anchor_from": "top_left", "anchor_to": "top_left", "size": [ 16, 16 ], "texture": "textures/items/redstone_dust", "offset": [ 5, 80 ] }
+					}
+					]
+				}
+			},
+			{
+				"0wbi@brewing_stand.water_breathing_icon":{}
+			}
+		]
+	},
+	
+	"water_breathing_icon": {
+		"type": "image",
+		"layer": 5,
+		"size": [ 16, 16 ],
+		"texture": "client/water_breathing"
+	},
+	
+// -=- Healing
+
+	"healing_button@common_buttons.light_text_button" : {
+		"layer": 3,
+		"size": [ 18, 18 ],
+		"anchor_from": "right_middle",
+		"anchor_to": "right_middle ",
+		"text": "",
+		"controls": [
+			{
+				"default@start.iibutton0": { "controls": [ { "icon7@brewing_stand.healing_icon":{} } ] }
+			},
+			{
+				"hover@brewing_stand.healing_hover": {}
+			},
+			{
+				"pressed@brewing_stand.healing_hover": {}
+			}
+		]
+	},
+	
+	"healing_hover@start.iibutton1": {
+		"controls": [
+			{
+				"7b@start.iibutton0": 
+				{
+					"size": [ 160, 102 ], "anchor_from": "left_middle", "anchor_to": "left_middle", "offset": [ 20, 0 ],
+					"controls": [
+					{
+						"0h@brewing_stand.title_txt": { "text": "Healing" }
+					},
+					{
+						"1h@brewing_stand.item1": { "text": "Awkward Potion +" }
+					},
+					{
+						"2h@brewing_stand.item2": { "text": "Glistering Melon" }
+					},
+					{
+						"3h@brewing_stand.result": { "text": "Healing I" }
+					},
+					{
+						"4h@brewing_stand.add1": { "text": "> II" }
+					},
+					{
+						"puffer_fish": { "type": "image", "layer": 5, "anchor_from": "top_left", "anchor_to": "top_left", "size": [ 16, 16 ], "texture": "textures/items/melon_speckled", "offset": [ 5, 36 ] }
+					},
+					{
+						"water_bottle": { "type": "image", "layer": 5, "anchor_from": "top_left", "anchor_to": "top_left", "size": [ 16, 16 ], "texture": "client/water_bottle", "offset": [ 5, 18 ] }
+					},
+					{
+						"5h@start.divider": { "size": [ "90%", 1 ], "anchor_from": "top_middle", "anchor_to": "top_middle", "offset": [ 0, 54 ] }
+					},
+					{
+						"6h@brewing_stand.healing_icon": { "anchor_from": "top_left", "anchor_to": "top_left", "offset": [ 5, 58 ] }
+					},
+					{
+						"7h@start.divider": { "size": [  "90%", 1 ], "anchor_from": "top_middle", "anchor_to": "top_middle", "offset": [ 0, 76 ] }
+					},
+					{
+						"glowstone": { "type": "image", "layer": 5, "anchor_from": "top_left", "anchor_to": "top_left", "size": [ 16, 16 ], "texture": "textures/items/glowstone_dust", "offset": [ 5, 80 ] }
+					}
+					]
+				}
+			},
+			{
+				"0hi@brewing_stand.healing_icon":{}
+			}
+		]
+	},
+	
+	"healing_icon": {
+		"type": "image",
+		"layer": 5,
+		"size": [ 16, 16 ],
+		"texture": "client/healing"
+	},
+	
+// -=- Harming
+
+	"harming_button@common_buttons.light_text_button" : {
+		"layer": 3,
+		"size": [ 18, 18 ],
+		"anchor_from": "right_middle",
+		"anchor_to": "right_middle ",
+		"text": "",
+		"controls": [
+			{
+				"default@start.iibutton0": { "controls": [ { "icon8@brewing_stand.harming_icon":{} } ] }
+			},
+			{
+				"hover@brewing_stand.harming_hover": {}
+			},
+			{
+				"pressed@brewing_stand.harming_hover": {}
+			}
+		]
+	},
+	
+	"harming_hover@start.iibutton1": {
+		"controls": [
+			{
+				"8b@start.iibutton0": 
+				{
+					"size": [ 160, 102 ], "anchor_from": "left_middle", "anchor_to": "left_middle", "offset": [ 20, 0 ],
+					"controls": [
+					{
+						"0hh@brewing_stand.title_txt": { "text": "Harming" }
+					},
+					{
+						"1hh@brewing_stand.item1": { "text": "Healing/Poison +" }
+					},
+					{
+						"2hh@brewing_stand.item2": { "text": "Fermented spider eye" }
+					},
+					{
+						"3hh@brewing_stand.result": { "text": "Harming I" }
+					},
+					{
+						"4hh@brewing_stand.add1": { "text": "> II" }
+					},
+					{
+						"fermented_spider_eye": { "type": "image", "layer": 5, "anchor_from": "top_left", "anchor_to": "top_left", "size": [ 16, 16 ], "texture": "textures/items/spider_eye_fermented", "offset": [ 5, 36 ] }
+					},
+					{
+						"5hh@brewing_stand.poison_icon": { "anchor_from": "top_left", "anchor_to": "top_left", "offset": [ 7, 20 ] }
+					},
+					{
+						"6hh@brewing_stand.healing_icon": { "anchor_from": "top_left", "anchor_to": "top_left", "offset": [ 4, 17 ] }
+					},
+					{
+						"7hh@start.divider": { "size": [ "90%", 1 ], "anchor_from": "top_middle", "anchor_to": "top_middle", "offset": [ 0, 54 ] }
+					},
+					{
+						"8hh@brewing_stand.harming_icon": { "anchor_from": "top_left", "anchor_to": "top_left", "offset": [ 5, 58 ] }
+					},
+					{
+						"9h@start.divider": { "size": [  "90%", 1 ], "anchor_from": "top_middle", "anchor_to": "top_middle", "offset": [ 0, 76 ] }
+					},
+					{
+						"glowstone": { "type": "image", "layer": 5, "anchor_from": "top_left", "anchor_to": "top_left", "size": [ 16, 16 ], "texture": "textures/items/glowstone_dust", "offset": [ 5, 80 ] }
+					}
+					]
+				}
+			},
+			{
+				"0hhi@brewing_stand.harming_icon":{}
+			}
+		]
+	},
+	
+	"harming_icon": {
+		"type": "image",
+		"layer": 5,
+		"size": [ 16, 16 ],
+		"texture": "client/harming"
+	},
+	
+// -=- Poison
+
+	"poison_button@common_buttons.light_text_button" : {
+		"layer": 3,
+		"size": [ 18, 18 ],
+		"anchor_from": "right_middle",
+		"anchor_to": "right_middle ",
+		"text": "",
+		"controls": [
+			{
+				"default@start.iibutton0": { "controls": [ { "icon9@brewing_stand.poison_icon":{} } ] }
+			},
+			{
+				"hover@brewing_stand.poison_hover": {}
+			},
+			{
+				"pressed@brewing_stand.poison_hover": {}
+			}
+		]
+	},
+	
+	"poison_hover@start.iibutton1": {
+		"controls": [
+			{
+				"9b@start.iibutton0": 
+				{
+					"size": [ 160, 120 ], "anchor_from": "left_middle", "anchor_to": "left_middle", "offset": [ 20, 0 ],
+					"controls": [
+					{
+						"0p@brewing_stand.title_txt": { "text": "Poison" }
+					},
+					{
+						"1p@brewing_stand.item1": { "text": "Awkward Potion +" }
+					},
+					{
+						"2p@brewing_stand.item2": { "text": "Spider Eye" }
+					},
+					{
+						"3p@brewing_stand.result": { "text": "Poison (0:45)" }
+					},
+					{
+						"4p@brewing_stand.add1": { "text": "> I (2:00)" }
+					},
+					{
+						"5p@brewing_stand.add2": { "text": "> II (0:22)" }
+					},
+					{
+						"spider_eye": { "type": "image", "layer": 5, "anchor_from": "top_left", "anchor_to": "top_left", "size": [ 16, 16 ], "texture": "textures/items/spider_eye", "offset": [ 5, 36 ] }
+					},
+					{
+						"water_bottle": { "type": "image", "layer": 5, "anchor_from": "top_left", "anchor_to": "top_left", "size": [ 16, 16 ], "texture": "client/water_bottle", "offset": [ 5, 18 ] }
+					},
+					{
+						"6p@start.divider": { "size": [ "90%", 1 ], "anchor_from": "top_middle", "anchor_to": "top_middle", "offset": [ 0, 54 ] }
+					},
+					{
+						"7p@brewing_stand.poison_icon": { "anchor_from": "top_left", "anchor_to": "top_left", "offset": [ 5, 58 ] }
+					},
+					{
+						"8p@start.divider": { "size": [  "90%", 1 ], "anchor_from": "top_middle", "anchor_to": "top_middle", "offset": [ 0, 76 ] }
+					},
+					{
+						"glowstone": { "type": "image", "layer": 5, "anchor_from": "top_left", "anchor_to": "top_left", "size": [ 16, 16 ], "texture": "textures/items/glowstone_dust", "offset": [ 5, 98 ] }
+					},
+					{
+						"redstone": { "type": "image", "layer": 5, "anchor_from": "top_left", "anchor_to": "top_left", "size": [ 16, 16 ], "texture": "textures/items/redstone_dust", "offset": [ 5, 80 ] }
+					}
+					]
+				}
+			},
+			{
+				"0pi@brewing_stand.poison_icon":{}
+			}
+		]
+	},
+	
+	"poison_icon": {
+		"type": "image",
+		"layer": 5,
+		"size": [ 16, 16 ],
+		"texture": "client/poison"
+	},
+	
+// -=- REGENERATION
+
+	"regeneration_button@common_buttons.light_text_button" : {
+		"layer": 3,
+		"size": [ 18, 18 ],
+		"anchor_from": "right_middle",
+		"anchor_to": "right_middle ",
+		"text": "",
+		"controls": [
+			{
+				"default@start.iibutton0": { "controls": [ { "icon10@brewing_stand.regen_icon":{} } ] }
+			},
+			{
+				"hover@brewing_stand.regen_hover": {}
+			},
+			{
+				"pressed@brewing_stand.regen_hover": {}
+			}
+		]
+	},
+	
+	"regen_hover@start.iibutton1": {
+		"controls": [
+			{
+				"10b@start.iibutton0": 
+				{
+					"size": [ 160, 120 ], "anchor_from": "bottom_left", "anchor_to": "bottom_left", "offset": [ 20, 40 ],
+					"controls": [
+					{
+						"0r@brewing_stand.title_txt": { "text": "Regeneration" }
+					},
+					{
+						"1r@brewing_stand.item1": { "text": "Healing/Poison +" }
+					},
+					{
+						"2r@brewing_stand.item2": { "text": "Ghast tear" }
+					},
+					{
+						"3r@brewing_stand.result": { "text": "Regeneration (0:45)" }
+					},
+					{
+						"4r@brewing_stand.add1": { "text": "> I (2:00)" }
+					},
+					{
+						"5r@brewing_stand.add2": { "text": "> II (0:22)" }
+					},
+					{
+						"ghast_tear": { "type": "image", "layer": 5, "anchor_from": "top_left", "anchor_to": "top_left", "size": [ 16, 16 ], "texture": "textures/items/ghast_tear", "offset": [ 5, 36 ] }
+					},
+					{
+						"water_bottle": { "type": "image", "layer": 5, "anchor_from": "top_left", "anchor_to": "top_left", "size": [ 16, 16 ], "texture": "client/water_bottle", "offset": [ 5, 18 ] }
+					},
+					{
+						"6r@start.divider": { "size": [ "90%", 1 ], "anchor_from": "top_middle", "anchor_to": "top_middle", "offset": [ 0, 54 ] }
+					},
+					{
+						"7r@brewing_stand.regen_icon": { "anchor_from": "top_left", "anchor_to": "top_left", "offset": [ 5, 58 ] }
+					},
+					{
+						"8r@start.divider": { "size": [  "90%", 1 ], "anchor_from": "top_middle", "anchor_to": "top_middle", "offset": [ 0, 76 ] }
+					},
+					{
+						"redstone": { "type": "image", "layer": 5, "anchor_from": "top_left", "anchor_to": "top_left", "size": [ 16, 16 ], "texture": "textures/items/redstone_dust", "offset": [ 5, 80 ] }
+					},
+					{
+						"glowstone": { "type": "image", "layer": 5, "anchor_from": "top_left", "anchor_to": "top_left", "size": [ 16, 16 ], "texture": "textures/items/glowstone_dust", "offset": [ 5, 98 ] }
+					}
+					]
+				}
+			},
+			{
+				"0ri@brewing_stand.regen_icon":{}
+			}
+		]
+	},
+	
+	"regen_icon": {
+		"type": "image",
+		"layer": 5,
+		"size": [ 16, 16 ],
+		"texture": "client/regen"
+	},
+	
+// -=- STRENGTH
+
+	"strength_button@common_buttons.light_text_button" : {
+		"layer": 3,
+		"size": [ 18, 18 ],
+		"anchor_from": "right_middle",
+		"anchor_to": "right_middle ",
+		"text": "",
+		"controls": [
+			{
+				"default@start.iibutton0": { "controls": [ { "icon11@brewing_stand.strength_icon":{} } ] }
+			},
+			{
+				"hover@brewing_stand.strength_hover": {}
+			},
+			{
+				"pressed@brewing_stand.strength_hover": {}
+			}
+		]
+	},
+	
+	"strength_hover@start.iibutton1": {
+		"controls": [
+			{
+				"11b@start.iibutton0": 
+				{
+					"size": [ 160, 120 ], "anchor_from": "bottom_left", "anchor_to": "bottom_left", "offset": [ 20, 20 ],
+					"controls": [
+					{
+						"0st@brewing_stand.title_txt": { "text": "Strength" }
+					},
+					{
+						"1st@brewing_stand.item1": { "text": "Awkward Potion +" }
+					},
+					{
+						"2st@brewing_stand.item2": { "text": "Blaze Powder" }
+					},
+					{
+						"3st@brewing_stand.result": { "text": "Strength (0:45)" }
+					},
+					{
+						"4st@brewing_stand.add1": { "text": "> I (2:00)" }
+					},
+					{
+						"5st@brewing_stand.add2": { "text": "> II (0:22)" }
+					},
+					{
+						"blaze_powder": { "type": "image", "layer": 5, "anchor_from": "top_left", "anchor_to": "top_left", "size": [ 16, 16 ], "texture": "textures/items/blaze_powder", "offset": [ 5, 36 ] }
+					},
+					{
+						"water_bottle": { "type": "image", "layer": 5, "anchor_from": "top_left", "anchor_to": "top_left", "size": [ 16, 16 ], "texture": "client/water_bottle", "offset": [ 5, 18 ] }
+					},
+					{
+						"6st@start.divider": { "size": [ "90%", 1 ], "anchor_from": "top_middle", "anchor_to": "top_middle", "offset": [ 0, 54 ] }
+					},
+					{
+						"7st@brewing_stand.strength_icon": { "anchor_from": "top_left", "anchor_to": "top_left", "offset": [ 5, 58 ] }
+					},
+					{
+						"8st@start.divider": { "size": [  "90%", 1 ], "anchor_from": "top_middle", "anchor_to": "top_middle", "offset": [ 0, 76 ] }
+					},
+					{
+						"redstone": { "type": "image", "layer": 5, "anchor_from": "top_left", "anchor_to": "top_left", "size": [ 16, 16 ], "texture": "textures/items/redstone_dust", "offset": [ 5, 80 ] }
+					},
+					{
+						"glowstone": { "type": "image", "layer": 5, "anchor_from": "top_left", "anchor_to": "top_left", "size": [ 16, 16 ], "texture": "textures/items/glowstone_dust", "offset": [ 5, 98 ] }
+					}
+					]
+				}
+			},
+			{
+				"0sti@brewing_stand.strength_icon":{}
+			}
+		]
+	},
+	
+	"strength_icon": {
+		"type": "image",
+		"layer": 5,
+		"size": [ 16, 16 ],
+		"texture": "client/strength"
+	},
+
+
+// -=- Weakness
+
+	"weakness_button@common_buttons.light_text_button" : {
+		"layer": 3,
+		"size": [ 18, 18 ],
+		"anchor_from": "right_middle",
+		"anchor_to": "right_middle ",
+		"text": "",
+		"controls": [
+			{
+				"default@start.iibutton0": { "controls": [ { "icon12@brewing_stand.weakness_icon":{} } ] }
+			},
+			{
+				"hover@brewing_stand.weakness_hover": {}
+			},
+			{
+				"pressed@brewing_stand.weakness_hover": {}
+			}
+		]
+	},
+	
+	"weakness_hover@start.iibutton1": {
+		"controls": [
+			{
+				"12b@start.iibutton0": 
+				{
+					"size": [ 160, 102 ], "anchor_from": "bottom_left", "anchor_to": "bottom_left", "offset": [ 20, 0 ],
+					"controls": [
+					{
+						"0w@brewing_stand.title_txt": { "text": "Weakness" }
+					},
+					{
+						"1w@brewing_stand.item1": { "text": "Any non-potion +" }
+					},
+					{
+						"2w@brewing_stand.item2": { "text": "Fermented spider eye" }
+					},
+					{
+						"3w@brewing_stand.result": { "text": "Weakness (1:30)" }
+					},
+					{
+						"4w@brewing_stand.add1": { "text": "> (4:00)" }
+					},
+					{
+						"fermented_spider_eye": { "type": "image", "layer": 5, "anchor_from": "top_left", "anchor_to": "top_left", "size": [ 16, 16 ], "texture": "textures/items/spider_eye_fermented", "offset": [ 5, 36 ] }
+					},
+					{
+						"water_bottle": { "type": "image", "layer": 5, "anchor_from": "top_left", "anchor_to": "top_left", "size": [ 16, 16 ], "texture": "client/water_bottle", "offset": [ 5, 18 ] }
+					},
+					{
+						"5w@start.divider": { "size": [ "90%", 1 ], "anchor_from": "top_middle", "anchor_to": "top_middle", "offset": [ 0, 54 ] }
+					},
+					{
+						"6w@brewing_stand.weakness_icon": { "anchor_from": "top_left", "anchor_to": "top_left", "offset": [ 5, 58 ] }
+					},
+					{
+						"7w@start.divider": { "size": [  "90%", 1 ], "anchor_from": "top_middle", "anchor_to": "top_middle", "offset": [ 0, 76 ] }
+					},
+					{
+						"redstone": { "type": "image", "layer": 5, "anchor_from": "top_left", "anchor_to": "top_left", "size": [ 16, 16 ], "texture": "textures/items/redstone_dust", "offset": [ 5, 80 ] }
+					}
+					]
+				}
+			},
+			{
+				"0wi@brewing_stand.weakness_icon":{}
+			}
+		]
+	},
+	
+	"weakness_icon": {
+		"type": "image",
+		"layer": 5,
+		"size": [ 16, 16 ],
+		"texture": "client/weakness"
+	},
+	
+// -=- SPLASH
+
+	"splash@common_buttons.light_text_button" : {
+		"layer": 3,
+		"size": [ 18, 18 ],
+		"anchor_from": "left_middle",
+		"anchor_to": "left_middle ",
+		"text": "",
+		"controls": [
+			{
+				"default@start.iibutton0": { "controls": [ { "icon13@brewing_stand.splash_icon":{} } ] }
+			},
+			{
+				"hover@brewing_stand.splash_hover": {}
+			}
+		]
+	},
+	
+	"splash_hover@start.iibutton1": {
+		"controls": [
+			{
+				"13b@start.iibutton0": 
+				{
+					"size": [ 125, 80 ], "anchor_from": "right_middle", "anchor_to": "right_middle", "offset": [ -20, 0 ],
+					"controls": [
+					{
+						"0sp@brewing_stand.title_txt": { "text": "Splash potion recipe" }
+					},
+					{
+						"1sp@brewing_stand.item1": { "text": "Any Potion +" }
+					},
+					{
+						"2sp@brewing_stand.item2": { "text": "Gunpowder" }
+					},
+					{
+						"3sp@brewing_stand.result": { "text": "Splash Potion" }
+					},
+					{
+						"gunpowder": { "type": "image", "layer": 5, "anchor_from": "top_left", "anchor_to": "top_left", "size": [ 16, 16 ], "texture": "textures/items/gunpowder", "offset": [ 5, 36 ] }
+					},
+					{
+						"water_bottle": { "type": "image", "layer": 5, "anchor_from": "top_left", "anchor_to": "top_left", "size": [ 16, 16 ], "texture": "client/water_bottle", "offset": [ 5, 18 ] }
+					},
+					{
+						"5sp@start.divider": { "size": [ "90%", 1 ], "anchor_from": "top_middle", "anchor_to": "top_middle", "offset": [ 0, 54 ] }
+					},
+					{
+						"6sp@brewing_stand.splash_icon": { "anchor_from": "top_left", "anchor_to": "top_left", "offset": [ 5, 58 ] }
+					}
+					]
+				}
+			},
+			{
+				"0spi@brewing_stand.splash_icon":{}
+			}
+		]
+	},
+	
+	"splash_icon": {
+		"type": "image",
+		"layer": 5,
+		"size": [ 16, 16 ],
+		"texture": "client/splash"
+	},
+	
+	// -=- SPLASH
+
+	"awkward_button@common_buttons.light_text_button" : {
+		"layer": 3,
+		"size": [ 18, 18 ],
+		"anchor_from": "left_middle",
+		"anchor_to": "left_middle ",
+		"text": "",
+		"controls": [
+			{
+				"default@start.iibutton0": { "controls": [ { "water_bottle": { "type": "image", "layer": 5, "size": [ 16, 16 ], "texture": "client/water_bottle" } } ] }
+			},
+			{
+				"hover@brewing_stand.awkward_hover": {}
+			}
+		]
+	},
+	
+	"awkward_hover@start.iibutton1": {
+		"controls": [
+			{
+				"14b@start.iibutton0": 
+				{
+					"size": [ 125, 80 ], "anchor_from": "right_middle", "anchor_to": "right_middle", "offset": [ -20, 0 ],
+					"controls": [
+					{
+						"0aw@brewing_stand.title_txt": { "text": "Awkward potion recipe" }
+					},
+					{
+						"1aw@brewing_stand.item1": { "text": "Water Bottle" }
+					},
+					{
+						"2aw@brewing_stand.item2": { "text": "Nether Wart" }
+					},
+					{
+						"3aw@brewing_stand.result": { "text": "Awkward Potion" }
+					},
+					{
+						"nether_wart": { "type": "image", "layer": 5, "anchor_from": "top_left", "anchor_to": "top_left", "size": [ 16, 16 ], "texture": "textures/items/nether_wart", "offset": [ 5, 36 ] }
+					},
+					{
+						"4awwater_bottle": { "type": "image", "layer": 5, "anchor_from": "top_left", "anchor_to": "top_left", "size": [ 16, 16 ], "texture": "client/water_bottle", "offset": [ 5, 18 ] }
+					},
+					{
+						"5aw@start.divider": { "size": [ "90%", 1 ], "anchor_from": "top_middle", "anchor_to": "top_middle", "offset": [ 0, 54 ] }
+					},
+					{
+						"water_bottle": { "type": "image", "layer": 5, "size": [ 16, 16 ], "texture": "client/water_bottle", "anchor_from": "top_left", "anchor_to": "top_left", "offset": [ 5, 58 ] }
+					}
+					]
+				}
+			},
+			{
+				"water_bottle": { "type": "image", "layer": 5, "size": [ 16, 16 ], "texture": "client/water_bottle" }
+			}
+		]
+	},
+	
+
+// -=-
+		
+	"sidebar": {
+		"type": "panel",
+		"size": [ 30, "100%" ],
+		"anchor_from": "left_middle",
+		"anchor_to": "left_middle ",
+		"controls": [
+			{
+				"12@brewing_stand.weakness_button": { "offset": [ 0, 120 ] }
+			},
+			{
+				"11@brewing_stand.strength_button": { "offset": [ 0, 100 ] }
+			},
+			{
+				"10@brewing_stand.regeneration_button": { "offset": [ 0, 80 ] }
+			},
+			{
+				"9@brewing_stand.poison_button": { "offset": [ 0, 60 ] }
+			},
+			{
+				"8@brewing_stand.harming_button": { "offset": [ 0, 40 ] }
+			},
+			{
+				"7@brewing_stand.healing_button": { "offset": [ 0, 20 ] }
+			},
+			{
+				"6@brewing_stand.water_breathing_button": { "offset": [ 0, 0 ] }
+			},
+			{
+				"5@brewing_stand.swiftness_button": { "offset": [ 0, -20 ] }
+			},
+			{
+				"4@brewing_stand.slowness_button": { "offset": [ 0, -40 ] }
+			},
+			{
+				"3@brewing_stand.fire_res_button": { "offset": [ 0, -60 ] }
+			},
+			{
+				"2@brewing_stand.leap_button": { "offset": [ 0, -80 ] }
+			},
+			{
+				"1@brewing_stand.invis_button": { "offset": [ 0, -100 ] }
+			},
+			{
+				"0@brewing_stand.night_vision_button": { "offset": [ 0, -120 ] }
+			}
+		]
+	},
+	
+	"brewingstand_output_item@common.container_item": {
+		"size": [ 18, 18 ],  "$cell_overlay_ref": "",
+		"$item_collection_name": "brewing_result_items"
+	},
+	
+	"brewing_fuel_bar_empty_image": {
+		"type": "image", "layer": 1,
+		"texture": "textures/ui/brewing_fuel_bar_empty",
+		"anchor_from": "top_left", "anchor_to": "top_left",
+		"offset": [ 56, 38 ], "size": [ 24, 6 ]
+	},
+
+	"brewing_fuel_bar_full_image": {
+		"type": "image", "layer": 3,
+		"texture": "textures/ui/brewing_fuel_bar_full",
+		"anchor_from": "top_left", "anchor_to": "top_left",
+		"offset": [ 57, 39 ], "size": [ 22, 4 ],
+		"clip_direction": "left",
+		"bindings": [
+			{ "binding_name": "#brewing_fuel_ratio", "binding_name_override": "#clip_ratio", "binding_condition": "always" }
+		]
+	},
+
+	"brewing_arrow_full_image": {
+		"type": "image", "layer": 3,
+		"texture": "textures/ui/brewing_arrow_full",
+		"anchor_from": "top_left", "anchor_to": "top_left",
+		"offset": [ 98, 11 ], "size": [ 9, 28 ],
+		"clip_direction": "up",
+		"bindings": [
+			{ "binding_name": "#brewing_arrow_ratio", "binding_name_override": "#clip_ratio", "binding_condition": "always" }
+		]
+	},
+	
+	"brewing_fuel_slot": {
+		"type": "panel",
+		"anchor_from": "top_left", "anchor_to": "top_left",
+		"size": [ 18, 18 ], "offset": [ 17, 11 ],
+		"controls": [
+			{
+			"fuel_grid_item@common.container_item": {
+			"$item_collection_name": "brewing_fuel_item",
+			"$focus_id_binding_type": "none", "$focus_id": "brewing_fuel",
+			"$focus_override_right_binding_type": "none", "$focus_override_right": "brewing_input_item0"
+			}
+			}
+		]
+	},
+	
+	"brewing_panel_top_half": {
+		"type": "panel",
+		"size": [ 176, 76 ],
+		"offset": [ 0, 5 ],
+		"anchor_to": "top_left",
+		"anchor_from": "top_left",
+		"controls": [
+			{ "brewing_input_slot@brewing_stand.brewing_input_slot": { } },
+			{ "brewing_output_slots@brewing_stand.brewing_output_slots": { } },
+			{ "brewing_fuel_bar_empty_image@brewing_stand.brewing_fuel_bar_empty_image": { } },
+			{ "brewing_fuel_bar_full_image@brewing_stand.brewing_fuel_bar_full_image": { } },
+			{ "brewing_arrow_full_image@brewing_stand.brewing_arrow_full_image": { } },
+			{ "brewing_fuel_slot@brewing_stand.brewing_fuel_slot": { } }
+		]
+	},
+
+	"right_sidebar": {
+		"type": "panel",
+		"size": [ 30, "100%" ],
+		"anchor_from": "right_middle",
+		"anchor_to": "right_middle ",
+		"controls": [
+			{
+				"rs0@brewing_stand.splash": { "offset": [ 0, 10 ] }
+			},
+			{
+				"rs2@brewing_stand.awkward_button": { "offset": [ 0, -10 ] }
+			}
+		]
+	},
+
+	"brewing_stand_panel": {
+		"type": "panel",
+		"controls": [
+			{ "sidebar@brewing_stand.sidebar": {} },
+			{ "right_sidebar@brewing_stand.right_sidebar": {} },
+			{ "background@start.background": {} },
+			{ "container_gamepad_helpers@common.container_gamepad_helpers": {} },
+			{ "flying_item_renderer@common.flying_item_renderer": { "layer": 11 } },
+			{ "selected_item_details_factory@common.selected_item_details_factory": {} },
+			{ "item_lock_notification_factory@common.item_lock_notification_factory": {} },
+			{
+			"root_panel@common.root_panel": {
+			  "layer": 1,
+			  "size": [ 176, 168 ],
+			  "controls": [
+				{ "brewing_stand_gui@brewing_stand.brewing_stand_gui": {} },
+				{
+				  "furnace_screen_inventory": {
+					"type": "panel",
+					"layer": 5,
+					"controls": [
+					  { "brewing_panel_top_half@brewing_stand.brewing_panel_top_half": {} },
+					  { "inventory_panel_bottom_half@common.inventory_panel_bottom_half": { "offset": [ 0, -2 ] } },
+					  { "hotbar_grid@common.hotbar_grid_template": { "offset": [ 0, -9 ] } },
+					  { "inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {} }
+					]
+				  }
+				},
+				{ "inventory_selected_icon_button@common.inventory_selected_icon_button": {} },
+				{ "gamepad_cursor@common.gamepad_cursor_button": {} }
+          ]
+        }
+      }
+    ]
+  },
+  "brewing_stand_screen@common.inventory_screen_common": {
+    "$close_on_player_hurt|default": false,
+    "close_on_player_hurt": "$close_on_player_hurt",
+    "variables": [
+      {
+        "requires": "$desktop_screen",
+        "$screen_content": "brewing_stand.brewing_stand_panel"
+      },
+      {
+        "requires": "$pocket_screen",
+        "$screen_content": "brewing_stand_pocket.brewing_stand_panel"
+      }
+    ]
+  }
+}

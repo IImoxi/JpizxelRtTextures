@@ -1,0 +1,8 @@
+{
+	"format_version": "1.16.100",
+		"minecraft:texture_set": {
+		"color": "textures/pumpkin_face_on",
+		"metalness_emissive_roughness": "mer/pumpkin_face_on",
+		"normal": "normals/pumpkin_face"
+	}
+}

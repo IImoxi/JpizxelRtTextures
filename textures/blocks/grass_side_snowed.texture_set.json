@@ -1,0 +1,8 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:texture_set": {
+		"color": "textures/grass_side_snowed",
+		"metalness_emissive_roughness": "mer/grass_side_snowed",
+		"normal": "normals/grass_side"
+	}
+}
