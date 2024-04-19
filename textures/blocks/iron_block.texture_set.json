@@ -2,7 +2,7 @@
 	"format_version": "1.16.100",
 	"minecraft:texture_set": {
 		"color": "textures/iron_block",
-		"metalness_emissive_roughness": "#ff0010",
+		"metalness_emissive_roughness": "#ff0030",
 		"normal": "normals/iron_block"
 	}
 }

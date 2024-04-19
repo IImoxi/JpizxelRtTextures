@@ -2,9 +2,9 @@ How to download:
 
 [ <> Code ▾ ] > 📁 Download ZIP,
 
-Change file extension from '.zip' to '.mcpack'
+Change file extension from '.zip' to '.mcpack',
 
-Then open it with minecraft!
+Open it with minecraft!
 
 ------
 
