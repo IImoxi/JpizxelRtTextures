@@ -436,77 +436,10 @@
 				}
 			},
 			{
-				"inventory_take_progress_icon_button@common.inventory_take_progress_icon_button":{}
-			},
-			{
 				"inventory_selected_icon_button@common.inventory_selected_icon_button":{}
 			},
 			{
 				"hold_icon@common.inventory_take_progress_icon_button":{}
-			},
-			{
-				"controller_gamepad_helpers_stack_panel":{
-					"type":"stack_panel",
-					"anchor_from":"bottom_middle",
-					"anchor_to":"bottom_middle",
-					"controls":[
-						{
-							"container_gamepad_helpers_second_row@crafting.container_gamepad_helpers_second_row":{}
-						},
-						{
-							"container_gamepad_helpers@common.container_gamepad_helpers":{
-								"$helper_x_control":"crafting.inventory_x_gamepad_helper",
-								"$helper_y_control":"crafting.inventory_y_gamepad_helper",
-								"$helper_a_control":"crafting.inventory_a_gamepad_helper"
-							}
-						}
-					],
-					"bindings":[
-						{
-							"binding_name":"#gamepad_helper_visible",
-							"binding_name_override":"#visible"
-						}
-					]
-				}
-			},
-			{
-				"flying_item_renderer@common.flying_item_renderer":{
-					"layer":13
-				}
-			},
-			{
-				"game_tip@game_tip.game_tip_panel":{
-					"layer":100,
-					"$offset|default":[
-						0,
-						110
-					],
-					"variables":[
-						{
-							"requires":"$game_pad",
-							"$offset":[
-								0,
-								"38%"
-							]
-						}
-					],
-					"offset":"$offset"
-				}
-			},
-			{
-				"selected_item_details_factory@common.selected_item_details_factory":{
-					
-				}
-			},
-			{
-				"item_lock_notification_factory@common.item_lock_notification_factory":{
-					
-				}
-			},
-			{
-				"background@start.background":{
-					
-				}
 			}
 		]
 	},
@@ -601,83 +534,12 @@
 				}
 			},
 			{
-				"inventory_take_progress_icon_button@common.inventory_take_progress_icon_button":{
-					
-				}
-			},
-			{
 				"inventory_selected_icon_button@common.inventory_selected_icon_button":{
 					
 				}
 			},
 			{
 				"hold_icon@common.inventory_take_progress_icon_button":{
-					
-				}
-			},
-			{
-				"controller_gamepad_helpers_stack_panel":{
-					"type":"stack_panel",
-					"anchor_from":"bottom_middle",
-					"anchor_to":"bottom_middle",
-					"controls":[
-						{
-							"container_gamepad_helpers_second_row@crafting.container_gamepad_helpers_second_row":{
-								
-							}
-						},
-						{
-							"container_gamepad_helpers@common.container_gamepad_helpers":{
-								"$helper_x_control":"crafting.inventory_x_gamepad_helper",
-								"$helper_y_control":"crafting.inventory_y_gamepad_helper",
-								"$helper_a_control":"crafting.inventory_a_gamepad_helper"
-							}
-						}
-					],
-					"bindings":[
-						{
-							"binding_name":"#gamepad_helper_visible",
-							"binding_name_override":"#visible"
-						}
-					]
-				}
-			},
-			{
-				"flying_item_renderer@common.flying_item_renderer":{
-					"layer":13
-				}
-			},
-			{
-				"game_tip@game_tip.game_tip_panel":{
-					"layer":100,
-					"$offset|default":[
-						0,
-						110
-					],
-					"variables":[
-						{
-							"requires":"$game_pad",
-							"$offset":[
-								0,
-								"38%"
-							]
-						}
-					],
-					"offset":"$offset"
-				}
-			},
-			{
-				"selected_item_details_factory@common.selected_item_details_factory":{
-					
-				}
-			},
-			{
-				"item_lock_notification_factory@common.item_lock_notification_factory":{
-					
-				}
-			},
-			{
-				"background@start.background":{
 					
 				}
 			}
@@ -864,7 +726,7 @@
 		"send_telemetry": false,
 		"low_frequency_rendering": false,
 		"$screen_content": "crafting.recipe_inventory_screen_content",
-		"$screen_bg_content": "common.screen_background",
+		"$screen_bg_content": "start.background",
 		"$top_half_variant": "crafting.survival_panel_top_half",
 		"close_on_player_hurt": false
 	},
@@ -874,6 +736,7 @@
 		"low_frequency_rendering": false,
 		"send_telemetry": false,
 		"$screen_content": "crafting.recipe_crafting_table_screen_content",
+		"$screen_bg_content": "start.background",
 		"$top_half_variant": "crafting.crafting_panel_top_half",
 		"close_on_player_hurt": false
 	}
