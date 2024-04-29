@@ -1,8 +1,8 @@
 {
- "format_version": "1.16.100",
-  "minecraft:texture_set": {
-  "color": "textures/cracked_polished_blackstone_bricks",
-    "metalness_emissive_roughness": "#770020",
-    "normal": "normals/cracked_stonebrick"
-  }
+	"format_version": "1.16.100",
+	"minecraft:texture_set": {
+		"color": "textures/cracked_polished_blackstone_bricks",
+		"metalness_emissive_roughness": "#000020",
+		"normal": "normals/cracked_stone_bricks"
+	}
 }

@@ -1,7 +1,8 @@
 {
- "format_version": "1.16.100",
-  "minecraft:texture_set": {
-  "color": "textures/door_iron_upper",
-  "metalness_emissive_roughness": "#ff0077"
- }
+	"format_version": "1.16.100",
+	"minecraft:texture_set": {
+		"color": "textures/iron_door_top",
+		"metalness_emissive_roughness": "#ff0040",
+		"normal": "normals/iron_door_top"
+	}
 }

@@ -2,7 +2,7 @@
 	"format_version": "1.16.100",
 	"minecraft:texture_set": {
 		"color": "textures/warped_wart_block",
-		"metalness_emissive_roughness": "#400040",
-		"normal": "normals/bedrock"
+		"metalness_emissive_roughness": "mer/nether_wart_block",
+		"normal": "normals/nether_wart_block"
 	}
 }
