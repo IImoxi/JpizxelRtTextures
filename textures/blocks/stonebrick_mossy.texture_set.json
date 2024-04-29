@@ -3,6 +3,6 @@
 	"minecraft:texture_set": {
 		"color": "textures/mossy_stonebrick",
 		"metalness_emissive_roughness": "mer/mossy_stonebrick",
-		"normal": "normals/stonebrick"
+		"normal": "normals/mossy_stonebrick"
 	}
 }
