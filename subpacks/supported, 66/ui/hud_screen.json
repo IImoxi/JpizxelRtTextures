@@ -267,6 +267,63 @@
       { "hotbar_slot_button@gui_hotbar_slot_button_prototype": {} }
     ]
   },
+  
+	"exp_progress_bar_and_hotbar": {
+		"type": "panel",
+		"size": [ 0, 0 ],
+		"anchor_from": "bottom_middle",
+		"anchor_to": "bottom_middle",
+		"controls": [
+			{ 
+				"hotbar@hotbar_chooser": { 
+					"size": [ 182, 22 ],
+					"offset": [ 4, 0 ]
+				} 
+			},
+			{
+				"dash_rend@dash_renderer": {
+					"size": [ 182, 5 ],
+					"layer": 7
+				}
+			},
+			{
+				"horse_jump_rend@horse_jump_renderer": {
+					"size": [ 182, 5 ],
+					"offset": [ 0, -13 ],
+					"anchor_from": "bottom_middle",
+					"anchor_to": "bottom_middle",
+					"layer": 7
+				}
+			},
+			{
+				"xp_bar": {
+					"type": "panel",
+					"size": [ 182, 5 ],
+					"offset": [ 0, -13 ],
+					"anchor_from": "bottom_middle",
+					"anchor_to": "bottom_middle",
+					"controls": [
+						{ "empty_progress_bar@empty_progress_bar": { "size": [ 182, 5 ], "layer": 1 } },
+						{ "full_progress_bar@full_progress_bar": { "size": [ 182, 5 ], "layer": 2 } },
+						{ "progress_text_label@progress_text_label": { "layer": 7 } }
+					],
+					"bindings": [
+						{ "binding_name": "#show_survival_ui", "binding_name_override": "#visible" }
+					]
+				}
+			},
+			{
+				"item_text_factory": {
+					"size": [ 100, 10 ],
+					"type": "factory",
+					"control_ids": {
+						"item_text": "@hud.item_name_text",
+						"jukebox_text": "@hud.jukebox_popup_text"
+					}
+				}
+			}
+		]
+	},
 
 	// Anims
 	
