@@ -2,7 +2,7 @@
 	"format_version": "1.16.100",
 	"minecraft:texture_set": {
 		"color": "textures/deepslate_tiles",
-		"metalness_emissive_roughness": "mer/stone",
+		"metalness_emissive_roughness": "mer/deepslate_tiles",
 		"normal": "normals/deepslate_tiles"
 	}
 }
