@@ -112,22 +112,27 @@
 	},
 	
 	"small_chest_screen@common.inventory_screen_common": {
+		"force_render_below": true,
 		"$close_on_player_hurt": false
 	},
 	
 	"large_chest_screen@common.inventory_screen_common": {
+		"force_render_below": true,
 		"$close_on_player_hurt": false
 	},
 
 	"ender_chest_screen@common.inventory_screen_common": {
+		"force_render_below": true,
 		"$close_on_player_hurt": false
 	},
 
 	"shulker_box_screen@chest.small_chest_screen": {
+		"force_render_below": true,
 		"$close_on_player_hurt": false
 	},
 
 	"barrel_screen@chest.small_chest_screen": {
+		"force_render_below": true,
 		"$close_on_player_hurt": false
 	}
 }

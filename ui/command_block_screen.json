@@ -399,6 +399,7 @@
   ///////////////////////////////////////////////////////////////////////////////////////////
 
 	"command_block_screen@common.base_screen": {
+		"force_render_below": true,
 		"$screen_content": "command_block.command_block_screen_content",
 		"button_mappings": [
 			{

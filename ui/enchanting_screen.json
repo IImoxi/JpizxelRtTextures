@@ -418,18 +418,19 @@
     ]
   },
   "enchanting_screen@common.inventory_screen_common": {
-    "close_on_player_hurt": false,
-    "variables": [
-      {
-        "requires": "$desktop_screen",
-        "$screen_content": "enchanting.enchanting_panel",
-        "$screen_bg_content": "start.background"
-      },
-      {
-        "requires": "$pocket_screen",
-        "$screen_content": "enchanting_pocket.enchanting_panel",
-		"$screen_bg_content": "start.background"
-      }
-    ]
-  }
+		"force_render_below": true,
+		"close_on_player_hurt": false,
+		"variables": [
+			{
+				"requires": "$desktop_screen",
+				"$screen_content": "enchanting.enchanting_panel",
+				"$screen_bg_content": "start.background"
+			},
+			{
+				"requires": "$pocket_screen",
+				"$screen_content": "enchanting_pocket.enchanting_panel",
+				"$screen_bg_content": "start.background"
+			}
+		]
+	}
 }

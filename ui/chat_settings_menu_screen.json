@@ -12,6 +12,134 @@
     Misc Elements
     Main Contents
   */
+  
+  "dropdown_background": {
+		"layer": 1,
+		"type": "image",
+		"texture": "textures/ui/dropdown_background"
+	},
+
+  
+  "dropdown": {
+    "type": "panel",
+
+    "$dropdown_content|default": "common.empty_panel",
+    "$dropdown_toggle|default": "common.checkbox",
+    "$dropdown_name|default": "dropdown_control",
+    "$dropdown_scroll_content_size|default": [ "100%", "500%" ],
+    "$dropdown_toggle_name|default": "($dropdown_name + '_toggle')",
+    "$dropdown_background|default": "start.iibutton0",
+
+    "controls": [
+      {
+        "$dropdown_name@$dropdown_toggle": {
+          "type": "dropdown",
+          "$toggle_view_binding_name": "$dropdown_name",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "dropdown_name": "$dropdown_name",
+          "dropdown_content_control": "dropdown_content",
+          "dropdown_area": "$dropdown_area",
+          "$toggle_name": "$dropdown_name",
+          "$toggle_state_binding_name": "('#' + $dropdown_name)",
+          "$toggle_tts_name": "accessibility.dropdown.tts.title",
+          "$toggle_tts_toggle_on_text": "",
+          "$toggle_tts_toggle_off_text": "",
+          "tts_control_type_order_priority": -1 // This should happen before labels whose default starts at 0
+        }
+      },
+      {
+        "dropdown_content": {
+          "type": "input_panel",
+          // we really want this on top of everything
+          "layer": 42,
+          "size": "$dropdown_scroll_content_size",
+          "$anchor_dropdown_content_from|default": "top_left",
+          "$anchor_dropdown_content_to|default": "top_left",
+          "anchor_from": "$anchor_dropdown_content_from",
+          "anchor_to": "$anchor_dropdown_content_to",
+          "modal": true,
+          "property_bag": {
+            "#is_dropdown": true
+          },
+          "ttsSectionContainer": true,
+          "$dropdown_content_controls|default": [
+            {
+              "scroll@common.scrolling_panel": {
+                "layer": 2,
+                "size": [ "100%", "100%" ],
+                "$scrolling_pane_size": [ "100%", "100%" ],
+                "$scrolling_content": "$dropdown_content",
+                "$scroll_view_port_size": [ "100% - 4px", "100% - 4px" ],
+                "$scroll_view_port_size_touch": [ "100% - 4px", "100% - 4px" ],
+                "$scroll_view_port_offset": [ 2, 2 ],
+                "$scroll_view_port_offset_touch": [ 2, 2 ],
+                "$scroll_size": [ 5, "100%-2px" ],
+                "$scroll_size_touch": [ 5, "100%-2px" ],
+                "$scroll_background_image_control": "$dropdown_background",
+                "$background_size": [ "100%", "100%" ],
+                "$background_size_touch": [ "100%", "100%" ],
+                "$show_background": true,
+                "$scroll_bar_contained": true,
+                "$scroll_bar_contained_touch": true
+              }
+            }
+          ],
+          "controls": "$dropdown_content_controls",
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "($dropdown_name)",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible",
+              "resolve_sibling_scope": true
+            }
+          ],
+          "button_mappings": [
+            {
+              "from_button_id": "button.menu_cancel",
+              "to_button_id": "button.dropdown_exit",
+              "mapping_type": "global"
+            },
+            {
+              "from_button_id": "button.menu_ok",
+              "to_button_id": "button.dropdown_exit",
+              "mapping_type": "global"
+            },
+            {
+              "from_button_id": "button.menu_select",
+              "to_button_id": "button.dropdown_exit",
+              "mapping_type": "global"
+            },
+            {
+              "from_button_id": "button.menu_up",
+              "to_button_id": "button.menu_up",
+              "mapping_type": "global",
+              "scope": "view"
+            },
+            {
+              "from_button_id": "button.menu_down",
+              "to_button_id": "button.menu_down",
+              "mapping_type": "global",
+              "scope": "view"
+            },
+            {
+              "from_button_id": "button.menu_left",
+              "to_button_id": "button.menu_left",
+              "mapping_type": "global",
+              "scope": "view"
+            },
+            {
+              "from_button_id": "button.menu_right",
+              "to_button_id": "button.menu_right",
+              "mapping_type": "global",
+              "scope": "view"
+            }
+          ]
+        }
+      }
+    ]
+  },
 
   //---------------------------------------------------------------------------
   // Toggles
@@ -45,11 +173,10 @@
   // Buttons
   //---------------------------------------------------------------------------
 
-  "reset_button@common_buttons.light_text_button": {
-    "size": [ "100%", 22 ],
+  "reset_button@start.ii_text_button": {
+    "size": [ 100, 16 ],
     "$pressed_button_name": "button.reset_chat_settings",
-    "$button_text": "options.resetSettings",
-
+    "$ii_text_button_text": "options.resetSettings",
     "$focus_id": "reset_button_focus_id",
     "$focus_override_down": "mute_all_toggle_focus_id"
   },
@@ -59,75 +186,135 @@
   //---------------------------------------------------------------------------
 
   // Typeface //
+  
+	"iibutton0": {
+		"type": "image",
+		"layer": 5,
+		"size": [ "100%", 16 ],
+		"texture": "client/iibutton0"
+	},
+	
+	"iibutton1": {
+		"type": "image",
+		"layer": 5,
+		"size": [ "100%", 16 ],
+		"texture": "client/iibutton1"
+	},
+	
+	"dropdown_button_hover": {
+		"type": "image",
+		"size": [ "100% - 4px", 16 ],
+		"texture": "client/divider",
+		"alpha": 0.25,
+		"controls": [{
+			"dropdown_label": {
+				"type": "label",
+				"text": "$radio_label_text",
+				"$ii_text_button_font|default": "default",
+				"font_type": "$ii_text_button_font"
+			}
+		}]
+	},
+	
+	"dropdown_button_selected": {
+		"type": "image",
+		"size": [ "100% - 4px", 16 ],
+		"texture": "client/divider",
+		"alpha": 0.4,
+		"controls": [{
+			"dropdown_label": {
+				"type": "label",
+				"text": "$radio_label_text",
+				"$ii_text_button_font|default": "default",
+				"font_type": "$ii_text_button_font"
+			}
+		}]
+	},
+	
+	"dropdown_button": {
+		"type": "panel",
+		"size": [ "100% - 4px", 16 ],
+		"controls": [{
+			"dropdown_label": {
+				"type": "label",
+				"text": "$radio_label_text",
+				"$ii_text_button_font|default": "default",
+				"font_type": "$ii_text_button_font"
+			}
+		}]
+	},
 
-  "typeface_dropdown_content": {
-    "type": "stack_panel",
-    "size": [ "100%", "100%c" ],
-    "controls": [
-      {
-        "top_padding@common.empty_panel": {
-          "size": [ "100%", 2 ]
-        }
-      },
-      {
-        "mojangles@settings_common.radio_item_with_label_and_content": {
-          "$toggle_state_binding_name": "#typeface_radio_mojangles",
-          "$radio_label_text": "typeface.mojangles"
-        }
-      },
-      {
-        "noto_sans@settings_common.radio_item_with_label_and_content": {
-          "$toggle_state_binding_name": "#typeface_radio_notoSans",
-          "$radio_label_text": "typeface.notoSans",
-          "$radio_label_font_type": "smooth"
-        }
-      },
-      {
-        "bottom_padding@common.empty_panel": {
-          "size": [ "100%", 2 ]
-        }
-      }
-    ]
-  },
+	"typeface_dropdown_content": {
+		"type": "stack_panel",
+		"size": [ "100%", "100%c" ],
+		"controls": [
+			{
+				"top_padding@common.empty_panel": {
+					"size": [ "100%", 2 ]
+				}
+			},
+			{
+				"mojangles@settings_common.radio_item_with_label_and_content": {
+					"$toggle_state_binding_name": "#typeface_radio_mojangles",
+					"$unchecked_hover_control": "chat_settings.dropdown_button_hover",
+					"$checked_hover_control": "chat_settings.dropdown_button_selected",
+					"$checked_control": "chat_settings.dropdown_button_selected",
+					"$unchecked_control": "chat_settings.dropdown_button",
+					"$unchecked_locked_control": "chat_settings.dropdown_button",
+					"$radio_label_text": "typeface.mojangles"
+				}
+			},
+			{
+				"noto_sans@settings_common.radio_item_with_label_and_content": {
+					"$toggle_state_binding_name": "#typeface_radio_notoSans",
+					"$unchecked_hover_control": "chat_settings.dropdown_button_hover",
+					"$checked_hover_control": "chat_settings.dropdown_button_selected",
+					"$checked_control": "chat_settings.dropdown_button_selected",
+					"$unchecked_control": "chat_settings.dropdown_button",
+					"$unchecked_locked_control": "chat_settings.dropdown_button",
+					"$radio_label_text": "typeface.notoSans",
+					"$ii_text_button_font": "smooth"
+				}
+			},
+			{
+				"bottom_padding@common.empty_panel": {
+					"size": [ "100%", 2 ]
+				}
+			}
+		]
+	},
 
-  "typeface_dropdown@settings_common.option_dropdown_no_scroll": {
-    "$option_label": "chat.settings.font",
-    "$dropdown_area": "chat_settings_content_area",
-    "$dropdown_name": "chat_typeface_dropdown",
-    "$option_enabled_binding_name": "#chat_typeface_dropdown_enabled",
-    "$options_dropdown_toggle_label_binding": "#chat_typeface_dropdown_label",
-    "bindings": [
-      {
-        "binding_type": "global",
-        "binding_name": "#chat_typeface_visible",
-        "binding_name_override": "#visible",
-        "binding_condition": "once"
-      }
-    ],
+	"font_type_setting@ii.button0": {
+		"size": [ "100%", "100%c" ],
+		"controls": [
+			{
+				"font_type_settings_content@chat_settings.typeface_dropdown_content": {}
+			}
+		]
+	},
+  
+	"option_dropdown_no_scroll@settings_common.option_generic": {
+		"$control_name": "chat_settings.option_dropdown_control_no_scroll"
+	},
+	"option_dropdown_control_no_scroll@settings_common.option_dropdown_control": {
+		"$option_dropdown_type": "chat_settings.dropdown_no_scrollpanel"
+	},
+  
+   "dropdown_no_scrollpanel@common.dropdown": {
+		"$dropdown_scroll_content_size": [ "100%", "100%c" ],
+		"$dropdown_content_controls": [ {
+			"background@start.iibutton0": {
+				"layer": 1,
+				"size": "$dropdown_scroll_content_size",
+				"controls": [ {
+					"content@$dropdown_content": {
+						"layer": 1
+					}
+				}]
+			}
+		}]
+	},
 
-    // Dropdown toggle button //
-    "$option_dropdown_size": [ "100%", 22 ],
-    "$options_dropdown_toggle_button_state_content": [ "100%", "100%" ],
-    "$options_dropdown_toggle_label_font_type": "#chat_font_type",
-    "$options_dropdown_toggle_label_font_scale": 1.04,
-    "$options_dropdown_label_bindings": [
-      {
-        "binding_name": "$options_dropdown_toggle_label_binding",
-        "binding_condition": "none",
-        "binding_type": "$options_dropdown_toggle_label_binding_type",
-        "binding_collection_name": "$options_dropdown_toggle_label_binding_collection_name"
-      },
-      {
-        "binding_type": "global",
-        "binding_name": "$options_dropdown_toggle_label_font_type",
-        "binding_name_override": "#font_type",
-        "binding_condition": "visible"
-      }
-    ],
-
-    // Dropdown contents //
-    "$dropdown_content": "chat_settings.typeface_dropdown_content"
-  },
 
   // Font Colors //
 
@@ -272,32 +459,11 @@
   // Sliders
   //---------------------------------------------------------------------------
 
-  "font_size_slider@settings_common.option_slider": {
-    "$option_label": "#chat_font_size_custom_label",
-    "$slider_name": "chat_font_size",
-    "$slider_value_binding_name": "#chat_font_size",
-    "$option_enabled_binding_name": "#chat_font_size_enabled",
-    "$slider_steps_binding_name": "#chat_font_size_steps",
-    "$slider_tts_text_value": "#chat_font_size_text_value",
-
-    "$label_bindings": [
-      {
-        "binding_name": "$option_label",
-        "binding_condition": "visible"
-      },
-      {
-        "binding_name": "$slider_tts_text_value"
-      }
-    ],
-    "bindings": [
-      {
-        "binding_type": "global",
-        "binding_name": "#chat_typeface_visible",
-        "binding_name_override": "#visible",
-        "binding_condition": "once"
-      }
-    ]
-  },
+	"font_size_label": {
+		"type": "label",
+		"max_size": [ "100%", "default" ],
+		"text": "Font size can only be changed within resource pack settings."
+	},
 
   "line_spacing_slider@settings_common.option_slider": {
     "$option_label": "#chat_line_spacing_slider_label",
@@ -399,8 +565,9 @@
 
             { "toggles_to_font_shape@chat_settings.line_break": {} },
 
-            { "typeface_dropdown@chat_settings.typeface_dropdown": {} },
-            { "font_size@chat_settings.font_size_slider": {} },
+            { "typeface_dropdown@chat_settings.font_type_setting": {} },
+			{ "font_size_padding@common.empty_panel": { "size": [ "100%", 2 ] } },
+            { "font_size@chat_settings.font_size_label": {} },
             //{ "line_spacing@chat_settings.line_spacing_slider": {} },
 
 

@@ -201,6 +201,7 @@
 	},
 
 	"grindstone_screen@common.inventory_screen_common": {
+		"force_render_below": true,
 		"$close_on_player_hurt|default": false,
 		"close_on_player_hurt": "$close_on_player_hurt",
 		"variables": [

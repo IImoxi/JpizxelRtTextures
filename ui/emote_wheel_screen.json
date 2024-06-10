@@ -1,0 +1,534 @@
+{
+  "namespace": "persona",
+
+  "emote_wheel_screen@common.base_screen": {
+    "force_render_below": true,
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_cancel",
+        "to_button_id": "button.emote_wheel_exit_non_gamepad",
+        "mapping_type": "global",
+        "input_mode_condition": "not_gamepad"
+      },
+      {
+        "from_button_id": "button.controller_start",
+        "to_button_id": "button.dressing_room",
+        "mapping_type": "global"
+      },
+      {
+        "from_button_id": "key.emote",
+        "to_button_id": "button.menu_exit",
+        "mapping_type": "global"
+      }
+    ],
+    "$screen_animations": [
+      "@common.screen_exit_animation_push_fade",
+      "@common.screen_exit_animation_pop_fade",
+      "@common.screen_entrance_animation_push_fade",
+      "@common.screen_entrance_animation_pop_fade"
+    ],
+    "$default_text_color": [ 0.7, 0.7, 0.7 ],
+    "$screen_content": "persona.emote_wheel_screen_content",
+    "$screen_bg_content": "emote_wheel_touch_zone",
+    "$is_full_screen_layout": true,
+    "$fill_alpha":  0.0,
+    "gamepad_cursor_deflection_mode": true
+  },
+
+
+  "emote_wheel_touch_zone@common_buttons.light_content_button": {
+    "size": [ "100%", "100%" ],
+    "$pressed_button_name": "button.menu_exit",
+    "alpha": 0
+  },
+
+  "emote_wheel_screen_content": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "size": [ "100%", "100%" ],
+    "controls": [
+	{
+		"test_button@start.ii_text_button": {
+			"$ii_text_button_text": "Emote",
+			"$pressed_button_name": "$gamepad_left_button_name",
+			"anchor_from": "top_right",
+			"anchor_to": "top_right",
+			"button_mappings": [
+			  {
+				"from_button_id": "$pressed_button_name",
+				"to_button_id": "button.slot4",
+				"mapping_type": "global"
+			  },
+			  {
+				"from_button_id": "button.slot4",
+				"to_button_id": "$gamepad_left_button_name",
+				"mapping_type": "global"
+			  }
+			]
+		}
+	},
+      {
+        "top_padding": {
+          "type": "panel",
+          "size": [ "100%", "fill" ]
+        }
+      },
+      {
+        "root_panel": {
+          "type": "panel",
+          "size": [ "100%", "55% + 35px" ],
+          "controls": [
+            {
+              "emotes_panel@common.squaring_panel": {
+                "$squaring_panel_content": "persona.emote_panel"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "instruction_padding": {
+          "type": "panel",
+          "size": [ "100%", 2 ]
+        }
+      },
+      {
+        "instruction_panel": {
+          "type": "panel",
+          "size": [ "100%", "100%c" ],
+          "controls": [
+            {
+              "instruction_background": {
+                "type": "image",
+                "texture": "textures/ui/Black",
+                "alpha": 0.7,
+                "size": [ "100%c + 10px", "100%c + 14px" ],
+                "min_size": [ 1 , "100%c + 14px" ],
+                "max_size": [ "100%c + 10px", "100%c + 14px" ],
+                "controls": [
+                  {
+                    "gamepad_instruction_stack": {
+                      "type": "stack_panel",
+                      "orientation": "vertical",
+                      "size": [ "100%cm", "100%c" ],
+                      "controls": [
+                        {
+                          "instruction_label_gamepad": {
+                            "type": "label",
+                            "size": [ "default", "default" ],
+                            "max_size": [ 300, 28 ],
+                            "offset": [ 0, -3 ],
+                            "layer": 2,
+                            "color": "$emote_screen_gamepad_instruction_colors",
+                            "text_alignment": "center",
+                            "text": "#emote_screen_instructions",
+                            "font_type": "MinecraftSeven",
+                            "line_padding": 5.0,
+                            "shadow": true,
+                            "bindings": [
+                              {
+                                "binding_name": "#emote_screen_instructions",
+                                "binding_condition": "always"
+                              },
+                              {
+                                "binding_name": "#is_using_gamepad_override",
+                                "binding_name_override": "#visible"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "gamepad_helpers@common.empty_panel": {
+                            "size": [ "100%sm", "100%c" ],
+                            "controls": [
+                              {
+                                "gamepad_helper_stack": {
+                                  "type": "stack_panel",
+                                  "orientation": "horizontal",
+                                  "size": [ "100%c", "100%cm" ],
+                                  "offset": [ 0, 2 ],
+                                  "controls": [
+                                    {
+                                      "gamepad_start@common.gamepad_helper_start": {
+                                        "$gamepad_helper_visible_binding_name": "#is_using_gamepad_override"
+                                      }
+                                    },
+                                    {
+                                      "gamepad_exit_panel@common.empty_panel": {
+                                        "size": [ 100, "100%sm" ],
+                                        "controls": [
+                                          {
+                                            "gamepad_exit": {
+                                              "type": "label",
+                                              "color": "$f_color_format",
+                                              "text": "#emote_screen_exit",
+                                              "text_alignment": "center",
+                                              "bindings": [
+                                                {
+                                                  "binding_name": "#emote_screen_exit",
+                                                  "binding_condition": "always"
+                                                },
+                                                {
+                                                  "binding_name": "#is_using_gamepad_override",
+                                                  "binding_name_override": "#visible"
+                                                }
+                                              ]
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "instruction_label_keyboard": {
+                      "type": "label",
+                      "size": [ "default", "default" ],
+                      "max_size": [ 300, 20 ],
+                      "layer": 2,
+                      "color": "$generic_button_text_color",
+                      "text_alignment": "center",
+                      "text": "emotes.instructions_keyboard",
+                      "line_padding": 5.0,
+                      "shadow": true,
+                      "bindings": [
+                        {
+                          "binding_name": "#is_using_mouse",
+                          "binding_name_override": "#visible"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "instruction_label_touch": {
+                      "type": "label",
+                      "size": [ "default", "default" ],
+                      "max_size": [ 300, 20 ],
+                      "layer": 2,
+                      "color": "$generic_button_text_color",
+                      "text_alignment": "center",
+                      "text": "emotes.instructions_touch",
+                      "line_padding": 5.0,
+                      "shadow": true,
+                      "bindings": [
+                        {
+                          "binding_name": "#is_touch_mode",
+                          "binding_name_override": "#visible"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "dressing_room_button_panel": {
+          "type": "panel",
+          "size": [ "100%", 27 ],
+          "bindings": [
+            {
+              "binding_name": "(not #is_using_gamepad_override)",
+              "binding_name_override": "#visible"
+            }
+          ],
+          "controls": [
+            {
+              "dressing_room_button@common_buttons.light_text_button": {
+                "$pressed_button_name": "button.dressing_room",
+                "size": [ 120, 23 ],
+                "enabled": "(not $store_disabled)",
+                "$button_text": "emotes.change_emotes",
+                "$default_text_color": "$light_button_default_text_color",
+
+                "focus_change_down": "FOCUS_OVERRIDE_STOP",
+                "focus_change_left": "emote_wheel",
+                "focus_change_right": "emote_wheel",
+                "bindings": [
+                  {
+                    "binding_name": "#dressing_room_button_visible",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "bottom_padding": {
+          "type": "panel",
+          "size": [ "100%", "fill" ]
+        }
+      }
+    ]
+  },
+  
+  "emote_panel@common_dialogs.main_panel": {
+    "size": [ "100%", "100%" ],
+
+    "$gamepad_top_emote_name": "emote_slot_0",
+    "$gamepad_right_emote_name": "emote_slot_1",
+    "$gamepad_bottom_emote_name": "emote_slot_2",
+
+    "controls": [
+      {
+        "emote_name@persona_common.emote_label": {
+          "size": [ 35, "default" ],
+          "max_size": [ 35, 35 ],
+          "text": "#emote_name",
+          "layer": 10,
+          "font_type": "mojangles",
+          "font_scale_factor": 1,
+          "shadow": true,
+          "bindings": [
+            {
+              "binding_name": "#emote_name"
+            }
+          ]
+        }
+      },
+      {
+        "emote_wheel_content_panel": {
+          "type": "panel",
+          "size": [ "75%", "75%" ],
+
+          "controls": [
+            { "gamepad_helpers@persona_common.gamepad_hotkey_helpers": {} },
+            { "keyboard_helpers@persona_common.keyboard_hotkey_helpers": {} },
+            { "emote_wheel@persona.emote_selection_wheel": {} }
+          ]
+        }
+      }
+    ]
+  },
+  
+  "selection_wheel": {
+    "type": "selection_wheel",
+    "size": [ "100%", "100%" ],
+
+    "always_handle_controller_direction": true,
+
+    "$slice_count|default": 1,
+    "$inner_radius|default": 0.0,
+    "$outer_radius|default": 1.0,
+
+    "$gamepad_bottom_button_name|default": "('button.select_' + $gamepad_bottom_emote_name)",
+    "$gamepad_top_button_name|default": "('button.select_' + $gamepad_top_emote_name)",
+    "$gamepad_left_button_name|default": "('button.select_' + $gamepad_left_emote_name)",
+    "$gamepad_right_button_name|default": "",
+
+    "variables": [
+      {
+        // on switch we need to reverse a/b button events since the client bases the gamepad helpers
+        // based on what the button does (ie. select/cancel) and not by location on the controller
+        "requires": "$nx_os",
+        "$gamepad_right_button_name|default": "('button.select_' + $gamepad_bottom_emote_name)",
+        "$gamepad_bottom_button_name|default": "('button.select_' + $gamepad_right_emote_name)"
+      }
+    ],
+
+    "$select_button_name|default": "",
+    "$hover_button_name|default": "",
+    "$analog_button_name|default": "",
+    "$iterate_left_button_name|default": "button.iterate_selection_left",
+    "$iterate_right_button_name|default": "button.iterate_selection_right",
+    "slice_count": "$slice_count",
+    "inner_radius": "$inner_radius",
+    "outer_radius": "$outer_radius",
+
+    "focus_enabled": true,
+
+    "select_button_name": "$select_button_name",
+    "hover_button_name": "$hover_button_name",
+    "analog_button_name": "$analog_button_name",
+
+    "iterate_left_button_name": "$iterate_left_button_name",
+    "iterate_right_button_name": "$iterate_right_button_name",
+    "initial_button_slice": 0,
+    "$button_focus_precedence|default": 0,
+    "default_focus_precedence": "$button_focus_precedence",
+
+    "$button_tts_name|default": "",
+    "$button_tts_header|default": "",
+    "$tts_section_header|default": "",
+    "$button_tts_control_type_order_priority|default": 100,
+
+    "tts_name": "$button_tts_name",
+    "tts_control_header": "$button_tts_header",
+    "tts_section_header": "$tts_section_header",
+    "tts_control_type_order_priority": "$button_tts_control_type_order_priority",
+    "tts_skip_message": true,
+
+    "layer": 1,
+    "sound_name": "random.click",
+    "sound_volume": 1.0,
+    "sound_pitch": 1.0,
+    "state_controls": [],
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_select",
+        "to_button_id": "$select_button_name",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "$analog_button_name",
+        "to_button_id": "$analog_button_name",
+        "mapping_type": "pressed"
+      },
+      {
+        "to_button_id": "$hover_button_name",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.controller_secondary_select",
+        "to_button_id": "$gamepad_top_button_name",
+        "mapping_type": "global"
+      },
+      {
+        "from_button_id": "button.menu_cancel",
+        "to_button_id": "$gamepad_right_button_name",
+        "input_mode_condition": "gamepad_and_not_gaze",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_ok",
+        "to_button_id": "$gamepad_bottom_button_name",
+        "mapping_type": "global"
+      },
+      {
+        "from_button_id": "button.menu_clear",
+        "to_button_id": "$gamepad_left_button_name",
+        "mapping_type": "global"
+      },
+      {
+        "from_button_id": "button.slot1",
+        "to_button_id": "$gamepad_top_button_name",
+        "mapping_type": "global"
+      },
+      {
+        "from_button_id": "button.slot2",
+        "to_button_id": "$gamepad_right_button_name",
+        "mapping_type": "global"
+      },
+      {
+        "from_button_id": "button.slot3",
+        "to_button_id": "$gamepad_bottom_button_name",
+        "mapping_type": "global"
+      },
+      {
+        "from_button_id": "button.slot4",
+        "to_button_id": "$gamepad_left_button_name",
+        "mapping_type": "global"
+      }
+    ],
+    "property_bag": {
+      "#hover_slice": 0
+    },
+
+    "bindings": [
+      {
+        "binding_name": "#init_selection_wheel_input_mode",
+        "binding_condition": "once"
+      }
+    ]
+  },
+  
+  "emote_selection_wheel@persona.selection_wheel": {
+    "inner_radius": 0.35,
+    "outer_radius": 1.0,
+    "$slice_count": 4,
+    "$select_button_name": "button.emote_selected",
+    "$hover_button_name": "button.emote_hovered",
+    "$analog_button_name": "button.emote_hovered_via_analog",
+    "$ignore_touch_labels|default": false,
+    "$button_focus_precedence": 10,
+    "focus_identifier": "emote_wheel",
+    "focus_change_left": "FOCUS_OVERRIDE_STOP",
+    "focus_change_right": "FOCUS_OVERRIDE_STOP",
+    "focus_change_up": "FOCUS_OVERRIDE_STOP",
+
+    "controls": [
+      {
+        "default_state@persona_common.wheel_state": {
+          "texture": "textures/ui/emote_wheel_updated_base"
+        }
+      },
+      {
+        "emote_slot_0_content@persona_common.emote_wheel_slot_content": {
+          "$emote_slot_index": 0,
+          "$emote_slot_name": "$gamepad_top_emote_name",
+          "$wheel_state_texture": "textures/ui/emote_wheel_updated_select_0",
+          "$emote_image_offset": [ 0, "-33%" ],
+          "$emote_touch_label_offset": [ 0, "-50%y - 50% - 3px" ],
+          "$emote_touch_label_alignment": "center",
+          "$emote_touch_label_ignore": "$ignore_touch_labels"
+        }
+      },
+      {
+        "emote_slot_1_content@persona_common.emote_wheel_slot_content": {
+          "$emote_slot_index": 1,
+          "$emote_slot_name": "$gamepad_right_emote_name",
+          "$wheel_state_texture": "textures/ui/emote_wheel_updated_select_1",
+          "$emote_image_offset": [ "33%", 0 ],
+          "$emote_touch_label_offset": [ "50%x + 50% + 3px", 0 ],
+          "$emote_touch_label_alignment": "left",
+          "$emote_touch_label_ignore": "$ignore_touch_labels"
+        }
+      },
+      {
+        "emote_slot_2_content@persona_common.emote_wheel_slot_content": {
+          "$emote_slot_index": 2,
+          "$emote_slot_name": "$gamepad_bottom_emote_name",
+          "$wheel_state_texture": "textures/ui/emote_wheel_updated_select_2",
+          "$emote_image_offset": [ 0, "33%" ],
+          "$emote_touch_label_offset": [ 0, "50%y + 50% + 3px" ],
+          "$emote_touch_label_alignment": "center",
+          "$emote_touch_label_ignore": "$ignore_touch_labels"
+        }
+      },
+      {
+        "emote_slot_3_content@persona_common.emote_wheel_slot_content": {
+          "$emote_slot_index": 3,
+          "$emote_slot_name": "$gamepad_left_emote_name",
+          "$wheel_state_texture": "textures/ui/emote_wheel_updated_select_3",
+          "$emote_image_offset": [ "-33%", 0 ],
+          "$emote_touch_label_offset": [ "-50%x - 50% - 3px", 0 ],
+          "$emote_touch_label_alignment": "right",
+          "$emote_touch_label_ignore": "$ignore_touch_labels"
+        }
+      }
+    ],
+    "state_controls": [
+      {
+        "control_name": "default_state"
+      },
+      {
+        "control_name": "$gamepad_top_emote_name"
+      },
+      {
+        "control_name": "$gamepad_right_emote_name"
+      },
+      {
+        "control_name": "$gamepad_bottom_emote_name"
+      },
+      {
+        "control_name": "$gamepad_left_emote_name"
+      }
+    ]
+  },
+
+  "swap_emote_button@common_buttons.dark_text_button": {
+    "$pressed_button_name": "button.rebind_emote",
+    "size": [ "16%", "100%" ]
+  }
+}

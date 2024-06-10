@@ -722,6 +722,7 @@
 	},
 	
 	"inventory_screen@crafting.inventory_screen_base": {
+		"force_render_below": true,
 		"enable_profanity_filter": false,
 		"send_telemetry": false,
 		"low_frequency_rendering": false,
@@ -732,6 +733,7 @@
 	},
   
 	"crafting_screen@crafting.inventory_screen_base": {
+		"force_render_below": true,
 		"enable_profanity_filter": false,
 		"low_frequency_rendering": false,
 		"send_telemetry": false,
