@@ -205,10 +205,11 @@
 		"type": "image",
 		"size": [ "100% - 4px", 16 ],
 		"texture": "client/divider",
-		"alpha": 0.25,
+		"alpha": 0.15,
 		"controls": [{
 			"dropdown_label": {
 				"type": "label",
+				"alpha": 0.8,
 				"text": "$radio_label_text",
 				"$ii_text_button_font|default": "default",
 				"font_type": "$ii_text_button_font"
@@ -220,10 +221,11 @@
 		"type": "image",
 		"size": [ "100% - 4px", 16 ],
 		"texture": "client/divider",
-		"alpha": 0.4,
+		"alpha": 0.3,
 		"controls": [{
 			"dropdown_label": {
 				"type": "label",
+				"alpha": 0.8,
 				"text": "$radio_label_text",
 				"$ii_text_button_font|default": "default",
 				"font_type": "$ii_text_button_font"
@@ -237,6 +239,7 @@
 		"controls": [{
 			"dropdown_label": {
 				"type": "label",
+				"alpha": 0.8,
 				"text": "$radio_label_text",
 				"$ii_text_button_font|default": "default",
 				"font_type": "$ii_text_button_font"
@@ -284,7 +287,7 @@
 		]
 	},
 
-	"font_type_setting@ii.button0": {
+	"font_type_setting@start.iibutton0": {
 		"size": [ "100%", "100%c" ],
 		"controls": [
 			{

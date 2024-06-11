@@ -44,7 +44,7 @@
 		"$scroll_box_visible": false,
 		"$always_handle_scrolling": true
 	},
-	
+
 	// Displayed commands panel //
 	
 	"commands_panel": {
@@ -229,7 +229,6 @@
   "chat_screen_content": {
 		"type": "panel",
 		"controls": [
-		
 			//Displayed messages panel
 			{ "displayed_chat_panel@chat.messages_scrolling_panel": {} },
 			

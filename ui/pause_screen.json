@@ -186,16 +186,16 @@
       { "keyboard_helpers@pause.keyboard_helpers": {} }
     ]
   },
-
-  "ii_player_list_panel": {
-    "type": "panel",
-    "size": [ 120, "100% - 24px" ],
-    "anchor_from": "right_middle",
-    "anchor_to": "right_middle",
-    "controls": [
-      { "player_list@pause.player_list_scrolling_panel": {} }
-    ]
-  },
+  
+	"ii_player_list_panel": {
+		"type": "panel",
+		"size": [ 120, "100% - 24px" ],
+		"anchor_from": "right_middle",
+		"anchor_to": "right_middle",
+		"controls": [
+			{ "player_list@pause.player_list_scrolling_panel": {} }
+		]
+	},
 
   "player_list_scrolling_panel@common.scrolling_panel": {
     "size": [ 128, "100%" ],
@@ -236,20 +236,20 @@
     ]
   },
 
-  "ii_player_list": {
-    "type": "stack_panel",
-    "anchor_from": "top_left",
-    "anchor_to": "top_left",
-    "size": [ "100%", "100%c" ],
-    "focus_container": true,
-    "use_last_focus": true,
-    "focus_nagivation_mode_right": "contained",
-    "controls": [
-      {
-        "players_grid_panel@pause.ii_player_grid": {}
-      }
-    ]
-  },
+	"ii_player_list": {
+		"type": "stack_panel",
+		"anchor_from": "top_left",
+		"anchor_to": "top_left",
+		"size": [ "100%", "100%c" ],
+		"focus_container": true,
+		"use_last_focus": true,
+		"focus_nagivation_mode_right": "contained",
+		"controls": [
+			{
+				"players_grid_panel@pause.ii_player_grid": {}
+			}
+		]
+	},
 
   "ii_player_grid": {
     "type": "grid",

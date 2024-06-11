@@ -187,7 +187,7 @@
     "type": "panel",
     "controls": [
       { "title_panel@disconnect.title_panel": {} },
-      //{ "gamepad_helpers@disconnect.gamepad_helpers": {} },
+      { "gamepad_helpers@disconnect.gamepad_helpers": {} },
       { "$button_layout": {} }
     ]
   },
