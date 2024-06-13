@@ -933,7 +933,7 @@
 			{
 				"loading_screen_label": {
 					"type": "label",
-					"alpha": 0.8,
+					"alpha": 0.6,
 					"text": "Loading World...",
 					"size": [ "default", 10 ],
 					"offset": [ 0, 4 ],
