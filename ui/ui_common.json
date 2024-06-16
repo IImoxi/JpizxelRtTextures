@@ -87,17 +87,18 @@
       }
     ]
   },
-  "durability_bar": {
-    "ignored": "(not $durability_bar_required)",
-    "type": "custom",
-    "renderer": "progress_bar_renderer",
-    "layer": 10,
-    "offset": [ 0, 5 ],
-    "size": [ 12, 1 ],
-	"property_bag": {
-      "is_durability": true,
-      "round_value": false
-	}
+	"durability_bar": {
+		"ignored": "(not $durability_bar_required)",
+		"type": "custom",
+		"renderer": "progress_bar_renderer",
+		"layer": 10,
+		"offset": [ 0, 6.5 ],
+		"size": [ 12, 1 ],
+		"property_bag": {
+			"drop_shadow": true,
+			"is_durability": true,
+			"round_value": false
+		}
   },
   
     "anim_item_details_alpha": {
@@ -331,7 +332,8 @@
       }
     ]
   },
-  
+ 
+
   
 // Inventory section for GUIs
 // Modified to match JAVA hotbar offset. y+3

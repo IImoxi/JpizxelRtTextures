@@ -574,7 +574,7 @@
                 "visible": false
               }
             },
-            { "sound_section@general_section.sound_section": { "visible": false } },
+            { "sound_section@ii_sound_settings.sound_section": { "visible": false } },
             {
               "language_section@general_section.language_section": {
                 "ignored": "(not $is_pregame)",

@@ -1,49 +1,242 @@
 {
 	"namespace" :"ii" ,
 	
-	"black": {
-		"type": "image",
-		"size": [ "100%", "100%" ],
-		"texture": "client/black",
-		"layer": 0
+	"black": { "type": "image", "size": [ "100%", "100%" ], "texture": "client/black", "layer": 0 },
+	"black1": { "type": "image", "size": [ "100%", "100%" ], "texture": "client/black1", "layer": 0 },
+	"dark_dialog": { "type": "image", "size": [ "100%", "100%" ], "texture": "client/top_bg", "layer": -1 },
+	"background": { "type": "image", "size": [ "100%", "100%" ], "texture": "client/bg", "layer": -1, "alpha": 0.4 },
+	"highlight": { "type": "image", "size": [ "100%", "100%" ], "texture": "client/highlight", "layer": 0 },
+	"button0": { "type": "image", "texture": "client/iibutton0" },
+	"button1": { "type": "image", "texture": "client/iibutton1" },
+	"button0h": { "type": "image", "texture": "client/iibutton0_horizontal" },
+	"button1h": { "type": "image", "texture": "client/iibutton1_horizontal" },
+	
+	"slider_bar": { "type": "image", "size": [ "100%", 2 ], "texture": "client/iislider0" },
+	"slider_bar1": { "type": "image", "size": [ "100%", 2 ], "texture": "client/iislider1" },
+	
+	"divider": { "type": "panel", "size": [ "100%", 5 ], "controls": [ { "general_section_label_panel@ii.highlight": { "size": [ "50%", 1 ] } } ] },
+	
+	"slider": {
+		"type": "slider",
+
+		"$focus_id|default": "",
+		"$focus_override_down|default": "",
+		"$focus_override_up|default": "",
+		"$focus_override_left|default": "",
+		"$focus_override_right|default": "",
+		"focus_identifier": "$focus_id",
+		"focus_change_down": "$focus_override_down",
+		"focus_change_up": "$focus_override_up",
+		"focus_change_left": "$focus_override_left",
+		"focus_change_right": "$focus_override_right",
+		"focus_enabled": true,
+
+		"$default_focus_precedence|default": 0,
+		"default_focus_precedence": "$default_focus_precedence",
+
+		"$slider_select_on_hover|default": false,
+		"slider_select_on_hover": "$slider_select_on_hover",
+
+		"layer": 1,
+		"always_listen_to_input": false,
+		"always_handle_pointer": true,
+		"slider_box_control": "slider_box",
+
+		// Slider
+		"$slider_track_button|default": "button.slider_skip_track",
+		"$slider_direction|default": "horizontal",
+		"$slider_steps|default": 1,
+		"$slider_collection_name|default": "",
+
+		"slider_name": "$slider_name",
+		"slider_track_button": "$slider_name",
+		"slider_direction": "$slider_direction",
+		"slider_steps": "$slider_steps",
+		"slider_collection_name": "$slider_collection_name",
+		"$slider_binding_type|default": "global",
+		"$slider_binding_condition|default": "visible",
+		"$slider_value_binding_name|default": "#slider_value",
+		"$slider_steps_binding_type|default": "global",
+		"$slider_steps_binding_condition|default": "visible",
+		"$slider_steps_binding_name|default": "#slider_steps",
+		"$slider_enabled_binding_type|default": "none",
+		"$slider_enabled_binding_condition|default": "visible",
+		"$slider_enabled_binding_name|default": "#slider_enabled",
+
+		"$slider_tts_binding_type|default": "global",
+		"$slider_tts_binding_condition|default": "visible",
+
+		"$slider_tts_header|default": "",
+		"$slider_tts_header_binding_type|default": "none",
+		"$slider_tts_header_binding_condition|default": "visible",
+		"$slider_header_collection_name": "",
+		"$slider_tts_override_value|default": " ", // The header will likely always displays the slider value
+		"$slider_tts_name|default": "accessibility.slider.tts.title",
+		"$slider_tts_text_value|default": "",
+		"$tts_section_header|default": "",
+
+		"default_control": "slider_bar_default",
+		"hover_control": "slider_bar_hover",
+		"background_control": "slider_background",
+		"background_hover_control": "slider_background_hover",
+		"progress_control": "slider_progress",
+		"progress_hover_control": "slider_progress_hover",
+
+		"tts_control_header": "$slider_tts_header",
+		"tts_section_header": "$tts_section_header",
+		"tts_override_control_value": "$slider_tts_override_value",
+		"tts_name": "$slider_tts_name",
+		"tts_value_changed": "$slider_tts_text_value",
+
+
+		"$slider_small_decrease_button|default": "slider.small_decrease",
+		"$slider_small_increase_button|default": "slider.small_increase",
+		"$slider_selected_button|default": "slider.selected",
+		"$slider_deselected_button|default": "slider.deselected",
+
+		"slider_small_decrease_button": "$slider_small_decrease_button",
+		"slider_small_increase_button": "$slider_small_increase_button",
+		"slider_selected_button": "$slider_selected_button",
+		"slider_deselected_button": "$slider_deselected_button",
+
+		"$slider_step_factory_control_ids": {
+			"slider_step": "@common.slider_step",
+			"slider_step_hover": "@common.slider_step_hover",
+			"slider_step_progress": "@common.slider_step_progress",
+			"slider_step_progress_hover": "@common.slider_step_progress_hover"
+		},
+
+		"factory": {
+			"name": "slider_step_factory",
+			"control_ids": "$slider_step_factory_control_ids"
+		},
+
+		"button_mappings": [
+			{
+				"from_button_id": "button.menu_select",
+				"to_button_id": "$slider_name",
+				"mapping_type": "pressed",
+				"button_up_right_of_first_refusal": true
+			},
+			{
+				"from_button_id": "button.menu_ok",
+				"to_button_id": "$slider_selected_button",
+				"mapping_type": "focused"
+			},
+			{
+				"from_button_id": "button.menu_cancel",
+				"to_button_id": "$slider_deselected_button",
+				"mapping_type": "focused"
+			},
+			{
+				"ignored": "($slider_direction = 'vertical')",
+				"from_button_id": "button.menu_left",
+				"to_button_id": "$slider_small_decrease_button",
+				"mapping_type": "pressed",
+				"input_mode_condition": "not_gaze",
+				"ignore_input_scope": true
+			},
+			{
+				"ignored": "($slider_direction = 'horizontal')",
+				"from_button_id": "button.menu_up",
+				"to_button_id": "$slider_small_decrease_button",
+				"mapping_type": "pressed",
+				"input_mode_condition": "not_gaze",
+				"ignore_input_scope": true
+			},
+			{
+				"ignored": "($slider_direction = 'vertical')",
+				"from_button_id": "button.menu_right",
+				"to_button_id": "$slider_small_increase_button",
+				"mapping_type": "pressed",
+				"input_mode_condition": "not_gaze",
+				"ignore_input_scope": true
+			},
+			{
+				"ignored": "($slider_direction = 'horizontal')",
+				"from_button_id": "button.menu_down",
+				"to_button_id": "$slider_small_increase_button",
+				"mapping_type": "pressed",
+				"input_mode_condition": "not_gaze",
+				"ignore_input_scope": true
+			}
+		],
+		"controls": [
+			{
+				"slider_box@ii.slider_box": {
+					"$slider_box_layout": "$slider_box_layout",
+					"$slider_box_size": "$slider_box_size",
+					"$slider_track_button": "$slider_name"
+				}
+			},
+			{ "slider_bar_default@ii.button0": { "size": [ "100% + 8px", "default" ] } },
+			{ "slider_bar_hover@ii.button0": { "size": [ "100% + 8px", "default" ], "visible": false } }
+		],
+		"property_bag": {
+			"#slider_steps": 1,
+			"#slider_value": 0
+		},
+		"bindings": [
+			{
+				"binding_type": "$slider_steps_binding_type",
+				"binding_condition": "$slider_steps_binding_condition",
+				"binding_collection_name": "$slider_collection_name",
+				"binding_name": "$slider_steps_binding_name",
+				"binding_name_override": "#slider_steps"
+			},
+			{
+				"binding_type": "$slider_binding_type",
+				"binding_condition": "$slider_binding_condition",
+				"binding_collection_name": "$slider_collection_name",
+				"binding_name": "$slider_value_binding_name",
+				"binding_name_override": "#slider_value"
+			},
+			{
+				"binding_type": "$slider_enabled_binding_type",
+				"binding_condition": "$slider_enabled_binding_condition",
+				"binding_collection_name": "$slider_collection_name",
+				"binding_name": "$slider_enabled_binding_name",
+				"binding_name_override": "#enabled"
+			},
+			{
+				"binding_type": "$slider_tts_binding_type",
+				"binding_condition": "$slider_tts_binding_condition",
+				"binding_collection_name": "$slider_collection_name",
+				"binding_name": "$slider_tts_text_value"
+			},
+			{
+				"binding_type": "$slider_tts_header_binding_type",
+				"binding_condition": "$slider_tts_header_binding_condition",
+				"binding_collection_name": "$slider_header_collection_name",
+				"binding_name": "$slider_tts_header"
+			}
+		]
 	},
 	
-	"black1": {
-		"type": "image",
-		"size": [ "100%", "100%" ],
-		"texture": "client/black1",
-		"layer": 0
+	"slider_box": {
+		"type": "slider_box",
+		"layer": 4,
+		"size": [ 10, 10 ],
+		"anchor_to": "center",
+		"anchor_from": "center",
+		"default_control": "default",
+		"hover_control": "hover",
+		"locked_control": "locked",
+		"indent_control": "indent",
+		"controls": [
+			{ "default@ii.button0": { "layer": 2 } },
+			{ "hover@ii.button1": { "layer": 3 } },
+			{ "indent@$slider_box_indent_layout": { "layer": 4 } },
+			{ "locked@ii.button0": { "layer": 1 } }
+		]
 	},
 	
-	"dark_dialog": {
-		"type": "image",
-		"size": [ "100%", "100%" ],
-		"texture": "client/top_bg",
-		"layer": -1
-	},
-	
-	
-	"highlight": {
-		"type": "image",
-		"size": [ "100%", "100%" ],
-		"texture": "client/highlight",
-		"layer": 0
-	},
-	
-	"divider": {
-		"type": "panel", "size": [ "100%", 5 ],
-		"controls": [ { "general_section_label_panel@ii.highlight": { "size": [ "50%", 1 ] } } ]
-	},
-	
-	"toggle": {
-		"type": "panel",
-		"$toggle_view_binding_name|default": "this_toggle",
-		"$template_toggle|default": "ii.toggle_template",
-		"$toggle_text|default": "",
-		"$toggle_icon|default": ""
-	},
-	
-	"toggle_template@common.toggle": {
+	"toggle@common.toggle": {
+		"offset": "$offset",
+		"$offset|default": [ 0, 0 ], 
+		
+		"$toggle_view_binding_name|default": "iitoggle",
+		
 		"$unchecked_control|default": "common_toggles.toggle_unchecked",
 		"$checked_control|default": "common_toggles.toggle_checked",
 		"$unchecked_hover_control|default": "common_toggles.toggle_unchecked_hover",
@@ -54,17 +247,13 @@
 		"$checked_locked_hover_control|default": "common_toggles.toggle_locked",
 
 		"$default_texture|default": "",
-		"$hover_texture|default": "client/iibutton1_horizontal",
-		"$pressed_texture|default": "client/iibutton0_horizontal",
-		"$pressed_no_hover_texture|default": "client/iibutton1_horizontal",
+		"$hover_texture|default": "",
+		"$pressed_texture|default": "",
+		"$pressed_no_hover_texture|default": "",
 		"$locked_texture|default": "",
 		"$default_chevron|default": "textures/ui/dropdown_chevron",
 		"$default_chevron_nohover|default": "textures/ui/dropdown_chevron",
 		"$default_chevron_hover|default": "textures/ui/chevron_white_down",
-		
-		"$checked_image|default": "common.empty_panel",
-		"$unchecked_image|default": "common.empty_panel",
-		"$locked_alpha": 1,
 
 		"$toggle_binding_type|default": "none",
 		"$toggle_parent_collection_details|default": "none",
@@ -111,150 +300,44 @@
 		"$focus_enabled_binding_name|default": "",
 
 		"$button_mappings|default": [
-      {
-        "from_button_id": "button.menu_select",
-        "to_button_id": "button.menu_select",
-        "mapping_type": "pressed"
-      },
-      {
-        "from_button_id": "button.menu_ok",
-        "to_button_id": "button.menu_ok",
-        "mapping_type": "focused"
-      },
-      {
-        "from_button_id": "button.controller_back",
-        "to_button_id": "button.controller_back",
-        "mapping_type": "focused",
-        "ignored": "(not $allow_controller_back_button_mapping)"
-      },
-      {
-        "ignored": "(not $enable_directional_toggling)",
-        "from_button_id": "button.menu_left",
-        "to_button_id": "$toggle_off_button",
-        "mapping_type": "pressed",
-        "input_mode_condition": "gamepad_and_not_gaze"
-      },
-      {
-        "ignored": "(not $enable_directional_toggling)",
-        "from_button_id": "button.menu_right",
-        "to_button_id": "$toggle_on_button",
-        "mapping_type": "pressed",
-        "input_mode_condition": "gamepad_and_not_gaze"
-      },
-      {
-        "ignored": "(not $enable_hover_event_mapping)",
-        "to_button_id": "$toggle_hover_event_mapping",
-        "mapping_type": "pressed"
-      }
-    ],
+		{ "from_button_id": "button.menu_select", "to_button_id": "button.menu_select", "mapping_type": "pressed" },
+		{ "from_button_id": "button.menu_ok", "to_button_id": "button.menu_ok", "mapping_type": "focused" },
+		{ "from_button_id": "button.controller_back", "to_button_id": "button.controller_back", "mapping_type": "focused", "ignored": "(not $allow_controller_back_button_mapping)" },
+		{ "ignored": "(not $enable_directional_toggling)", "from_button_id": "button.menu_left", "to_button_id": "$toggle_off_button", "mapping_type": "pressed", "input_mode_condition": "gamepad_and_not_gaze" },
+		{ "ignored": "(not $enable_directional_toggling)", "from_button_id": "button.menu_right", "to_button_id": "$toggle_on_button", "mapping_type": "pressed", "input_mode_condition": "gamepad_and_not_gaze" },
+		{ "ignored": "(not $enable_hover_event_mapping)", "to_button_id": "$toggle_hover_event_mapping", "mapping_type": "pressed" }
+		],
+		"focus_wrap_enabled": "$toggle_focus_wrap_enabled",
+		"focus_magnet_enabled": "$toggle_focus_magnet_enabled",
 
-    "focus_wrap_enabled": "$toggle_focus_wrap_enabled",
-    "focus_magnet_enabled": "$toggle_focus_magnet_enabled",
+		"$custom_toggle_binding_type|default": "none",
+		"$custom_toggle_binding_condition|default": "visible",
+		"$custom_toggle_state_binding_name|default": "",
+		"$custom_toggle_state_binding_name_override|default": "",
 
-    "$custom_toggle_binding_type|default": "none",
-    "$custom_toggle_binding_condition|default": "visible",
-    "$custom_toggle_state_binding_name|default": "",
-    "$custom_toggle_state_binding_name_override|default": "",
+		"$toggle_tts_header_binding_type|default": "none",
+		"$toggle_tts_header_binding_condition|default": "visible",
+		"$toggle_tts_header_binding_collection_name|default": "",
+		"$toggle_tts_header|default": "",
 
-    "$toggle_tts_header_binding_type|default": "none",
-    "$toggle_tts_header_binding_condition|default": "visible",
-    "$toggle_tts_header_binding_collection_name|default": "",
-    "$toggle_tts_header|default": "",
-
-    "button_mappings": "$button_mappings",
-    "$toggle_bindings|default": [
-      {
-        "binding_type": "$toggle_binding_type",
-        "binding_condition": "$toggle_binding_condition",
-        "binding_collection_name": "$toggle_grid_collection_name",
-        "binding_name": "$toggle_state_binding_name",
-        "binding_name_override": "#toggle_state"
-      },
-      {
-        "binding_type": "$toggle_enabled_binding_type",
-        "binding_condition": "$toggle_enabled_binding_condition",
-        "binding_collection_name": "$toggle_grid_collection_name",
-        "binding_name": "$toggle_enabled_binding_name",
-        "binding_name_override": "#enabled"
-      },
-      {
-        "binding_collection_name": "$toggle_grid_collection_name",
-        "binding_type": "collection_details"
-      },
-      {
-        "binding_type": "$toggle_parent_collection_details",
-        "binding_collection_name": "$toggle_parent_collection_details_name",
-        "binding_collection_prefix": "$toggle_parent_collection_details_prefix"
-      },
-      {
-        "binding_type": "$toggle_property_bag_binding_type",
-        "binding_condition": "$toggle_property_bag_binding_condition",
-        "binding_collection_name": "$toggle_grid_collection_name",
-        "binding_name": "$toggle_property_bag_binding_name"
-      },
-      {
-        "binding_type": "$toggle_tab_focus_binding_type",
-        "binding_name": "$toggle_tab_focus_binding_name",
-        "binding_name_override": "#default_focus_precedence"
-      },
-      {
-        "binding_type": "$toggle_tab_focus_id_binding_type",
-        "binding_collection_name": "$toggle_grid_collection_name",
-        "binding_name": "$toggle_tab_focus_id_binding_name",
-        "binding_name_override": "#focus_identifier"
-      },
-      {
-        "binding_type": "$toggle_tab_focus_override_right_binding_type",
-        "binding_collection_name": "$toggle_grid_collection_name",
-        "binding_name": "$toggle_tab_focus_override_right",
-        "binding_name_override": "#focus_change_right"
-      },
-      {
-        "binding_type": "$toggle_tab_focus_override_left_binding_type",
-        "binding_collection_name": "$toggle_grid_collection_name",
-        "binding_name": "$toggle_tab_focus_override_left",
-        "binding_name_override": "#focus_change_left"
-      },
-      {
-        "binding_type": "$toggle_tab_focus_override_down_binding_type",
-        "binding_collection_name": "$toggle_grid_collection_name",
-        "binding_name": "$toggle_tab_focus_override_down",
-        "binding_name_override": "#focus_change_down"
-      },
-      {
-        "binding_type": "$toggle_tab_focus_override_up_binding_type",
-        "binding_collection_name": "$toggle_grid_collection_name",
-        "binding_name": "$toggle_tab_focus_override_up",
-        "binding_name_override": "#focus_change_up"
-      },
-      {
-        "binding_type": "$toggle_on_hover_binding_type",
-        "binding_name": "$toggle_on_hover_binding_name",
-        "binding_name_override": "#toggle_on_hover"
-      },
-      {
-        "binding_type": "$custom_toggle_binding_type",
-        "binding_condition": "$custom_toggle_binding_condition",
-        "binding_collection_name": "$toggle_grid_collection_name",
-        "binding_name": "$custom_toggle_state_binding_name",
-        "binding_name_override": "$custom_toggle_state_binding_name_override"
-      },
-      {
-        "binding_type": "$toggle_tts_header_binding_type",
-        "binding_condition": "$toggle_tts_header_binding_condition",
-        "binding_collection_name": "$toggle_tts_header_binding_collection_name",
-        "binding_name": "$toggle_tts_header"
-      },
-      {
-        "ignored": "(not $enable_focus_id_bind)",
-        "binding_name": "$focus_id_binding_name",
-        "binding_name_override": "#focus_identifier"
-      },
-      {
-        "ignored": "(not $enable_focus_enabled_bind)",
-        "binding_name": "$focus_enabled_binding_name",
-        "binding_name_override": "#focus_enabled"
-      }
+		"button_mappings": "$button_mappings",
+		"$toggle_bindings|default": [
+		{ "binding_type": "$toggle_binding_type", "binding_condition": "$toggle_binding_condition", "binding_collection_name": "$toggle_grid_collection_name", "binding_name": "$toggle_state_binding_name", "binding_name_override": "#toggle_state" },
+		{ "binding_type": "$toggle_enabled_binding_type", "binding_condition": "$toggle_enabled_binding_condition", "binding_collection_name": "$toggle_grid_collection_name", "binding_name": "$toggle_enabled_binding_name", "binding_name_override": "#enabled" },
+		{ "binding_collection_name": "$toggle_grid_collection_name", "binding_type": "collection_details" },
+		{ "binding_type": "$toggle_parent_collection_details", "binding_collection_name": "$toggle_parent_collection_details_name", "binding_collection_prefix": "$toggle_parent_collection_details_prefix" },
+		{ "binding_type": "$toggle_property_bag_binding_type", "binding_condition": "$toggle_property_bag_binding_condition", "binding_collection_name": "$toggle_grid_collection_name", "binding_name": "$toggle_property_bag_binding_name" },
+		{ "binding_type": "$toggle_tab_focus_binding_type", "binding_name": "$toggle_tab_focus_binding_name", "binding_name_override": "#default_focus_precedence" },
+		{ "binding_type": "$toggle_tab_focus_id_binding_type", "binding_collection_name": "$toggle_grid_collection_name", "binding_name": "$toggle_tab_focus_id_binding_name", "binding_name_override": "#focus_identifier" },
+		{ "binding_type": "$toggle_tab_focus_override_right_binding_type", "binding_collection_name": "$toggle_grid_collection_name", "binding_name": "$toggle_tab_focus_override_right", "binding_name_override": "#focus_change_right" },
+		{ "binding_type": "$toggle_tab_focus_override_left_binding_type", "binding_collection_name": "$toggle_grid_collection_name", "binding_name": "$toggle_tab_focus_override_left", "binding_name_override": "#focus_change_left" },
+		{ "binding_type": "$toggle_tab_focus_override_down_binding_type", "binding_collection_name": "$toggle_grid_collection_name", "binding_name": "$toggle_tab_focus_override_down", "binding_name_override": "#focus_change_down" },
+		{ "binding_type": "$toggle_tab_focus_override_up_binding_type", "binding_collection_name": "$toggle_grid_collection_name", "binding_name": "$toggle_tab_focus_override_up", "binding_name_override": "#focus_change_up" },
+		{ "binding_type": "$toggle_on_hover_binding_type", "binding_name": "$toggle_on_hover_binding_name", "binding_name_override": "#toggle_on_hover" },
+		{ "binding_type": "$custom_toggle_binding_type", "binding_condition": "$custom_toggle_binding_condition", "binding_collection_name": "$toggle_grid_collection_name", "binding_name": "$custom_toggle_state_binding_name", "binding_name_override": "$custom_toggle_state_binding_name_override" },
+		{ "binding_type": "$toggle_tts_header_binding_type", "binding_condition": "$toggle_tts_header_binding_condition", "binding_collection_name": "$toggle_tts_header_binding_collection_name", "binding_name": "$toggle_tts_header" },
+		{ "ignored": "(not $enable_focus_id_bind)", "binding_name": "$focus_id_binding_name", "binding_name_override": "#focus_identifier" },
+		{ "ignored": "(not $enable_focus_enabled_bind)", "binding_name": "$focus_enabled_binding_name", "binding_name_override": "#focus_enabled" }
     ],
     "bindings": "$toggle_bindings"
 	}

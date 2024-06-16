@@ -1209,8 +1209,12 @@
 				}
 			},
 			{
+				"button@general_section.ii_keyboard_and_mouse_button2": { "size": [ 128, 16 ] }
+			},
+			{
 				"settings_panel@ii.dark_dialog": {
-					"size": [ "100% - 120px", "100% - 40px" ],
+					"size": [ "80%", "90%" ],
+					//"max_size": [ "480px - 10%", 550 ],
 					"controls": [
 						{
 							"sidebar_bg@ii.black1": { "size": [ 130, "100% - 2px" ], "alpha": 0.2, "anchor_from": "left_middle", "anchor_to": "left_middle" }
@@ -1242,18 +1246,19 @@
 			{
 			"stack_panel": {
 			  "type": "stack_panel",
-			  "size": [ "100% - 122px", "100% - 42px" ],
+			  "size": [ "80% - 2px", "90% - 6px" ],
+			  //"max_size": [ "80% - 2px", 544 ],
 			  "controls": [
 				{
 				  "content_panel": {
 					"type": "panel",
-					"size": [ "100%", "fill" ],
+					"size": [ "100%", "100%" ],
 
 					"controls": [
 					  {
-						"container": {
+						"container@": {
 						  "type": "panel",
-						  "size": [ "100%", "100% - 4px" ],
+						  "size": [ "100%", "100%" ],
 						  "controls": [
 							{ "$dialog_content@$dialog_content": {} }
 						  ]

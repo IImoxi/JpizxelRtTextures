@@ -50,21 +50,9 @@
 	{
 		"test_button@start.ii_text_button": {
 			"$ii_text_button_text": "Emote",
-			"$pressed_button_name": "$gamepad_left_button_name",
+			"$pressed_button_name": "button.rebind_mode",
 			"anchor_from": "top_right",
-			"anchor_to": "top_right",
-			"button_mappings": [
-			  {
-				"from_button_id": "$pressed_button_name",
-				"to_button_id": "button.slot4",
-				"mapping_type": "global"
-			  },
-			  {
-				"from_button_id": "button.slot4",
-				"to_button_id": "$gamepad_left_button_name",
-				"mapping_type": "global"
-			  }
-			]
+			"anchor_to": "top_right"
 		}
 	},
       {

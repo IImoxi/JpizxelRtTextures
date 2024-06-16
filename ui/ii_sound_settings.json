@@ -1,0 +1,421 @@
+{
+	"namespace" :"ii_sound_settings" ,
+	
+	"sound_section": {
+		"type": "panel",
+		"size": [ "100%", 224 ],
+		"anchor_from": "top_left",
+		"anchor_to": "top_left",
+		"bindings": [
+			{
+				"binding_type": "view",
+				"source_control_name": "sound_button_toggle",
+				"source_property_name": "#toggle_state",
+				"target_property_name": "#visible"
+			}
+		],
+		"controls": [
+			{
+				"title_panel@ii.button0": {
+					"anchor_from": "top_middle",
+					"anchor_to": "top_middle",
+					"size": [ "100% - 8px", 24 ],
+					"controls": [
+					{
+						"title_label": {
+							"type": "label",
+							"offset": [ 0, 2 ],
+							"text": "§lAudio",
+							"font_scale_factor": 2
+						}	
+					}
+					]
+				}
+			},
+			{
+				"main_volume": {
+					"type": "panel",
+					"anchor_from": "top_left",
+					"anchor_to": "top_left",
+					"size": [ "100%", 32 ],
+					"offset": [ 0, 32 ],
+					"controls": [
+						{
+							"main_volume_slider@ii.slider": {
+								"size": [ "100% - 64px", 6 ],
+								"$option_label": "#main_volume_slider_label",
+								"$slider_name": "main_volume",
+								"$slider_value_binding_name": "#main_volume",
+								"$slider_tts_text_value": "#main_volume_text_value",
+								"$option_enabled_binding_name": "#main_volume_enabled",
+								"$focus_override_up": "FOCUS_OVERRIDE_STOP",
+								"$label_bindings": [
+									{
+										"binding_name": "$option_label"
+										}
+								]
+							}
+						},
+						{
+							"main_volume_label": {
+								"type": "label",
+								"offset": [ 0, -10 ],
+								"text": "Main Volume"
+							}
+						}
+					]
+				}
+			},
+			{
+				"music_volume": {
+					"type": "panel",
+					"anchor_from": "top_left",
+					"anchor_to": "top_left",
+					"offset": [ 0, 64 ],
+					"size": [ "50%", 32 ],
+					"controls": [
+						{
+							"music_volume_slider@ii.slider": {
+								"size": [ "100% - 48px", 6 ],
+								"offset": [ 8, 0 ],
+								"$option_label": "#music_volume_slider_label",
+								"$slider_name": "music_volume",
+								"$slider_value_binding_name": "#music_volume",
+								"$slider_tts_text_value": "#music_volume_text_value",
+								"$option_enabled_binding_name": "#music_volume_enabled",
+								"$focus_override_up": "FOCUS_OVERRIDE_STOP",
+								"$label_bindings": [
+									{
+										"binding_name": "$option_label"
+									}
+								]
+							}
+						},
+						{
+							"music_volume_label": {
+								"type": "label",
+								"offset": [ 4, -10 ],
+								"text": "Music Volume"
+							}
+						}
+					]
+				}
+			},
+			{
+				"sound_volume": {
+					"type": "panel",
+					"anchor_from": "top_right",
+					"anchor_to": "top_right",
+					"offset": [ 0, 64 ],
+					"size": [ "50%", 32 ],
+					"controls": [
+						{
+							"sound_volume_slider@ii.slider": {
+								"size": [ "100% - 48px", 6 ],
+								"offset": [ -8, 0 ],
+								"$option_label": "#sound_volume_slider_label",
+								"$slider_name": "sound_volume",
+								"$slider_value_binding_name": "#sound_volume",
+								"$slider_tts_text_value": "#sound_volume_text_value",
+								"$option_enabled_binding_name": "#sound_volume_enabled",
+								"$focus_override_up": "FOCUS_OVERRIDE_STOP",
+								"$label_bindings": [
+									{
+										"binding_name": "$option_label"
+									}
+								]
+							}
+						},
+						{
+							"sound_volume_label": {
+								"type": "label",
+								"offset": [ -4, -10 ],
+								"text": "Sound Volume"
+							}
+						}
+					]
+				}
+			},
+			{
+				"ambient_volume@": {
+					"type": "panel",
+					"anchor_from": "top_left",
+					"anchor_to": "top_left",
+					"offset": [ 0, 96 ],
+					"size": [ "50%", 32 ],
+					"controls": [
+						{
+							"ambient_volume_slider@ii.slider": {
+								"size": [ "100% - 48px", 6 ],
+								"offset": [ 8, 0 ],
+								"$option_label": "#ambient_volume_slider_label",
+								"$slider_name": "ambient_volume",
+								"$slider_value_binding_name": "#ambient_volume",
+								"$slider_tts_text_value": "#ambient_volume_text_value",
+								"$option_enabled_binding_name": "#ambient_volume_enabled",
+								"$focus_override_up": "FOCUS_OVERRIDE_STOP",
+								"$label_bindings": [
+									{
+										"binding_name": "$option_label"
+									}
+								]
+							}
+						},
+						{
+							"ambient_volume_label": {
+								"type": "label",
+								"offset": [ 4, -10 ],
+								"text": "Ambience"
+							}
+						}
+					]
+				}
+			},
+			{
+				"block_volume@": {
+					"type": "panel",
+					"anchor_from": "top_right",
+					"anchor_to": "top_right",
+					"offset": [ 0, 96 ],
+					"size": [ "50%", 32 ],
+					"controls": [
+						{
+							"block_volume_slider@ii.slider": {
+								"size": [ "100% - 48px", 6 ],
+								"offset": [ -8, 0 ],
+								"$option_label": "#block_volume_slider_label",
+								"$slider_name": "block_volume",
+								"$slider_value_binding_name": "#block_volume",
+								"$slider_tts_text_value": "#block_volume_text_value",
+								"$option_enabled_binding_name": "#block_volume_enabled",
+								"$focus_override_up": "FOCUS_OVERRIDE_STOP",
+								"$label_bindings": [
+									{
+										"binding_name": "$option_label"
+									}
+								]
+							}
+						},
+						{
+							"block_volume_label": {
+								"type": "label",
+								"offset": [ -4, -10 ],
+								"text": "Block Sounds"
+							}
+						}
+					]
+				}
+			},
+			{
+				"hostile_volume@": {
+					"type": "panel",
+					"anchor_from": "top_left",
+					"anchor_to": "top_left",
+					"offset": [ 0, 128 ],
+					"size": [ "50%", 32 ],
+					"controls": [
+						{
+							"hostile_volume_slider@ii.slider": {
+								"size": [ "100% - 48px", 6 ],
+								"offset": [ 8, 0 ],
+								"$option_label": "#hostile_volume_slider_label",
+								"$slider_name": "hostile_volume",
+								"$slider_value_binding_name": "#hostile_volume",
+								"$slider_tts_text_value": "#hostile_volume_text_value",
+								"$option_enabled_binding_name": "#hostile_volume_enabled",
+								"$focus_override_up": "FOCUS_OVERRIDE_STOP",
+								"$label_bindings": [
+									{
+										"binding_name": "$option_label"
+									}
+								]
+							}
+						},
+						{
+							"hostile_volume_label": {
+								"type": "label",
+								"offset": [ 4, -10 ],
+								"text": "Hostile Mobs"
+							}
+						}
+					]
+				}
+			},
+			{
+				"neutral_volume@": {
+					"type": "panel",
+					"anchor_from": "top_right",
+					"anchor_to": "top_right",
+					"offset": [ 0, 128 ],
+					"size": [ "50%", 32 ],
+					"controls": [
+						{
+							"neutral_volume_slider@ii.slider": {
+								"size": [ "100% - 48px", 6 ],
+								"offset": [ -8, 0 ],
+								"$option_label": "#neutral_volume_slider_label",
+								"$slider_name": "neutral_volume",
+								"$slider_value_binding_name": "#neutral_volume",
+								"$slider_tts_text_value": "#neutral_volume_text_value",
+								"$option_enabled_binding_name": "#neutral_volume_enabled",
+								"$focus_override_up": "FOCUS_OVERRIDE_STOP",
+								"$label_bindings": [
+									{
+										"binding_name": "$option_label"
+									}
+								]
+							}
+						},
+						{
+							"neutral_volume_label": {
+								"type": "label",
+								"offset": [ -4, -10 ],
+								"text": "Neutral"
+							}
+						}
+					]
+				}
+			},
+			{
+				"player_volume@": {
+					"type": "panel",
+					"anchor_from": "top_left",
+					"anchor_to": "top_left",
+					"offset": [ 0, 160 ],
+					"size": [ "50%", 32 ],
+					"controls": [
+						{
+							"player_volume_slider@ii.slider": {
+								"size": [ "100% - 48px", 6 ],
+								"offset": [ 8, 0 ],
+								"$option_label": "#player_volume_slider_label",
+								"$slider_name": "player_volume",
+								"$slider_value_binding_name": "#player_volume",
+								"$slider_tts_text_value": "#player_volume_text_value",
+								"$option_enabled_binding_name": "#player_volume_enabled",
+								"$focus_override_up": "FOCUS_OVERRIDE_STOP",
+								"$label_bindings": [
+									{
+										"binding_name": "$option_label"
+									}
+								]
+							}
+						},
+						{
+							"player_volume_label": {
+								"type": "label",
+								"offset": [ 4, -10 ],
+								"text": "Player Sounds"
+							}
+						}
+					]
+				}
+			},
+			{
+				"record_volume@": {
+					"type": "panel",
+					"anchor_from": "top_right",
+					"anchor_to": "top_right",
+					"offset": [ 0, 160 ],
+					"size": [ "50%", 32 ],
+					"controls": [
+						{
+							"record_volume_slider@ii.slider": {
+								"size": [ "100% - 48px", 6 ],
+								"offset": [ -8, 0 ],
+								"$option_label": "#record_volume_slider_label",
+								"$slider_name": "record_volume",
+								"$slider_value_binding_name": "#record_volume",
+								"$slider_tts_text_value": "#record_volume_text_value",
+								"$option_enabled_binding_name": "#record_volume_enabled",
+								"$focus_override_up": "FOCUS_OVERRIDE_STOP",
+								"$label_bindings": [
+									{
+										"binding_name": "$option_label"
+									}
+								]
+							}
+						},
+						{
+							"record_volume_label": {
+								"type": "label",
+								"offset": [ -4, -10 ],
+								"text": "Music Record"
+							}
+						}
+					]
+				}
+			},
+			{
+				"weather_volume@": {
+					"type": "panel",
+					"anchor_from": "top_left",
+					"anchor_to": "top_left",
+					"offset": [ 0, 192 ],
+					"size": [ "50%", 32 ],
+					"controls": [
+						{
+							"weather_volume_slider@ii.slider": {
+								"size": [ "100% - 48px", 6 ],
+								"offset": [ 8, 0 ],
+								"$option_label": "#weather_volume_slider_label",
+								"$slider_name": "weather_volume",
+								"$slider_value_binding_name": "#weather_volume",
+								"$slider_tts_text_value": "#weather_volume_text_value",
+								"$option_enabled_binding_name": "#weather_volume_enabled",
+								"$focus_override_up": "FOCUS_OVERRIDE_STOP",
+								"$label_bindings": [
+									{
+										"binding_name": "$option_label"
+									}
+								]
+							}
+						},
+						{
+							"weather_volume_label": {
+								"type": "label",
+								"offset": [ 4, -10 ],
+								"text": "Weather"
+							}
+						}
+					]
+				}
+			},
+			{
+				"texttospeech_volume@": {
+					"type": "panel",
+					"anchor_from": "top_right",
+					"anchor_to": "top_right",
+					"offset": [ 0, 192 ],
+					"size": [ "50%", 32 ],
+					"controls": [
+						{
+							"texttospeech_volume_slider@ii.slider": {
+								"size": [ "100% - 48px", 6 ],
+								"offset": [ -8, 0 ],
+								"$option_label": "#texttospeech_volume_slider_label",
+								"$slider_name": "texttospeech_volume",
+								"$slider_value_binding_name": "#texttospeech_volume",
+								"$slider_tts_text_value": "#texttospeech_volume_text_value",
+								"$option_enabled_binding_name": "#texttospeech_volume_enabled",
+								"$focus_override_up": "FOCUS_OVERRIDE_STOP",
+								"$label_bindings": [
+									{
+										"binding_name": "$option_label"
+									}
+								]
+							}
+						},
+						{
+							"texttospeech_volume_label": {
+								"type": "label",
+								"offset": [ -4, -10 ],
+								"text": "Text To Speech"
+							}
+						}
+					]
+				}
+			}
+		]
+	}
+}

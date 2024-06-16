@@ -6,6 +6,66 @@
 {
   "namespace": "general_section",
   
+  	"ii_toggle@ii.toggle": {
+		"anchor_from": "top_left",
+		"anchor_to": "top_left",
+		"size": [ "100%", 16 ],
+
+		"$radio_toggle_group": true,
+		"$toggle_name": "navigation_tab",
+		"$toggle_group_default_selected": "$default_selector_toggle_index",
+		
+		"$unchecked_control": "",
+		"$checked_control": "ii.button1h",
+		"$unchecked_hover_control": "ii.button0h",
+		"$checked_hover_control": "ii.button1h",
+		"$unchecked_locked_control": "common_toggles.toggle_locked",
+		"$unchecked_locked_hover_control": "common_toggles.toggle_locked",
+		"$checked_locked_control": "common_toggles.toggle_locked",
+		"$checked_locked_hover_control": "common_toggles.toggle_locked",
+		
+		"$toggle_view_binding_name|default": "this_toggle",
+		"$template_toggle|default": "common_toggles.light_template_toggle",
+
+		"$toggle_tab_focus_binding_type": "global",
+		"$toggle_tab_focus_binding_name": "#navigation_tab_focus_precedence",
+		"$toggle_on_hover_binding_type": "global",
+		"$toggle_on_hover_binding_name": "#toggle_on_hover",
+		"$toggle_tts_toggle_on_text": "accessibility.state.selected",
+		"$toggle_tts_toggle_off_text": "accessibility.state.unselected",
+		"$toggle_tts_name": "accessibility.tab.tts.title",
+		"controls": [
+			{ "$toggle_view_binding_name@$template_toggle": {} },
+			{ 
+				"text_and_glyph": {
+					"type": "stack_panel",
+					"size": [ "100%c", 16 ],
+					"offset": [ 6, 3 ],
+					"anchor_from": "left_middle",
+					"anchor_to": "left_middle",
+					"orientation": "horizontal",
+					"controls": [
+						{
+							"image": {
+								"type": "image",
+								"texture": "$toggle_icon",
+								"size": [ 10, 10 ]
+							}
+						},
+						{
+							"padding": { "type": "panel", "size": [ 6, 10 ] }
+						},
+						{
+							"button_text": { 
+								"type": "label", "alpha": 0.6, "text": "$toggle_text", "size": [ "default", 8 ]
+							} 
+						}
+					]
+				} 
+			}
+		]
+	},
+  
     "ii_keyboard_and_mouse_button@general_section.ii_toggle": {
 		"$toggle_view_binding_name": "keyboard_and_mouse_button_toggle",
 		"$toggle_icon": "textures/ui/keyboard_and_mouse_glyph_color",
@@ -15,7 +75,7 @@
 		}
 	},
   
-  
+
 	"ii_touch_button@general_section.ii_toggle": {
 		"$toggle_view_binding_name": "touch_button_toggle",
 		"$toggle_icon": "textures/ui/touch_glyph_color",
@@ -4582,54 +4642,6 @@
   },
   
     // SETTINGS NAVIGATOR
-	
-	"ii_toggle@ii.toggle": {
-		"anchor_from": "top_left",
-		"anchor_to": "top_left",
-		"size": [ "100%", 16 ],
-
-		"$radio_toggle_group": true,
-		"$toggle_name": "navigation_tab",
-		"$toggle_group_default_selected": "$default_selector_toggle_index",
-
-		"$toggle_tab_focus_binding_type": "global",
-		"$toggle_tab_focus_binding_name": "#navigation_tab_focus_precedence",
-		"$toggle_on_hover_binding_type": "global",
-		"$toggle_on_hover_binding_name": "#toggle_on_hover",
-		"$toggle_tts_toggle_on_text": "accessibility.state.selected",
-		"$toggle_tts_toggle_off_text": "accessibility.state.unselected",
-		"$toggle_tts_name": "accessibility.tab.tts.title",
-		"controls": [
-			{ "$toggle_view_binding_name@$template_toggle": {} },
-			{ 
-				"text_and_glyph": {
-					"type": "stack_panel",
-					"size": [ "100%c", 16 ],
-					"offset": [ 10, 3 ],
-					"anchor_from": "left_middle",
-					"anchor_to": "left_middle",
-					"orientation": "horizontal",
-					"controls": [
-						{
-							"image": {
-								"type": "image",
-								"texture": "$toggle_icon",
-								"size": [ 10, 10 ]
-							}
-						},
-						{
-							"padding": { "type": "panel", "size": [ 2, 10 ] }
-						},
-						{
-							"button_text": { 
-								"type": "label", "alpha": 0.6, "text": "$toggle_text", "size": [ "default", 8 ]
-							} 
-						}
-					]
-				} 
-			}
-		]
-	},
 
   // Accessibility button & section
 
@@ -5017,346 +5029,6 @@
     "$toggle_property_bag": {
       "#panel_title": "options.sounds.title"
     }
-  },
-  
-  "sound_section": {
-    "type": "stack_panel",
-    "size": [ "100%", "100%c" ],
-    "$spatialPatternsPadding": [ "100%", 36 ],
-    "$audioSlidersSize": [ "75% - 2px", 16 ],
-    "anchor_from": "top_left",
-    "anchor_to": "top_left",
-    "bindings": [
-      {
-        "binding_type": "view",
-        "source_control_name": "sound_button_toggle",
-        "source_property_name": "#toggle_state",
-        "target_property_name": "#visible"
-      }
-    ],
-    "controls": [
-      // Add some padding between the buttons/toggles to reduce the impression upon the eyes. (ADO:515619)
-      {
-        "paddingMainVolume": {
-          "type": "panel",
-          "size": "$spatialPatternsPadding"
-        }
-      },
-
-      {
-        "option_slider_0@settings_common.option_slider": {
-          "size": "$audioSlidersSize",
-          "$option_label": "#main_volume_slider_label",
-          "$slider_name": "main_volume",
-          "$slider_value_binding_name": "#main_volume",
-          "$slider_tts_text_value": "#main_volume_text_value",
-          "$option_enabled_binding_name": "#main_volume_enabled",
-          "$focus_override_up": "FOCUS_OVERRIDE_STOP",
-          "$label_bindings": [
-            {
-              "binding_name": "$option_label"
-            }
-          ]
-        }
-      },
-
-      // Add some padding between the buttons/toggles to reduce the impression upon the eyes. (ADO:515619)
-      {
-        "paddingDividerAudioSettings": {
-          "type": "panel",
-          "size": "$spatialPatternsPadding"
-        }
-      },
-
-      {
-        "dividerAudioSettings": {
-          "type": "panel",
-          "size": [ "100%", "100%c + 14px" ],
-          "controls": [
-            {
-              "section_divider": {
-                "type": "image",
-                "size": [ "100% - 30px", 1 ],
-                "anchor_from": "center",
-                "anchor_to": "center",
-                "layer": 3,
-                "texture": "textures/ui/list_item_divider_line_light"
-              }
-            }
-          ]
-        }
-      },
-
-      // Add some padding between the buttons/toggles to reduce the impression upon the eyes. (ADO:515619)
-      {
-        "paddingMusic": {
-          "type": "panel",
-          "size": "$spatialPatternsPadding"
-        }
-      },
-
-      {
-        "option_slider_1@settings_common.option_slider": {
-          "size": "$audioSlidersSize",
-          "$option_label": "#music_volume_slider_label",
-          "$slider_name": "music_volume",
-          "$slider_value_binding_name": "#music_volume",
-          "$slider_tts_text_value": "#music_volume_text_value",
-          "$option_enabled_binding_name": "#music_volume_enabled",
-          "$label_bindings": [
-            {
-              "binding_name": "$option_label"
-            }
-          ]
-        }
-      },
-
-      // Add some padding between the buttons/toggles to reduce the impression upon the eyes. (ADO:515619)
-      {
-        "paddingSound": {
-          "type": "panel",
-          "size": "$spatialPatternsPadding"
-        }
-      },
-
-      {
-        "option_slider_2@settings_common.option_slider": {
-          "size": "$audioSlidersSize",
-          "$option_label": "#sound_volume_slider_label",
-          "$slider_name": "sound_volume",
-          "$slider_value_binding_name": "#sound_volume",
-          "$slider_tts_text_value": "#sound_volume_text_value",
-          "$option_enabled_binding_name": "#sound_volume_enabled",
-          "$label_bindings": [
-            {
-              "binding_name": "$option_label"
-            }
-          ]
-        }
-      },
-
-      // Add some padding between the buttons/toggles to reduce the impression upon the eyes. (ADO:515619)
-      {
-        "paddingAmbient": {
-          "type": "panel",
-          "size": "$spatialPatternsPadding"
-        }
-      },
-
-      {
-        "option_slider_3@settings_common.option_slider": {
-          "size": "$audioSlidersSize",
-          "$option_label": "#ambient_volume_slider_label",
-          "$slider_name": "ambient_volume",
-          "$slider_value_binding_name": "#ambient_volume",
-          "$slider_tts_text_value": "#ambient_volume_text_value",
-          "$option_enabled_binding_name": "#ambient_volume_enabled",
-          "$label_bindings": [
-            {
-              "binding_name": "$option_label"
-            }
-          ]
-        }
-      },
-
-      // Add some padding between the buttons/toggles to reduce the impression upon the eyes. (ADO:515619)
-      {
-        "paddingBlockVolume": {
-          "type": "panel",
-          "size": "$spatialPatternsPadding"
-        }
-      },
-
-      {
-        "option_slider_4@settings_common.option_slider": {
-          "size": "$audioSlidersSize",
-          "$option_label": "#block_volume_slider_label",
-          "$slider_name": "block_volume",
-          "$slider_value_binding_name": "#block_volume",
-          "$slider_tts_text_value": "#block_volume_text_value",
-          "$option_enabled_binding_name": "#block_volume_enabled",
-          "$label_bindings": [
-            {
-              "binding_name": "$option_label"
-            }
-          ]
-        }
-      },
-
-      // Add some padding between the buttons/toggles to reduce the impression upon the eyes. (ADO:515619)
-      {
-        "paddingHostile": {
-          "type": "panel",
-          "size": "$spatialPatternsPadding"
-        }
-      },
-
-      {
-        "option_slider_5@settings_common.option_slider": {
-          "size": "$audioSlidersSize",
-          "$option_label": "#hostile_volume_slider_label",
-          "$slider_name": "hostile_volume",
-          "$slider_value_binding_name": "#hostile_volume",
-          "$slider_tts_text_value": "#hostile_volume_text_value",
-          "$option_enabled_binding_name": "#hostile_volume_enabled",
-          "$label_bindings": [
-            {
-              "binding_name": "$option_label"
-            }
-          ]
-        }
-      },
-
-      // Add some padding between the buttons/toggles to reduce the impression upon the eyes. (ADO:515619)
-      {
-        "paddingNeutralVolume": {
-          "type": "panel",
-          "size": "$spatialPatternsPadding"
-        }
-      },
-
-      {
-        "option_slider_6@settings_common.option_slider": {
-          "size": "$audioSlidersSize",
-          "$option_label": "#neutral_volume_slider_label",
-          "$slider_name": "neutral_volume",
-          "$slider_value_binding_name": "#neutral_volume",
-          "$slider_tts_text_value": "#neutral_volume_text_value",
-          "$option_enabled_binding_name": "#neutral_volume_enabled",
-          "$label_bindings": [
-            {
-              "binding_name": "$option_label"
-            }
-          ]
-        }
-      },
-
-      // Add some padding between the buttons/toggles to reduce the impression upon the eyes. (ADO:515619)
-      {
-        "paddingPlayervolume": {
-          "type": "panel",
-          "size": "$spatialPatternsPadding"
-        }
-      },
-
-      {
-        "option_slider_7@settings_common.option_slider": {
-          "size": "$audioSlidersSize",
-          "$option_label": "#player_volume_slider_label",
-          "$slider_name": "player_volume",
-          "$slider_value_binding_name": "#player_volume",
-          "$slider_tts_text_value": "#player_volume_text_value",
-          "$option_enabled_binding_name": "#player_volume_enabled",
-          "$label_bindings": [
-            {
-              "binding_name": "$option_label"
-            }
-          ]
-
-        }
-      },
-
-      // Add some padding between the buttons/toggles to reduce the impression upon the eyes. (ADO:515619)
-      {
-        "paddingRecordVolume": {
-          "type": "panel",
-          "size": "$spatialPatternsPadding"
-        }
-      },
-
-      {
-        "option_slider_8@settings_common.option_slider": {
-          "size": "$audioSlidersSize",
-          "$option_label": "#record_volume_slider_label",
-          "$slider_name": "record_volume",
-          "$slider_value_binding_name": "#record_volume",
-          "$slider_tts_text_value": "#record_volume_text_value",
-          "$option_enabled_binding_name": "#record_volume_enabled",
-          "$label_bindings": [
-            {
-              "binding_name": "$option_label"
-            }
-          ]
-        }
-      },
-
-      // Add some padding between the buttons/toggles to reduce the impression upon the eyes. (ADO:515619)
-      {
-        "paddingWeatherVolume": {
-          "type": "panel",
-          "size": "$spatialPatternsPadding"
-        }
-      },
-
-      {
-        "option_slider_9@settings_common.option_slider": {
-          "size": "$audioSlidersSize",
-          "$option_label": "#weather_volume_slider_label",
-          "$slider_name": "weather_volume",
-          "$slider_value_binding_name": "#weather_volume",
-          "$slider_tts_text_value": "#weather_volume_text_value",
-          "$option_enabled_binding_name": "#weather_volume_enabled",
-          "$label_bindings": [
-            {
-              "binding_name": "$option_label"
-            }
-          ]
-        }
-      },
-
-      // Add some padding between the buttons/toggles to reduce the impression upon the eyes. (ADO:515619)
-      {
-        "paddingTTSVolume": {
-          "type": "panel",
-          "size": "$spatialPatternsPadding"
-        }
-      },
-
-      {
-        "option_slider_10@settings_common.option_slider": {
-          "size": "$audioSlidersSize",
-          "$option_label": "#texttospeech_volume_slider_label",
-          "$slider_name": "texttospeech_volume",
-          "$slider_value_binding_name": "#texttospeech_volume",
-          "$slider_tts_text_value": "#texttospeech_volume_text_value",
-          "$option_enabled_binding_name": "#texttospeech_volume_enabled",
-          "$label_bindings": [
-            {
-              "binding_name": "$option_label"
-            }
-          ]
-        }
-      },
-
-      // Add some padding between the buttons/toggles to reduce the impression upon the eyes. (ADO:515619)
-      {
-        "paddingResetVolumes": {
-          "type": "panel",
-          "size": "$spatialPatternsPadding"
-        }
-      },
-
-      {
-        "reset_button@settings_common.action_button": {
-          "ignored": "(not $is_pregame)",
-          "$pressed_button_name": "button.reset_settings",
-          "$button_text": "options.resetSettings",
-          "$focus_override_down": "FOCUS_OVERRIDE_STOP",
-          "property_bag": {
-            "reset_group": "audio"
-          }
-        }
-      },
-
-      // Add some padding between the buttons/toggles to reduce the impression upon the eyes. (ADO:515619)
-      {
-        "paddingEndOfList": {
-          "type": "panel",
-          "size": "$spatialPatternsPadding"
-        }
-      }
-
-    ]
   },
 
   // LANGUAGE button & section
