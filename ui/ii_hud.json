@@ -310,14 +310,5 @@
 			{ "binding_name": "#hud_alpha", "binding_name_override": "#alpha", "binding_type": "global" },
 			{ "binding_name": "#hud_propagate_alpha", "binding_name_override": "#propagateAlpha", "binding_type": "global" }
 		]
-	},
-	
-	"content": {
-		"type": "panel", "size": [ "100%", "100%" ],
-		"controls": [
-			{ "curor_rend@iihud.cursor_renderer": {} },
-			{ "camera_renderer@hud.camera_renderer": {} },
-			{ "root_panel@iihud.root_panel": {} }
-		]
 	}
 }

@@ -16,9 +16,18 @@
 		"@iihud.ii_fade_anim"
 		]
 	},
+	
+	"hud_content": {
+		"type": "panel", "size": [ "100%", "100%" ],
+		"controls": [
+			{ "curor_rend@iihud.cursor_renderer": {} },
+			{ "camera_renderer@hud.camera_renderer": {} },
+			{ "root_panel@iihud.root_panel": {} }
+		]
+	},
     
 	"hud_screen@common.base_screen": {
-		"$screen_content": "iihud.content",
+		"$screen_content": "hud.hud_content",
 		"enable_profanity_filter": false,
 		"is_showing_menu": false,
 		"should_steal_mouse": true,
