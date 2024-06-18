@@ -455,16 +455,26 @@
 								"layer": 2,
 								"controls": [
 									{ "top_half_panel@anvil.top_half_panel": {} },
-									{ "inventory_panel_bottom_half@common.inventory_panel_bottom_half": {} },
-									{ "hotbar_grid@common.hotbar_grid_template": {} },
+									{ "inventory_panel_bottom_half@common.inventory_panel_bottom_half": {
+										"bindings": [ { "binding_type": "view", "source_control_name": "expand_text_edit_panel",  "source_property_name": "(not #toggle_state)", "target_property_name": "#visible" } ] } },
+									{ "hotbar_grid@common.hotbar_grid_template": {
+										"bindings": [ { "binding_type": "view", "source_control_name": "expand_text_edit_panel",  "source_property_name": "(not #toggle_state)", "target_property_name": "#visible" } ] } },
 									{ "inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {} },
-									{ 
-										"multi_line_text_edit_panel@ii.dark_dialog": {
-											"anchor_from": "top_right",
-											"anchor_to": "top_left",
-											"size": [ 110, "default" ],
-											"offset": [ 0, 0 ],
-											"controls": [  { "text_edit_control@anvil.text_edit_control": { "$text_background_default": "", "$text_background_hover": "", "anchor_from": "top_left", "anchor_to": "top_left" } } ],
+									{
+										"multiline_text_box@common.multiline_text_edit_box": {
+											"$text_offset": [ 1, 1 ],
+											"$text_background_default": "ii.dark_dialog",
+											"$text_background_hover": "ii.dark_dialog",
+											"enabled_newline": true,
+											"anchor_from": "top_middle",
+											"anchor_to": "top_middle",
+											"layer": 40,
+											"size": [ 176, "50%" ],
+											"offset": [ 0, 80 ],
+											"max_length": 32767,
+											"$text_edit_binding_name": "#text_box_item_name",
+											"$text_edit_box_content_binding_name": "#text_box_item_name",
+											"$place_holder_text": "",
 											"bindings": [
 												{
 													"binding_type": "view", "source_control_name": "expand_text_edit_panel", 
