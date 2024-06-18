@@ -1,3 +1,611 @@
 {
-	"namespace" :"ii_video_settings" 
+	"namespace" :"ii_video_settings",
+	
+	"option_toggle@ii.option_generic": {
+		"$control_name": "ii.option_toggle_control",
+		"$option_label|default": "",
+		"$toggle_tts_header": "$option_label",
+		"variables": [
+			{
+				"requires": "$desktop_screen",
+				"$one_line_layout": true
+			}
+		]
+	},
+	
+	"video_section": {
+		"type": "panel",
+		"size": [ "100%", 400 ],
+		"anchor_from": "top_middle",
+		"anchor_to": "top_middle",
+		"bindings": [
+			{
+				"binding_type": "view",
+				"source_control_name": "video_button_toggle",
+				"source_property_name": "#toggle_state",
+				"target_property_name": "#visible"
+			}
+		],
+		"controls": [
+			{
+				"title_panel@ii.button0": {
+					"anchor_from": "top_middle",
+					"anchor_to": "top_middle",
+					"size": [ "100% - 8px", 24 ],
+					"controls": [
+					{
+						"title_label": {
+							"type": "label",
+							"offset": [ 0, 0 ],
+							"text": "§lGraphics",
+							"font_scale_factor": 1
+						}	
+					}
+					]
+				}
+			},
+			{
+				"fullscreen_toggle@ii_video_settings.option_toggle": {
+					"$option_generic_panel_size": [ "50%", 24 ],
+					"offset": [ 0, 30 ],
+					"anchor_from": "top_left",
+					"anchor_to": "top_left",
+					"visible": "($show_fullscreen_toggle and not $is_holographic)",
+					"$option_label": "options.fullscreen",
+					"$option_binding_name": "#full_screen",
+					"$option_enabled_binding_name": "#full_screen_enabled",
+					"$toggle_name": "full_screen"
+				}
+			},
+			{
+				"hide_hand_toggle@ii_video_settings.option_toggle": {
+					"$option_generic_panel_size": [ "50%", 24 ],
+					"offset": [ 0, 50 ],
+					"anchor_from": "top_left",
+					"anchor_to": "top_left",
+					"$option_label": "options.hidehand",
+					"$option_binding_name": "#hide_hand",
+					"$option_enabled_binding_name": "#hide_hand_enabled",
+					"$toggle_name": "hide_hand"
+				}
+			},
+			{
+				"hide_hud_toggle@ii_video_settings.option_toggle": {
+					"$option_generic_panel_size": [ "50%", 24 ],
+					"ignored": "($is_holographic)",
+					"offset": [ 0, 70 ],
+					"anchor_from": "top_left",
+					"anchor_to": "top_left",
+					"$option_label": "options.hidehud",
+					"$option_binding_name": "#hide_hud",
+					"$option_enabled_binding_name": "#hide_hud_enabled",
+					"$toggle_name": "hide_hud"
+				}
+			},
+			{
+				"screen_animations_toggle@ii_video_settings.option_toggle": {
+					"$option_generic_panel_size": [ "50%", 24 ],
+					"ignored": "($is_holographic)",
+					"offset": [ 0, 90 ],
+					"anchor_from": "top_left",
+					"anchor_to": "top_left",
+					"$option_label": "options.screenanimations",
+					"$option_binding_name": "#screen_animations",
+					"$option_enabled_binding_name": "#screen_animations_enabled",
+					"$toggle_name": "screen_animations"
+				}
+			},
+			{
+				"brightness_slider": {
+					"type": "panel",
+					"anchor_from": "top_right", "anchor_to": "top_right",
+					"size": [ "50%", 32 ], "offset": [ 0, 30 ],
+					"controls": [
+						{
+							"brightness@ii.slider": {
+								"size": [ "100% - 48px", 6 ], "offset": [ -8, 0 ],
+								"$option_label": "#gamma_slider_label",
+								"$slider_name": "gamma",
+								"$slider_value_binding_name": "#gamma",
+								"$option_enabled_binding_name": "#gamma_enabled",
+								"$focus_override_up": "FOCUS_OVERRIDE_STOP"
+							}
+						},
+						{
+							"brightness_label": {
+								"type": "stack_panel",
+								"orientation": "horizontal",
+								"offset": [ -4, -10 ],
+								"size": [ "default", 8 ],
+								"controls": [
+									{
+										"brightness_name_label": { 
+											"alpha": 0.6, "type": "label", "text": "Brightness »"
+										}
+									},
+									{
+										"brightness_value_label": {
+											"type": "label",
+											"alpha": 0.6,
+											"$slider_tts_text_value": "#gamma_text_value",
+											"text": "$slider_tts_text_value",
+											"bindings": [
+												{
+													"binding_type": "$slider_tts_binding_type",
+													"binding_condition": "$slider_tts_binding_condition",
+													"binding_collection_name": "$slider_collection_name",
+													"binding_name": "$slider_tts_text_value"
+												}
+											]
+										}
+									}
+								]
+							}
+						}
+					]
+				}
+			},
+			{
+				"fov_slider": {
+					"type": "panel",
+					"anchor_from": "top_right", "anchor_to": "top_right",
+					"size": [ "50%", 32 ], "offset": [ 0, 60 ],
+					"controls": [
+						{
+							"fov@ii.slider": {
+								"size": [ "100% - 48px", 6 ], "offset": [ -8, 0 ],
+								"$slider_name": "field_of_view",
+								"$slider_value_binding_name": "#field_of_view",
+								"$option_enabled_binding_name": "#field_of_view_enabled",
+								"$focus_override_up": "FOCUS_OVERRIDE_STOP"
+							}
+						},
+						{
+							"fov_label": {
+								"type": "label",
+								"alpha": 0.6,
+									"offset": [ -4, -10 ],
+									"$slider_tts_text_value": "#field_of_view_slider_label",
+									"text": "$slider_tts_text_value",
+									"bindings": [
+										{
+											"binding_type": "$slider_tts_binding_type",
+											"binding_condition": "$slider_tts_binding_condition",
+											"binding_collection_name": "$slider_collection_name",
+											"binding_name": "$slider_tts_text_value"
+									}
+								]
+							}
+						}
+					]
+				}
+			},
+			{
+				"hud_opacity_slider": {
+					"type": "panel",
+					"anchor_from": "top_right", "anchor_to": "top_right",
+					"size": [ "50%", 32 ], "offset": [ 0, 90 ],
+					"controls": [
+						{
+							"hud_opacity@ii.slider": {
+								"size": [ "100% - 48px", 6 ], "offset": [ -8, 0 ],
+								"$slider_name": "interface_opacity",
+								"$slider_value_binding_name": "#interface_opacity",
+								"$option_enabled_binding_name": "#interface_opacity_enabled",
+								"$focus_override_up": "FOCUS_OVERRIDE_STOP"
+							}
+						},
+						{
+							"hud_opacity_label": {
+								"type": "label",
+								"alpha": 0.6,
+									"offset": [ -4, -10 ],
+									"$slider_tts_text_value": "#interface_opacity_slider_label",
+									"text": "$slider_tts_text_value",
+									"bindings": [
+										{
+											"binding_type": "$slider_tts_binding_type",
+											"binding_condition": "$slider_tts_binding_condition",
+											"binding_collection_name": "$slider_collection_name",
+											"binding_name": "$slider_tts_text_value"
+									}
+								]
+							}
+						}
+					]
+				}
+			},
+			{
+				"outline_selection_toggle@ii_video_settings.option_toggle": {
+					"$option_generic_panel_size": [ "50%", 24 ],
+					"ignored": "($is_holographic)",
+					"offset": [ 0, 120 ],
+					"anchor_from": "top_left",
+					"anchor_to": "top_left",
+					"$option_label": "options.classic_box_selection",
+					"$option_binding_name": "#classic_box_selection",
+					"$option_enabled_binding_name": "#classic_box_selection_enabled",
+					"$toggle_name": "classic_box_selection"
+				}
+			},
+			{
+				"player_names_toggle@ii_video_settings.option_toggle": {
+					"$option_generic_panel_size": [ "50%", 24 ],
+					"ignored": "($is_holographic)",
+					"offset": [ 0, 120 ],
+					"anchor_from": "top_right",
+					"anchor_to": "top_right",
+					"$option_label": "options.ingamePlayerNames",
+					"$option_binding_name": "#ingame_player_names",
+					"$option_enabled_binding_name": "#ingame_player_names_enabled",
+					"$toggle_name": "ingame_player_names"
+				}
+			},
+			{
+				"clouds_toggle@ii_video_settings.option_toggle": {
+					"$option_generic_panel_size": [ "50%", 24 ],
+					"offset": [ 0, 140 ],
+					"anchor_from": "top_left",
+					"anchor_to": "top_left",
+					"$option_label": "options.renderclouds",
+					"$option_binding_name": "#render_clouds",
+					"$option_enabled_binding_name": "#render_clouds_enabled",
+					"$toggle_name": "render_clouds"
+				}
+			},
+			{
+				"camera_shake_toggle@ii_video_settings.option_toggle": {
+					"$option_generic_panel_size": [ "50%", 24 ],
+					"ignored": "($is_holographic and $is_reality_mode and not $is_pregame)",
+					"offset": [ 0, 140 ],
+					"anchor_from": "top_right",
+					"anchor_to": "top_right",
+					"$option_label": "options.screenShake",
+					"$option_binding_name": "#camera_shake",
+					"$option_enabled_binding_name": "#camera_shake_enabled",
+					"$toggle_name": "camera_shake"
+				}
+			},
+			{
+				"fancy_leaves_toggle@ii_video_settings.option_toggle": {
+					"$option_generic_panel_size": [ "50%", 24 ],
+					"ignored": "($pocket_edition or $education_ios or $is_holographic)",
+					"offset": [ 0, 160 ],
+					"anchor_from": "top_left",
+					"anchor_to": "top_left",
+					"$option_label": "options.transparentleaves",
+					"$option_binding_name": "#transparent_leaves",
+					"$option_enabled_binding_name": "#transparent_leaves_enabled",
+					"$toggle_name": "transparent_leaves"
+				}
+			},
+			{
+				"view_bobbing_toggle@ii_video_settings.option_toggle": {
+					"$option_generic_panel_size": [ "50%", 24 ],
+					"ignored": "($is_holographic and $is_reality_mode and not $is_pregame)",
+					"offset": [ 0, 160 ],
+					"anchor_from": "top_right",
+					"anchor_to": "top_right",
+					"$option_label": "options.viewBobbing",
+					"$option_binding_name": "#view_bobbing",
+					"$option_enabled_binding_name": "#view_bobbing_enabled",
+					"$toggle_name": "view_bobbing"
+				}
+			},
+			{
+				"smooth_lighting_toggle@ii_video_settings.option_toggle": {
+					"$option_generic_panel_size": [ "50%", 24 ],
+					"ignored": "($is_holographic or $new_video_settings)",
+					"offset": [ 0, 180 ],
+					"anchor_from": "top_left",
+					"anchor_to": "top_left",
+					"$option_label": "options.smooth_lighting",
+					"$option_binding_name": "#smooth_lighting",
+					"$option_enabled_binding_name": "#smooth_lighting_enabled",
+					"$toggle_name": "smooth_lighting"
+				}
+			},
+			{
+				"fov_alter_toggle@ii_video_settings.option_toggle": {
+					"$option_generic_panel_size": [ "50%", 24 ],
+					"offset": [ 0, 180 ],
+					"anchor_from": "top_right",
+					"anchor_to": "top_right",
+					"$option_label": "options.fov.toggle",
+					"$option_binding_name": "#field_of_view_toggle",
+					"$option_enabled_binding_name": "#field_of_view_toggle_enabled",
+					"$toggle_name": "field_of_view_toggle"
+				}
+			},
+			{
+				"gui_scale_slider": {
+					"type": "panel",
+					"anchor_from": "top_right", "anchor_to": "top_right",
+					"size": [ "50%", 32 ], "offset": [ 0, 210 ],
+					"controls": [
+						{
+							"gui_scale@ii.slider": {
+								"ignored": "($is_holographic)",
+								"size": [ "100% - 48px", 6 ], "offset": [ -8, 0 ],
+								"$slider_name": "gui_scale",
+								"$slider_value_binding_name": "#gui_scale",
+								"$option_enabled_binding_name": "#gui_scale_enabled",
+								"$slider_steps_binding_name": "#gui_scale_steps",
+								"$focus_override_up": "FOCUS_OVERRIDE_STOP"
+							}
+						},
+						{
+							"gui_scale_label": {
+								"type": "label",
+								"alpha": 0.6,
+									"offset": [ -4, -10 ],
+									"$slider_tts_text_value": "#gui_scale_slider_label",
+									"text": "$slider_tts_text_value",
+									"bindings": [
+										{
+											"binding_type": "$slider_tts_binding_type",
+											"binding_condition": "$slider_tts_binding_condition",
+											"binding_collection_name": "$slider_collection_name",
+											"binding_name": "$slider_tts_text_value"
+									}
+								]
+							}
+						}
+					]
+				}
+			},
+			{
+				"render_distance_slider": {
+					"type": "panel",
+					"anchor_from": "top_left", "anchor_to": "top_left",
+					"size": [ "50%", 32 ], "offset": [ 0, 210 ],
+					"controls": [
+						{
+							"render_distance@ii.slider": {
+								"size": [ "100% - 48px", 6 ], "offset": [ 8, 0 ],
+								"$slider_name": "render_distance",
+								"$slider_value_binding_name": "#render_distance",
+								"$option_enabled_binding_name": "#render_distance_enabled",
+								"$slider_steps_binding_name": "#render_distance_steps",
+								"$focus_override_up": "FOCUS_OVERRIDE_STOP"
+							}
+						},
+						{
+							"render_distance_label": {
+								"type": "label",
+								"alpha": 0.6,
+									"offset": [ 4, -10 ],
+									"$slider_tts_text_value": "#render_distance_slider_label",
+									"text": "$slider_tts_text_value",
+									"bindings": [
+										{
+											"binding_type": "$slider_tts_binding_type",
+											"binding_condition": "$slider_tts_binding_condition",
+											"binding_collection_name": "$slider_collection_name",
+											"binding_name": "$slider_tts_text_value"
+									}
+								]
+							}
+						}
+					]
+				}
+			},
+			{
+				"advanced_settings_panel": {
+					"type": "panel",
+					"size": [ "100%", 64 ],
+					"anchor_from": "top_middle",
+					"anchor_to": "top_middle",
+					"offset": [ 0, 240 ],
+					"controls": [
+						{
+							"advanced_title_panel@ii.button0": {
+								"anchor_from": "top_middle",
+								"anchor_to": "top_middle",
+								"offset": [ 0, 0 ],
+								"size": [ "100% - 8px", 14 ],
+								"controls": [
+								{
+									"title_label": {
+										"type": "label",
+										"offset": [ 0, 1 ],
+										"text": "§lAdvanced",
+										"font_scale_factor": 1
+									}	
+								}
+								]
+							}
+						},
+						{
+							"vsync_toggle@ii_video_settings.option_toggle": {
+								"$option_generic_panel_size": [ "50%", 24 ],
+								"offset": [ 0, 20 ],
+								"anchor_from": "top_left",
+								"anchor_to": "top_left",
+								"$option_label": "VSync (Not working)",
+								"$option_binding_name": "#vsync",
+								"$option_enabled_binding_name": "#vsync_enabled",
+								"$toggle_name": "vsync"
+							}
+						},
+						{
+							"input_response_toggle@ii_video_settings.option_toggle": {
+								"$option_generic_panel_size": [ "50%", 24 ],
+								"offset": [ 0, 40 ],
+								"anchor_from": "top_left",
+								"anchor_to": "top_left",
+								"$option_label": "options.improvedInputResponsePlaceholder",
+								"$option_binding_name": "#improved_input_response_options",
+								"$option_enabled_binding_name": "#improved_input_response_options_enabled",
+								"$toggle_name": "improved_input_response_options"
+							}
+						},
+						{
+							"fps_slider": {
+								"type": "panel",
+								"anchor_from": "top_right", "anchor_to": "top_right",
+								"size": [ "50%", 32 ], "offset": [ 0, 20 ],
+								"controls": [
+									{
+										"fps@ii.slider": {
+											"size": [ "100% - 48px", 6 ], "offset": [ -8, 0 ],
+											"$slider_name": "max_framerate",
+											"$slider_value_binding_name": "#max_framerate",
+											"$option_enabled_binding_name": "#max_framerate_enabled",
+											"$focus_override_up": "FOCUS_OVERRIDE_STOP",
+											"$slider_steps_binding_name": "#max_framerate_steps"
+										}
+									},
+									{
+										"fps_label": {
+											"type": "label",
+											"alpha": 0.6,
+											"offset": [ -4, -10 ],
+											"$slider_tts_text_value": "#max_framerate_slider_label",
+											"text": "$slider_tts_text_value",
+											"bindings": [
+												{
+													"binding_type": "$slider_tts_binding_type",
+													"binding_condition": "$slider_tts_binding_condition",
+													"binding_collection_name": "$slider_collection_name",
+													"binding_name": "$slider_tts_text_value"
+												}
+											]
+										}
+									}
+								]
+							}
+						},
+						{
+							"msaa_slider": {
+								"type": "panel",
+								"anchor_from": "top_right", "anchor_to": "top_right",
+								"size": [ "50%", 32 ], "offset": [ 0, 50 ],
+								"controls": [
+									{
+										"msaa@ii.slider": {
+											"size": [ "100% - 48px", 6 ], "offset": [ -8, 0 ],
+											"$slider_name": "msaa",
+											"$slider_value_binding_name": "#msaa",
+											"$option_enabled_binding_name": "#msaa_enabled",
+											"$focus_override_up": "FOCUS_OVERRIDE_STOP",
+											"$slider_steps_binding_name": "#msaa_steps"
+										}
+									},
+									{
+										"msaa_label": {
+											"type": "label",
+											"alpha": 0.6,
+											"offset": [ -4, -10 ],
+											"$slider_tts_text_value": "#msaa_slider_label",
+											"text": "$slider_tts_text_value",
+											"bindings": [
+												{
+													"binding_type": "$slider_tts_binding_type",
+													"binding_condition": "$slider_tts_binding_condition",
+													"binding_collection_name": "$slider_collection_name",
+													"binding_name": "$slider_tts_text_value"
+												}
+											]
+										}
+									}
+								]
+							}
+						}
+					]
+				}
+			},
+			{
+				"rtx_panel": {
+					"type": "panel",
+					"size": [ "100%", 64 ],
+					"anchor_from": "top_middle",
+					"anchor_to": "top_middle",
+					"offset": [ 0, 320 ],
+					"controls": [
+						{
+							"rtx_title_panel@ii.button0": {
+								"anchor_from": "top_middle",
+								"anchor_to": "top_middle",
+								"offset": [ 0, 0 ],
+								"size": [ "100% - 8px", 14 ],
+								"controls": [
+								{
+									"title_label": {
+										"type": "label",
+										"offset": [ 0, 1 ],
+										"text": "§lRTX",
+										"font_scale_factor": 1
+									}	
+								}
+								]
+							}
+						},
+						{
+							"rtx_toggle@ii_video_settings.option_toggle": {
+								"$option_generic_panel_size": [ "50%", 24 ],
+								"offset": [ 0, 16 ],
+								"anchor_from": "top_left",
+								"anchor_to": "top_left",
+								"ignored": "($is_holographic or $new_video_settings)",
+								"$option_label": "options.raytracing",
+								"$option_binding_name": "#raytracing",
+								"$option_enabled_binding_name": "#raytracing_enabled",
+								"$toggle_name": "raytracing"
+							}
+						},
+						{
+							"upscaling_toggle@ii_video_settings.option_toggle": {
+								"$option_generic_panel_size": [ "50%", 24 ],
+								"offset": [ 0, 16 ],
+								"anchor_from": "top_right",
+								"anchor_to": "top_right",
+								"ignored": "($is_holographic or $new_video_settings)",
+								"$option_label": "options.upscaling",
+								"$option_binding_name": "#graphics_upscaling",
+								"$option_enabled_binding_name": "#graphics_upscaling_enabled",
+								"$toggle_name": "graphics_upscaling"
+							}
+						},
+						{
+							"rtx_render_distance_slider": {
+								"type": "panel",
+								"anchor_from": "top_middle", "anchor_to": "top_middle",
+								"size": [ "100%", 32 ], "offset": [ 0, 40 ],
+								"controls": [
+									{
+										"rtx_render_distance@ii.slider": {
+											"size": [ "100% - 64px", 6 ], "offset": [ 0, 0 ],
+											"$slider_name": "raytracing_render_distance",
+											"$slider_value_binding_name": "#raytracing_render_distance",
+											"$option_enabled_binding_name": "#raytracing_render_distance_enabled",
+											"$focus_override_up": "FOCUS_OVERRIDE_STOP",
+											"$slider_steps_binding_name": "#raytracing_render_distance_steps"
+										}
+									},
+									{
+										"rtx_render_distance_label": {
+											"type": "label",
+											"offset": [ 4, -10 ],
+											"alpha": 0.6,
+											"$slider_tts_text_value": "#raytracing_render_distance_slider_label",
+											"text": "$slider_tts_text_value",
+											"bindings": [
+												{
+													"binding_type": "$slider_tts_binding_type",
+													"binding_condition": "$slider_tts_binding_condition",
+													"binding_collection_name": "$slider_collection_name",
+													"binding_name": "$slider_tts_text_value"
+												}
+											]
+										}
+									}
+								]
+							}
+						}
+					]
+				}
+			}
+		]
+	}
 }

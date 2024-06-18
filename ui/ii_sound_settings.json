@@ -24,9 +24,9 @@
 					{
 						"title_label": {
 							"type": "label",
-							"offset": [ 0, 2 ],
+							"offset": [ 0, 0 ],
 							"text": "§lAudio",
-							"font_scale_factor": 2
+							"font_scale_factor": 1
 						}	
 					}
 					]
@@ -57,10 +57,33 @@
 							}
 						},
 						{
-							"main_volume_label": {
-								"type": "label",
-								"offset": [ 0, -10 ],
-								"text": "Main Volume"
+							"audio_label": {
+								"type": "stack_panel",
+								"orientation": "horizontal",
+								"offset": [ 4, -10 ],
+								"size": [ "default", 8 ],
+								"controls": [
+									{
+										"fov_name_label": { 
+											"type": "label", "text": "Volume »"
+										}
+									},
+									{
+										"audio_value_label": {
+											"type": "label",
+											"$slider_tts_text_value": "#main_volume_text_value",
+											"text": "$slider_tts_text_value",
+											"bindings": [
+												{
+													"binding_type": "$slider_tts_binding_type",
+													"binding_condition": "$slider_tts_binding_condition",
+													"binding_collection_name": "$slider_collection_name",
+													"binding_name": "$slider_tts_text_value"
+												}
+											]
+										}
+									}
+								]
 							}
 						}
 					]

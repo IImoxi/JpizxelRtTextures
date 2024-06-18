@@ -1213,11 +1213,29 @@
 			},
 			{
 				"settings_panel@ii.dark_dialog": {
-					"size": [ "80%", "90%" ],
+					"size": [ "85%", "90%" ],
 					//"max_size": [ "480px - 10%", 550 ],
 					"controls": [
 						{
 							"sidebar_bg@ii.black1": { "size": [ 130, "100% - 2px" ], "alpha": 0.2, "anchor_from": "left_middle", "anchor_to": "left_middle" }
+						},
+						{
+							"title_panel@ii.button0": {
+								"anchor_from": "top_left",
+								"anchor_to": "top_left",
+								"offset": [ 2, 2 ],
+								"size": [ 126, 24 ],
+								"controls": [
+								{
+									"title_label": {
+										"type": "label",
+										"offset": [ 0, 0 ],
+										"text": "§lSettings",
+										"font_scale_factor": 1
+									}	
+								}
+								]
+							}
 						},
 						{
 							"texture_pack_button_panel": {
@@ -1228,7 +1246,7 @@
 								"controls": [
 									{
 										"global_texture_pack_button@general_section.ii_global_texture_pack_button": {
-											"size": [ 130, 16 ],
+											"size": [ 129, 16 ],
 											"offset": [ 1, 0 ],
 											"layer": 8,
 											"ignored": "$ignore_global_resources_section",
@@ -1244,46 +1262,28 @@
 				}
 			},
 			{
-			"stack_panel": {
-			  "type": "stack_panel",
-			  "size": [ "80% - 2px", "90% - 6px" ],
-			  //"max_size": [ "80% - 2px", 544 ],
-			  "controls": [
-				{
-				  "content_panel": {
+				"container@": {
 					"type": "panel",
-					"size": [ "100%", "100%" ],
-
+					"size": [ "85% - 2px", "90% - 4px" ],
 					"controls": [
-					  {
-						"container@": {
-						  "type": "panel",
-						  "size": [ "100%", "100%" ],
-						  "controls": [
-							{ "$dialog_content@$dialog_content": {} }
-						  ]
-						}
-					  }
+						{ "$dialog_content@$dialog_content": {} }
 					]
-				  }
 				}
-			  ]
+			},
+			{
+				"popup_dialog_factory": {
+					"type": "factory",
+					"control_ids": {
+						"purchase_failed": "@realms_create.popup_dialog__purchase_failed",
+						"purchase_in_progress": "@realms_create.popup_dialog__purchase_in_progress",
+						"share_by_link": "@realms_allowlist.popup_dialog__share_by_link",
+						"options_modal": "@realms_allowlist.popup_dialog__options",
+						"backups_modal": "@realms_settings.popup_dialog__backups"
+				}
+				}
 			}
-		  },
-      {
-        "popup_dialog_factory": {
-          "type": "factory",
-          "control_ids": {
-            "purchase_failed": "@realms_create.popup_dialog__purchase_failed",
-            "purchase_in_progress": "@realms_create.popup_dialog__purchase_in_progress",
-            "share_by_link": "@realms_allowlist.popup_dialog__share_by_link",
-            "options_modal": "@realms_allowlist.popup_dialog__options",
-            "backups_modal": "@realms_settings.popup_dialog__backups"
-          }
-        }
-      }
-    ]
-  },
+		]
+	},
 
   "toggle_button_control": {
     "type": "panel",
@@ -1468,17 +1468,10 @@
     ]
   },
 
-  "selector_group_label": {
-    "type": "label",
-    "size": [ "100%", "default" ],
-    "color": "$main_header_text_color",
-    "offset": [ 15, 0 ]
-  },
-
   "scrollable_selector_area_content": {
     "type": "panel",
     "offset": [ 0, 0 ],
-    "size": [ "100%", "100%c" ],
+    "size": [ 130, "100%c" ],
     "controls": [
       { "$selector_stack_panel@$selector_stack_panel": {} }
     ]
@@ -1487,8 +1480,8 @@
   // left panel
   "selector_area": {
     "type": "panel",
-    "offset": [ 0, 0 ],
-    "size": [ 130, "100%" ],
+    "offset": [ 0, 28 ],
+    "size": [ 129, "100% - 44px" ],
     "anchor_from": "top_left",
     "anchor_to": "top_left",
     "layer": 2,

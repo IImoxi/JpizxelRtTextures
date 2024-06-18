@@ -78,6 +78,7 @@
   },
   
 	"ii_selector_pane_content": {
+		"size": [ 129, "100%c" ],
 		"type": "stack_panel",
 
 		"$tts_section_header": "realmsSettingsScreen.worldSectionTitle",
@@ -270,6 +271,7 @@
 
 	"selector_stack_panel": {
 		"type": "stack_panel",
+		"size": [ 129, "100%c" ],
 		"anchor_from": "top_left",
 		"anchor_to": "top_left",
 		"orientation": "vertical",
@@ -561,7 +563,7 @@
               }
             },
             { "creator_section@general_section.creator_section": { "visible": false } },
-            { "video_section@general_section.video_section": { "visible": false } },
+            { "video_section@ii_video_settings.video_section": { "visible": false } },
             {
               "view_subscriptions_section@general_section.view_subscriptions_section": {
                 "ignored": "($education_edition or $is_editor_mode_enabled)",
