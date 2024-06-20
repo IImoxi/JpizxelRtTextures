@@ -9,16 +9,29 @@
 		"shadow": true,
 		"enable_profanity_filter": false,
 		"localize": true,
-		"font_scale_factor": 1,
+		"font_scale_factor": 1.0,
 		"color": "$chat_text_color",
 		"anims": [
 		"@iihud.ii_slide_anim",
 		"@iihud.ii_fade_anim"
 		]
 	},
+	
+	"hud_content": {
+		"type": "panel", "size": [ "100%", "100%" ],
+		"controls": [
+			{ "crosshair@iihud.cursor_renderer": {} },
+			{ "root_panel@iihud.root_panel": {} }
+		],
+		"bindings": [
+			{ "binding_name": "#hud_visible", "binding_name_override": "#visible", "binding_type": "global" },
+			{ "binding_name": "#hud_alpha", "binding_name_override": "#alpha", "binding_type": "global" },
+			{ "binding_name": "#hud_propagate_alpha", "binding_name_override": "#propagateAlpha", "binding_type": "global" }
+		]
+	},
     
 	"hud_screen@common.base_screen": {
-		"$screen_content": "iihud.content",
+		"$screen_content": "hud.hud_content",
 		"enable_profanity_filter": false,
 		"is_showing_menu": false,
 		"should_steal_mouse": true,
