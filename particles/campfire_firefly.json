@@ -4,7 +4,7 @@
 		"description": {
 			"identifier": "ii:campfire_firefly",
 			"basic_render_parameters": {
-				"material": "particles_alpha",
+				"material": "particles_add",
 				"texture": "textures/particle/pixel"
 			}
 		},

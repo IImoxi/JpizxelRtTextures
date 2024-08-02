@@ -11,31 +11,38 @@
 		"events": {
 			"flash": {
 				"particle_effect": {
-					"effect": "minecraft:basic_flash",
-					"type": "particle_with_velocity"
+					"effect": "ii:explosion_flash",
+					"type": "emitter"
+				}
+			},
+			"explosion": {
+				"particle_effect": {
+					"effect": "ii:explosion",
+					"type": "emitter"
 				}
 			}
 		},
 		"components": {
 			"minecraft:emitter_rate_instant": {
-			"num_particles": 256
+			"num_particles": 1
 			},   
 			"minecraft:emitter_lifetime_once": {},
 			"minecraft:emitter_shape_point": {
-				"offset": [ "Math.random(-0.7, 0.7)", "Math.random(-0.7, 0.7)", "Math.random(-0.7, 0.7)" ],
-				"direction": [ "Math.random(-1, 1)", "Math.random(-0.5, 0.5)", "Math.random(-1, 1)" ]
+				"offset": [0, 0.5, 0 ],
+				"direction": [ 0, 0, 0 ]
 			},
 			"minecraft:particle_initial_speed": "Math.random(30.0, 50.0)",
 			"minecraft:particle_lifetime_expression": {
-				"max_lifetime": "Math.random(0.25, 1)"
+				"max_lifetime": 1
 			},
 			"minecraft:particle_motion_dynamic": {
-				"linear_acceleration": [ 0, -2, 0 ],
+				"linear_acceleration": [ 0, 0, 0 ],
 				"linear_drag_coefficient": 6
 			},
 			"minecraft:particle_lifetime_events": {
 				"timeline": {
-					"0.00": "flash"
+					"0.00": "flash",
+					"0.01": "explosion"
 				}
 			},
 			"minecraft:particle_motion_collision": {
@@ -62,7 +69,7 @@
 				}
 			},
 			"minecraft:particle_appearance_tinting": {
-				"color": [ "(variable.particle_random_1 / 2) + 0.5", "(variable.particle_random_1 / 2) + 0.5", "(variable.particle_random_1 / 2) + 0.5", 1.0 ]
+				"color": [ 1, 1, 1, 1.0 ]
 			},
 			"minecraft:particle_appearance_lighting": {}
 		}
