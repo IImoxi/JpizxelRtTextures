@@ -2,7 +2,7 @@
  "format_version": "1.16.100",
   "minecraft:texture_set": {
     "color": "textures/moss_block",
-    "metalness_emissive_roughness": "#000077",
+    "metalness_emissive_roughness": "mer/moss_block",
     "normal": "normals/moss_block"
   }
 }

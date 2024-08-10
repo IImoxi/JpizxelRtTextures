@@ -1,7 +1,7 @@
 {
 	"format_version": "1.16.100",
 	"minecraft:texture_set": {
-		"color": "textures/grass_side",
+		"color": "textures/grass_side1",
 		"metalness_emissive_roughness": "mer/grass_side",
 		"normal": "normals/grass_side"
 	}
