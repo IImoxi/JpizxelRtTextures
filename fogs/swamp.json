@@ -1,0 +1,27 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:fog_settings": {
+		"description": {
+			"identifier": "ii:swamp"
+		},
+		"volumetric": {
+			"density": {
+				"air": {
+					"max_density": 0.005,
+					"max_density_height": 63,
+					"zero_density_height": 256
+				}
+			},
+			"media_coefficients": {
+				"air": {
+					"scattering": [ 0.1, 0.13, 0.20 ],
+					"absorption": [ 0, 0.04, 0.06 ]
+				},
+				"water": {
+					"scattering": [ 0.15, 0.09, 0.1 ],
+					"absorption": [ 0.1, 0.09, 0.15 ]
+				}
+			}
+		}
+	}
+ }
