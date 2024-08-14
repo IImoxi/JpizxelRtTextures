@@ -1,0 +1,8 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:texture_set": {
+		"color": "textures/muddy_mangrove_roots_top",
+		"metalness_emissive_roughness": "mer/mangrove_roots_top",
+		"normal": "normals/mangrove_roots_top"
+	}
+}
