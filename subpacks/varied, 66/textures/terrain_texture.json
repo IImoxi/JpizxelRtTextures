@@ -260,7 +260,8 @@
 		"stonebrick" : { "textures" : [ "textures/blocks/stonebrick", "textures/blocks/stonebrick_mossy", "textures/blocks/stonebrick_cracked", "textures/blocks/stonebrick_carved" ] },
       	"stone" : { "textures" : [  { "variations": [
 			{ "path": "textures/blocks/stone", "weight": 1 },
-			{ "path": "textures/blocks/stone1", "weight": 1 } ] }, 
+			{ "path": "textures/blocks/stone1", "weight": 1 },
+			{ "path": "textures/blocks/stone2", "weight": 1 } ] }, 
 			"textures/blocks/stone_granite", "textures/blocks/stone_granite_smooth", "textures/blocks/stone_diorite", "textures/blocks/stone_diorite_smooth", "textures/blocks/stone_andesite", "textures/blocks/stone_andesite_smooth" ] },
 		"oak_leaves" : { "textures" : "textures/blocks/leaves_oak" },
 		"dirt" : { "textures" : [  { "variations": [
