@@ -2,11 +2,12 @@
 	"namespace": "iichat",
 
 	// Input
-	"text_box_offset": {
+	"text_box": {
 		"type": "panel",
-		"anchor_from": "bottom_left",
-		"anchor_to": "bottom_left",
-		"size": [ "100%", "1px" ],
+		"anchor_from": "bottom_middle",
+		"anchor_to": "bottom_middle",
+		"size": [ "100%", 18 ],
+		"anims": [ "@chat.ii_offset_05-0012-0000" ],
 		"controls": [ 
 			{ "text_box@iichat.text_edit_box": {} }
 		],
@@ -18,14 +19,12 @@
 		]
 	},
 	"text_edit_box@common.text_edit_box": {
-		"anchor_from": "top_middle", "anchor_to": "bottom_middle",
-		"size": [ "100% - 2px", 16 ], "max_length": 11001,
+		"anchor_from": "center", "anchor_to": "center",
+		"size": [ "100% - 2px", 16 ],
+		"max_length": 11001,
 
 		"always_listening": true,
 
-		"$text_background_default": "chat.chat_input_dialog",
-		"$text_background_hover": "chat.chat_input_dialog",
-	
 		"$text_box_name": "#message_text_box",
 		"$text_edit_box_content_binding_name": "#message_text_box_content",
 
@@ -38,6 +37,37 @@
 			{ "binding_type": "$text_edit_box_enabled_binding_type", "binding_collection_name": "$text_edit_box_grid_collection_name", "binding_name": "$text_box_enabled_binding_name", "binding_name_override": "#enabled" },
 			{ "binding_name": "#text_edit_box_focus_override_up",    "binding_name_override":   "#focus_change_up" },
 			{ "binding_name": "#text_edit_box_focus_override_down",  "binding_name_override":   "#focus_change_down" }
+		],	
+		"controls": [
+			{
+				"centering_panel": {
+					"type": "panel",
+					"size": [ "100% - 6px", "100% - 4px" ],
+					"controls": [
+						{
+							"clipper_panel": {
+								"type": "panel",
+								"size": "$text_edit_clipping_panel_size",
+								"anchor_from": "left_middle",
+								"anchor_to": "left_middle",
+								"offset": "$text_offset",
+								"clips_children": true,
+								"$disabled_color|default": "$color",
+								"controls": [
+									{
+										"$text_edit_text_control@common.text_edit_box_label": {
+											"layer": 1,
+											"anchor_from": "left_middle",
+											"anchor_to": "left_middle"
+										}
+									}
+								]
+							}
+						}
+					]
+				}
+			},
+			{ "@chat.chat_input_dialog": {} }
 		],
 		
 		"button_mappings": [
@@ -65,7 +95,7 @@
 	},
 	
 	// Multiline Input
-	"multiline_text_box_offset@common.multiline_text_edit_box": {
+	"multiline_text_box@common.multiline_text_edit_box": {
 		"$text_offset": [ 1, 1 ],
 		"$text_background_default": "ii.dark_dialog",
 		"$text_background_hover": "ii.dark_dialog",
@@ -73,7 +103,9 @@
 		"anchor_from": "bottom_middle",
 		"anchor_to": "bottom_middle",
 		"layer": 20,
-		"size": [ "100% - 2px", "50%" ],
+		//"size": [ "100% - 2px", "50%" ],
+		"size": "@iichat.ii_size_05",
+		"anims": [ "@iichat.ii_size_05" ],
 		"offset": [ 0, -1 ],
 		"max_length": 32767,
 		"$text_box_name": "#message_text_box",
@@ -86,6 +118,8 @@
 			}
 		]
     },
+	"multiline_chat_input_dialog@ii.dark_dialog": { "alpha": 0.8, "anims": [ "@iichat.ii_size_05" ] },
+	"ii_size_05": { "anim_type": "size", "easing": "out_expo",  "duration": 2.5, "from": [ "100%-2px", 16 ], "to": [ "100%-2px", "50%" ] },
 	
 	//Hidden Exit Button
 	"exit_button@common_buttons.light_text_button": {
@@ -123,7 +157,7 @@
 	
 	"expand_chat_button": {
 		"type": "panel",
-		"$template_toggle|default": "ii.toggle",
+		"$template_toggle": "ii.toggle",
 		"anchor_from": "top_left",
 		"anchor_to": "top_left",
 		"$unchecked_control": "iichat.expand_button0",

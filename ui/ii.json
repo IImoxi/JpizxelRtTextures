@@ -16,6 +16,38 @@
 	
 	"divider": { "type": "panel", "size": [ "100%", 5 ], "controls": [ { "general_section_label_panel@ii.highlight": { "size": [ "50%", 1 ] } } ] },
 	
+	//Base Screen template
+	
+	"base_screen": {
+		"type": "screen",
+		"close_on_player_hurt": false,
+		"$screen_content|default": "",
+		"vr_mode": "$is_holographic",
+		"controls": [
+			{
+			"variables_button_mappings_and_controls": {
+				"type": "input_panel",
+				"hover_enabled": false,
+					"prevent_touch_input": false,
+					"ttsSectionContainer": true
+				}
+			}
+		]
+	},
+	
+	// Hotbar Inventory Template
+	
+	"hotbar_grid_template": {
+		"type": "grid",
+		"size": [ 162, 18 ],
+		"anchor_from": "center",
+		"anchor_to": "center",
+		"offset": [ 0, 67 ],
+		"grid_dimensions": [ 9, 1 ],
+		"grid_item_template": "common.grid_item_for_hotbar",
+		"collection_name": "hotbar_items"
+	},
+	
 	// Option Toggle
 	"off@ii.button0": { "size": [ "100%c + 8px", 16 ], "controls": [ { "off_label": { "color": [ 1, 0.5, 0.5 ], "type": "label", "text": "Disabled", "size": [ "default", "default" ], "text_alignment": "center", "alpha": 0.6, "anchor_from": "center", "anchor_to": "center" } } ] },
 	"off_hover@ii.button1": { "size": [ "100%c + 8px", 16 ], "controls": [ { "off_hover_label": { "type": "label", "color": [ 1, 0.5, 0.5 ], "text": "Disabled", "text_alignment": "center", "alpha": 0.6, "anchor_from": "center", "anchor_to": "center" } } ] },

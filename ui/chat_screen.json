@@ -81,12 +81,13 @@
 		]
 	},
 	// Background
-	"chat_input_dialog@ii.dark_dialog": { "alpha": 0.8, "anims": [ "@chat.ii_offset_05-2", "@chat.ii_alpha_05_00_08" ] },
+	"chat_input_dialog@ii.dark_dialog": { "alpha": "@chat.ii_alpha_05_08_00", "anims": [ "@chat.ii_offset_05-2", "@chat.ii_alpha_05_00_08", "@chat.ii_alpha_05_08_00" ] },
 	// Animations Top
 	"ii_alpha_05_00_10":  { "anim_type": "alpha",  "easing": "out_quint", "duration": 0.5, "from": 0, "to": 1 },
 	"ii_offset_05-1": { "anim_type": "offset", "easing": "out_expo",  "duration": 0.5, "from": [ 0, -12 ], "to": [ 0, 0 ] },
 	// Animations Bottom
 	"ii_alpha_05_00_08":  { "anim_type": "alpha",  "easing": "out_quint", "duration": 0.5, "from": 0, "to": 0.8 },
+	"ii_alpha_05_08_00":  { "anim_type": "alpha",  "easing": "out_quint", "duration": 0.5, "from": 0.8, "to": 0, "play_event": "screen.exit_pop", "end_event": "screen.exit_end" },
 	"ii_offset_05-2": { "anim_type": "offset", "easing": "out_expo",  "duration": 0.5, "from": [ 0, 12 ], "to": [ 0, 0 ] },
 	
 	////////////////////////////

@@ -35,7 +35,7 @@
 		"$show_background": false,
 		"$scroll_box_visible": false,
 		"$always_handle_scrolling": true,
-		"bindings": [ { "binding_type": "view", "source_control_name": "expand_chat_input",  "source_property_name": "(not #toggle_state)", "target_property_name": "#visible" } ]
+		"bindings": [  { "binding_type": "view", "source_control_name": "expand_chat_input",  "source_property_name": "(not #toggle_state)", "target_property_name": "#visible" } ]
 	},
 	
 	//Displayed command text
@@ -81,27 +81,18 @@
 		]
 	},
 	// Background
-	"chat_input_dialog@ii.dark_dialog": { "alpha": 0.8, "anims": [ "@chat.ii_offset_05-2", "@chat.ii_alpha_05_00_08" ] },
+	"chat_input_dialog@ii.dark_dialog": { "alpha": 0.8, "anims": [ "@chat.ii_alpha_05_00_08" ] },
 	// Animations Top
 	"ii_alpha_05_00_10":  { "anim_type": "alpha",  "easing": "out_quint", "duration": 0.5, "from": 0, "to": 1 },
 	"ii_offset_05-1": { "anim_type": "offset", "easing": "out_expo",  "duration": 0.5, "from": [ 0, -12 ], "to": [ 0, 0 ] },
 	// Animations Bottom
 	"ii_alpha_05_00_08":  { "anim_type": "alpha",  "easing": "out_quint", "duration": 0.5, "from": 0, "to": 0.8 },
-	"ii_offset_05-2": { "anim_type": "offset", "easing": "out_expo",  "duration": 0.5, "from": [ 0, 12 ], "to": [ 0, 0 ] },
+	"ii_offset_05-0012-0000": { "anim_type": "offset", "easing": "out_expo",  "duration": 0.5, "from": [ 0, 12 ], "to": [ 0, 0 ] },
+
 	
 	////////////////////////////
 	// Main Screen            //
 	////////////////////////////
-
-	"chat_screen@common.base_screen": {
-		"close_on_player_hurt": false,
-		"$screen_content": "chat.chat_screen_content",
-		"$screen_bg_content": "",
-		"button_mappings": [
-			{ "from_button_id": "button.menu_exit", "to_button_id": "button.chat_menu_cancel", "mapping_type": "global" },
-			{ "from_button_id": "button.menu_cancel", "to_button_id": "button.chat_menu_cancel", "mapping_type": "global" }
-		]
-	},
 
 	"chat_screen_content": {
 		"type": "panel",
@@ -110,10 +101,10 @@
 			{ "displayed_chat_panel@chat.messages_scrolling_panel": {} },
 			
 			//Chat input panel
-			{ "chat_bottom_panel@iichat.text_box_offset": { "layer": 2 } },
+			{ "chat_bottom_panel@iichat.text_box": { "layer": 2 } },
 			
 			//Multiline Chat input panel
-			{ "multiline_chat_bottom_panel@iichat.multiline_text_box_offset": { "layer": 2 } },
+			{ "multiline_chat_bottom_panel@iichat.multiline_text_box": { "layer": 2 } },
 			
 			//Displayed commands panel
 			{ "displayed_commands_panel@chat.commands_panel": { "layer": 3 } },
@@ -126,9 +117,29 @@
 			
 			//Expand button
 			{ "expand_chat_button@iichat.expand_chat_button": {} },
-			
+
 			//Exit button
 			{ "exit@iichat.exit_button": {} }
+		]
+	},
+	
+	"chat_screen": {
+		"type": "screen",
+		"close_on_player_hurt": false,
+		"vr_mode": "$is_holographic",
+		"controls": [
+			{ "content@chat.chat_screen_content": {} },
+			{
+			"variables_button_mappings_and_controls": {
+				"type": "input_panel",
+				"hover_enabled": false,
+					"prevent_touch_input": false,
+					"ttsSectionContainer": true,
+					"button_mappings": [
+						{ "from_button_id": "button.menu_cancel", "to_button_id": "button.chat_menu_cancel", "mapping_type": "global" }
+					]
+				}
+			}
 		]
 	}
 }

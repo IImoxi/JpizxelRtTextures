@@ -154,14 +154,6 @@
 			"water_surface_color": "#0084FF",
 			"fog_identifier": "ii:atmosphere"
 		},
-		"hell": {
-			"water_surface_color": "#905957",
-			"fog_identifier": "ii:nether"
-		},
-		"the_end": {
-			"water_surface_color": "#62529e",
-			"fog_identifier": "ii:end"
-		},
 		"frozen_river": {
 			"water_surface_color": "#185390",
 			"fog_identifier": "ii:atmosphere"

@@ -1,17 +1,17 @@
 // edit @iimoxi JPvP
 
 {
-  "$pack_version": "ODI v2.07.20",
+  "$pack_version": "ODI v2.10.00",
   "$item_stack_count_color": [ 0.9, 0.9, 0.9 ],
   "$selected_item_stack_count_color": [ 0.9, 0.9, 0.9 ],
 
-  "$transition_time_push_size": 0.0,
-  "$transition_time_pop_size": 0.0,
-  "$transition_time_push": 0.10,
-  "$transition_time_pop": 0.0,
+  "$transition_time_push_size": 0,
+  "$transition_time_pop_size": 0,
+  "$transition_time_push": 0,
+  "$transition_time_pop": 0,
   "$container_transition_time_push": 0,
-  "$container_transition_time_pop": 0.0,
-  "$loading_bar_transition": 1,
+  "$container_transition_time_pop": 0,
+  "$loading_bar_transition": 0,
 
   "$pocket_item_details_color": [ 0.9, 0.9, 0.9 ],
 
