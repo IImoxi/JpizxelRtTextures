@@ -152,9 +152,11 @@
       }
     ]
   },
-
-	"stonecutter_panel": {
-		"type": "panel",
+  
+	"stonecutter_screen": {
+		"type": "screen",
+		"close_on_player_hurt": false,
+		"force_render_below": true,
 		"controls": [
 			{ "common_panel@stonecutter.stonecutter_gui": {} },
 			
@@ -162,36 +164,15 @@
 			{ "stonecutter_input_slot@stonecutter.input_item_slot": {} },
 			{ "scroll_panel@stonecutter.scroll_panel": {} },
 			{ "stonecutter_result_slot@stonecutter.result_item_slot": {} },
-			{ "inventory_panel_bottom_half_with_label@common.inventory_panel_bottom_half": { "size": [ 176, 166 ], "anchor_from": "center", "anchor_to": "center" } },
-			{ "inventory_hotbar@ii.hotbar_grid_template": {} },
+			{ "player_inventory@ii.player_inventory": { "offset": [ 0, 27 ] } },
 			
 			{ "container_gamepad_helpers@common.container_gamepad_helpers": {} },
 			{ "selected_item_details_factory@common.selected_item_details_factory": {} },
 			{ "item_lock_notification_factory@common.item_lock_notification_factory": {} },
 			{ "inventory_selected_icon_button@common.inventory_selected_icon_button": {} },
 			{ "inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {} },
-			{ "flying_item_renderer@common.flying_item_renderer": { "layer": 11 } }
-		]
-	},
-  
-	"stonecutter_screen": {
-		"type": "screen",
-		"close_on_player_hurt": false,
-		"force_render_below": true,
-		"controls": [
-			{ "content@stonecutter.stonecutter_panel": {} },
-			{ "background@ii.background": {} },
-			{
-			"variables_button_mappings_and_controls": {
-				"type": "input_panel",
-				"hover_enabled": false,
-					"prevent_touch_input": false,
-					"ttsSectionContainer": true,
-					"button_mappings": [
-						{ "from_button_id": "button.menu_cancel", "to_button_id": "button.menu_exit", "mapping_type": "global" }
-					]
-				}
-			}
+			{ "flying_item_renderer@common.flying_item_renderer": { "layer": 11 } },
+			{ "background@ii.background": {} }
 		]
 	}
 }

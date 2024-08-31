@@ -332,9 +332,16 @@
       }
     ]
   },
- 
-
   
+	"hover_text": {
+		"$hover_text_max_width|default": 0, // A value greater than zero will result in line breaks being added to limit width
+		"type": "custom",
+		"renderer": "hover_text_renderer",
+		"hover_text_max_width": 720,
+		"layer": 5,
+		"allow_clipping": false
+	},
+
 // Inventory section for GUIs
 // Modified to match JAVA hotbar offset. y+3
   

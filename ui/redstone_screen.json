@@ -1,0 +1,107 @@
+{
+  "namespace": "redstone",
+  //---------------------------------------------------------------------------
+  // Screens
+  //---------------------------------------------------------------------------
+  
+  "hopper_gui": {
+		"type": "image",
+		"texture": "textures/gui/container/hopper",
+		"texture_width": 256,
+		"texture_height": 256,
+		"uv": [ 0, 0 ],
+		"uv_size": [ 176, 134 ],
+		"size": [ 176, 134 ]
+	},
+	
+	"dispenser_gui": {
+		"type": "image",
+		"texture": "textures/gui/container/dispenser",
+		"texture_width": 256,
+		"texture_height": 256,
+		"uv": [ 0, 0 ],
+		"uv_size": [ 176, 166 ],
+		"size": [ 176, 166 ]
+	},
+
+//	Hopper
+
+	"hopper_inventory@common.root_panel": {
+		"size": [ 176, 134 ],
+		"offset": [ 0, -39 ],
+		"controls": [
+			{
+				"redstone_input_grid": {
+					"type": "grid",
+					"anchor_from": "center",
+					"anchor_to": "center",
+					"grid_dimensions": [ 5, 1 ],
+					"collection_name": "container_items",
+					"grid_item_template": "common.container_item",
+					"$item_collection_name": "container_items"
+				}
+			}
+		]
+	},
+
+	"hopper_screen": {
+		"type": "screen",
+		"close_on_player_hurt": false,
+		"force_render_below": true,
+		"controls": [
+			{ "hopper_gui@redstone.hopper_gui": {} },
+			{ "hopper_inventory@redstone.hopper_inventory": {} },
+			{ "player_inventory@ii.player_inventory": { "offset": [ 0, 10 ] } },
+			{ "inventory_selected_icon_button@common.inventory_selected_icon_button": {} },
+			{ "background@ii.background": {} }
+		]
+	},
+
+//	Dropper & Dispenser
+
+	"dispenser_inventory@common.root_panel": {
+		"size": [ 176, 166 ],
+		"offset": [ 0, -40 ],
+		"controls": [
+			{
+				"redstone_input_grid": {
+					"type": "grid",
+					"anchor_from": "center",
+					"anchor_to": "center",
+					"grid_dimensions": [ 3, 3 ],
+					"collection_name": "container_items",
+					"grid_item_template": "common.container_item",
+					"$item_collection_name": "container_items"
+				}
+			}
+		]
+	},
+	
+	"dispenser_screen": {
+		"type": "screen",
+		"close_on_player_hurt": false,
+		"force_render_below": true,
+		"controls": [
+			{ "dispenser_gui@redstone.dispenser_gui": {} },
+			{ "dispenser_inventory@redstone.dispenser_inventory": {} },
+			{ "player_inventory@ii.player_inventory": { "offset": [ 0, 27 ] } },
+			{ "inventory_selected_icon_button@common.inventory_selected_icon_button": {} },
+			{ "gamepad_helpers@common.container_gamepad_helpers": {} },
+			{ "background@ii.background": {} }
+		]
+	},
+
+	"dropper_screen": {
+		"type": "screen",
+		"close_on_player_hurt": false,
+		"force_render_below": true,
+		"controls": [
+			{ "dispenser_gui@redstone.dispenser_gui": {} },
+			{ "dispenser_inventory@redstone.dispenser_inventory": {} },
+			{ "player_inventory@ii.player_inventory": { "offset": [ 0, 27 ] } },
+			{ "inventory_selected_icon_button@common.inventory_selected_icon_button": {} },
+			{ "gamepad_helpers@common.container_gamepad_helpers": {} },
+			{ "background@ii.background": {} }
+		]
+	}
+}
