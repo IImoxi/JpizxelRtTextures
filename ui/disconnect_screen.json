@@ -71,12 +71,27 @@
 		]
 	},
 	
+	"background@ii.background": { 
+		"alpha": 1.0,
+		"size": [ "100%", "100% + 2px" ], 
+		"offset": "$unimate", 
+		"anchor_from": "bottom_middle", 
+		"anchor_to": "bottom_middle",
+		"$unimate|default": [ 0, 0 ],
+		"variables": [
+			{
+					"requires": "$is_pregame",
+					"$unimate": "@ii_bg_slide"
+			}
+		]
+	},
+	
 
 	"disconnect_screen": {
 		"type": "screen",
 		"controls": [
-			{ "background@ii.background": { "alpha": 1.0, "size": [ "100%", "100% + 2px" ], "offset": "@ii_bg_slide", "anchor_from": "bottom_middle", "anchor_to": "bottom_middle" } },
-			{ "content@disconnect.content_stack_panel": {} }
+			{ "background@disconnect.background": { "layer": 0 } },
+			{ "content@disconnect.content_stack_panel": { "layer": 1 } }
 			//{ "gamepad_helpers@disconnect.gamepad_helpers": {} },
 			//{ "$button_layout": {} }
 		]
