@@ -1,48 +1,68 @@
 // Edited by moxi#7684
 
 {
-  "namespace": "pause",
+	"namespace": "pause",
 
-  "menu_section": {
-    "type": "panel",
-    "anchor_from": "center",
-    "anchor_to": "center",
-    "size": [ 150, 100 ],
-    "controls": [
-      {
-        "world_name@pause.players_label": {
-          "size": [ "default", 10 ],
-          "offset": [ 0, -27 ],
-          "text_alignment": "center"
-        }
-      },
-      {
-        "invite_players_button@pause.invites": { "offset": [ 0, 30 ] }
-      },
-      {
-        "return_to_game_button@pause.return_to_game_button": {
-          "size": [ 150, 16 ],
-          "$button_text": "",
-          "offset": [ 0, 32 ],
-          "controls": [
-            { "iibutton0@start.iibutton": {} },
-            { "resume_txt@pause.resume_txt": {} }
-          ]
-        }
-      },
-      {
-        "quit_button@pause.quit_button": {
-          "size": [ 150, 16 ],
-          "offset": [ 0, 54 ],
-          "$button_text": "Quit game",
-          "controls": [
-            { "iibutton0@start.iibutton": { "sound_pitch": 0.5 } },
-            { "quit_txt@pause.quit_txt": {} }
-          ]
-        }
-      }
-    ]
-  },
+	"center_panel": {
+		"type": "panel",
+		"anchor_from": "center",
+		"anchor_to": "center",
+		"size": [ 150, 100 ],
+		"controls": [
+			{
+				"world_name@pause.players_label": {
+					"size": [ "default", 10 ],
+					"offset": [ 0, -27 ],
+					"text_alignment": "center"
+				}
+			},
+			{
+				"invite_players_button@pause.invites": { "offset": [ 0, 30 ] }
+			},
+			{
+				"return@ii.button_asset": {
+					"layer": 10,
+					"size": [ 150, 16 ],
+					"offset": [ 0, -10 ],
+					"$pressed_button_name": "button.menu_continue",
+					"controls": [
+						{ "default@ii.iibutton_default": {} },
+						{ "hover@ii.iibutton_highlight": {} },
+						{ "pressed@ii.iibutton_highlight": {} },
+						{
+							"text": {
+								"type": "label",
+								"font_type": "MinecraftTen",
+								"offset": [ 0, -1 ],
+								"text": "menu.returnToGame"
+							}
+						}
+					]
+				}
+			},
+			{
+				"quit@ii.button_asset": {
+					"layer": 10,
+					"size": [ 150, 16 ],
+					"offset": [ 0, 11 ],
+					"$pressed_button_name": "button.menu_quit",
+					"controls": [
+						{ "default@ii.iibutton_default": {} },
+						{ "hover@ii.iibutton_highlight": {} },
+						{ "pressed@ii.iibutton_highlight": {} },
+						{
+							"text": {
+								"type": "label",
+								"font_type": "MinecraftTen",
+								"offset": [ 0, -1 ],
+								"text": "pauseScreen.quit"
+							}
+						}
+					]
+				}
+			}
+		]
+	},
 
   "resume_txt": {
 
@@ -63,64 +83,6 @@
     "layer": 15,
     "font_type": "MinecraftTen"
   },
-
-	// Bottom Bar
-
-	"bottom_bar": {
-		"type": "panel",
-		"anchor_from": "bottom_left",
-		"anchor_to": "bottom_left",
-		"size": [ "100%", 35 ],
-		"controls": [
-			{
-				"bar_store@start.ii_icon_button": {
-					"$ii_icon_button_text": "Marketplace",
-					"$ii_icon_button_texture": "client/marketplace_icon",
-					"$pressed_button_name": "button.menu_store",
-					"size": [ 18, 18 ],
-					"offset": [ -50, -9 ]
-				}
-			},
-			{
-				"feedback_button@common_buttons.hyperlink_content_button": {
-					"size": [ 18, 18 ],
-					"$button_text": "",
-					"offset": [ -25, -9 ],
-					"property_bag": { "#hyperlink": "https://aka.ms/minecraftfb" },
-					"$button_content": "start.feedback_icon",
-					"controls": [
-						{ "default@start.iibutton0": {} },
-						{ "hover@start.iibutton1": { "controls": [ { "iitxt@start.ii_hover_text_label": { "$ii_icon_button_text": "Feedback" } } ] } },
-						{ "feedback_icon": {"type": "image", "texture": "client/feedback_icon"} }
-					]
-				}
-			},
-			{
-				"bar_settings@start.ii_icon_button": {
-					"$ii_icon_button_text": "Settings",
-					"$ii_icon_button_texture": "client/settings_icon",
-					"$pressed_button_name": "button.menu_settings",
-					"size": [ 18, 18 ], "offset": [ 0, -9 ]
-				}
-			},
-			{
-				"bar_achievements@start.ii_icon_button": {
-					"$ii_icon_button_text": "Achievements",
-					"$ii_icon_button_texture": "client/achievements_icon",
-					"$pressed_button_name": "button.menu_achievements",
-					"size": [ 18, 18 ], "offset": [ 25, -9 ]
-				}
-			},
-			{
-				"bar_profile@start.ii_icon_button": {
-					"$ii_icon_button_text": "Profile",
-					"$ii_icon_button_texture": "client/profile_icon",
-					"$pressed_button_name": "button.to_profile_or_skins_screen",
-					"size": [ 18, 18 ], "offset": [ 50, -9 ]
-				}
-			}
-		]
-	},
 
   "invites": {
     "type": "panel",
@@ -169,22 +131,6 @@
   "pause_screen@common.base_screen": {
 	"low_frequency_rendering": true,
 	"send_telemetry": false
-  },
-
-  "pause_screen_content": {
-    "type": "panel",
-    "size": [ "100%", "100%" ],
-    "anchor_from": "top_left",
-    "anchor_to": "top_left",
-    "layer": 1,
-    "controls": [
-      { "background@start.background": {} },
-      { "menu_section@pause.menu_section": {} },
-      { "bottom_bar@pause.bottom_bar": {} },
-      { "ii_player_list_panel@pause.ii_player_list_panel": {} },
-      { "gamepad_helpers@pause.gamepad_helpers": {} },
-      { "keyboard_helpers@pause.keyboard_helpers": {} }
-    ]
   },
   
 	"ii_player_list_panel": {
@@ -327,13 +273,13 @@
         "permission_button_content@pause.player_permission_button_content": { "layer": 2 }
       },
       {
-        "default@start.background": {
+        "default@ii.background": {
           "size": [ "100%", "100%" ],
           "layer": 1
         }
       },
       {
-        "hover@start.divider": {
+        "hover@ii.highlight": {
           "layer": 1,
           "size": [ "100%", "100%" ]
         }
@@ -390,10 +336,10 @@
         "player_button_content@pause.player_button_content": {}
       },
       {
-        "default@start.background": { "size": [ "100%", "100%" ] }
+        "default@ii.background": {}
       },
       {
-        "hover@start.divider": { "size": [ "100%", "100%" ] }
+        "hover@ii.highlight": {}
       }
     ]
   },
@@ -482,7 +428,20 @@
         }
       }
     ]
-  }
+  },
+  
+  "pause_screen": {
+		"type": "screen",
+		"close_on_player_hurt": false,
+		"force_render_below": false,
+		"controls": [
+			{ "background@ii.background": {} },
+			{ "center_panel@pause.center_panel": {} },
+			{ "bottom_panel@start.bottom_panel": {} },
+			{ "ii_player_list_panel@pause.ii_player_list_panel": {} },
+			{ "gamepad_helpers@pause.gamepad_helpers": {} }
+		]
+	}
 }
 
 // Edited by moxi#7684

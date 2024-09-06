@@ -42,7 +42,7 @@
     "anchor_to": "right_middle",
     "controls": [
       {
-        "main@start.background": {
+        "main@ii.background": {
           "size": [ "100%cm + 2px", "100%c" ],
           "controls": [
             {

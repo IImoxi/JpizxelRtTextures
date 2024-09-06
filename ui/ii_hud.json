@@ -3,7 +3,7 @@
 	
 	// Chat
 	
-	"single_chat_panel@start.background": {
+	"single_chat_panel@ii.background": {
 		"layer": 1,
 		"$chat_scale": "$chat_scale",
 		"size": [ "100%", "100%c" ],
@@ -255,7 +255,7 @@
 	
 	// Coords
 	
-	"player_position@start.background": {
+	"player_position@ii.background": {
 		"size": [ "100%c + 4px", "100%c" ],
 		"offset": [ 1, 1 ],
 		"controls": [

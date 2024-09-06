@@ -1,10 +1,15 @@
 {
 	"namespace" :"ii" ,
 	
+	"button_default": { "type": "image", "texture": "textures/gui/buttons/button_default" },
+	"button_highlight": { "type": "image", "texture": "textures/gui/buttons/button_highlight" },
+	"iibutton_default": { "type": "image", "texture": "textures/gui/buttons/iibutton_default" },
+	"iibutton_highlight": { "type": "image", "texture": "textures/gui/buttons/iibutton_highlight" },
+	
 	"black": { "type": "image", "size": [ "100%", "100%" ], "texture": "client/black", "layer": 0 },
 	"black1": { "type": "image", "size": [ "100%", "100%" ], "texture": "client/black1", "layer": 0 },
 	"dark_dialog": { "type": "image", "size": [ "100%", "100%" ], "texture": "client/top_bg", "layer": -1 },
-	"background": { "type": "image", "size": [ "100%", "100%" ], "texture": "client/bg", "layer": -1, "alpha": 0.4 },
+	"background": { "type": "image", "size": [ "100%", "100%" ], "texture": "textures/gui/background", "layer": -1, "alpha": 0.4 },
 	"highlight": { "type": "image", "size": [ "100%", "100%" ], "texture": "client/highlight", "layer": 0 },
 	"button0": { "type": "image", "texture": "client/iibutton0" },
 	"button1": { "type": "image", "texture": "client/iibutton1" },
@@ -15,6 +20,54 @@
 	"slider_bar1": { "type": "image", "size": [ "100%", 2 ], "texture": "client/iislider1" },
 	
 	"divider": { "type": "panel", "size": [ "100%", 5 ], "controls": [ { "general_section_label_panel@ii.highlight": { "size": [ "50%", 1 ] } } ] },
+	
+	"icon_tip_button@ii.button_asset": {
+		"size": [ 18, 18 ],
+		"controls": [
+			{ "default@ii.iibutton_default": {} },
+			{ 
+				"hover@ii.iibutton_highlight": { 
+					"controls": [ 
+						{ 
+							"hover_text": { 
+							"type": "label",
+							"text": "$icon_button_text", 
+							"font_type": "$icon_button_font",
+							"alpha": "$icon_button_text_alpha",
+							"$icon_button_font|default": "default",
+							"$icon_button_text|default": "Text", 
+							"$icon_button_text_alpha|default": 0.6, 
+							"offset": [ 0, -18 ] } 
+						} 
+					] 
+				} 
+			},
+			{ "pressed@ii.iibutton_highlight": {} },
+			{
+				"icon": {
+					"type": "image",
+					"$icon_button_texture|default": "",
+					"texture": "$icon_button_texture"
+				}
+			}
+		]
+	},
+	
+	"icon_button@ii.button_asset": {
+		"size": [ 18, 18 ],
+		"controls": [
+			{ "default@ii.iibutton_default": {} },
+			{ "hover@ii.iibutton_highlight": {} },
+			{ "pressed@ii.iibutton_highlight": {} },
+			{
+				"icon": {
+					"type": "image",
+					"$icon_button_texture|default": "",
+					"texture": "$icon_button_texture"
+				}
+			}
+		]
+	},
 	
 	//Base Screen template
 	
@@ -33,6 +86,19 @@
 				}
 			}
 		]
+	},
+	
+	"button_asset@common.button": {
+		"$default_button_texture": "textures/gui/buttons/iibutton_default",
+		"$hover_button_texture|default": "textures/gui/buttons/iibutton_highlight",
+		"$pressed_button_texture|default": "textures/gui/buttons/iibutton_highlight",
+		"$locked_button_texture|default": "textures/gui/buttons/iibutton_default",
+		"$default_content_alpha": 1,
+		"$hover_content_alpha": 1,
+		"locked_control": "locked",
+		"$default_font|default": "default",
+		"$font_type": "$default_font",
+		"$locked_alpha": 1
 	},
 	
 	"player_inventory": {
