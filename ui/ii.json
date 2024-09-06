@@ -8,7 +8,7 @@
 	
 	"black": { "type": "image", "size": [ "100%", "100%" ], "texture": "client/black", "layer": 0 },
 	"black1": { "type": "image", "size": [ "100%", "100%" ], "texture": "client/black1", "layer": 0 },
-	"dark_dialog": { "type": "image", "size": [ "100%", "100%" ], "texture": "client/top_bg", "layer": -1 },
+	"dark_dialog": { "type": "image", "size": [ "100%", "100%" ], "texture": "textures/gui/dialog_background", "layer": -1 },
 	"background": { "type": "image", "size": [ "100%", "100%" ], "texture": "textures/gui/background", "layer": -1, "alpha": 0.4 },
 	"highlight": { "type": "image", "size": [ "100%", "100%" ], "texture": "client/highlight", "layer": 0 },
 	"button0": { "type": "image", "texture": "client/iibutton0" },

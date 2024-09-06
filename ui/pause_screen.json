@@ -17,9 +17,6 @@
 				}
 			},
 			{
-				"invite_players_button@pause.invites": { "offset": [ 0, 30 ] }
-			},
-			{
 				"return@ii.button_asset": {
 					"layer": 10,
 					"size": [ 150, 16 ],
@@ -60,61 +57,31 @@
 						}
 					]
 				}
+			},
+			//{ "invite_players_button@pause.invites": { "offset": [ 0, 30 ] } },
+			{
+				"invite_button@ii.button_asset": {
+					"size": [ 80, 16 ],
+					"offset": [ 0, 30 ],
+					"$pressed_button_name": "button.menu_invite_players",
+					"controls": [
+						{ "default@pause.invite_button_text": { "alpha": 0.4 } },
+						{ "hover@pause.invite_button_text": {} },
+						{ "pressed@pause.invite_button_text": {} }
+					]
+				}
 			}
 		]
 	},
 
-  "resume_txt": {
-
-    "type": "label",
-    "size": [ "default", 10 ],
-    "offset": [ 0, -2.5 ],
-    "text": "Back to game",
-    "layer": 15,
-    "font_type": "MinecraftTen"
-  },
-
-  "quit_txt": {
-
-    "type": "label",
-    "size": [ "default", 10 ],
-    "offset": [ 0, -2.5 ],
-    "text": "Save and quit",
-    "layer": 15,
-    "font_type": "MinecraftTen"
-  },
-
-  "invites": {
-    "type": "panel",
-    "anchor_from": "center",
-    "anchor_to": "center",
-    "size": [ 80, 16 ],
-    "controls": [
-      {
-        "pause.invite_text": {
-          "type": "label",
-          "layer": 2,
-          "font_type": "smooth",
-          "text": "Invite to game",
-          "alpha": 0.5,
-          "size": [ "default", 10 ]
-        }
-      },
-      {
-        "ii_invite_button@pause.grid_button_template": {
-          "size": [ 80, 16 ],
-          "$pressed_button_name": "button.menu_invite_players",
-          "focus_change_down": "FOCUS_OVERRIDE_STOP",
-          "$focus_override_right": "FOCUS_OVERRIDE_STOP",
-          "controls": [
-            {
-              "none": {}
-            }
-          ]
-        }
-      }
-    ]
-  },
+	"invite_button_text": {
+		"type": "label",
+		"layer": 2,
+		"font_type": "smooth",
+		"text": "Invite to game",
+		"alpha": 0.7,
+		"size": [ "default", 10 ]
+	},
 
   "take_screenshot_button@common_buttons.light_glyph_button": {
     "ignored": "($is_holographic)",
@@ -126,11 +93,6 @@
     "sound_name": "random.screenshot",
     "sound_volume": 1.0,
     "sound_pitch": 1.0
-  },
-
-  "pause_screen@common.base_screen": {
-	"low_frequency_rendering": true,
-	"send_telemetry": false
   },
   
 	"ii_player_list_panel": {
@@ -196,6 +158,8 @@
 			}
 		]
 	},
+	
+	// Playerlist Sidebar
 
   "ii_player_grid": {
     "type": "grid",
@@ -404,41 +368,48 @@
     ]
   },
 
-  "player_button_content": {
-    "type": "panel",
-    "anchor_from": "top_left",
-    "anchor_to": "top_left",
-    "size": [ "100%", "100%" ],
-    "offset": [ 0, 0 ],
-    "layer": 3,
-    "controls": [
-      {
-        "player_pic_panel@pause.player_pic_panel": {
-          "layer": 1
-        }
-      },
-      {
-        "player_gamertag@pause.player_gamertag": {
-          "layer": 1
-        }
-      },
-      {
-        "platform_icon@pause.platform_icon_panel": {
-          "layer": 1
-        }
-      }
-    ]
-  },
+	"player_button_content": {
+		"type": "panel",
+		"anchor_from": "top_left",
+		"anchor_to": "top_left",
+		"size": [ "100%", "100%" ],
+		"offset": [ 0, 0 ],
+		"layer": 3,
+		"controls": [
+			{ "player_pic_panel@pause.player_pic_panel": { "layer": 1 } },
+			{ "player_gamertag@pause.player_gamertag": { "layer": 1 } },
+			{ "platform_icon@pause.platform_icon_panel": { "layer": 1 } }
+		]
+	},
+  
+  "bottom_panel": {
+		"type": "panel",
+		"size": [ "100%", 60 ],
+		"anchor_from": "bottom_middle",
+		"anchor_to": "bottom_middle",
+		"controls": [
+			{ "marketplace@ii.icon_tip_button": { "offset": [ -50, 0 ], "$pressed_button_name": "button.menu_store", "$icon_button_texture": "textures/gui/icons/marketplace_icon", "$icon_button_text": "menu.store", "$icon_button_font": "smooth" } },
+			{ "feedback@ii.icon_tip_button": { "offset": [ -25, 0 ], "$pressed_button_name": "button.menu_settings", "$icon_button_texture": "textures/gui/icons/feedback_icon", "$icon_button_text": "options.group.feedback", "$icon_button_font": "smooth" } },
+			{ "settings@ii.icon_tip_button": { "$pressed_button_name": "button.menu_settings", "$icon_button_texture": "textures/gui/icons/settings_icon", "$icon_button_text": "menu.settings", "$icon_button_font": "smooth" } },
+			{ "achievements@ii.icon_tip_button": { "offset": [ 25, 0 ], "$pressed_button_name": "button.menu_achievements", "$icon_button_texture": "textures/gui/icons/achievements_icon", "$icon_button_text": "gui.achievements", "$icon_button_font": "smooth" } },
+			{ "profile@ii.icon_tip_button": { "offset": [ 50, 0 ], "$pressed_button_name": "button.to_profile_or_skins_screen", "$icon_button_texture": "textures/gui/icons/profile_icon", "$icon_button_text": "menu.skins", "$icon_button_font": "smooth" } }
+		]
+	},
   
   "pause_screen": {
 		"type": "screen",
 		"close_on_player_hurt": false,
 		"force_render_below": false,
+		"$screen_content": "pause.pause_screen_content"
+	},
+	
+	"pause_screen_content": {
+		"type": "panel",
 		"controls": [
 			{ "background@ii.background": {} },
 			{ "center_panel@pause.center_panel": {} },
-			{ "bottom_panel@start.bottom_panel": {} },
 			{ "ii_player_list_panel@pause.ii_player_list_panel": {} },
+			{ "bottom_panel@pause.bottom_panel": {} },
 			{ "gamepad_helpers@pause.gamepad_helpers": {} }
 		]
 	}

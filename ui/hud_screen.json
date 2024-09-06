@@ -9,7 +9,7 @@
 		"shadow": true,
 		"enable_profanity_filter": false,
 		"localize": true,
-		"font_scale_factor": 1.0,
+		"font_scale_factor": "$subpackscale_chat",
 		"color": "$chat_text_color",
 		"anims": [
 		"@iihud.ii_slide_anim",

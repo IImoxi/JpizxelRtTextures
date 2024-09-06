@@ -3,10 +3,12 @@
 
 	//Animations
 	"ii_alpha":  { "anim_type": "alpha",  "easing": "in_out_cubic", "duration": 1.5, "from": 0, "to": 1 },
-	"ii_alpha_hold":  { "anim_type": "alpha", "duration": 0.5, "from": 0, "to": 0, "next": "@ii_alpha" },
+	"ii_alpha_text_hold":  { "anim_type": "alpha", "duration": 0.2, "from": 0, "to": 0, "next": "@ii_alpha" },
+	"ii_alpha_button_hold":  { "anim_type": "alpha", "duration": 0.6, "from": 0, "to": 0, "next": "@ii_alpha" },
 	
 	"ii_offset": { "anim_type": "offset", "easing": "out_expo",  "duration": 1.5, "from": [ 0, 12 ], "to": [ 0, 0 ] },
-	"ii_offset_hold": { "anim_type": "offset",  "duration": 0.5, "from": [ 0, 12 ], "to": [ 0, 12 ], "next": "@ii_offset" },
+	"ii_offset_text_hold": { "anim_type": "offset",  "duration": 0.2, "from": [ 0, 12 ], "to": [ 0, 12 ], "next": "@ii_offset" },
+	"ii_offset_button_hold": { "anim_type": "offset",  "duration": 0.6, "from": [ 0, 12 ], "to": [ 0, 12 ], "next": "@ii_offset" },
 	
 	"ii_bg_slide": { "anim_type": "offset", "easing": "out_expo",  "duration": 0.8, "from": [ 0, "-100%" ], "to": [ 0, 1 ] },
 	
@@ -26,8 +28,8 @@
 							"text": {
 								"type": "label",
 								"text_alignment": "center",
-								"offset": "@ii_offset",
-								"alpha": "@ii_alpha",
+								"offset": "@ii_offset_text_hold",
+								"alpha": "@ii_alpha_text_hold",
 								"size": [ "100%", "default" ],
 								"text": "#disconnect_text",
 								"bindings": [
@@ -48,17 +50,17 @@
 						{
 							"playbutton@ii.button_asset": {
 								"layer": 10,
-								"offset": "@ii_offset_hold",
+								"offset": "@ii_offset_button_hold",
 								"size": [ 128, 16 ],
 								"$pressed_button_name": "button.menu_leave_screen",
 								"controls": [
-									{ "default@ii.iibutton_default": { "alpha": "@ii_alpha_hold" } },
-									{ "hover@ii.iibutton_highlight": { "alpha": "@ii_alpha_hold" } },
-									{ "pressed@ii.iibutton_highlight": { "alpha": "@ii_alpha_hold" } },
+									{ "default@ii.iibutton_default": { "alpha": "@ii_alpha_button_hold" } },
+									{ "hover@ii.iibutton_highlight": { "alpha": "@ii_alpha_button_hold" } },
+									{ "pressed@ii.iibutton_highlight": { "alpha": "@ii_alpha_button_hold" } },
 									{
 										"text": {
 											"type": "label",
-											"alpha": "@ii_alpha_hold",
+											"alpha": "@ii_alpha_button_hold",
 											"text": "gui.back"
 										}
 									}

@@ -12,24 +12,13 @@
 		"raytraced" 
 	],
 	"subpacks": [
-		{
-		"folder_name": "supported, 100", "name": "§r§7§lDefault with RTX support, Default chat scale§r", "memory_tier": 1
-		},
-		{
-		"folder_name": "supported, 66", "name": "§r§7§lDefault with RTX support, 66% Chat scale§r", "memory_tier": 1
-		},
-		{
-		"folder_name": "supported, 50", "name": "§r§7§lDefault with RTX support, 50% Chat scale§r", "memory_tier": 1
-		},
-		{
-		"folder_name": "varied, 50", "name": "§r§7§lVaried Textures, 50% chat scale§r", "memory_tier": 0
-		},
-		{
-		"folder_name": "varied, 66", "name": "§r§7§lVaried Textures, 66% Chat scale§r", "memory_tier": 0
-		},
-		{
-		"folder_name": "varied, 100", "name": "§r§7§lVaried Textures, Default chat scale§r", "memory_tier": 0
-		}
+		{ "folder_name": "supported 100", "name": "§r§7§lDefault with RTX support, Default chat scale§r", "memory_tier": 1 },
+		{ "folder_name": "supported 66", "name": "§r§7§lDefault with RTX support, 66%% Chat scale§r", "memory_tier": 1 },
+		{ "folder_name": "supported 50", "name": "§r§7§lDefault with RTX support, 50%% Chat scale§r", "memory_tier": 1 },
+		
+		{ "folder_name": "varied 50", "name": "§r§7§lVaried Textures, 50%% chat scale§r", "memory_tier": 0 },
+		{ "folder_name": "varied 66", "name": "§r§7§lVaried Textures, 66%% Chat scale§r", "memory_tier": 0 },
+		{ "folder_name": "varied 100", "name": "§r§7§lVaried Textures, Default chat scale§r", "memory_tier": 0 }
 	],
 	"modules": [
 		{

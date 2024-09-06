@@ -66,41 +66,21 @@
 			}
 		]
 	},
-	
-	"warning_panel@ii.button0h": {
+
+	"warning_message": {
+		"type": "label",
 		"visible": "$not_pc",
 		"$not_pc|default": false,
-		"size": [ 252, 36 ],
-		"offset": [ 0, 20 ],
-		"anchor_from": "top_middle",
-		"anchor_to": "top_middle",
-		"controls": [
-			{
-				"warning_title": {
-					"type": "label",
-					"text": "Warning!",
-					"font_type": "MinecraftTen",
-					"color": [ 1, 1, 0 ],
-					"offset": [ 0, -12 ]
-				}
-			},
-			{
-				"warning_message": {
-					"type": "label",
-					"text": "It appears you are not using Mouse & Keyboard. This pack's UI may not function properly!",
-					"color": [ 1, 0.5, 0.5 ],
-					"size": [ 248, "default" ],
-					"offset": [ 0, 5 ]
-				}
-			}
-		],
+		"text": "Warning - No mouse/keyboard detected. This pack's UI may not function properly!",
+		"color": [ 1, 0.2, 0.2 ],
+		"size": [ "50%", "default" ],
+		"shadow": true,
+		"anchor_from": "top_left",
+		"anchor_to": "top_left",
+		"offset": [ 1, 1 ],
 		"variables": [
 			{
-				"requires": "(not $touch)",
-				"$not_pc": false
-			},
-			{
-				"requires": "$touch",
+				"requires": "(not $mouse)",
 				"$not_pc": true
 			}
 		]
@@ -158,6 +138,29 @@
 		]
 	},
 	
+	"pack_name_label": {
+		"type": "label",
+		"alpha": 0.5,
+		"text": "JPizxel RT Textures",
+		"size": [ "default", 10 ],
+		"anchor_from": "bottom_left",
+		"anchor_to": "bottom_left",
+		"offset": [ 1, 4 ],
+		"font_scale_factor": 0.5
+	},
+	
+	"version_label": {
+		"type": "label",
+		"alpha": 0.5,
+		"text": "#version",
+		"size": [ "default", 10 ],
+		"anchor_from": "bottom_right",
+		"anchor_to": "bottom_right",
+		"offset": [ -1, 4 ],
+		"font_scale_factor": 0.5,
+		"bindings": [ { "binding_name": "#version" } ]
+	},
+	
 	// Content
 	
 	"start_screen": {
@@ -169,9 +172,11 @@
 		"type": "panel",
 		"controls": [
 			{ "play_section@start.play_section": {} },
-			{ "warning_panel@start.warning_panel": {} },
+			{ "warning_log@start.warning_message": {} },
 			{ "bottom_panel@start.bottom_panel": {} },
-			{ "skin_viewer@start.skin_viewer_panel": {} }
+			{ "skin_viewer@start.skin_viewer_panel": {} },
+			{ "pack_name_label@start.pack_name_label": {} },
+			{ "version_label@start.version_label": {} }
 		]
 	}
 }
