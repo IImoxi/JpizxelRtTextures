@@ -22,7 +22,7 @@
 	
 	"messages_stack_panel": {
 		"type": "stack_panel", "orientation": "vertical", "$scrolling_content_anchor_from": "bottom_left", "$scrolling_content_anchor_to": "bottom_left",
-		"factory": { "name": "messages_factory", "max_children_size": 256, "control_ids": { "chat_screen_messages": "chat_screen_messages@chat.message_tts_wrapper" } } 
+		"factory": { "name": "messages_factory", "max_children_size": 384, "control_ids": { "chat_screen_messages": "chat_screen_messages@chat.message_tts_wrapper" } } 
 	},
 	
 	"message_tts_wrapper@common.tts_label_focus_wrapper": { "$tts_label_panel": "chat.messages_text", "$focus_border_visible_binding": "#host_options_menu_not_open_and_tts_enabled" },
