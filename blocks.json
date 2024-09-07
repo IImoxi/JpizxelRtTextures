@@ -3,15 +3,10 @@
 		"sound" : "cherry_leaves",
 		"textures" : "cherry_leaves",
 		"isotropic" : true
-		}
 	},
 	"concretePowder" : {
 		"sound" : "sand",
 		"isotropic" : true,
 		"textures" : "concretePowder"
-	},
-	"bricks" : {
-		"sound" : "stone",
-		"textures" : { "down" : "brick", "side" : "brick", "up" : "bricks_top" }
 	}
 }
