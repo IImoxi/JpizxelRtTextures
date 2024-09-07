@@ -4,7 +4,6 @@
 	"resource_pack_name" : "vanilla",
 	"texture_name" : "atlas.terrain",
 	"texture_data": {
-		"brick_top" : { "textures" : "textures/blocks/textures/bricks_top" }
 		}
 	}
 }

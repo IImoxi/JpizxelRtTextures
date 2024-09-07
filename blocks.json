@@ -8,5 +8,20 @@
 		"sound" : "sand",
 		"isotropic" : true,
 		"textures" : "concretePowder"
-	}
+	},
+	"gravel" : {
+		"sound" : "gravel",
+		"isotropic" : true,
+		"textures" : "gravel"
+	},
+	"moss_block" : {
+		"sound" : "moss_block",
+		"isotropic" : true,
+		"textures" : "moss_block"
+	},
+	"moss_carpet" : {
+      "sound" : "moss_carpet",
+	  "isotropic" : true,
+      "textures" : "moss_block"
+   }
 }
