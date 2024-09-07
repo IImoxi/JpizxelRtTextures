@@ -4,19 +4,19 @@
   
 // Chat
 	
-	"chat_child": {
+	"single_chat_panel": {
 		"type": "panel",
 		"size": [ 270, "100%c" ],
 		"controls": [
 			{
-				"chat_background@ii.background": {
+				"background@ii.background": {
 					"layer": 1,
 					"anims": [ "@hud.ii_bg_alpha_in", "@hud.ii_offset_in" ],
 					"propagate_alpha": false,
 					"size": [ 270, "100%c" ],
 					"controls": [
 						{ 
-							"chat_text": {
+							"text": {
 								"type": "label",
 								"layer": 10,
 								"text": "#text",
@@ -37,26 +37,26 @@
 	
 	"ii_chat_panel": {
 		"type": "panel",
-		"clips_children": true,
+		"clips_children": false,
 		"anchor_from": "bottom_left",
 		"anchor_to": "bottom_left",
 		"size": [ 270, "30%" ],
 		"offset": [ 1, -31 ],
 		"controls": [
-		{
-			"stack_panel": {
-				"type": "stack_panel",
-				"anchor_from": "bottom_left",
-				"anchor_to": "bottom_left",
-				"factory": {
-					"name": "chat_item_factory",
-					"max_children_size": 10,
-					"control_ids": {
-						"chat_item": "single_chat_panel@hud.chat_child"
+			{
+				"chat_panel_stack": {
+					"type": "stack_panel",
+					"anchor_from": "bottom_left",
+					"anchor_to": "bottom_left",
+					"factory": {
+						"name": "chat_item_factory",
+						"max_children_size": 10,
+						"control_ids": {
+							"chat_item": "single_chat_panel@hud.single_chat_panel"
+						}
 					}
 				}
 			}
-		}
 		]
 	},
 	
