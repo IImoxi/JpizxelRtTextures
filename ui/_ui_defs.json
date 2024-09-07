@@ -1,7 +1,6 @@
 {
 	"ui_defs": [
 		"ui/ii.json",
-		"ui/ii_hud.json",
 		"ui/ii_sound_settings.json",
 		"ui/ii_video_settings.json"
 	]

@@ -1,3 +1,4 @@
+// JPizxel RTP | IImoxi
 {
 	"namespace" :"ii" ,
 	
@@ -5,6 +6,8 @@
 	"button_highlight": { "type": "image", "texture": "textures/gui/buttons/button_highlight" },
 	"iibutton_default": { "type": "image", "texture": "textures/gui/buttons/iibutton_default" },
 	"iibutton_highlight": { "type": "image", "texture": "textures/gui/buttons/iibutton_highlight" },
+	
+	"empty": { "type": "panel" },
 	
 	"black": { "type": "image", "size": [ "100%", "100%" ], "texture": "client/black", "layer": 0 },
 	"black1": { "type": "image", "size": [ "100%", "100%" ], "texture": "client/black1", "layer": 0 },

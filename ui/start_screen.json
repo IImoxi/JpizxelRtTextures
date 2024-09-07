@@ -71,7 +71,7 @@
 		"type": "label",
 		"visible": "$not_pc",
 		"$not_pc|default": false,
-		"text": "Warning - No mouse/keyboard detected. This pack's UI may not function properly!",
+		"text": "Warning - This pack's UI is not fully supported on gamepad or touch.",
 		"color": [ 1, 0.2, 0.2 ],
 		"size": [ "50%", "default" ],
 		"shadow": true,
