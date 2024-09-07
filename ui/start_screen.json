@@ -138,6 +138,17 @@
 		]
 	},
 	
+	"pack_setting_label": {
+		"type": "label",
+		"alpha": 0.5,
+		"text": "$subpackscale_name",
+		"size": [ "default", 10 ],
+		"anchor_from": "bottom_left",
+		"anchor_to": "bottom_left",
+		"offset": [ 1, 4 ],
+		"font_scale_factor": 0.5
+	},
+	
 	"pack_name_label": {
 		"type": "label",
 		"alpha": 0.5,
@@ -145,7 +156,7 @@
 		"size": [ "default", 10 ],
 		"anchor_from": "bottom_left",
 		"anchor_to": "bottom_left",
-		"offset": [ 1, 4 ],
+		"offset": [ 1, -1 ],
 		"font_scale_factor": 0.5
 	},
 	
@@ -176,6 +187,7 @@
 			{ "bottom_panel@start.bottom_panel": {} },
 			{ "skin_viewer@start.skin_viewer_panel": {} },
 			{ "pack_name_label@start.pack_name_label": {} },
+			{ "pack_setting_label@start.pack_setting_label": {} },
 			{ "version_label@start.version_label": {} }
 		]
 	}

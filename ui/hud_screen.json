@@ -494,14 +494,15 @@
 			{ "binding_name": "#hud_propagate_alpha", "binding_name_override": "#propagateAlpha", "binding_type": "global" }
 		]
 	},
-    
-	"hud_screen@common.base_screen": {
-		"$screen_content": "hud.hud_content",
+	
+	"hud_screen": {
+		"type": "screen",
 		"is_showing_menu": false,
 		"should_steal_mouse": true,
 		"low_frequency_rendering": false,
 		"absorbs_input": false,
-		"send_telemetry": false
+		"send_telemetry": false,
+		"$screen_content": "hud.hud_content"
 	}
 }
 

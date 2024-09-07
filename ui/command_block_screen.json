@@ -136,7 +136,7 @@
 					"size": [ 110, 5 ],
 					"$option_dropdown_size": [ "100%", 17 ],
 					"offset": [ -1, 1 ],
-					"$dropdown_background_control": "start.top_background",
+					"$dropdown_background_control": "ii.dark_dialog",
 					"$dropdown_content": "command_block.redstone_dropdown_content",
 					"$dropdown_area": "left_scrolling_panel",
 					"$dropdown_name": "redstone_dropdown",
@@ -163,7 +163,7 @@
 					"size": [ 110, 5 ],
 					"$option_dropdown_size": [ "100%", 17 ],
 					"offset": [ 0, 1 ],
-					"$dropdown_background_control": "start.top_background",
+					"$dropdown_background_control": "ii.dark_dialog",
 					"$focus_override_right": "show_output_toggle",
     				"$dropdown_content": "command_block.condition_dropdown_content",
     				"$dropdown_area": "left_scrolling_panel",
@@ -191,7 +191,7 @@
 					"size": [ 110, 5 ],
 					"$option_dropdown_size": [ "100%", 17 ],
 					"offset": [ 1, 1 ],
-					"$dropdown_background_control": "start.top_background",
+					"$dropdown_background_control": "ii.dark_dialog",
 					"$focus_override_right": "command_block_commands_text",
 					"$button_content": "command_block.icon_dropdown_toggle_button_state_content",
 					"$options_dropdown_label_color_binding_type": "global",
@@ -237,7 +237,7 @@
 								"offset": [ 0, 0 ]
 							} 
 						},
-						{ "hover@start.divider": { "alpha": 0.2, "size": [ "100%", "100%"] } }
+						{ "hover@ii.highlight": { "alpha": 0.2, "size": [ "100%", "100%"] } }
 					]
 				}
 			}
@@ -301,8 +301,8 @@
 		"offset": [ 0, 60 ],
         "size": [ 340, 60 ],
         "focus_enabled": false,
-		"$text_background_default": "start.background",
-		"$text_background_hover": "start.background",
+		"$text_background_default": "ii.dark_dialog",
+		"$text_background_hover": "ii.dark_dialog",
         "$text_box_name": "command_block.output_text",
         "max_length": 32500,
         "$text_edit_box_content_binding_name": "#command_output_text",
@@ -348,7 +348,7 @@
 				} 
 			},
 			{
-				"hover@start.divider": { "alpha": 0.1, "size": [ "100%", "100%"] }
+				"hover@ii.highlight": { "alpha": 0.1, "size": [ "100%", "100%"] }
 			}
 		]
 	},
@@ -374,7 +374,8 @@
 		]
     },
 								
-	"command_block_screen_content@start.background": {
+	"command_block_screen_content": {
+		"type": "panel",
 		"controls": [
 			{
 				"background_divider@common.common_panel": {
@@ -398,7 +399,8 @@
   ////        Base Screen                                                           /////////
   ///////////////////////////////////////////////////////////////////////////////////////////
 
-	"command_block_screen@common.base_screen": {
+	"command_block_screen": {
+		"type": "screen",
 		"force_render_below": true,
 		"$screen_content": "command_block.command_block_screen_content",
 		"button_mappings": [
