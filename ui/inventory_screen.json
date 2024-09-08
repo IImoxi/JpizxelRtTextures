@@ -355,6 +355,8 @@
 	"recipe_inventory_screen_content": {
 		"type":"panel",
 		"controls":[
+			{ "left_invisible_button@ii.left_invisible_button": { "$pressed_button_name": "button.menu_exit" } },
+			{ "right_invisible_button@ii.right_invisible_button": { "$pressed_button_name": "button.menu_exit" } },
 			{
 				"content_stack_panel": {
 					"type":"stack_panel",
@@ -450,6 +452,8 @@
 	 "recipe_crafting_table_screen_content":{
 		"type":"panel",
 		"controls":[
+			{ "left_invisible_button@ii.left_invisible_button": { "$pressed_button_name": "button.menu_exit" } },
+			{ "right_invisible_button@ii.right_invisible_button": { "$pressed_button_name": "button.menu_exit" } },
 			{
 				"content_stack_panel":{
 					"type":"stack_panel",
@@ -727,7 +731,7 @@
 		"send_telemetry": false,
 		"low_frequency_rendering": false,
 		"$screen_content": "crafting.recipe_inventory_screen_content",
-		"$screen_bg_content": "start.background",
+		"$screen_bg_content": "ii.background",
 		"$top_half_variant": "crafting.survival_panel_top_half",
 		"close_on_player_hurt": false
 	},
@@ -738,7 +742,7 @@
 		"low_frequency_rendering": false,
 		"send_telemetry": false,
 		"$screen_content": "crafting.recipe_crafting_table_screen_content",
-		"$screen_bg_content": "start.background",
+		"$screen_bg_content": "ii.background",
 		"$top_half_variant": "crafting.crafting_panel_top_half",
 		"close_on_player_hurt": false
 	}

@@ -152,7 +152,7 @@
       }
     ]
   },
-  
+ 
 	"stonecutter_screen": {
 		"type": "screen",
 		"close_on_player_hurt": false,
@@ -172,6 +172,8 @@
 			{ "inventory_selected_icon_button@common.inventory_selected_icon_button": {} },
 			{ "inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {} },
 			{ "flying_item_renderer@common.flying_item_renderer": { "layer": 11 } },
+			{ "left_invisible_button@ii.left_invisible_button": { "$pressed_button_name": "button.menu_exit" } },
+			{ "right_invisible_button@ii.right_invisible_button": { "$pressed_button_name": "button.menu_exit" } },
 			{ "background@ii.background": {} }
 		]
 	}

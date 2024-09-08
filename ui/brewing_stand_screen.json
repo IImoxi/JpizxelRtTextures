@@ -75,7 +75,7 @@
   
 // -=- NIGHT VISION
 
-	"night_vision_button@common_buttons.light_text_button" : {
+	"night_vision_button@ii.button_asset" : {
 		"layer": 3,
 		"size": [ 18, 18 ],
 		"anchor_from": "right_middle",
@@ -83,7 +83,7 @@
 		"text": "",
 		"controls": [
 			{
-				"default@start.iibutton0": { "controls": [ { "icon0@brewing_stand.night_vision_icon":{} } ] }
+				"default@ii.button_default": { "controls": [ { "icon0@brewing_stand.night_vision_icon":{} } ] }
 			},
 			{
 				"hover@brewing_stand.night_vision_hover": {}
@@ -94,10 +94,10 @@
 		]
 	},
 	
-	"night_vision_hover@start.iibutton1": {
+	"night_vision_hover@ii.button_highlight": {
 		"controls": [
 			{
-				"0b@start.iibutton0": 
+				"0b@ii.button_default": 
 				{
 					"size": [ 160, 102 ], "anchor_from": "top_left", "anchor_to": "top_left", "offset": [ 20, 0 ],
 					"controls": [
@@ -123,13 +123,13 @@
 						"water_bottle": { "type": "image", "layer": 5, "anchor_from": "top_left", "anchor_to": "top_left", "size": [ 16, 16 ], "texture": "client/water_bottle", "offset": [ 5, 18 ] }
 					},
 					{
-						"5nv@start.divider": { "size": [ "90%", 1 ], "anchor_from": "top_middle", "anchor_to": "top_middle", "offset": [ 0, 54 ] }
+						"5nv@ii.highlight": { "size": [ "90%", 1 ], "anchor_from": "top_middle", "anchor_to": "top_middle", "offset": [ 0, 54 ] }
 					},
 					{
 						"6nv@brewing_stand.night_vision_icon": { "anchor_from": "top_left", "anchor_to": "top_left", "offset": [ 5, 58 ] }
 					},
 					{
-						"7nv@start.divider": { "size": [  "90%", 1 ], "anchor_from": "top_middle", "anchor_to": "top_middle", "offset": [ 0, 76 ] }
+						"7nv@ii.highlight": { "size": [  "90%", 1 ], "anchor_from": "top_middle", "anchor_to": "top_middle", "offset": [ 0, 76 ] }
 					},
 					{
 						"redstone": { "type": "image", "layer": 5, "anchor_from": "top_left", "anchor_to": "top_left", "size": [ 16, 16 ], "texture": "textures/items/redstone_dust", "offset": [ 5, 80 ] }
@@ -152,7 +152,7 @@
 	
 // -=- INVISIBILITY
 		
-	"invis_button@common_buttons.light_text_button" : {
+	"invis_button@ii.button_asset" : {
 		"layer": 3,
 		"size": [ 18, 18 ],
 		"anchor_from": "right_middle",
@@ -160,7 +160,7 @@
 		"text": "",
 		"controls": [
 			{
-				"default@start.iibutton0": { "controls": [ { "icon1@brewing_stand.invis_icon":{} } ] }
+				"default@ii.button_default": { "controls": [ { "icon1@brewing_stand.invis_icon":{} } ] }
 			},
 			{
 				"hover@brewing_stand.invis_hover": {}
@@ -171,10 +171,10 @@
 		]
 	},
 	
-	"invis_hover@start.iibutton1": {
+	"invis_hover@ii.button_highlight": {
 		"controls": [
 			{
-				"1b@start.iibutton0": 
+				"1b@ii.button_default": 
 				{
 					"size": [ 160, 102 ], "anchor_from": "top_left", "anchor_to": "top_left", "offset": [ 20, -20 ],
 					"controls": [
@@ -200,13 +200,13 @@
 						"fermented_spider_eye": { "type": "image", "layer": 5, "anchor_from": "top_left", "anchor_to": "top_left", "size": [ 16, 16 ], "texture": "textures/items/spider_eye_fermented", "offset": [ 5, 36 ] }
 					},
 					{
-						"7i@start.divider": { "size": [ "90%", 1 ], "anchor_from": "top_middle", "anchor_to": "top_middle", "offset": [ 0, 54 ] }
+						"7i@ii.highlight": { "size": [ "90%", 1 ], "anchor_from": "top_middle", "anchor_to": "top_middle", "offset": [ 0, 54 ] }
 					},
 					{
 						"8i@brewing_stand.invis_icon": { "anchor_from": "top_left", "anchor_to": "top_left", "offset": [ 5, 58 ] }
 					},
 					{
-						"9i@start.divider": { "size": [  "90%", 1 ], "anchor_from": "top_middle", "anchor_to": "top_middle", "offset": [ 0, 76 ] }
+						"9i@ii.highlight": { "size": [  "90%", 1 ], "anchor_from": "top_middle", "anchor_to": "top_middle", "offset": [ 0, 76 ] }
 					},
 					{
 						"redstone": { "type": "image", "layer": 5, "anchor_from": "top_left", "anchor_to": "top_left", "size": [ 16, 16 ], "texture": "textures/items/redstone_dust", "offset": [ 5, 80 ] }
@@ -230,7 +230,7 @@
 	
 // -=- LEAPING
 
-	"leap_button@common_buttons.light_text_button" : {
+	"leap_button@ii.button_asset" : {
 		"layer": 3,
 		"size": [ 18, 18 ],
 		"anchor_from": "right_middle",
@@ -238,7 +238,7 @@
 		"text": "",
 		"controls": [
 			{
-				"default@start.iibutton0": { "controls": [ { "icon2@brewing_stand.leap_icon":{} } ] }
+				"default@ii.button_default": { "controls": [ { "icon2@brewing_stand.leap_icon":{} } ] }
 			},
 			{
 				"hover@brewing_stand.leap_hover": {}
@@ -249,10 +249,10 @@
 		]
 	},
 	
-	"leap_hover@start.iibutton1": {
+	"leap_hover@ii.button_highlight": {
 		"controls": [
 			{
-				"2b@start.iibutton0": 
+				"2b@ii.button_default": 
 				{
 					"size": [ 160, 120 ], "anchor_from": "top_left", "anchor_to": "top_left", "offset": [ 20, -40 ],
 					"controls": [
@@ -281,13 +281,13 @@
 						"rabbit_foot": { "type": "image", "layer": 5, "anchor_from": "top_left", "anchor_to": "top_left", "size": [ 16, 16 ], "texture": "textures/items/rabbit_foot", "offset": [ 5, 36 ] }
 					},
 					{
-						"6l@start.divider": { "size": [ "90%", 1 ], "anchor_from": "top_middle", "anchor_to": "top_middle", "offset": [ 0, 54 ] }
+						"6l@ii.highlight": { "size": [ "90%", 1 ], "anchor_from": "top_middle", "anchor_to": "top_middle", "offset": [ 0, 54 ] }
 					},
 					{
 						"7l@brewing_stand.leap_icon": { "anchor_from": "top_left", "anchor_to": "top_left", "offset": [ 5, 58 ] }
 					},
 					{
-						"8l@start.divider": { "size": [  "90%", 1 ], "anchor_from": "top_middle", "anchor_to": "top_middle", "offset": [ 0, 76 ] }
+						"8l@ii.highlight": { "size": [  "90%", 1 ], "anchor_from": "top_middle", "anchor_to": "top_middle", "offset": [ 0, 76 ] }
 					},
 					{
 						"redstone": { "type": "image", "layer": 5, "anchor_from": "top_left", "anchor_to": "top_left", "size": [ 16, 16 ], "texture": "textures/items/redstone_dust", "offset": [ 5, 80 ] }
@@ -314,7 +314,7 @@
 		
 // -=- FIRE RESISTANCE
 
-	"fire_res_button@common_buttons.light_text_button" : {
+	"fire_res_button@ii.button_asset" : {
 		"layer": 3,
 		"size": [ 18, 18 ],
 		"anchor_from": "right_middle",
@@ -322,7 +322,7 @@
 		"text": "",
 		"controls": [
 			{
-				"default@start.iibutton0": { "controls": [ { "icon3@brewing_stand.fire_res_icon":{} } ] }
+				"default@ii.button_default": { "controls": [ { "icon3@brewing_stand.fire_res_icon":{} } ] }
 			},
 			{
 				"hover@brewing_stand.fire_res_hover": {}
@@ -333,10 +333,10 @@
 		]
 	},
 	
-	"fire_res_hover@start.iibutton1": {
+	"fire_res_hover@ii.button_highlight": {
 		"controls": [
 			{
-				"3b@start.iibutton0": 
+				"3b@ii.button_default": 
 				{
 					"size": [ 160, 102 ], "anchor_from": "left_middle", "anchor_to": "left_middle", "offset": [ 20, 0 ],
 					"controls": [
@@ -362,13 +362,13 @@
 						"water_bottle": { "type": "image", "layer": 5, "anchor_from": "top_left", "anchor_to": "top_left", "size": [ 16, 16 ], "texture": "client/water_bottle", "offset": [ 5, 18 ] }
 					},
 					{
-						"5fr@start.divider": { "size": [ "90%", 1 ], "anchor_from": "top_middle", "anchor_to": "top_middle", "offset": [ 0, 54 ] }
+						"5fr@ii.highlight": { "size": [ "90%", 1 ], "anchor_from": "top_middle", "anchor_to": "top_middle", "offset": [ 0, 54 ] }
 					},
 					{
 						"6fr@brewing_stand.fire_res_icon": { "anchor_from": "top_left", "anchor_to": "top_left", "offset": [ 5, 58 ] }
 					},
 					{
-						"7fr@start.divider": { "size": [  "90%", 1 ], "anchor_from": "top_middle", "anchor_to": "top_middle", "offset": [ 0, 76 ] }
+						"7fr@ii.highlight": { "size": [  "90%", 1 ], "anchor_from": "top_middle", "anchor_to": "top_middle", "offset": [ 0, 76 ] }
 					},
 					{
 						"redstone": { "type": "image", "layer": 5, "anchor_from": "top_left", "anchor_to": "top_left", "size": [ 16, 16 ], "texture": "textures/items/redstone_dust", "offset": [ 5, 80 ] }
@@ -391,7 +391,7 @@
 	
 // -=- SLOWNESS
 
-	"slowness_button@common_buttons.light_text_button" : {
+	"slowness_button@ii.button_asset" : {
 		"layer": 3,
 		"size": [ 18, 18 ],
 		"anchor_from": "right_middle",
@@ -399,7 +399,7 @@
 		"text": "",
 		"controls": [
 			{
-				"default@start.iibutton0": { "controls": [ { "icon4@brewing_stand.slowness_icon":{} } ] }
+				"default@ii.button_default": { "controls": [ { "icon4@brewing_stand.slowness_icon":{} } ] }
 			},
 			{
 				"hover@brewing_stand.slowness_hover": {}
@@ -410,10 +410,10 @@
 		]
 	},
 	
-	"slowness_hover@start.iibutton1": {
+	"slowness_hover@ii.button_highlight": {
 		"controls": [
 			{
-				"4b@start.iibutton0": 
+				"4b@ii.button_default": 
 				{
 					"size": [ 160, 102 ], "anchor_from": "left_middle", "anchor_to": "left_middle", "offset": [ 20, 0 ],
 					"controls": [
@@ -442,13 +442,13 @@
 						"6s@brewing_stand.swiftness_icon": { "anchor_from": "top_left", "anchor_to": "top_left", "offset": [ 6, 20 ] }
 					},
 					{
-						"7s@start.divider": { "size": [ "90%", 1 ], "anchor_from": "top_middle", "anchor_to": "top_middle", "offset": [ 0, 54 ] }
+						"7s@ii.highlight": { "size": [ "90%", 1 ], "anchor_from": "top_middle", "anchor_to": "top_middle", "offset": [ 0, 54 ] }
 					},
 					{
 						"8s@brewing_stand.slowness_icon": { "anchor_from": "top_left", "anchor_to": "top_left", "offset": [ 5, 58 ] }
 					},
 					{
-						"9s@start.divider": { "size": [  "90%", 1 ], "anchor_from": "top_middle", "anchor_to": "top_middle", "offset": [ 0, 76 ] }
+						"9s@ii.highlight": { "size": [  "90%", 1 ], "anchor_from": "top_middle", "anchor_to": "top_middle", "offset": [ 0, 76 ] }
 					},
 					{
 						"redstone": { "type": "image", "layer": 5, "anchor_from": "top_left", "anchor_to": "top_left", "size": [ 16, 16 ], "texture": "textures/items/redstone_dust", "offset": [ 5, 80 ] }
@@ -471,7 +471,7 @@
 	
 // -=- SWIFTNESS
 
-	"swiftness_button@common_buttons.light_text_button" : {
+	"swiftness_button@ii.button_asset" : {
 		"layer": 3,
 		"size": [ 18, 18 ],
 		"anchor_from": "right_middle",
@@ -479,7 +479,7 @@
 		"text": "",
 		"controls": [
 			{
-				"default@start.iibutton0": { "controls": [ { "icon5@brewing_stand.swiftness_icon":{} } ] }
+				"default@ii.button_default": { "controls": [ { "icon5@brewing_stand.swiftness_icon":{} } ] }
 			},
 			{
 				"hover@brewing_stand.swiftness_hover": {}
@@ -490,10 +490,10 @@
 		]
 	},
 	
-	"swiftness_hover@start.iibutton1": {
+	"swiftness_hover@ii.button_highlight": {
 		"controls": [
 			{
-				"5b@start.iibutton0": 
+				"5b@ii.button_default": 
 				{
 					"size": [ 160, 120 ], "anchor_from": "left_middle", "anchor_to": "left_middle", "offset": [ 20, 0 ],
 					"controls": [
@@ -522,13 +522,13 @@
 						"swater_bottle": { "type": "image", "layer": 5, "anchor_from": "top_left", "anchor_to": "top_left", "size": [ 16, 16 ], "texture": "client/water_bottle", "offset": [ 5, 18 ] }
 					},
 					{
-						"6ss@start.divider": { "size": [ "90%", 1 ], "anchor_from": "top_middle", "anchor_to": "top_middle", "offset": [ 0, 54 ] }
+						"6ss@ii.highlight": { "size": [ "90%", 1 ], "anchor_from": "top_middle", "anchor_to": "top_middle", "offset": [ 0, 54 ] }
 					},
 					{
 						"7ss@brewing_stand.swiftness_icon": { "anchor_from": "top_left", "anchor_to": "top_left", "offset": [ 5, 58 ] }
 					},
 					{
-						"8ss@start.divider": { "size": [  "90%", 1 ], "anchor_from": "top_middle", "anchor_to": "top_middle", "offset": [ 0, 76 ] }
+						"8ss@ii.highlight": { "size": [  "90%", 1 ], "anchor_from": "top_middle", "anchor_to": "top_middle", "offset": [ 0, 76 ] }
 					},
 					{
 						"redstone": { "type": "image", "layer": 5, "anchor_from": "top_left", "anchor_to": "top_left", "size": [ 16, 16 ], "texture": "textures/items/redstone_dust", "offset": [ 5, 80 ] }
@@ -554,7 +554,7 @@
 
 // -=- WATER BREATHING
 
-	"water_breathing_button@common_buttons.light_text_button" : {
+	"water_breathing_button@ii.button_asset" : {
 		"layer": 3,
 		"size": [ 18, 18 ],
 		"anchor_from": "right_middle",
@@ -562,7 +562,7 @@
 		"text": "",
 		"controls": [
 			{
-				"default@start.iibutton0": { "controls": [ { "icon6@brewing_stand.water_breathing_icon":{} } ] }
+				"default@ii.button_default": { "controls": [ { "icon6@brewing_stand.water_breathing_icon":{} } ] }
 			},
 			{
 				"hover@brewing_stand.water_breathing_hover": {}
@@ -573,10 +573,10 @@
 		]
 	},
 	
-	"water_breathing_hover@start.iibutton1": {
+	"water_breathing_hover@ii.button_highlight": {
 		"controls": [
 			{
-				"6b@start.iibutton0": 
+				"6b@ii.button_default": 
 				{
 					"size": [ 160, 102 ], "anchor_from": "left_middle", "anchor_to": "left_middle", "offset": [ 20, 0 ],
 					"controls": [
@@ -602,13 +602,13 @@
 						"water_bottle": { "type": "image", "layer": 5, "anchor_from": "top_left", "anchor_to": "top_left", "size": [ 16, 16 ], "texture": "client/water_bottle", "offset": [ 5, 18 ] }
 					},
 					{
-						"5wb@start.divider": { "size": [ "90%", 1 ], "anchor_from": "top_middle", "anchor_to": "top_middle", "offset": [ 0, 54 ] }
+						"5wb@ii.highlight": { "size": [ "90%", 1 ], "anchor_from": "top_middle", "anchor_to": "top_middle", "offset": [ 0, 54 ] }
 					},
 					{
 						"6wb@brewing_stand.water_breathing_icon": { "anchor_from": "top_left", "anchor_to": "top_left", "offset": [ 5, 58 ] }
 					},
 					{
-						"7wb@start.divider": { "size": [  "90%", 1 ], "anchor_from": "top_middle", "anchor_to": "top_middle", "offset": [ 0, 76 ] }
+						"7wb@ii.highlight": { "size": [  "90%", 1 ], "anchor_from": "top_middle", "anchor_to": "top_middle", "offset": [ 0, 76 ] }
 					},
 					{
 						"redstone": { "type": "image", "layer": 5, "anchor_from": "top_left", "anchor_to": "top_left", "size": [ 16, 16 ], "texture": "textures/items/redstone_dust", "offset": [ 5, 80 ] }
@@ -631,7 +631,7 @@
 	
 // -=- Healing
 
-	"healing_button@common_buttons.light_text_button" : {
+	"healing_button@ii.button_asset" : {
 		"layer": 3,
 		"size": [ 18, 18 ],
 		"anchor_from": "right_middle",
@@ -639,7 +639,7 @@
 		"text": "",
 		"controls": [
 			{
-				"default@start.iibutton0": { "controls": [ { "icon7@brewing_stand.healing_icon":{} } ] }
+				"default@ii.button_default": { "controls": [ { "icon7@brewing_stand.healing_icon":{} } ] }
 			},
 			{
 				"hover@brewing_stand.healing_hover": {}
@@ -650,10 +650,10 @@
 		]
 	},
 	
-	"healing_hover@start.iibutton1": {
+	"healing_hover@ii.button_highlight": {
 		"controls": [
 			{
-				"7b@start.iibutton0": 
+				"7b@ii.button_default": 
 				{
 					"size": [ 160, 102 ], "anchor_from": "left_middle", "anchor_to": "left_middle", "offset": [ 20, 0 ],
 					"controls": [
@@ -679,13 +679,13 @@
 						"water_bottle": { "type": "image", "layer": 5, "anchor_from": "top_left", "anchor_to": "top_left", "size": [ 16, 16 ], "texture": "client/water_bottle", "offset": [ 5, 18 ] }
 					},
 					{
-						"5h@start.divider": { "size": [ "90%", 1 ], "anchor_from": "top_middle", "anchor_to": "top_middle", "offset": [ 0, 54 ] }
+						"5h@ii.highlight": { "size": [ "90%", 1 ], "anchor_from": "top_middle", "anchor_to": "top_middle", "offset": [ 0, 54 ] }
 					},
 					{
 						"6h@brewing_stand.healing_icon": { "anchor_from": "top_left", "anchor_to": "top_left", "offset": [ 5, 58 ] }
 					},
 					{
-						"7h@start.divider": { "size": [  "90%", 1 ], "anchor_from": "top_middle", "anchor_to": "top_middle", "offset": [ 0, 76 ] }
+						"7h@ii.highlight": { "size": [  "90%", 1 ], "anchor_from": "top_middle", "anchor_to": "top_middle", "offset": [ 0, 76 ] }
 					},
 					{
 						"glowstone": { "type": "image", "layer": 5, "anchor_from": "top_left", "anchor_to": "top_left", "size": [ 16, 16 ], "texture": "textures/items/glowstone_dust", "offset": [ 5, 80 ] }
@@ -708,7 +708,7 @@
 	
 // -=- Harming
 
-	"harming_button@common_buttons.light_text_button" : {
+	"harming_button@ii.button_asset" : {
 		"layer": 3,
 		"size": [ 18, 18 ],
 		"anchor_from": "right_middle",
@@ -716,7 +716,7 @@
 		"text": "",
 		"controls": [
 			{
-				"default@start.iibutton0": { "controls": [ { "icon8@brewing_stand.harming_icon":{} } ] }
+				"default@ii.button_default": { "controls": [ { "icon8@brewing_stand.harming_icon":{} } ] }
 			},
 			{
 				"hover@brewing_stand.harming_hover": {}
@@ -727,10 +727,10 @@
 		]
 	},
 	
-	"harming_hover@start.iibutton1": {
+	"harming_hover@ii.button_highlight": {
 		"controls": [
 			{
-				"8b@start.iibutton0": 
+				"8b@ii.button_default": 
 				{
 					"size": [ 160, 102 ], "anchor_from": "left_middle", "anchor_to": "left_middle", "offset": [ 20, 0 ],
 					"controls": [
@@ -759,13 +759,13 @@
 						"6hh@brewing_stand.healing_icon": { "anchor_from": "top_left", "anchor_to": "top_left", "offset": [ 4, 17 ] }
 					},
 					{
-						"7hh@start.divider": { "size": [ "90%", 1 ], "anchor_from": "top_middle", "anchor_to": "top_middle", "offset": [ 0, 54 ] }
+						"7hh@ii.highlight": { "size": [ "90%", 1 ], "anchor_from": "top_middle", "anchor_to": "top_middle", "offset": [ 0, 54 ] }
 					},
 					{
 						"8hh@brewing_stand.harming_icon": { "anchor_from": "top_left", "anchor_to": "top_left", "offset": [ 5, 58 ] }
 					},
 					{
-						"9h@start.divider": { "size": [  "90%", 1 ], "anchor_from": "top_middle", "anchor_to": "top_middle", "offset": [ 0, 76 ] }
+						"9h@ii.highlight": { "size": [  "90%", 1 ], "anchor_from": "top_middle", "anchor_to": "top_middle", "offset": [ 0, 76 ] }
 					},
 					{
 						"glowstone": { "type": "image", "layer": 5, "anchor_from": "top_left", "anchor_to": "top_left", "size": [ 16, 16 ], "texture": "textures/items/glowstone_dust", "offset": [ 5, 80 ] }
@@ -788,7 +788,7 @@
 	
 // -=- Poison
 
-	"poison_button@common_buttons.light_text_button" : {
+	"poison_button@ii.button_asset" : {
 		"layer": 3,
 		"size": [ 18, 18 ],
 		"anchor_from": "right_middle",
@@ -796,7 +796,7 @@
 		"text": "",
 		"controls": [
 			{
-				"default@start.iibutton0": { "controls": [ { "icon9@brewing_stand.poison_icon":{} } ] }
+				"default@ii.button_default": { "controls": [ { "icon9@brewing_stand.poison_icon":{} } ] }
 			},
 			{
 				"hover@brewing_stand.poison_hover": {}
@@ -807,10 +807,10 @@
 		]
 	},
 	
-	"poison_hover@start.iibutton1": {
+	"poison_hover@ii.button_highlight": {
 		"controls": [
 			{
-				"9b@start.iibutton0": 
+				"9b@ii.button_default": 
 				{
 					"size": [ 160, 120 ], "anchor_from": "left_middle", "anchor_to": "left_middle", "offset": [ 20, 0 ],
 					"controls": [
@@ -839,13 +839,13 @@
 						"water_bottle": { "type": "image", "layer": 5, "anchor_from": "top_left", "anchor_to": "top_left", "size": [ 16, 16 ], "texture": "client/water_bottle", "offset": [ 5, 18 ] }
 					},
 					{
-						"6p@start.divider": { "size": [ "90%", 1 ], "anchor_from": "top_middle", "anchor_to": "top_middle", "offset": [ 0, 54 ] }
+						"6p@ii.highlight": { "size": [ "90%", 1 ], "anchor_from": "top_middle", "anchor_to": "top_middle", "offset": [ 0, 54 ] }
 					},
 					{
 						"7p@brewing_stand.poison_icon": { "anchor_from": "top_left", "anchor_to": "top_left", "offset": [ 5, 58 ] }
 					},
 					{
-						"8p@start.divider": { "size": [  "90%", 1 ], "anchor_from": "top_middle", "anchor_to": "top_middle", "offset": [ 0, 76 ] }
+						"8p@ii.highlight": { "size": [  "90%", 1 ], "anchor_from": "top_middle", "anchor_to": "top_middle", "offset": [ 0, 76 ] }
 					},
 					{
 						"glowstone": { "type": "image", "layer": 5, "anchor_from": "top_left", "anchor_to": "top_left", "size": [ 16, 16 ], "texture": "textures/items/glowstone_dust", "offset": [ 5, 98 ] }
@@ -871,7 +871,7 @@
 	
 // -=- REGENERATION
 
-	"regeneration_button@common_buttons.light_text_button" : {
+	"regeneration_button@ii.button_asset" : {
 		"layer": 3,
 		"size": [ 18, 18 ],
 		"anchor_from": "right_middle",
@@ -879,7 +879,7 @@
 		"text": "",
 		"controls": [
 			{
-				"default@start.iibutton0": { "controls": [ { "icon10@brewing_stand.regen_icon":{} } ] }
+				"default@ii.button_default": { "controls": [ { "icon10@brewing_stand.regen_icon":{} } ] }
 			},
 			{
 				"hover@brewing_stand.regen_hover": {}
@@ -890,10 +890,10 @@
 		]
 	},
 	
-	"regen_hover@start.iibutton1": {
+	"regen_hover@ii.button_highlight": {
 		"controls": [
 			{
-				"10b@start.iibutton0": 
+				"10b@ii.button_default": 
 				{
 					"size": [ 160, 120 ], "anchor_from": "bottom_left", "anchor_to": "bottom_left", "offset": [ 20, 40 ],
 					"controls": [
@@ -922,13 +922,13 @@
 						"water_bottle": { "type": "image", "layer": 5, "anchor_from": "top_left", "anchor_to": "top_left", "size": [ 16, 16 ], "texture": "client/water_bottle", "offset": [ 5, 18 ] }
 					},
 					{
-						"6r@start.divider": { "size": [ "90%", 1 ], "anchor_from": "top_middle", "anchor_to": "top_middle", "offset": [ 0, 54 ] }
+						"6r@ii.highlight": { "size": [ "90%", 1 ], "anchor_from": "top_middle", "anchor_to": "top_middle", "offset": [ 0, 54 ] }
 					},
 					{
 						"7r@brewing_stand.regen_icon": { "anchor_from": "top_left", "anchor_to": "top_left", "offset": [ 5, 58 ] }
 					},
 					{
-						"8r@start.divider": { "size": [  "90%", 1 ], "anchor_from": "top_middle", "anchor_to": "top_middle", "offset": [ 0, 76 ] }
+						"8r@ii.highlight": { "size": [  "90%", 1 ], "anchor_from": "top_middle", "anchor_to": "top_middle", "offset": [ 0, 76 ] }
 					},
 					{
 						"redstone": { "type": "image", "layer": 5, "anchor_from": "top_left", "anchor_to": "top_left", "size": [ 16, 16 ], "texture": "textures/items/redstone_dust", "offset": [ 5, 80 ] }
@@ -954,7 +954,7 @@
 	
 // -=- STRENGTH
 
-	"strength_button@common_buttons.light_text_button" : {
+	"strength_button@ii.button_asset" : {
 		"layer": 3,
 		"size": [ 18, 18 ],
 		"anchor_from": "right_middle",
@@ -962,7 +962,7 @@
 		"text": "",
 		"controls": [
 			{
-				"default@start.iibutton0": { "controls": [ { "icon11@brewing_stand.strength_icon":{} } ] }
+				"default@ii.button_default": { "controls": [ { "icon11@brewing_stand.strength_icon":{} } ] }
 			},
 			{
 				"hover@brewing_stand.strength_hover": {}
@@ -973,10 +973,10 @@
 		]
 	},
 	
-	"strength_hover@start.iibutton1": {
+	"strength_hover@ii.button_default": {
 		"controls": [
 			{
-				"11b@start.iibutton0": 
+				"11b@ii.button_default": 
 				{
 					"size": [ 160, 120 ], "anchor_from": "bottom_left", "anchor_to": "bottom_left", "offset": [ 20, 20 ],
 					"controls": [
@@ -1005,13 +1005,13 @@
 						"water_bottle": { "type": "image", "layer": 5, "anchor_from": "top_left", "anchor_to": "top_left", "size": [ 16, 16 ], "texture": "client/water_bottle", "offset": [ 5, 18 ] }
 					},
 					{
-						"6st@start.divider": { "size": [ "90%", 1 ], "anchor_from": "top_middle", "anchor_to": "top_middle", "offset": [ 0, 54 ] }
+						"6st@ii.highlight": { "size": [ "90%", 1 ], "anchor_from": "top_middle", "anchor_to": "top_middle", "offset": [ 0, 54 ] }
 					},
 					{
 						"7st@brewing_stand.strength_icon": { "anchor_from": "top_left", "anchor_to": "top_left", "offset": [ 5, 58 ] }
 					},
 					{
-						"8st@start.divider": { "size": [  "90%", 1 ], "anchor_from": "top_middle", "anchor_to": "top_middle", "offset": [ 0, 76 ] }
+						"8st@ii.highlight": { "size": [  "90%", 1 ], "anchor_from": "top_middle", "anchor_to": "top_middle", "offset": [ 0, 76 ] }
 					},
 					{
 						"redstone": { "type": "image", "layer": 5, "anchor_from": "top_left", "anchor_to": "top_left", "size": [ 16, 16 ], "texture": "textures/items/redstone_dust", "offset": [ 5, 80 ] }
@@ -1038,7 +1038,7 @@
 
 // -=- Weakness
 
-	"weakness_button@common_buttons.light_text_button" : {
+	"weakness_button@ii.button_asset" : {
 		"layer": 3,
 		"size": [ 18, 18 ],
 		"anchor_from": "right_middle",
@@ -1046,7 +1046,7 @@
 		"text": "",
 		"controls": [
 			{
-				"default@start.iibutton0": { "controls": [ { "icon12@brewing_stand.weakness_icon":{} } ] }
+				"default@ii.button_default": { "controls": [ { "icon12@brewing_stand.weakness_icon":{} } ] }
 			},
 			{
 				"hover@brewing_stand.weakness_hover": {}
@@ -1057,10 +1057,10 @@
 		]
 	},
 	
-	"weakness_hover@start.iibutton1": {
+	"weakness_hover@ii.button_highlight": {
 		"controls": [
 			{
-				"12b@start.iibutton0": 
+				"12b@ii.button_default": 
 				{
 					"size": [ 160, 102 ], "anchor_from": "bottom_left", "anchor_to": "bottom_left", "offset": [ 20, 0 ],
 					"controls": [
@@ -1086,13 +1086,13 @@
 						"water_bottle": { "type": "image", "layer": 5, "anchor_from": "top_left", "anchor_to": "top_left", "size": [ 16, 16 ], "texture": "client/water_bottle", "offset": [ 5, 18 ] }
 					},
 					{
-						"5w@start.divider": { "size": [ "90%", 1 ], "anchor_from": "top_middle", "anchor_to": "top_middle", "offset": [ 0, 54 ] }
+						"5w@ii.highlight": { "size": [ "90%", 1 ], "anchor_from": "top_middle", "anchor_to": "top_middle", "offset": [ 0, 54 ] }
 					},
 					{
 						"6w@brewing_stand.weakness_icon": { "anchor_from": "top_left", "anchor_to": "top_left", "offset": [ 5, 58 ] }
 					},
 					{
-						"7w@start.divider": { "size": [  "90%", 1 ], "anchor_from": "top_middle", "anchor_to": "top_middle", "offset": [ 0, 76 ] }
+						"7w@ii.highlight": { "size": [  "90%", 1 ], "anchor_from": "top_middle", "anchor_to": "top_middle", "offset": [ 0, 76 ] }
 					},
 					{
 						"redstone": { "type": "image", "layer": 5, "anchor_from": "top_left", "anchor_to": "top_left", "size": [ 16, 16 ], "texture": "textures/items/redstone_dust", "offset": [ 5, 80 ] }
@@ -1115,7 +1115,7 @@
 	
 // -=- SPLASH
 
-	"splash@common_buttons.light_text_button" : {
+	"splash@ii.button_asset" : {
 		"layer": 3,
 		"size": [ 18, 18 ],
 		"anchor_from": "left_middle",
@@ -1123,7 +1123,7 @@
 		"text": "",
 		"controls": [
 			{
-				"default@start.iibutton0": { "controls": [ { "icon13@brewing_stand.splash_icon":{} } ] }
+				"default@ii.button_default": { "controls": [ { "icon13@brewing_stand.splash_icon":{} } ] }
 			},
 			{
 				"hover@brewing_stand.splash_hover": {}
@@ -1131,10 +1131,10 @@
 		]
 	},
 	
-	"splash_hover@start.iibutton1": {
+	"splash_hover@ii.button_highlight": {
 		"controls": [
 			{
-				"13b@start.iibutton0": 
+				"13b@ii.button_default": 
 				{
 					"size": [ 125, 80 ], "anchor_from": "right_middle", "anchor_to": "right_middle", "offset": [ -20, 0 ],
 					"controls": [
@@ -1157,7 +1157,7 @@
 						"water_bottle": { "type": "image", "layer": 5, "anchor_from": "top_left", "anchor_to": "top_left", "size": [ 16, 16 ], "texture": "client/water_bottle", "offset": [ 5, 18 ] }
 					},
 					{
-						"5sp@start.divider": { "size": [ "90%", 1 ], "anchor_from": "top_middle", "anchor_to": "top_middle", "offset": [ 0, 54 ] }
+						"5sp@ii.highlight": { "size": [ "90%", 1 ], "anchor_from": "top_middle", "anchor_to": "top_middle", "offset": [ 0, 54 ] }
 					},
 					{
 						"6sp@brewing_stand.splash_icon": { "anchor_from": "top_left", "anchor_to": "top_left", "offset": [ 5, 58 ] }
@@ -1180,7 +1180,7 @@
 	
 	// -=- SPLASH
 
-	"awkward_button@common_buttons.light_text_button" : {
+	"awkward_button@ii.button_asset" : {
 		"layer": 3,
 		"size": [ 18, 18 ],
 		"anchor_from": "left_middle",
@@ -1188,7 +1188,7 @@
 		"text": "",
 		"controls": [
 			{
-				"default@start.iibutton0": { "controls": [ { "water_bottle": { "type": "image", "layer": 5, "size": [ 16, 16 ], "texture": "client/water_bottle" } } ] }
+				"default@ii.button_default": { "controls": [ { "water_bottle": { "type": "image", "layer": 5, "size": [ 16, 16 ], "texture": "client/water_bottle" } } ] }
 			},
 			{
 				"hover@brewing_stand.awkward_hover": {}
@@ -1196,10 +1196,10 @@
 		]
 	},
 	
-	"awkward_hover@start.iibutton1": {
+	"awkward_hover@ii.button_highlight": {
 		"controls": [
 			{
-				"14b@start.iibutton0": 
+				"14b@ii.button_default": 
 				{
 					"size": [ 125, 80 ], "anchor_from": "right_middle", "anchor_to": "right_middle", "offset": [ -20, 0 ],
 					"controls": [
@@ -1222,7 +1222,7 @@
 						"4awwater_bottle": { "type": "image", "layer": 5, "anchor_from": "top_left", "anchor_to": "top_left", "size": [ 16, 16 ], "texture": "client/water_bottle", "offset": [ 5, 18 ] }
 					},
 					{
-						"5aw@start.divider": { "size": [ "90%", 1 ], "anchor_from": "top_middle", "anchor_to": "top_middle", "offset": [ 0, 54 ] }
+						"5aw@ii.highlight": { "size": [ "90%", 1 ], "anchor_from": "top_middle", "anchor_to": "top_middle", "offset": [ 0, 54 ] }
 					},
 					{
 						"water_bottle": { "type": "image", "layer": 5, "size": [ 16, 16 ], "texture": "client/water_bottle", "anchor_from": "top_left", "anchor_to": "top_left", "offset": [ 5, 58 ] }
@@ -1372,49 +1372,50 @@
 		"controls": [
 			{ "sidebar@brewing_stand.sidebar": {} },
 			{ "right_sidebar@brewing_stand.right_sidebar": {} },
-			{ "background@start.background": {} },
+			{ "background@ii.background": {} },
 			{ "container_gamepad_helpers@common.container_gamepad_helpers": {} },
 			{ "flying_item_renderer@common.flying_item_renderer": { "layer": 11 } },
 			{ "selected_item_details_factory@common.selected_item_details_factory": {} },
 			{ "item_lock_notification_factory@common.item_lock_notification_factory": {} },
 			{
-			"root_panel@common.root_panel": {
-			  "layer": 1,
-			  "size": [ 176, 168 ],
-			  "controls": [
-				{ "brewing_stand_gui@brewing_stand.brewing_stand_gui": {} },
-				{
-				  "furnace_screen_inventory": {
-					"type": "panel",
-					"layer": 5,
+				"root_panel@common.root_panel": {
+					"layer": 1,
+					"size": [ 176, 168 ],
 					"controls": [
-					  { "brewing_panel_top_half@brewing_stand.brewing_panel_top_half": {} },
-					  { "inventory_panel_bottom_half@common.inventory_panel_bottom_half": { "offset": [ 0, -2 ] } },
-					  { "hotbar_grid@common.hotbar_grid_template": { "offset": [ 0, -9 ] } },
-					  { "inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {} }
+						{ "brewing_stand_gui@brewing_stand.brewing_stand_gui": {} },
+						{
+							"furnace_screen_inventory": {
+								"type": "panel",
+								"layer": 5,
+								"controls": [
+									{ "brewing_panel_top_half@brewing_stand.brewing_panel_top_half": {} },
+									{ "inventory_panel_bottom_half@common.inventory_panel_bottom_half": { "offset": [ 0, -2 ] } },
+									{ "hotbar_grid@common.hotbar_grid_template": { "offset": [ 0, -9 ] } },
+									{ "inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {} }
+								]
+							}
+						},
+						{ "inventory_selected_icon_button@common.inventory_selected_icon_button": {} },
+						{ "gamepad_cursor@common.gamepad_cursor_button": {} }
 					]
-				  }
-				},
-				{ "inventory_selected_icon_button@common.inventory_selected_icon_button": {} },
-				{ "gamepad_cursor@common.gamepad_cursor_button": {} }
-          ]
-        }
-      }
-    ]
-  },
+				}
+			}
+		]
+	},
+  
   "brewing_stand_screen@common.inventory_screen_common": {
 	  "force_render_below": true,
-    "$close_on_player_hurt|default": false,
-    "close_on_player_hurt": "$close_on_player_hurt",
-    "variables": [
-      {
-        "requires": "$desktop_screen",
-        "$screen_content": "brewing_stand.brewing_stand_panel"
-      },
-      {
-        "requires": "$pocket_screen",
-        "$screen_content": "brewing_stand_pocket.brewing_stand_panel"
-      }
-    ]
-  }
+		"$close_on_player_hurt|default": false,
+		"close_on_player_hurt": "$close_on_player_hurt",
+		"variables": [
+			{
+				"requires": "$desktop_screen",
+				"$screen_content": "brewing_stand.brewing_stand_panel"
+			},
+			{
+				"requires": "$pocket_screen",
+				"$screen_content": "brewing_stand_pocket.brewing_stand_panel"
+			}
+		]
+	}
 }

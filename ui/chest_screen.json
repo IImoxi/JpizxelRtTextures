@@ -31,7 +31,9 @@
 	"small_chest_panel": {
 		"type": "panel",
 		"controls": [
-			{ "background@start.background": {} },
+			{ "background@ii.background": {} },
+			{ "left_invisible_button@ii.left_invisible_button": { "$pressed_button_name": "button.menu_exit" } },
+			{ "right_invisible_button@ii.right_invisible_button": { "$pressed_button_name": "button.menu_exit" } },
 			{ "container_gamepad_helpers@common.container_gamepad_helpers": {} },
 			{ "flying_item_renderer@common.flying_item_renderer": { "layer": 14 } },
 			{ "selected_item_details_factory@common.selected_item_details_factory": {} },
@@ -68,7 +70,9 @@
   "large_chest_panel": {
     "type": "panel",
     "controls": [
-      { "background@start.background": {} },
+      { "background@ii.background": {} },
+		{ "left_invisible_button@ii.left_invisible_button": { "$pressed_button_name": "button.menu_exit" } },
+	{ "right_invisible_button@ii.right_invisible_button": { "$pressed_button_name": "button.menu_exit" } },
       { "container_gamepad_helpers@common.container_gamepad_helpers": {} },
       {
         "flying_item_renderer@common.flying_item_renderer": {

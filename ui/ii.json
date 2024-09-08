@@ -91,6 +91,21 @@
 		]
 	},
 	
+	"left_invisible_button@ii.button_asset": {
+		"layer": 20,
+		"size": [ 32, "100%" ],
+		"anchor_from": "top_left",
+		"anchor_to": "top_left",
+		"offset": [ 0, 0 ]
+	},
+	"right_invisible_button@ii.button_asset": {
+		"layer": 20,
+		"size": [ 32, "100%" ],
+		"anchor_from": "top_right",
+		"anchor_to": "top_right",
+		"offset": [ 0, 0 ]
+	},
+
 	"button_asset@common.button": {
 		"$default_button_texture": "textures/gui/buttons/iibutton_default",
 		"$hover_button_texture|default": "textures/gui/buttons/iibutton_highlight",
