@@ -183,12 +183,63 @@
 		]
 	},
 	
-	"expanded_text_box_panel@chat.text_box_panel": {
-		"size": [ "100%", 128 ],
-		"$child_size": [ "100% - 2px", 126 ],
-		"$child_clip_size": [ "100% - 2px", 124 ],
-		"$text_anchor": "top_left",
+	"expanded_text_box_panel": {
+		"type": "panel",
+		"anchor_from": "bottom_middle",
+		"anchor_to": "bottom_middle",
+		"size": [ "100% - 2px", 128 ],
+		"anims": [ "@chat.ii_offset_05-0012-0000" ],
 		"$multiline": true,
+		"controls": [ 
+			{
+				"expanded_text_box@chat.text_box_template": {
+					"layer": 20,
+					"anchor_from": "bottom_middle",
+					"anchor_to": "bottom_middle",
+					"size": [ "100%", 126 ],
+					"$text_anchor": "top_left",
+					"button_mappings": [
+						{
+							"from_button_id": "button.menu_select", "to_button_id": "$text_edit_box_selected_to_button_id",
+							"handle_select": true, "handle_deselect": false, "mapping_type": "pressed"
+						},
+						{
+							"from_button_id": "button.menu_select",
+							"to_button_id": "$text_edit_box_selected_to_button_id",
+							"handle_select": false,
+							"handle_deselect": true,
+							"mapping_type": "global",
+							"consume_event": false
+						},
+						{
+							"from_button_id": "button.menu_ok",
+							"to_button_id": "$text_edit_box_selected_to_button_id",
+							"handle_select": true,
+							"handle_deselect": false,
+							"mapping_type": "pressed"
+						},
+						{
+							"from_button_id": "button.menu_cancel",
+							"to_button_id": "$text_edit_box_deselected_to_button_id",
+							"handle_select": false,
+							"handle_deselect": true,
+							"mapping_type": "global"
+						},
+						{
+							"to_button_id": "$text_edit_box_hovered_button_id",
+							"mapping_type": "pressed"
+						},
+						{
+							"from_button_id": "$text_edit_box_clear_from_button_id",
+							"to_button_id": "$text_edit_box_clear_to_button_id",
+							"handle_select": false,
+							"handle_deselect": false,
+							"mapping_type": "focused"
+						}
+					]
+				}
+			}
+		],
 		"bindings": [
 			{
 				"binding_type": "view", "source_control_name": "expand_chat_input", 
@@ -236,7 +287,7 @@
 								"anchor_from": "left_middle",
 								"anchor_to": "left_middle",
 								"offset": "$text_offset",
-								"clips_children": true,
+								"clips_children": false,
 								"$disabled_color|default": "$color",
 								"controls": [
 									{
@@ -254,7 +305,6 @@
 			},
 			{ "@chat.chat_input_dialog": {} }
 		],
-		
 		"button_mappings": [
 			{ "from_button_id": "button.menu_select", "to_button_id": "$text_edit_box_selected_to_button_id", "handle_select": true, "handle_deselect": true, "mapping_type": "pressed" },
 			{ "from_button_id": "button.menu_select", "to_button_id": "$text_edit_box_selected_to_button_id", "handle_select": false, "handle_deselect": true, "mapping_type": "global", "consume_event": false },
