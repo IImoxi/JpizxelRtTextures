@@ -4,7 +4,7 @@
   "$pack_version": "ODI v2.10.00",
   
   "$subpackscale_chat": 1.0,
-  "$subpackscale_name": "Varied Textures, 100% Chat scale (Default)",
+  "$subpackscale_name": "Varied Textures, 100%% Chat scale (Default)",
   
   "$item_stack_count_color": [ 0.9, 0.9, 0.9 ],
   "$selected_item_stack_count_color": [ 0.9, 0.9, 0.9 ],
@@ -40,7 +40,7 @@
   //////// Color format colors ////////
   "$3_color_format": [ 0.16, 0.192, 0.463 ], // Accent Color
   
-  "$0_color_format": [ 0.0, 0.0, 0.0 ], // Black
+  "$0_color_format": [ 0.02, 0.02, 0.02 ], // Black
   "$1_color_format": [ 0.16, 0.16, 0.94 ], // Dark Blue
   "$2_color_format": [ 0.05, 0.7, 0.05 ], // Dark Green
   "$3_color_format": [ 0.0, 0.50, 0.84 ], // Dark Aqua

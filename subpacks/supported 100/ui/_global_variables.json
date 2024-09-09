@@ -1,8 +1,41 @@
 // JPizxel RTP | IImoxi
 
 {
-  "$subpackscale_chat": 1.0,
-  "$subpackscale_name": "RTX Supported Textures, 100%% Chat scale"
+	"$subpackscale_chat": 1.0,
+	"$subpackscale_name": "RTX Supported Textures, 100%% Chat scale",
+	
+	"$transition_time_push_size": 0,
+	"$transition_time_pop_size": 0,
+	"$transition_time_push": 0,
+	"$transition_time_pop": 0,
+	"$container_transition_time_push": 0,
+	"$container_transition_time_pop": 0,
+	"$loading_bar_transition": 0,
+	
+	"$item_stack_count_color": [ 0.9, 0.9, 0.9 ],
+	"$selected_item_stack_count_color": [ 0.9, 0.9, 0.9 ],
+	"$chat_text_color": [ 0.9, 0.9, 0.9 ],
+	"$hud_gamertag_color": [ 0.9, 0.9, 0.9 ],
+	
+	"$enchanting_runes_color": [ 0.26, 0.62, 1 ],
+	"$enchanting_runes_fail_color": [ 0.408, 0.368, 0.29 ],
+  
+	"$0_color_format": [ 0.02, 0.02, 0.02 ], // Black
+	"$1_color_format": [ 0.16, 0.16, 0.94 ], // Dark Blue
+	"$2_color_format": [ 0.05, 0.7, 0.05 ], // Dark Green
+	"$3_color_format": [ 0.0, 0.50, 0.84 ], // Dark Aqua
+	"$4_color_format": [ 0.667, 0.0, 0.0 ], // Dark Red
+	"$5_color_format": [ 0.533, 0.240, 0.918 ],
+	"$6_color_format": [ 1.0, 0.667, 0.0 ], // Gold
+	"$7_color_format": [ 0.667, 0.667, 0.667 ], // Gray
+	"$8_color_format": [ 0.333, 0.333, 0.333 ], // Dark Gray
+	"$9_color_format": [ 0.337, 0.337, 1 ], // Blue
+	"$a_color_format": [ 0.300, 1.0, 0.6 ], // Green
+	"$b_color_format": [ 0.337, 0.693, 1.00 ], // Aqua
+	"$c_color_format": [ 1.0, 0.55, 0.55 ], // Red
+	"$d_color_format": [ 0.99, 0.6, 0.97 ], // Light Purple
+	"$e_color_format": [ 1.0, 1.0, 0.5 ], // Yellow
+	"$f_color_format": [ 0.9, 0.9, 0.9 ], // White
 }
 
 // JPizxel RTP | IImoxi
