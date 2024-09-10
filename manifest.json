@@ -1,10 +1,10 @@
 {
 	"format_version": 2,
 	"header": {
-		"description": "§rIImoxi | Modifies the look of minecraft with an option to enable Ray Tracing. (May boost FPS) (Recommended for PC/Mouse and keyboard only!)",
-		"name": "§r§6JPizxeL RT Textures",
+		"description": "§rIImoxi | Default edit PVP pack with PBR + Custom UI. Check pack settings before using RTX §7(Mouse & Keyboard recommended UI)",
+		"name": "§r§6JPizxeL RT",
 		"uuid": "bd3398a9-0fe7-4195-8a6b-6334b76fc5fb",
-		"version": [ 1, 0, 0 ],
+		"version": [ 3, 0, 0 ],
 		"min_engine_version": [ 1, 16, 0 ]
 	},
 	"capabilities": [ 

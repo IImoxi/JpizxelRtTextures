@@ -152,7 +152,7 @@
 	"pack_name_label": {
 		"type": "label",
 		"alpha": 0.5,
-		"text": "JPizxel RT Textures",
+		"text": "JPizxel RT",
 		"size": [ "default", 10 ],
 		"anchor_from": "bottom_left",
 		"anchor_to": "bottom_left",
