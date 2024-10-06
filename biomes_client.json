@@ -98,15 +98,15 @@
 		},
 		"jungle": {
 			"water_surface_color": "#14A2C5",
-			"fog_identifier": "ii:swamp"
+			"fog_identifier": "ii:humid_atmosphere"
 		},
 		"bamboo_jungle": {
 			"water_surface_color": "#14A2C5",
-			"fog_identifier": "ii:swamp"
+			"fog_identifier": "ii:humid_atmosphere"
 		},
 		"jungle_mutated": {
 			"water_surface_color": "#1B9ED8",
-			"fog_identifier": "ii:swamp"
+			"fog_identifier": "ii:humid_atmosphere"
 		},
 		"jungle_hills": {
 			"water_surface_color": "#1B9ED8",
@@ -118,7 +118,7 @@
 		},
 		"jungle_edge": {
 			"water_surface_color": "#0D8AE3",
-			"fog_identifier": "ii:swamp"
+			"fog_identifier": "ii:humid_atmosphere"
 		},
 		"forest": {
 			"water_surface_color": "#1E97F2",

@@ -3,25 +3,25 @@
 		"stone" : {
 			"events" : {
 				"break":
-				{ "pitch" : 0.8, "sound" : "dig.stone", "volume" : 1.0 },
+				{ "pitch" : 0.8, "sound" : "dig.stone", "volume" : 1.0, "pitch": 0.8 },
 				
 				"place": 
-				{ "pitch": 0.8, "sound" : "dig.stone", "volume" : 1.0 },
+				{ "pitch": 0.8, "sound" : "dig.stone", "volume" : 1.0, "pitch": 0.8 },
 					
 				"hit" : 
-				{ "pitch" : 0.5, "sound" : "hit.stone", "volume" : 1.0 }
+				{ "pitch" : 0.5, "sound" : "hit.stone", "volume" : 1.0, "pitch": 0.5 }
 			}
 		},
 		"normal" : {
 			"events" : {
 				"break":
-				{ "pitch" : 0.8, "sound" : "dig.stone", "volume" : 1.0 },
+				{ "pitch" : 0.8, "sound" : "dig.stone", "volume" : 1.0, "pitch": 0.8 },
 				
 				"place": 
-				{ "pitch": 0.8, "sound" : "dig.stone", "volume" : 1.0 },
+				{ "pitch": 0.8, "sound" : "dig.stone", "volume" : 1.0, "pitch": 0.8 },
 				
 				"hit" : 
-				{ "pitch" : 0.5, "sound" : "hit.stone", "volume" : 1.0 }
+				{ "pitch" : 0.5, "sound" : "hit.stone", "volume" : 1.0, "pitch": 0.5 }
 			}
 		},
 		"wood" : {

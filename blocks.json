@@ -1,27 +1,26 @@
 {
-	"cherry_leaves" : {
-		"sound" : "cherry_leaves",
-		"textures" : "cherry_leaves",
-		"isotropic" : true
-	},
-	"concretePowder" : {
-		"sound" : "sand",
-		"isotropic" : true,
-		"textures" : "concretePowder"
-	},
-	"gravel" : {
-		"sound" : "gravel",
-		"isotropic" : true,
-		"textures" : "gravel"
-	},
-	"moss_block" : {
-		"sound" : "moss_block",
-		"isotropic" : true,
-		"textures" : "moss_block"
-	},
-	"moss_carpet" : {
-      "sound" : "moss_carpet",
-	  "isotropic" : true,
-      "textures" : "moss_block"
-   }
+	"cherry_leaves" : { "sound" : "cherry_leaves", "textures" : "cherry_leaves", "isotropic" : true },
+	"concretePowder" : { "sound" : "sand", "isotropic" : true, "textures" : "concretePowder" },
+	"gravel" : { "sound" : "gravel", "isotropic" : true, "textures" : "gravel" },
+	"moss_block" : { "sound" : "moss_block", "isotropic" : true, "textures" : "moss_block" },
+	"moss_carpet" : { "sound" : "moss_carpet", "isotropic" : true, "textures" : "moss_block" },
+	"stone_brick_stairs" : { "textures" : "ii_stone_bricks" },
+	"stonebrick" : { "sound" : "stone", "textures" : "ii_stone_bricks" },
+	"planks" : { "sound" : "wood", "textures" : "planks" },
+	"dirt" : { "isotropic" : true, "sound" : "gravel", "textures" : "ii_dirt" },
+	"stone" : { "sound" : "stone", "textures" : "ii_stone" },
+	"red_flower" : { "sound" : "grass", "textures" : "ii_red_flower" },
+	"yellow_flower" : { "sound" : "grass", "textures" : "ii_yellow_flower" },
+	"tallgrass" : { "carried_textures" : "tallgrass_carried", "sound" : "grass", "textures" : "ii_tallgrass" },
+	"snow" : { "brightness_gamma" : 0.450, "isotropic" : true, "sound" : "snow", "textures" : "ii_snow" },
+	"sand" : { "brightness_gamma" : 1, "isotropic" : true, "sound" : "sand", "textures" : "ii_sand" },
+	"clay" : { "isotropic" : true, "sound" : "gravel", "textures" : "ii_clay" },
+	"reeds" : { "sound" : "grass", "textures" : "ii_reeds" },
+	"leaves" : {
+		"brightness_gamma" : 0.80,
+		"carried_textures" : "leaves_carried",
+		"isotropic" : { "down" : true, "up" : true },
+		"sound" : "grass",
+		"textures" : "ii_leaves"
+	}
 }
