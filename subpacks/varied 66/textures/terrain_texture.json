@@ -311,7 +311,11 @@
 			{ "path": "textures/blocks/stone2", "weight": 1 },
 			{ "path": "textures/blocks/textures/stone3", "weight": 1 },
 			{ "path": "textures/blocks/textures/stone4", "weight": 1 } ] }, 
-			"textures/blocks/stone_granite", "textures/blocks/stone_granite_smooth", "textures/blocks/stone_diorite", "textures/blocks/stone_diorite_smooth", 
+			"textures/blocks/stone_granite", "textures/blocks/stone_granite_smooth", 
+			{ "variations": [
+			{ "path": "textures/blocks/stone_diorite", "weight": 1 },
+			{ "path": "textures/blocks/textures/diorite1", "weight": 1 } ] },
+			"textures/blocks/stone_diorite_smooth", 
 			{ "variations": [
 			{ "path": "textures/blocks/stone_andesite", "weight": 1 },
 			{ "path": "textures/blocks/textures/andesite1", "weight": 1 },
@@ -323,9 +327,14 @@
 			]
 		},
 			
-		 "cobblestone_wall": {
+		 "ii_wall": {
 			"textures": [
-				"textures/blocks/cobblestone",
+				{ "variations": [
+				{ "path": "textures/blocks/cobblestone", "weight": 1 },
+				{ "path": "textures/blocks/textures/cobblestone1", "weight": 1 },
+				{ "path": "textures/blocks/textures/cobblestone2", "weight": 1 },
+				{ "path": "textures/blocks/textures/cobblestone3", "weight": 1 },
+				{ "path": "textures/blocks/textures/cobblestone4", "weight": 1 } ] },
 				"textures/blocks/cobblestone_mossy",
 				"textures/blocks/stone_granite",
 				"textures/blocks/stone_diorite",
@@ -352,12 +361,88 @@
 			{ "variations": [
 				{ "path": "textures/blocks/stone_slab_top", "weight": 1 },
 				{ "path": "textures/blocks/textures/stone_slab_top1", "weight": 1 } ] },
-			"textures/blocks/sandstone_top", "textures/blocks/planks_oak", "textures/blocks/cobblestone", "textures/blocks/brick", 
+			"textures/blocks/sandstone_top", 
+			{ "variations": [
+					{ "path": "textures/blocks/planks_oak", "weight": 1 },
+					{ "path": "textures/blocks/textures/oak_planks1", "weight": 1 },
+					{ "path": "textures/blocks/textures/oak_planks2", "weight": 1 },
+					{ "path": "textures/blocks/textures/oak_planks3", "weight": 1 } ] },
+			{ "variations": [
+				{ "path": "textures/blocks/cobblestone", "weight": 1 },
+				{ "path": "textures/blocks/textures/cobblestone1", "weight": 1 },
+				{ "path": "textures/blocks/textures/cobblestone2", "weight": 1 },
+				{ "path": "textures/blocks/textures/cobblestone3", "weight": 1 },
+				{ "path": "textures/blocks/textures/cobblestone4", "weight": 1 } ] },
+			{ "variations": [
+				{ "path": "textures/blocks/brick", "weight": 1 },
+				{ "path": "textures/blocks/brick1", "weight": 1 } ] },
 			{ "variations": [
 				{ "path": "textures/blocks/stonebrick", "weight": 1 },
 				{ "path": "textures/blocks/textures/stone_bricks1", "weight": 1 },
 				{ "path": "textures/blocks/textures/stone_bricks2", "weight": 1 } ] },
 			"textures/blocks/quartz_block_top", "textures/blocks/nether_brick" ] 
+		},
+		
+		"stone_slab_side": { "textures": [
+				"textures/blocks/stone_slab_side",
+				"textures/blocks/sandstone_normal", 
+				{ "variations": [
+					{ "path": "textures/blocks/planks_oak", "weight": 1 },
+					{ "path": "textures/blocks/textures/oak_planks1", "weight": 1 },
+					{ "path": "textures/blocks/textures/oak_planks2", "weight": 1 },
+					{ "path": "textures/blocks/textures/oak_planks3", "weight": 1 } ] },
+				{ "variations": [
+					{ "path": "textures/blocks/cobblestone", "weight": 1 },
+					{ "path": "textures/blocks/textures/cobblestone1", "weight": 1 },
+					{ "path": "textures/blocks/textures/cobblestone2", "weight": 1 },
+					{ "path": "textures/blocks/textures/cobblestone3", "weight": 1 },
+					{ "path": "textures/blocks/textures/cobblestone4", "weight": 1 } ] },
+				{ "variations": [
+					{ "path": "textures/blocks/brick", "weight": 1 },
+					{ "path": "textures/blocks/brick1", "weight": 1 } ] },
+				{ "variations": [
+					{ "path": "textures/blocks/stonebrick", "weight": 1 },
+					{ "path": "textures/blocks/textures/stone_bricks1", "weight": 1 },
+					{ "path": "textures/blocks/textures/stone_bricks2", "weight": 1 } ] },
+				"textures/blocks/quartz_block_side", "textures/blocks/nether_brick"
+			]
+		},
+		
+		"stone_slab_bottom": { "textures": [
+				"textures/blocks/stone_slab_top",
+				"textures/blocks/sandstone_bottom",
+				{ "variations": [
+					{ "path": "textures/blocks/planks_oak", "weight": 1 },
+					{ "path": "textures/blocks/textures/oak_planks1", "weight": 1 },
+					{ "path": "textures/blocks/textures/oak_planks2", "weight": 1 },
+					{ "path": "textures/blocks/textures/oak_planks3", "weight": 1 } ] },
+				{ "variations": [
+					{ "path": "textures/blocks/cobblestone", "weight": 1 },
+					{ "path": "textures/blocks/textures/cobblestone1", "weight": 1 },
+					{ "path": "textures/blocks/textures/cobblestone2", "weight": 1 },
+					{ "path": "textures/blocks/textures/cobblestone3", "weight": 1 },
+					{ "path": "textures/blocks/textures/cobblestone4", "weight": 1 } ] },
+				{ "variations": [
+					{ "path": "textures/blocks/brick", "weight": 1 },
+					{ "path": "textures/blocks/brick1", "weight": 1 } ] },
+				{ "variations": [
+					{ "path": "textures/blocks/stonebrick", "weight": 1 },
+					{ "path": "textures/blocks/textures/stone_bricks1", "weight": 1 },
+					{ "path": "textures/blocks/textures/stone_bricks2", "weight": 1 } ] },
+				"textures/blocks/quartz_block_bottom",
+				"textures/blocks/nether_brick"
+			]
+		},
+		
+		"ii_cobblestone": {
+			"textures" : [
+			{ "variations": [
+				{ "path": "textures/blocks/cobblestone", "weight": 1 },
+				{ "path": "textures/blocks/textures/cobblestone1", "weight": 1 },
+				{ "path": "textures/blocks/textures/cobblestone2", "weight": 1 },
+				{ "path": "textures/blocks/textures/cobblestone3", "weight": 1 },
+				{ "path": "textures/blocks/textures/cobblestone4", "weight": 1 } ] }
+			]
 		},
 		
 		"prismarine": {

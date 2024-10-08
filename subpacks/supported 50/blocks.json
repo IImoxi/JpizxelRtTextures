@@ -4,9 +4,8 @@
 	"gravel" : { "sound" : "gravel", "isotropic" : true, "textures" : "gravel" },
 	"moss_block" : { "sound" : "moss_block", "isotropic" : true, "textures" : "moss_block" },
 	"moss_carpet" : { "sound" : "moss_carpet", "isotropic" : true, "textures" : "moss_block" },
-	"stone_brick_stairs" : { "textures" : "stone_bricks" },
-	"stonebrick" : { "sound" : "stone", "textures" : "stonebrick" },
 	"planks" : { "sound" : "wood", "textures" : "planks" },
+	
 	"dirt" : { "isotropic" : true, "sound" : "gravel", "textures" : "dirt" },
 	"stone" : { "sound" : "stone", "textures" : "stone" },
 	"red_flower" : { "sound" : "grass", "textures" : "red_flower" },
@@ -16,11 +15,13 @@
 	"sand" : { "brightness_gamma" : 1, "isotropic" : true, "sound" : "sand", "textures" : "sand" },
 	"clay" : { "isotropic" : true, "sound" : "gravel", "textures" : "clay" },
 	"reeds" : { "sound" : "grass", "textures" : "reeds" },
+	"stone_brick_stairs" : { "textures" : "stonebrick" },
+	"stonebrick" : { "sound" : "stone", "textures" : "stonebrick" },
+	"stone_stairs" : { "textures" : "cobblestone" },
+	"cobblestone" : { "sound" : "stone", "textures" : "cobblestone" },
+	"cobblestone_wall" : { "textures" : "cobblestone_wall" },
 	"leaves" : {
-		"brightness_gamma" : 0.80,
-		"carried_textures" : "leaves_carried",
-		"isotropic" : { "down" : true, "up" : true },
-		"sound" : "grass",
-		"textures" : "leaves"
+		"brightness_gamma" : 0.80, "carried_textures" : "leaves_carried", "isotropic" : { "down" : true, "up" : true },
+		"sound" : "grass", "textures" : "leaves"
 	}
 }
