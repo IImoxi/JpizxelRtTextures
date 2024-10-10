@@ -285,6 +285,14 @@
 		"smooth_stone" : { "textures" : "textures/blocks/stone_slab_top" },
 		"stonebrick" : { "textures" : [ "textures/blocks/stonebrick", "textures/blocks/stonebrick_mossy", "textures/blocks/stonebrick_cracked", "textures/blocks/stonebrick_carved" ] },
 		
+		"ii_end_stone": {
+			"textures" : [
+			{ "variations": [
+				{ "path": "textures/blocks/end_stone", "weight": 1 },
+				{ "path": "textures/blocks/textures/end_stone1", "weight": 1 } ] }
+			]
+		},
+		
 		"ii_yellow_flower" : { "textures": [ { "variations": [ 
 				{ "path": "textures/blocks/flower_dandelion", "weight": 1 },
 				{ "path": "textures/blocks/textures/flower_dandelion1", "weight": 1 } ] } ] },

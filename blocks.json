@@ -20,6 +20,7 @@
 	"stone_stairs" : { "textures" : "ii_cobblestone" },
 	"cobblestone" : { "sound" : "stone", "textures" : "ii_cobblestone" },
 	"cobblestone_wall" : { "textures" : "ii_wall" },
+	"end_stone" : { "sound" : "stone", "textures" : "ii_end_stone" },
 	"leaves" : {
 		"brightness_gamma" : 0.80, "carried_textures" : "leaves_carried", "isotropic" : { "down" : true, "up" : true },
 		"sound" : "grass", "textures" : "ii_leaves"
