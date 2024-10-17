@@ -533,8 +533,9 @@
 			}
 		],
 		"controls": [
-			{ "dp0@dura_percent_label": { "$lo": 0, "$hi": 0, "$duraPercent": "" }},
-			{ "dp005@dura_percent_label": { "$lo": 0.1, "$hi": 0.5, "$duraPercent": "0%" }},
+			{ "dpNegative@dura_percent_label": { "$lo": -100000, "$hi": 0, "$duraPercent": "<0%" }},
+			{ "dpNA@dura_percent_label": { "$lo": 0, "$hi": 0, "$duraPercent": "" }},
+			{ "dp0@dura_percent_label": { "$lo": 0.1, "$hi": 0.5, "$duraPercent": "0%" }},
 			{ "dp01@dura_percent_label": { "$lo": 0.5, "$hi": 1.5, "$duraPercent": "1%" }},
 			{ "dp2@dura_percent_label": { "$lo": 1.5, "$hi": 2.5, "$duraPercent": "2%" }},
 			{ "dp3@dura_percent_label": { "$lo": 2.5, "$hi": 3.5, "$duraPercent": "3%" }},
@@ -591,8 +592,8 @@
 			{ "dp98@dura_percent_label": { "$lo": 97, "$hi": 99, "$duraPercent": "98%" }},
 			{ "dp100@dura_percent_label": { "$lo": 99, "$hi": 101, "$duraPercent": "100%" }},
 			{ "dpOver100@dura_percent_label": { "$lo": 101, "$hi": 1000, "$duraPercent": ">100%" }},
-			{ "dpOver100@dura_percent_label": { "$lo": 1000, "$hi": 10000, "$duraPercent": ">1,000%" }},
-			{ "dpOver100@dura_percent_label": { "$lo": 10000, "$hi": 100000, "$duraPercent": ">10,000%" }}
+			{ "dpOver1000@dura_percent_label": { "$lo": 1000, "$hi": 10000, "$duraPercent": ">1,000%" }},
+			{ "dpOver10000@dura_percent_label": { "$lo": 10000, "$hi": 100000, "$duraPercent": ">10,000%" }}
 		]
 	},
 	
