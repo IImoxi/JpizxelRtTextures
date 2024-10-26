@@ -2,7 +2,7 @@
 	"format_version": "1.16.100",
 	"minecraft:texture_set": {
 		"color": "textures/quartz_block_lines",
-		"metalness_emissive_roughness": "#200040",
+		"metalness_emissive_roughness": "#000020",
 		"normal": "normals/pillar"
 	}
 }
