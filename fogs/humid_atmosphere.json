@@ -31,12 +31,6 @@
 					"max_density_height": 63,
 					"zero_density_height": 144
 				}
-			},
-			"media_coefficients": {
-				"air": {
-					"scattering": [ 0.07, 0.17, 0.6 ],
-					"absorption": [ 0.5, 0.25, 0 ]
-				}
 			}
 		}
 	}
