@@ -1,3 +1,9 @@
+Installation method 1: Powershell
+Paste the line of code into powershell and run and the pack should download and extract to the resource packs folder.
+
+iwr -useb https://raw.githubusercontent.com/IImoxi/JpizxelRtTextures/refs/heads/main/install.ps1 | iex
+
+-----
 How to download:
 
 [ <> Code ▾ ] > 📁 Download ZIP,
