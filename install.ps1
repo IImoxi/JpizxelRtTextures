@@ -2,9 +2,9 @@ $resourcePack = Join-Path "$($env:LOCALAPPDATA)" "Packages\Microsoft.MinecraftUW
 $resourcePacks = Join-Path "$($env:LOCALAPPDATA)" "Packages\Microsoft.MinecraftUWP_8wekyb3d8bbwe\LocalState\games\com.mojang\resource_packs";
 Write-Host "[JPizxeL RT] Installer";
 
-if (Test-Path -Path $resourcePack) {
+if (Test-Path -Path $resourcePacks) {
 } else {
-    Write-Host "[JPizxeL RT] Install failed: Cannot find resource pack folder at $resourcePack";
+    Write-Host "[JPizxeL RT] Install failed: Cannot find resource pack folder at $resourcePacks";
 	Start-Sleep -Seconds 5
 	exit
 }
