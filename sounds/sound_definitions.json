@@ -12,9 +12,64 @@
 				}
 			]
 		},
+		"random.explode" : {
+			"__use_legacy_max_distance" : "true",
+			"category" : "block",
+			"max_distance" : null,
+			"min_distance" : null,
+			"sounds" : [
+				{
+					"load_on_low_memory" : true,
+					"name":  "sounds/random/explode",
+					"volume" : 1.0
+				}
+			]
+		},
+		"ambient.weather.lightning.impact" : {
+			"__use_legacy_max_distance" : "true",
+			"category" : "weather",
+			"max_distance" : null,
+			"min_distance" : 100.0,
+			"sounds" : [
+				{
+					"load_on_low_memory" : true,
+					"name":  "sounds/random/lightning_impact",
+					"pitch" : 1.0,
+					"volume" : 0.5
+				}
+			]
+		},
+		"game.player.die" : {
+			"__use_legacy_max_distance" : "true",
+			"category" : "player",
+			"max_distance" : null,
+			"min_distance" : null,
+			"sounds" : [
+				"sounds/damage/hit1",
+				{
+					"load_on_low_memory" : true,
+					"name" : "sounds/damage/hit2"
+				},
+				"sounds/damage/hit3"
+			]
+		},
+		"game.player.hurt" : {
+			"__use_legacy_max_distance" : "true",
+			"category" : "player",
+			"max_distance" : null,
+			"min_distance" : null,
+			"sounds" : [
+				"sounds/damage/hit1",
+				{
+					"load_on_low_memory" : true,
+					"name" : "sounds/damage/hit2"
+				},
+				"sounds/damage/hit3"
+			]
+		},
 		"ambient.creepy" : {
-			 "__use_legacy_max_distance" : "true",
-			 "category" : "neutral",
+			"__use_legacy_max_distance" : "true",
+			"category" : "neutral",
 			"sounds" : [
 				{
 					"load_on_low_memory" : true,

@@ -3,6 +3,6 @@
 	"minecraft:texture_set": {
 		"color": "textures/grass_top1",
 		"metalness_emissive_roughness": "mer/grass_top1",
-		"normal": "normals/grass_top"
+		"normal": "normals/grass_top1"
 	}
 }

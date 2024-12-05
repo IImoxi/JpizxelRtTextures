@@ -2,7 +2,7 @@
 	"format_version": "1.16.100",
 	"minecraft:texture_set": {
 		"color": "textures/stone2",
-		"metalness_emissive_roughness": "mer/stone",
-		"normal": "normals/stone"
+		"metalness_emissive_roughness": "mer/stone2",
+		"normal": "normals/stone2"
 	}
 }

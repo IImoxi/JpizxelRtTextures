@@ -1,0 +1,8 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:texture_set": {
+		"color": "textures/pale_hanging_moss_middle",
+		"metalness_emissive_roughness": "#0000ff",
+		"normal": "normals/glass"
+	}
+}

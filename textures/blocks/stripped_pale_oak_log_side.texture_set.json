@@ -1,0 +1,8 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:texture_set": {
+		"color": "textures/stripped_pale_oak_log_side",
+		"metalness_emissive_roughness": "mer/stripped_log",
+		"normal": "normals/stripped_log"
+	}
+}
