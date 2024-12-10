@@ -507,8 +507,8 @@
 			"textures" : [
 				{ "variations": [
 				{ "path": "textures/blocks/log_spruce", "weight": 1 },
-				{ "path": "textures/blocks/textures/spruce_log1", "weight": 1 },
-				{ "path": "textures/blocks/textures/spruce_log2", "weight": 1 } ] }
+				{ "path": "textures/blocks/log_spruce1", "weight": 1 },
+				{ "path": "textures/blocks/log_spruce2", "weight": 1 } ] }
 			]
 		},
 		
@@ -549,7 +549,7 @@
 
 		"dirt_podzol_top" : { "textures": [ { "variations": [ 
 				{ "path": "textures/blocks/dirt_podzol_top", "weight": 1 },
-				{ "path": "textures/blocks/textures/dirt_podzol_top1", "weight": 1 } ] } ] },
+				{ "path": "textures/blocks/dirt_podzol_top1", "weight": 1 } ] } ] },
 			
 		"gravel" : { "textures": [ { "variations": [ 
 				{ "path": "textures/blocks/gravel", "weight": 1 },
@@ -562,8 +562,8 @@
 					{ "path": "textures/blocks/textures/oak_leaves1", "weight": 1 } ] },
 				{ "variations": [
 					{ "path": "textures/blocks/leaves_spruce", "weight": 1 },
-					{ "path": "textures/blocks/textures/spruce_leaves1", "weight": 1 },
-					{ "path": "textures/blocks/textures/spruce_leaves2", "weight": 1 } ] },
+					{ "path": "textures/blocks/leaves_spruce1", "weight": 1 },
+					{ "path": "textures/blocks/leaves_spruce2", "weight": 1 } ] },
 				{ "variations": [
 					{ "path": "textures/blocks/leaves_birch", "weight": 1 },
 					{ "path": "textures/blocks/textures/birch_leaves1", "weight": 1 } ] },

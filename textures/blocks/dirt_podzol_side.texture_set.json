@@ -2,7 +2,7 @@
  "format_version": "1.16.100",
   "minecraft:texture_set": {
     "color": "textures/dirt_podzol_side",
-    "metalness_emissive_roughness": "mer/podzol_side",
-    "normal": "normals/podzol_side"
+    "metalness_emissive_roughness": "mer/dirt_podzol_side",
+    "normal": "normals/dirt_podzol_side"
   }
 }

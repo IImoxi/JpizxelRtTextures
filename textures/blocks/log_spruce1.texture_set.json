@@ -1,0 +1,8 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:texture_set": {
+		"color": "textures/spruce_log1",
+		"metalness_emissive_roughness": "mer/spruce_log1",
+		"normal": "normals/spruce_log1"
+	}
+}

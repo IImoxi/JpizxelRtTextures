@@ -1,0 +1,8 @@
+{
+ "format_version": "1.16.100",
+  "minecraft:texture_set": {
+  "color": "textures/dirt_podzol_top1",
+    "metalness_emissive_roughness": "mer/podzol_top1",
+    "normal": "normals/podzol_top1"
+  }
+}

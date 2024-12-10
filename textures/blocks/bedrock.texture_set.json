@@ -2,7 +2,7 @@
 	"format_version": "1.16.100",
 	"minecraft:texture_set": {
 		"color": "textures/bedrock",
-		"metalness_emissive_roughness": "#0000e0",
+		"metalness_emissive_roughness": "mer/bedrock",
 		"normal": "normals/bedrock"
 	}
 }

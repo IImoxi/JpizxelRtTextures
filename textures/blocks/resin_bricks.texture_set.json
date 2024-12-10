@@ -1,0 +1,8 @@
+{
+ 	"format_version": "1.16.100",
+	"minecraft:texture_set": {
+		"color": "textures/resin_bricks",
+		"metalness_emissive_roughness": "mer/resin_bricks",
+		"normal": "normals/resin_bricks"
+	}
+}
