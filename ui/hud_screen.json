@@ -274,7 +274,7 @@
                   {
                     "ii_text_label": {
                       "type": "label", "max_size": [ 182, "default" ], "text_alignment": "center", "layer": 31,
-					  "shadow": true, "color": "$text_color", "text": "#text", "alpha": "@hud.anim_item_name_text_alpha_in",
+					  "shadow": true, "color": "$text_color", "text": "#text", "anims": [ "@hud.ii_enter_offset", "@hud.ii_enter_alpha" ],
                       "bindings": [ { "binding_name": "$text_binding", "binding_name_override": "#text" } ]
                     }
                   }
@@ -303,6 +303,14 @@
       }
     ]
 	},
+	
+	"ii_enter_alpha": { "anim_type": "alpha", "easing": "out_expo",  "duration": 0.3, "from": 0, "to": 1, "next": "@hud.ii_wait_alpha" },
+	"ii_wait_alpha": { "anim_type": "wait", "duration": 0.5, "next": "@hud.ii_exit_alpha" },
+	"ii_exit_alpha": { "anim_type": "alpha", "easing": "out_expo",  "duration": 0.3, "from": 1, "to": 0 },
+	
+	"ii_enter_offset": { "anim_type": "offset", "easing": "out_expo",  "duration": 0.3, "from": [ 0, 6 ], "to": [ 0, -4 ], "next": "@hud.ii_wait_offset" },
+	"ii_wait_offset": { "anim_type": "wait", "duration": 0.5, "next": "@hud.ii_exit_offset" },
+	"ii_exit_offset": { "anim_type": "offset", "easing": "out_expo",  "duration": 1, "from": [ 0, -4 ], "to": [ 0, 6 ] },
 
 // HUD Item name
 

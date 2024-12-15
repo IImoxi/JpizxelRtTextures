@@ -1,6 +1,7 @@
 // JPizxel RTP | IImoxi
 
 {
+	"$scoreboard_padding": [ 1, 5 ],
 	"$subpackscale_chat": 0.5,
 	"$subpackscale_name": "Varied Textures, 50%% Chat scale",
 	

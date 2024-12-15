@@ -3,6 +3,7 @@
 {
   "$pack_version": "ODI v2.10.00",
   
+  "$scoreboard_padding": [ 1, 10 ],
   "$subpackscale_chat": 1.0,
   "$subpackscale_name": "Varied Textures, 100%% Chat scale (Default)",
   

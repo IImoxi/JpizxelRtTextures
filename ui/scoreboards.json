@@ -4,12 +4,14 @@
   "scoreboard_sidebar_score": {
     "type": "label",
     "layer": 2,
-    "size": [ "default", 10 ],
+    "size": [ "default", "default" ],
     "text": "#player_score_sidebar",
+	"alpha": 0.8,
+	"font_scale_factor": "$subpackscale_chat",
     "anchor_from": "top_right",
     "anchor_to": "top_right",
     "locked_alpha": 1.0,
-    "color": "$player_score_color",
+    "color": "$chat_text_color",
     "bindings": [
       {
         "binding_name": "#player_score_sidebar",
@@ -21,10 +23,12 @@
 
   "scoreboard_sidebar_player": {
     "type": "label",
+	//"shadow": true,
     "layer": 2,
     "text": "#player_name_sidebar",
-    "size": [ "default", 10 ],
-    "locked_alpha": 1.0,
+	"font_scale_factor": "$subpackscale_chat",
+    "size": [ "default", "default" ],
+	"locked_alpha": 1,
     "color": "$player_name_color",
     "bindings": [
       {
@@ -42,19 +46,23 @@
     "anchor_to": "right_middle",
     "controls": [
       {
-        "main@ii.background": {
-          "size": [ "100%cm + 2px", "100%c" ],
+        "main@ii.dark_dialog": {
+          "size": [ "100%cm + 4px", "100%c + 2px" ],
+		  "alpha": 0.6,
           "controls": [
             {
               "displayed_objective": {
                 "type": "label",
-                "size": [ "default", 10 ],
+				//"shadow": true,
+                "size": [ "default", "default" ],
                 "text": "#objective_sidebar_name",
+				"font_scale_factor": "$subpackscale_chat",
                 "anchor_from": "top_middle",
                 "anchor_to": "top_middle",
+				"offset": [ 0, 1 ],
                 "text_alignment": "center",
                 "inherit_max_sibling_width": true,
-                "locked_alpha": 1.0,
+                "locked_alpha": 1,
                 "layer": 1,
                 "color": "$objective_title_color",
                 "bindings": [
@@ -68,10 +76,10 @@
             {
               "lists": {
                 "type": "panel",
-                "anchor_from": "top_left",
-                "anchor_to": "top_left",
-                "offset": [ 1, 10 ],
-                "size": [ "100%c + 6px", "100%cm" ],
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "offset": "$scoreboard_padding",
+                "size": [ "100%c + 4px", "100%cm" ],
                 "controls": [
                   {
                     "players": {

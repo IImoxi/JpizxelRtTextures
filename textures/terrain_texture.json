@@ -326,12 +326,12 @@
 			"textures/blocks/stone_diorite_smooth", 
 			{ "variations": [
 			{ "path": "textures/blocks/stone_andesite", "weight": 1 },
-			{ "path": "textures/blocks/textures/andesite1", "weight": 1 },
-			{ "path": "textures/blocks/textures/andesite2", "weight": 1 } ] },
+			{ "path": "textures/blocks/stone_andesite1", "weight": 1 },
+			{ "path": "textures/blocks/stone_andesite2", "weight": 1 } ] },
 			{ "variations": [
 			{ "path": "textures/blocks/stone_andesite_smooth", "weight": 3 },
-			{ "path": "textures/blocks/textures/polished_andesite1", "weight": 3 },
-			{ "path": "textures/blocks/textures/polished_andesite2", "weight": 1 } ] }
+			{ "path": "textures/blocks/stone_andesite_smooth1", "weight": 3 },
+			{ "path": "textures/blocks/stone_andesite_smooth2", "weight": 1 } ] }
 			]
 		},
 			
@@ -595,9 +595,9 @@
 				
 		"deepslate_tiles" : { "textures": [  {  "variations": [ 
 				{ "path": "textures/blocks/deepslate_tiles", "weight": 1 },
-				{ "path": "textures/blocks/textures/deepslate_tiles1", "weight": 1 },
-				{ "path": "textures/blocks/textures/deepslate_tiles2", "weight": 1 },
-				{ "path": "textures/blocks/textures/deepslate_tiles3", "weight": 1 }
+				{ "path": "textures/blocks/deepslate_tiles1", "weight": 1 },
+				{ "path": "textures/blocks/deepslate_tiles2", "weight": 1 },
+				{ "path": "textures/blocks/deepslate_tiles3", "weight": 1 }
 			] } ] 
 		},
 		
@@ -605,24 +605,24 @@
       	
 		"deepslate_top" : { "textures": [  {  "variations": [ 
 				{ "path": "textures/blocks/deepslate_top", "weight": 1 },
-				{ "path": "textures/blocks/textures/deepslate_top1", "weight": 1 },
-				{ "path": "textures/blocks/textures/deepslate_top2", "weight": 1 }
+				{ "path": "textures/blocks/deepslate_top1", "weight": 1 },
+				{ "path": "textures/blocks/deepslate_top2", "weight": 1 }
 			] } ] 
 		},
 		
       	"deepslate" : { "textures": [  {  "variations": [ 
 				{ "path": "textures/blocks/deepslate", "weight": 1 },
-				{ "path": "textures/blocks/textures/deepslate1", "weight": 1 },
-				{ "path": "textures/blocks/textures/deepslate2", "weight": 1 },
-				{ "path": "textures/blocks/textures/deepslate3", "weight": 1 }
+				{ "path": "textures/blocks/deepslate1", "weight": 1 },
+				{ "path": "textures/blocks/deepslate2", "weight": 1 },
+				{ "path": "textures/blocks/deepslate3", "weight": 1 }
 			] } ] 
 		},
 		
 		"polished_deepslate" : { "textures": [  {  "variations": [ 
 				{ "path": "textures/blocks/polished_deepslate", "weight": 1 },
-				{ "path": "textures/blocks/textures/polished_deepslate1", "weight": 1 },
-				{ "path": "textures/blocks/textures/polished_deepslate2", "weight": 1 },
-				{ "path": "textures/blocks/textures/polished_deepslate3", "weight": 1 }
+				{ "path": "textures/blocks/polished_deepslate1", "weight": 1 },
+				{ "path": "textures/blocks/polished_deepslate2", "weight": 1 },
+				{ "path": "textures/blocks/polished_deepslate3", "weight": 1 }
 			] } ] 
 		},
 				
