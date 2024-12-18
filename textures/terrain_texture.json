@@ -322,7 +322,7 @@
 			"textures/blocks/stone_granite", "textures/blocks/stone_granite_smooth", 
 			{ "variations": [
 			{ "path": "textures/blocks/stone_diorite", "weight": 1 },
-			{ "path": "textures/blocks/textures/diorite1", "weight": 1 } ] },
+			{ "path": "textures/blocks/stone_diorite1", "weight": 1 } ] },
 			"textures/blocks/stone_diorite_smooth", 
 			{ "variations": [
 			{ "path": "textures/blocks/stone_andesite", "weight": 1 },
