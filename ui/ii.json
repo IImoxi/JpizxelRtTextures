@@ -9,6 +9,7 @@
 	
 	"empty": { "type": "panel" },
 	
+	"purple_dialog": { "type": "image", "size": [ "100%", "100%" ], "texture": "textures/ui/purpleBorder", "layer": 0 },
 	"black": { "type": "image", "size": [ "100%", "100%" ], "texture": "client/black", "layer": 0 },
 	"black1": { "type": "image", "size": [ "100%", "100%" ], "texture": "client/black1", "layer": 0 },
 	"dark_dialog": { "type": "image", "size": [ "100%", "100%" ], "texture": "textures/gui/dialog_background", "layer": -1 },

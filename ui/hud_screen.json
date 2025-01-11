@@ -676,7 +676,7 @@
 
 // Screen
 
-	"hud_content": {
+	"root_panel": {
 		"type": "panel", "size": [ "100%", "100%" ],
 		"controls": [
 			{ "crosshair": { "type": "custom", "size": [ 16, 16 ], "renderer": "cursor_renderer", "layer": 8 } },
@@ -704,7 +704,7 @@
 		"low_frequency_rendering": false,
 		"absorbs_input": false,
 		"send_telemetry": false,
-		"$screen_content": "hud.hud_content"
+		"$screen_content": "hud.root_panel"
 	}
 }
 

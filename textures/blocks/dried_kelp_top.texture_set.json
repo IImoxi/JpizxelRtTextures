@@ -1,0 +1,8 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:texture_set": {
+		"color": "textures/dried_kelp_top",
+		"metalness_emissive_roughness": "#0000b0",
+		"normal": "normals/dried_kelp_top"
+	}
+}

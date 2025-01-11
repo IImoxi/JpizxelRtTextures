@@ -243,7 +243,7 @@
 		"bindings": [
 			{
 				"binding_type": "view", "source_control_name": "expand_chat_input", 
-				"source_property_name": "(#toggle_state)", "target_property_name": "#visible"
+				"source_property_name": "#toggle_state", "target_property_name": "#visible"
 			}
 		]
 	},
@@ -335,11 +335,71 @@
 	"ii_button_alpha_in":  { "anim_type": "alpha",  "easing": "out_quint", "duration": 0.5, "from": 0, "to": 1 },
 	"ii_settings_button_offset_in": { "anim_type": "offset", "easing": "out_expo",  "duration": 0.5, "from": [ 3, -9 ], "to": [ 3, 3 ] },
 	"ii_expand_button_offset_in": { "anim_type": "offset", "easing": "out_expo",  "duration": 0.5, "from": [ 21, -9 ], "to": [ 21, 3 ] },
+	"ii_commands_button_offset_in": { "anim_type": "offset", "easing": "out_expo",  "duration": 0.5, "from": [ 39, -9 ], "to": [ 39, 3 ] },
 	// Animations Bottom
 	"ii_alpha_05_00_08":  { "anim_type": "alpha",  "easing": "out_quint", "duration": 0.5, "from": 0, "to": 0.8 },
 	"ii_alpha_05_08_00":  { "anim_type": "alpha",  "easing": "out_quint", "duration": 0.5, "from": 0.8, "to": 0, "play_event": "screen.exit_pop", "end_event": "screen.exit_end" },
 	"ii_offset_05-2": { "anim_type": "offset", "easing": "out_expo",  "duration": 0.5, "from": [ 0, 12 ], "to": [ 0, 0 ] },
 	
+// Command Templates section
+	
+	"cmd_template_button@ii.button_asset" : {
+		"layer": 11,
+		"size": [ "100%cm", "100%cm" ],
+		"controls": [
+			{
+				"base@chat.cmd_template_button_base": {}
+			},
+			{
+				"hover@chat.cmd_template_button_expanded_panel": {}
+			},
+			{
+				"pressed@chat.cmd_template_button_expanded_panel": {}
+			}
+		]
+	},
+	
+	"cmd_template_button_base": {
+		"type": "label",
+		"layer": 12,
+		"$cmd_t_txt|default": "/template",
+		"text": "$cmd_t_txt",
+		"size": [ "default", 12 ]
+	},
+	
+	"cmd_template_button_expanded_panel": {
+		"layer": 13,
+		"type": "panel",
+		"anchor_from": "top_right",
+		"anchor_to": "bottom_left",
+		"size": [ 0, 0 ],
+		"controls": [
+			{
+				"cmd_template_button_expanded@ii.purple_dialog": {
+					"size": [ "100%c + 8px", "100%c + 8px" ],
+					"layer": 14,
+					"anchor_from": "bottom_right",
+					"anchor_to": "top_left",
+					"offset": [ 5, -3 ],
+					"controls": [
+						{
+							"cmd_template_button_expanded_text": {
+								"type": "label",
+								"layer": 15,
+								"offset": [ 0, -1 ],
+								"alpha": 1,
+								"text": "$cmd_t_e_txt",
+								"size": [ "default", "default" ],
+								"max_size": [ 360, "default" ]
+							}
+						}
+					]
+				}
+			}
+		]
+	},
+		
+
 // Other
 
 	"expand_button_default@ii.iibutton_default": {
@@ -386,6 +446,68 @@
 		]
 	},
 
+	"cmd_button_default@ii.iibutton_default": {
+	"controls": [ { "icon": { "type": "image", "size": [ 18, 18 ], "texture": "textures/gui/icons/cmd_icon" } } ] },
+	"cmd_button_highlight@ii.iibutton_highlight": {
+	"controls": [ { "icon": { "type": "image", "size": [ 18, 18 ], "texture": "textures/gui/icons/cmd_icon" } } ] },
+	"cmd_button_pressed@ii.iibutton_highlight": {
+	"controls": [ 
+		{ "icon": { "type": "image", "size": [ 18, 18 ], "texture": "textures/gui/icons/cmd_icon" } },
+		{
+			"cmd_t@ii.dark_dialog": {
+			"layer": 10,
+			"size": [ "100%c + 6px", "100%c + 6px" ],
+			"offset": [ 0, 19 ],
+			"anchor_from": "top_left",
+			"anchor_to": "top_left",
+			"controls": [
+				{
+					"cmd_template_list": {
+						"type": "stack_panel",
+						"size": [ "100%cm", "100%c" ],
+						"anchor_from": "center",
+						"anchor_to": "center",
+						"controls": [
+							{ "cmd_template_button_info@chat.cmd_template_button": { "$cmd_t_txt": "§lInfo (Hover)", "$cmd_t_e_txt": "Use this to assist you with commands.\nNote that this does not contain everything." } },
+							{ "cmd_template_button@chat.cmd_template_button": { "$cmd_t_txt": "/playanimation", "$cmd_t_e_txt": "/playanimation @p animation.humanoid.base_pose x 1 \"0\" anim1" } },
+							{ "cmd_template_button1@chat.cmd_template_button": { "$cmd_t_txt": "§7Animations", "$cmd_t_e_txt": "animation.humanoid.base_pose, animation.player.riding.legs, animation.player.bow_equipped, animation.player.bob, animation.player.base_pose.upside_down, animation.player.move.legs.inverted, animation.armor_stand.athena_pose, animation.armor_stand.brandish_pose, animation.armor_stand.cancan_a_pose, animation.armor_stand.cancan_b_pose, animation.armor_stand.default_pose, animation.armor_stand.entertain_pose, animation.armor_stand.hero_pose, animation.armor_stand.honor_pose, animation.armor_stand.no_pose, animation.armor_stand.riposte_pose, animation.armor_stand.salute_pose, animation.armor_stand.solemn_pose, animation.armor_stand.wiggle, animation.armor_stand.zombie_pose" } },
+							{ "cmd_template_button2@chat.cmd_template_button": { "$cmd_t_txt": "§7Particles", "$cmd_t_e_txt": "minecraft:blue_flame_particle, minecraft:basic_flame_particle, minecraft:basic_smoke_particle, minecraft:critical_hit_emitter, minecraft:crop_growth_emitter, minecraft:crop_growth_area_emitter, minecraft:enchanting_table_particle, minecraft:dragon_death_explosion_emitter, minecraft:end_chest, minecraft:endrod, minecraft:heart_particle" } },
+							{ "cmd_template_button3@chat.cmd_template_button": { "$cmd_t_txt": "§7Particles [Custom]", "$cmd_t_e_txt": "§cOnly players using this resource pack will see these particles!\n§rii:campfire_fire, ii:fire, ii:blue_fire, ii:pink_fire, ii:dust" } },
+							{ "cmd_template_button4@chat.cmd_template_button": { "$cmd_t_txt": "§7Sounds", "$cmd_t_e_txt": "random.[explode | click | hurt | bowhit | screenshot | levelup],\nbeacon.[activate | deactivate],\nrandom.[toast|toast_recipe_unlocking_in],\nfirework.[blast|twinkle],\nblock.bell.hit, vr.stutterturn, step.slime, sign.ink_sac.use, mob.wither.shoot" } },
+							{ "cmd_template_button5@chat.cmd_template_button": { "$cmd_t_txt": "§7Sounds [Ambient]", "$cmd_t_e_txt": "ambient.cave, ambient.underwater.exit, ambient.weather.rain" } },
+							{ "cmd_template_button6@chat.cmd_template_button": { "$cmd_t_txt": "§7Sounds [Discs]", "$cmd_t_e_txt": "record.11, record.13, record.5, record.blocks, record.cat, record.chirp, record.far, record.mall, record.mellohi, record.otherside, record.pigstep, record.relic, record.stal, record.strad, record.wait, record.ward" } },
+							{ "cmd_template_button7@chat.cmd_template_button": { "$cmd_t_txt": "§7Sounds [Custom]", "$cmd_t_e_txt": "§cOnly players using this resource pack will see hear these sounds!\n§rambient.weather.lightning.impact" } },
+							{ "cmd_template_button8@chat.cmd_template_button": { "$cmd_t_txt": "/tellraw", "$cmd_t_e_txt": "/tellraw @a {\"rawtext\":[{\"text\":\"Works with titleraw\"}]}" } },
+							{ "cmd_template_button9@chat.cmd_template_button": { "$cmd_t_txt": "§7Rawtext syntax", "$cmd_t_e_txt": "§fText:\n§7{\"text\":\"Works with titleraw\"}\n§fSelector:\n§7{\"selector\":\"@a\"}\n§fScores:\n§7{\"score\":{\"name\":\"<name>\", \"objective\":\"<score>\"}}"}}
+						]
+					}
+				}
+			]
+			}
+		}
+		] 
+	},
+	
+	"commands_button": {
+		"type": "panel",
+		"$template_toggle": "ii.toggle",
+		"anchor_from": "top_left",
+		"anchor_to": "top_left",
+		"$unchecked_control": "chat.cmd_button_default",
+		"$checked_control": "chat.cmd_button_pressed",
+		"$unchecked_hover_control": "chat.cmd_button_highlight",
+		"$checked_hover_control": "chat.cmd_button_pressed",
+		"$toggle_name": "cmd_template_toggle",
+		"$offset": "@ii_commands_button_offset_in",
+		"size": [ 16, 16 ],
+		"propagate_alpha": true,
+		"alpha": "@ii_button_alpha_in",
+		"$toggle_view_binding_name": "cmd_t",
+		"controls": [
+			{ "$toggle_view_binding_name@$template_toggle": {} }
+		]
+	},
+
 	"exit_button@common_buttons.light_text_button": {
 		"layer": 10,
 		"anchor_from": "top_right",
@@ -417,11 +539,13 @@
 			{ "displayed_commands_panel@chat.auto_complete_panel": { "layer": 3 } },
 			{ "chat_input@chat.text_box_panel": { "layer": 2 } },
 			{ "expanded_chat_input@chat.expanded_text_box_panel": { "layer": 2 } },
+			{ "cmd_t@chat.cmd_t": { "layer": 4 } },
 			
 			{ "settings_button@chat.settings_button": {} },
 			{ "expand_chat_button@chat.expand_chat_button": {} },
+			{ "commands_button@chat.commands_button": {} },
 			
-			{ "host_main_panel@host_options.host_panel": { "layer": 4 } },
+			{ "host_main_panel@host_options.host_panel": { "layer": 5 } },
 			{ "popup_factory@chat_settings.popup_factory": {} },
 			{ "exit@chat.exit_button": {} }
 		]

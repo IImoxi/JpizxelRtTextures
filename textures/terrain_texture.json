@@ -299,7 +299,8 @@
 				
 		"ii_red_flower" : { "textures" : [  { "variations": [
 			{ "path": "textures/blocks/flower_rose", "weight": 1 },
-			{ "path": "textures/blocks/textures/flower_poppy1", "weight": 1 } ] }, 
+			{ "path": "textures/blocks/textures/flower_poppy1", "weight": 1 },
+			{ "path": "textures/blocks/textures/flower_poppy2", "weight": 1 } ] }, 
 				"textures/blocks/flower_blue_orchid",
 				"textures/blocks/flower_allium",
 				"textures/blocks/flower_houstonia",
@@ -312,6 +313,13 @@
 				"textures/blocks/flower_lily_of_the_valley"
 			]
 		},
+		
+		"sunflower_additional" : {
+			"textures" : [
+            "textures/blocks/sunflower_front",
+            "textures/blocks/double_plant_sunflower_back"
+         ]
+      },
 		
       	"ii_stone" : { "textures" : [  { "variations": [
 			{ "path": "textures/blocks/stone", "weight": 1 },
