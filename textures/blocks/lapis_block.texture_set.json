@@ -2,7 +2,7 @@
 	"format_version": "1.16.100",
 	"minecraft:texture_set": {
 		"color": "textures/lapis_block",
-		"metalness_emissive_roughness": "#001717",
+		"metalness_emissive_roughness": "#001017",
 		"normal": "normals/lapis_block"
 	}
 }

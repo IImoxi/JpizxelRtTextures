@@ -4,6 +4,10 @@
 	"resource_pack_name" : "ii",
 	"texture_name" : "atlas.terrain",
 	"texture_data": {
+		"red_candle" : { "textures" : [ "textures/blocks/textures/candles/red_candle", "textures/blocks/red_candle_lit" ] },
+		
+		"crafting_table_bottom" : { "textures" : "textures/blocks/crafting_table_bottom" },
+		
 		"stripped_warped_stem_side" : { "textures" : "textures/blocks/stripped_warped_stem_side" },
 		"stripped_warped_stem_top" : { "textures" : "textures/blocks/stripped_warped_stem_top" },
 		"warped_planks" : { "textures" : "textures/blocks/planks_warped" },
