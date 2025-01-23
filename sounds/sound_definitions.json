@@ -78,18 +78,57 @@
 				}
 			]
 		},
-		"ii.tate.say" : {
+		"ii.suck_an_egg" : {
 			"__use_legacy_max_distance" : "true",
-			"category" : "neutral",
-			"sounds" : [ "sounds/ii/tate/breathe_air", "sounds/ii/tate/how_can_woman_drive" ]
-		},
-		"ii.tate.theme_song" : {
-			"__use_legacy_max_distance" : "true",
-			"category" : "neutral",
+			"category" : "player",
 			"sounds" : [
 				{
 					"load_on_low_memory" : true,
-					"name" : "sounds/ii/tate/theme_song",
+					"name" : "sounds/custom/suck_an_egg",
+					"volume" : 1
+				}
+			]
+		},
+		"ii.vine_boom" : {
+			"__use_legacy_max_distance" : "true",
+			"category" : "player",
+			"sounds" : [
+				{
+					"load_on_low_memory" : true,
+					"name" : "sounds/custom/vine_boom",
+					"volume" : 1
+				}
+			]
+		},
+		"ii.damn_son" : {
+			"__use_legacy_max_distance" : "true",
+			"category" : "player",
+			"sounds" : [
+				{
+					"load_on_low_memory" : true,
+					"name" : "sounds/custom/damn_son",
+					"volume" : 1
+				}
+			]
+		},
+		"ii.metal_pipe" : {
+			"__use_legacy_max_distance" : "true",
+			"category" : "player",
+			"sounds" : [
+				{
+					"load_on_low_memory" : true,
+					"name" : "sounds/custom/metal_pipe",
+					"volume" : 1
+				}
+			]
+		},
+		"ii.wet_fart" : {
+			"__use_legacy_max_distance" : "true",
+			"category" : "player",
+			"sounds" : [
+				{
+					"load_on_low_memory" : true,
+					"name" : "sounds/custom/wet_fart",
 					"volume" : 1
 				}
 			]

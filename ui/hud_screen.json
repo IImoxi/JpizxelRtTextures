@@ -489,127 +489,6 @@
 
 // Dura test
 
-	"dura_percent_label": {
-		"type": "label",
-		"text": "('§r§8' + $duraPercent)",
-		"size": [ "default", 10 ],
-		"localize": false,
-		"bindings": [
-			{
-				"binding_name": "#item_durability_current_amount",
-				"binding_type": "collection",
-				"binding_collection_name": "$item_collection_name"
-			},
-			{
-				"binding_name": "#item_durability_total_amount",
-				"binding_type": "collection",
-				"binding_collection_name": "$item_collection_name"
-			},
-			{
-				"binding_type": "view",
-				"source_property_name": "((((#item_durability_current_amount / #item_durability_total_amount) * 100) > $lo) and (((#item_durability_current_amount / #item_durability_total_amount) * 100) < $hi)) or (((#item_durability_current_amount / #item_durability_total_amount) * 100) = $lo)",
-				"target_property_name": "#visible"
-			}
-		]
-	},
-
-	"durability_percent_panel": {
-		"type": "stack_panel",
-		"anchor_from": "bottom_middle",
-		"anchor_to": "bottom_middle",
-		"size": [ 30, "100%c" ],
-		"offset": [ 108, 0 ],
-		"collection_name": "hotbar_items",
-		"controls": [
-			{ "1@dura_percent_controls": { "collection_index": 0 }},
-			{ "2@dura_percent_controls": { "collection_index": 1 }},
-			{ "3@dura_percent_controls": { "collection_index": 2 }},
-			{ "4@dura_percent_controls": { "collection_index": 3 }},
-			{ "5@dura_percent_controls": { "collection_index": 4 }},
-			{ "6@dura_percent_controls": { "collection_index": 5 }},
-			{ "7@dura_percent_controls": { "collection_index": 6 }},
-			{ "8@dura_percent_controls": { "collection_index": 7 }},
-			{ "9@dura_percent_controls": { "collection_index": 8 }}
-		]
-	},
-	
-	"dura_percent_controls": {
-		"type": "panel",
-		"$item_collection_name": "hotbar_items",
-		"size": [ "100%c", "100%c" ],
-		"bindings": [
-			{
-				"binding_name": "#slot_selected",
-				"binding_name_override": "#visible",
-				"binding_type": "collection",
-				"binding_collection_name": "hotbar_items"
-			}
-		],
-		"controls": [
-			{ "dpNegative@dura_percent_label": { "$lo": -100000, "$hi": 0, "$duraPercent": "<0%" }},
-			{ "dpNA@dura_percent_label": { "$lo": 0, "$hi": 0, "$duraPercent": "" }},
-			{ "dp0@dura_percent_label": { "$lo": 0.1, "$hi": 0.5, "$duraPercent": "0%" }},
-			{ "dp01@dura_percent_label": { "$lo": 0.5, "$hi": 1.5, "$duraPercent": "1%" }},
-			{ "dp2@dura_percent_label": { "$lo": 1.5, "$hi": 2.5, "$duraPercent": "2%" }},
-			{ "dp3@dura_percent_label": { "$lo": 2.5, "$hi": 3.5, "$duraPercent": "3%" }},
-			{ "dp4@dura_percent_label": { "$lo": 3.5, "$hi": 4.5, "$duraPercent": "4%" }},
-			{ "dp5@dura_percent_label": { "$lo": 4.5, "$hi": 5.5, "$duraPercent": "5%" }},
-			{ "dp6@dura_percent_label": { "$lo": 5.5, "$hi": 6.5, "$duraPercent": "6%" }},
-			{ "dp7@dura_percent_label": { "$lo": 6.5, "$hi": 7.5, "$duraPercent": "7%" }},
-			{ "dp8@dura_percent_label": { "$lo": 7.5, "$hi": 8.5, "$duraPercent": "8%" }},
-			{ "dp9@dura_percent_label": { "$lo": 8.5, "$hi": 9.5, "$duraPercent": "9%" }},
-			{ "dp10@dura_percent_label": { "$lo": 9.5, "$hi": 11, "$duraPercent": "10%" }},
-			{ "dp12@dura_percent_label": { "$lo": 11, "$hi": 13, "$duraPercent": "12%" }},
-			{ "dp14@dura_percent_label": { "$lo": 13, "$hi": 15, "$duraPercent": "14%" }},
-			{ "dp16@dura_percent_label": { "$lo": 15, "$hi": 17, "$duraPercent": "16%" }},
-			{ "dp18@dura_percent_label": { "$lo": 17, "$hi": 19, "$duraPercent": "18%" }},
-			{ "dp20@dura_percent_label": { "$lo": 19, "$hi": 21, "$duraPercent": "20%" }},
-			{ "dp22@dura_percent_label": { "$lo": 21, "$hi": 23, "$duraPercent": "22%" }},
-			{ "dp24@dura_percent_label": { "$lo": 23, "$hi": 25, "$duraPercent": "24%" }},
-			{ "dp26@dura_percent_label": { "$lo": 25, "$hi": 27, "$duraPercent": "26%" }},
-			{ "dp28@dura_percent_label": { "$lo": 27, "$hi": 29, "$duraPercent": "28%" }},
-			{ "dp30@dura_percent_label": { "$lo": 29, "$hi": 31, "$duraPercent": "30%" }},
-			{ "dp32@dura_percent_label": { "$lo": 31, "$hi": 33, "$duraPercent": "32%" }},
-			{ "dp34@dura_percent_label": { "$lo": 33, "$hi": 35, "$duraPercent": "34%" }},
-			{ "dp36@dura_percent_label": { "$lo": 35, "$hi": 37, "$duraPercent": "36%" }},
-			{ "dp38@dura_percent_label": { "$lo": 37, "$hi": 39, "$duraPercent": "38%" }},
-			{ "dp40@dura_percent_label": { "$lo": 39, "$hi": 41, "$duraPercent": "40%" }},
-			{ "dp42@dura_percent_label": { "$lo": 41, "$hi": 43, "$duraPercent": "42%" }},
-			{ "dp44@dura_percent_label": { "$lo": 43, "$hi": 45, "$duraPercent": "44%" }},
-			{ "dp46@dura_percent_label": { "$lo": 45, "$hi": 47, "$duraPercent": "46%" }},
-			{ "dp48@dura_percent_label": { "$lo": 47, "$hi": 49, "$duraPercent": "48%" }},
-			{ "dp50@dura_percent_label": { "$lo": 49, "$hi": 51, "$duraPercent": "50%" }},
-			{ "dp52@dura_percent_label": { "$lo": 51, "$hi": 53, "$duraPercent": "52%" }},
-			{ "dp54@dura_percent_label": { "$lo": 53, "$hi": 55, "$duraPercent": "54%" }},
-			{ "dp56@dura_percent_label": { "$lo": 55, "$hi": 57, "$duraPercent": "56%" }},
-			{ "dp58@dura_percent_label": { "$lo": 57, "$hi": 59, "$duraPercent": "58%" }},
-			{ "dp60@dura_percent_label": { "$lo": 59, "$hi": 61, "$duraPercent": "60%" }},
-			{ "dp62@dura_percent_label": { "$lo": 61, "$hi": 63, "$duraPercent": "62%" }},
-			{ "dp64@dura_percent_label": { "$lo": 63, "$hi": 65, "$duraPercent": "64%" }},
-			{ "dp66@dura_percent_label": { "$lo": 65, "$hi": 67, "$duraPercent": "66%" }},
-			{ "dp68@dura_percent_label": { "$lo": 67, "$hi": 69, "$duraPercent": "68%" }},
-			{ "dp70@dura_percent_label": { "$lo": 69, "$hi": 71, "$duraPercent": "70%" }},
-			{ "dp72@dura_percent_label": { "$lo": 71, "$hi": 73, "$duraPercent": "72%" }},
-			{ "dp74@dura_percent_label": { "$lo": 73, "$hi": 75, "$duraPercent": "74%" }},
-			{ "dp76@dura_percent_label": { "$lo": 75, "$hi": 77, "$duraPercent": "76%" }},
-			{ "dp78@dura_percent_label": { "$lo": 77, "$hi": 79, "$duraPercent": "78%" }},
-			{ "dp82@dura_percent_label": { "$lo": 79, "$hi": 81, "$duraPercent": "80%" }},
-			{ "dp80@dura_percent_label": { "$lo": 81, "$hi": 83, "$duraPercent": "82%" }},
-			{ "dp84@dura_percent_label": { "$lo": 83, "$hi": 85, "$duraPercent": "84%" }},
-			{ "dp86@dura_percent_label": { "$lo": 85, "$hi": 87, "$duraPercent": "86%" }},
-			{ "dp88@dura_percent_label": { "$lo": 87, "$hi": 89, "$duraPercent": "88%" }},
-			{ "dp90@dura_percent_label": { "$lo": 89, "$hi": 91, "$duraPercent": "90%" }},
-			{ "dp92@dura_percent_label": { "$lo": 91, "$hi": 93, "$duraPercent": "92%" }},
-			{ "dp94@dura_percent_label": { "$lo": 93, "$hi": 95, "$duraPercent": "94%" }},
-			{ "dp96@dura_percent_label": { "$lo": 95, "$hi": 97, "$duraPercent": "96%" }},
-			{ "dp98@dura_percent_label": { "$lo": 97, "$hi": 99, "$duraPercent": "98%" }},
-			{ "dp100@dura_percent_label": { "$lo": 99, "$hi": 101, "$duraPercent": "100%" }},
-			{ "dpOver100@dura_percent_label": { "$lo": 101, "$hi": 1000, "$duraPercent": ">100%" }},
-			{ "dpOver1000@dura_percent_label": { "$lo": 1000, "$hi": 10000, "$duraPercent": ">1,000%" }},
-			{ "dpOver10000@dura_percent_label": { "$lo": 10000, "$hi": 100000, "$duraPercent": ">10,000%" }}
-		]
-	},
-	
 	"dura_value_label": {
 		"type": "label",
 		"text": "('§r§c' + $duraInt)",
@@ -685,7 +564,6 @@
 		"type": "panel", "size": [ "100%", "100%" ],
 		"controls": [
 			{ "crosshair": { "type": "custom", "size": [ 16, 16 ], "renderer": "cursor_renderer", "layer": 8 } },
-			{ "durability@durability_percent_panel": {} },
 			{ "durability_value@durability_value_panel": {} },
 			{ "player_position@hud.player_position": { "anchor_from": "top_left", "anchor_to": "top_left" } },
 			{ "mob_effects_renderer@mob_effects_renderer": { "size": [ "100%", "100%" ], "offset": [ 0, 24 ], "anchor_from": "center", "anchor_to": "center" } },
