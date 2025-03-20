@@ -2,6 +2,8 @@
 
 menu.globalpacks=Resource packs	#
 
+pauseScreen.playersTitle=%s	#
+
 deathScreen.message=§cWASTED	#
 deathScreen.quit=Main menu	#
 
