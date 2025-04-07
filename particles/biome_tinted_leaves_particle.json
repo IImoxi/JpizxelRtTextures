@@ -12,7 +12,7 @@
 			"land": {
 				"particle_effect": {
 					"effect": "ii:grounded_leaves",
-					"type": "emitter"
+					"type": "particle"
 				}
 			}
 		},
@@ -35,6 +35,7 @@
 			"minecraft:particle_lifetime_expression": {
 				"max_lifetime": 15
 			},
+			"minecraft:particle_expire_if_in_blocks": ["minecraft:water"],
 			"minecraft:particle_lifetime_events": {
 				"expiration_event": "land"
 			},
@@ -69,7 +70,7 @@
 			},
 			"minecraft:particle_motion_collision": {
 					"collision_drag": 10,
-					"collision_radius": 0.075,
+					"collision_radius": 0.025,
 					"expire_on_contact": true
 			},
 			"minecraft:particle_appearance_lighting": {},
