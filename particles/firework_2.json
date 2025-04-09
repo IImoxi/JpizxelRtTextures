@@ -18,7 +18,7 @@
 		},
 		"components": {
 			"minecraft:emitter_rate_steady": {
-				"spawn_rate": 6,
+				"spawn_rate": 2,
 				"max_particles": 8
 			},
 			"minecraft:emitter_lifetime_once": {

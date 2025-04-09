@@ -5,7 +5,7 @@
 			"identifier": "ii:firework_sparkle",
 			"basic_render_parameters": {
 				"material": "particles_add",
-				"texture": "textures/particle/particles"
+				"texture": "textures/particle/spark"
 			}
 		},
 		"components": {
@@ -26,14 +26,8 @@
 			"minecraft:particle_initial_speed": 1,
 			"minecraft:particle_motion_dynamic": {},
 			"minecraft:particle_appearance_billboard": {
-				"size": [0.05, 0.05],
-				"facing_camera_mode": "rotate_xyz",
-				"uv": {
-					"texture_width": 16,
-					"texture_height": 16,
-					"uv": [0, 12],
-					"uv_size": [1, 1]
-				}
+				"size": [0.25, 0.25],
+				"facing_camera_mode": "rotate_xyz"
 			},
 			"minecraft:particle_appearance_tinting": {
 				"color": [1, 1, 1, 1]

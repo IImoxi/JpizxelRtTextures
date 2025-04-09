@@ -5,7 +5,7 @@
 			"identifier": "ii:firework_boom",
 			"basic_render_parameters": {
 				"material": "particles_add",
-				"texture": "textures/particle/particles"
+				"texture": "textures/particle/spark"
 			}
 		},
 		"events": {
@@ -142,21 +142,15 @@
 				"collision_radius": 0.1
 			},
 			"minecraft:particle_appearance_billboard": {
-				"size": ["math.clamp((v.particle_lifetime - v.particle_age) / 16, 0, 0.1)", "math.clamp((v.particle_lifetime - v.particle_age) / 16, 0, 0.1)"],
-				"facing_camera_mode": "lookat_direction",
-				"uv": {
-					"texture_width": 16,
-					"texture_height": 16,
-					"uv": [4, 12],
-					"uv_size": [1, 1]
-				}
+				"size": ["math.clamp((v.particle_lifetime - v.particle_age) / 8, 0, 0.2) * 6", "math.clamp((v.particle_lifetime - v.particle_age) / 8, 0, 0.2) * 6"],
+				"facing_camera_mode": "rotate_xyz"
 			},
 			"minecraft:particle_appearance_tinting": {
 				"color": {
 					"interpolant": "v.particle_age / v.particle_lifetime",
 					"gradient": {
-						"0.0": "#FFff3838",
-						"1.5": "#E0ff3838"
+						"0.0": "#FFffea30",
+						"1.5": "#E0ffea30"
 					}
 				}
 			}
