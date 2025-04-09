@@ -142,15 +142,15 @@
 				"collision_radius": 0.1
 			},
 			"minecraft:particle_appearance_billboard": {
-				"size": ["math.clamp((v.particle_lifetime - v.particle_age) / 8, 0, 0.2) * 6", "math.clamp((v.particle_lifetime - v.particle_age) / 8, 0, 0.2) * 6"],
+				"size": ["math.clamp((v.particle_lifetime - v.particle_age) / 8, 0, 0.2) * 8", "math.clamp((v.particle_lifetime - v.particle_age) / 8, 0, 0.2) * 8"],
 				"facing_camera_mode": "rotate_xyz"
 			},
 			"minecraft:particle_appearance_tinting": {
 				"color": {
 					"interpolant": "v.particle_age / v.particle_lifetime",
 					"gradient": {
-						"0.0": "#FFffea30",
-						"1.5": "#E0ffea30"
+						"0.0": "#FFFFFFFF",
+						"1.0": "#E0FFFFFF"
 					}
 				}
 			}

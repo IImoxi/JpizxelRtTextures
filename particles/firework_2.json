@@ -5,7 +5,7 @@
 			"identifier": "ii:firework_2",
 			"basic_render_parameters": {
 				"material": "particles_add",
-				"texture": "textures/particle/flame"
+				"texture": "textures/particle/spark"
 			}
 		},
 		"events": {
@@ -32,17 +32,29 @@
 			},
 			"minecraft:particle_lifetime_events": {
 				"timeline": {
+					"0.05": "trail",
 					"0.10": "trail",
+					"0.15": "trail",
 					"0.20": "trail",
+					"0.25": "trail",
 					"0.30": "trail",
+					"0.35": "trail",
 					"0.40": "trail",
+					"0.45": "trail",
 					"0.50": "trail",
+					"0.55": "trail",
 					"0.60": "trail",
+					"0.65": "trail",
 					"0.70": "trail",
+					"0.75": "trail",
 					"0.80": "trail",
+					"0.85": "trail",
 					"0.90": "trail",
+					"0.95": "trail",
 					"1.00": "trail",
+					"1.05": "trail",
 					"1.10": "trail",
+					"1.15": "trail",
 					"1.20": "trail"
 				}
 			},
@@ -54,7 +66,7 @@
 				"rotation": "math.sqrt((math.random(-10, 10), (math.random(-170, 190))"
 			},
 			"minecraft:particle_appearance_billboard": {
-				"size": [0.3, 0.6],
+				"size": ["math.clamp((v.particle_lifetime - v.particle_age), 0, 0.2) * 3", "math.clamp((v.particle_lifetime - v.particle_age), 0, 0.2) * 3"],
 				"facing_camera_mode": "lookat_xyz"
 			},
 			"minecraft:particle_motion_collision": {
@@ -62,7 +74,7 @@
 				"collision_radius": 0.2
 			},
 			"minecraft:particle_appearance_tinting": {
-				"color": [1, 1, 1, 0.30196]
+				"color": [1, 1, 1, 1]
 			}
 		}
 	}
