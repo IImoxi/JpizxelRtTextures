@@ -10,7 +10,7 @@
     },
     "components": {
       "minecraft:emitter_rate_manual": {
-        "max_particles": 50
+        "max_particles": 32
       },
       "minecraft:emitter_lifetime_expression": {
         "activation_expression": 1,

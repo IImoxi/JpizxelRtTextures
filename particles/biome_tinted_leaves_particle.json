@@ -21,7 +21,7 @@
 				"creation_expression": "v.fall_acc = -0.3; v.wind_acc = 10; v.curve_len = 15;"
 			},
 			"minecraft:emitter_rate_manual": {
-				"max_particles": 2000
+				"max_particles": 16
 			},
 			"minecraft:emitter_lifetime_expression": {
 				"activation_expression": 1,
@@ -70,7 +70,7 @@
 			},
 			"minecraft:particle_motion_collision": {
 					"collision_drag": 10,
-					"collision_radius": 0.025,
+					"collision_radius": 0.01,
 					"expire_on_contact": true
 			},
 			"minecraft:particle_appearance_lighting": {},

@@ -14,7 +14,7 @@
         "direction": [ "Math.random(-1.0, 1.0)", "Math.random(-0.4, 0.2)", "Math.random(-1.0, 1.0)"]
       },
       "minecraft:emitter_rate_manual": {
-        "max_particles": 500
+        "max_particles": 64
       },
       "minecraft:emitter_lifetime_expression": {
         "activation_expression": 1,

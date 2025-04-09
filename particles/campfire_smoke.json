@@ -37,7 +37,7 @@
 				}
 			},
 			"minecraft:emitter_rate_manual": {
-				"max_particles": 8
+				"max_particles": 16
 			},
         "minecraft:emitter_lifetime_expression": {
           "activation_expression": 1,

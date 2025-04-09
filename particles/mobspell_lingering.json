@@ -10,7 +10,7 @@
 		},
 		"components": {
 			"minecraft:emitter_rate_instant": {
-				"num_particles": "(Math.pi * variable.cloud_radius * variable.cloud_radius * variable.particle_multiplier) / 2"
+				"num_particles": "(Math.pi * variable.cloud_radius * variable.cloud_radius * variable.particle_multiplier) / 2.5"
 			},
 			"minecraft:emitter_lifetime_once": {
 				"active_time": "variable.cloud_lifetime"
