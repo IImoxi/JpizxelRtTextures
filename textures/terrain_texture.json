@@ -289,6 +289,10 @@
 		"smooth_stone" : { "textures" : "textures/blocks/stone_slab_top" },
 		"stonebrick" : { "textures" : [ "textures/blocks/stonebrick", "textures/blocks/stonebrick_mossy", "textures/blocks/stonebrick_cracked", "textures/blocks/stonebrick_carved" ] },
 		
+		"lapis_block" : { "textures": [ { "variations": [ 
+				{ "path": "textures/blocks/lapis_block", "weight": 1 },
+				{ "path": "textures/blocks/lapis_block1", "weight": 1 } ] } ] },
+		
 		"ii_end_stone": {
 			"textures" : [
 			{ "variations": [
