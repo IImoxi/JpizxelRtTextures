@@ -1,0 +1,19 @@
+{
+	"format_version": "1.8.0",
+	"render_controllers": {
+		"controller.render.player.third_person_spectator": {
+			"geometry": "Geometry.default",
+			"materials": [ { "*": "Material.spectator" } ],
+			"textures": [ "Texture.default" ],
+			"part_visibility": [
+				{ "*": true }
+			],
+			"color": {
+				"r": "1.0f",
+				"g": "1.0f",
+				"b": "1.0f",
+				"a": "0.5f"
+			}
+		}
+	}
+}

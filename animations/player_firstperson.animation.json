@@ -15,7 +15,7 @@
 			"override_previous_animation": true,
 			"bones": {
 				"rightitem": {
-					"position": [ "-math.sin(math.sqrt(variable.attack_time) * Math.Pi * 100) * 10", "math.sin(math.sqrt(variable.attack_time) * Math.Pi * 2 * 60) * 10", "-math.sin(variable.attack_time * Math.Pi * 65) * 2" ],
+					"position": [ "10 + -math.sin(math.sqrt(variable.attack_time) * Math.Pi * 100) * 10", "math.sin(math.sqrt(variable.attack_time) * Math.Pi * 2 * 60) * 10", "-math.sin(variable.attack_time * Math.Pi * 65) * 2" ],
 					"rotation": [ "-math.sin(math.sqrt(variable.attack_time) * Math.Pi * 20) * 25", "-math.sin(math.sqrt(variable.attack_time) * 75.0) * 15.0", "-math.sin(math.sqrt(variable.attack_time) * 25) * 15" ]
 				}
 			}
@@ -28,6 +28,9 @@
 				},
 				"head": {
 					"rotation": [ "query.target_x_rotation", "query.target_y_rotation + 180", 0.0 ]
+				},
+				"rightitem": {
+					"position": [ 0, 0, 1 ]
 				}
 			}
 		},
@@ -71,10 +74,10 @@
 					"rotation": [ "95.0 + variable.is_using_vr * 7.5", "-45.0 + variable.is_using_vr * 7.5", "115.0 + variable.is_using_vr * -2.5" ]
 				},
 				"rightitem": {
-					"position": [ -10.0, "q.get_default_bone_pivot('rightarm',1) - q.get_default_bone_pivot('rightitem',1) - 7.0", "-q.get_default_bone_pivot('rightitem',2)" ]
+					"position": [ 1.0, "q.get_default_bone_pivot('rightarm',1) - q.get_default_bone_pivot('rightitem',1) - 7.0", "-q.get_default_bone_pivot('rightitem',2)" ]
 				},
 				"leftitem": {
-					"position": [ -10.0, "q.get_default_bone_pivot('leftarm',1) - q.get_default_bone_pivot('leftitem',1) - 7.0", "-q.get_default_bone_pivot('leftitem',2)" ]
+					"position": [ 1.0, "q.get_default_bone_pivot('leftarm',1) - q.get_default_bone_pivot('leftitem',1) - 7.0", "-q.get_default_bone_pivot('leftitem',2)" ]
 				}
 			}
 		},
