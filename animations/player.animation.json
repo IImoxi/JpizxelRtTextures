@@ -11,7 +11,7 @@
 					"rotation" : [ 0.0, 0.0, "(math.cos(query.life_time * 103.2) * 2.865) + 2.865" ]
 				},
 				"body": {
-					"position" : [ 0.0, "((math.cos(query.life_time * 103.2) * 0.1) + 0.05)", 0.0 ]
+					"position" : [ 0.0, "((math.cos(query.life_time * 103.2) * 0.12) + 0.06)", 0.0 ]
 				}
 			}
 		},
@@ -19,13 +19,35 @@
 			"loop": true,
 			"bones": {
 				"leftleg": {
-					"rotation": [ "(math.cos(q.modified_distance_moved * 38) * (1.0 - (1.0 - q.modified_move_speed) * (1.0 - q.modified_move_speed)) / v.gliding_speed_value) * 57.3 * -1.4", -0.1, -0.1 ]
+					"rotation": [ "variable.tcos0 * -1.4", 0.1, 0.1 ]
 				},
 				"rightleg": {
-					"rotation": [ "(math.cos(q.modified_distance_moved * 38) * (1.0 - (1.0 - q.modified_move_speed) * (1.0 - q.modified_move_speed)) / v.gliding_speed_value) * 57.3 * 1.4", 0.1, 0.1 ]
+					"rotation": [ "variable.tcos0 * 1.4", 0.1, 0.1 ]
 				},
 				"root": {
-					"position": [ 0, "-(math.cos(q.modified_distance_moved * 76) * math.max(1 - math.max(q.modified_move_speed, 0.3), 0.2))", 0]
+					"position": [ 0, "-(math.cos(q.modified_distance_moved * 76.34) * ((1.15 - q.modified_move_speed) * q.modified_move_speed)) * 1.5", 0]
+					
+					
+				}
+			}
+		},
+		"animation.player.move.arms" : {
+			"loop": true,
+			"bones": {
+				"leftarm": {
+					"rotation": [ "variable.tcos0", -0.1, -0.1 ]
+				},
+				"rightarm": {
+					"rotation": [ "-variable.tcos0", 0.1, 0.1 ]
+				}
+			}
+		},
+		"animation.player.cape" : {
+			"loop" : true,
+			"bones" : {
+				"cape" : {
+					"position" : [ 0.0, "query.get_root_locator_offset('armor_offset.default_neck', 1)", 0.0 ],
+					"rotation" : [ "(math.lerp(0.0, -126.0, query.cape_flap_amount) - 6.0) - (math.cos(q.modified_distance_moved * 76.34) * ((1.15 - q.modified_move_speed) * q.modified_move_speed)) * 6", 0.0, 0.0 ]
 				}
 			}
 		}
