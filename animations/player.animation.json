@@ -25,7 +25,7 @@
 					"rotation": [ "variable.tcos0 * 1.4", 0.1, 0.1 ]
 				},
 				"root": {
-					"position": [ 0, "-(math.cos(q.modified_distance_moved * 76.34) * ((1.15 - q.modified_move_speed) * q.modified_move_speed)) * 1.5", 0]
+					"position": [ 0, "-(math.cos(q.modified_distance_moved * 76.34) * ((1.1 - q.modified_move_speed) * q.modified_move_speed)) * 2", 0]
 					
 					
 				}
@@ -47,7 +47,7 @@
 			"bones" : {
 				"cape" : {
 					"position" : [ 0.0, "query.get_root_locator_offset('armor_offset.default_neck', 1)", 0.0 ],
-					"rotation" : [ "(math.lerp(0.0, -126.0, query.cape_flap_amount) - 6.0) - (math.cos(q.modified_distance_moved * 76.34) * ((1.15 - q.modified_move_speed) * q.modified_move_speed)) * 6", 0.0, 0.0 ]
+					"rotation" : [ "(math.lerp(0.0, -126.0, query.cape_flap_amount) - 6.0) - (math.cos(q.modified_distance_moved * 76.34) * ((1.1 - q.modified_move_speed) * q.modified_move_speed)) * 6", 0.0, 0.0 ]
 				}
 			}
 		}
