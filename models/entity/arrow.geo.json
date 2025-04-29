@@ -12,6 +12,13 @@
 			},
 			"bones": [
 				{
+					"name": "bb_main",
+					"pivot": [0, 0, 0],
+					"locators": {
+						"arrow": [0, 0, 0]
+					}
+				},
+				{
 					"name": "body",
 					"pivot": [0, 1, 0],
 					"cubes": [

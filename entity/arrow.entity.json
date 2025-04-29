@@ -1,0 +1,38 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "minecraft:arrow",
+      "materials": {
+        "default": "arrow"
+      },
+      "textures": {
+        "default": "textures/entity/arrows"
+      },
+      "geometry": {
+        "default": "geometry.arrow"
+      },
+      "animations": {
+        "move": "animation.arrow.move",
+		"arrow_particle": "animation.arrow.particle"
+      },
+      "scripts": {
+        "pre_animation": [
+          "variable.shake = query.shake_time - query.frame_alpha;",
+          "variable.shake_power = variable.shake > 0.0 ? -Math.sin(variable.shake * 200.0) * variable.shake : 0.0;"
+        ],
+        "animate": [
+		  "move",
+		  "arrow_particle"
+        ]
+      },
+	  "particle_effects": {
+        "trail": "ii:firework_sparkle",
+        "arrow_particle": "ii:arrow_particle"
+      },
+      "render_controllers": [
+        "controller.render.arrow"
+      ]
+    }
+  }
+}
