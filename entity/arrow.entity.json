@@ -14,7 +14,7 @@
       },
       "animations": {
         "move": "animation.arrow.move",
-		"arrow_particle": "animation.arrow.particle"
+        "trail": "animation.arrow.trail"
       },
       "scripts": {
         "pre_animation": [
@@ -23,12 +23,11 @@
         ],
         "animate": [
 		  "move",
-		  "arrow_particle"
+		  "trail"
         ]
       },
 	  "particle_effects": {
-        "trail": "ii:firework_sparkle",
-        "arrow_particle": "ii:arrow_particle"
+        "trail": "ii:projectile_indicator"
       },
       "render_controllers": [
         "controller.render.arrow"

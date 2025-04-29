@@ -2,7 +2,7 @@
 	"format_version": "1.10.0",
 	"particle_effect": {
 		"description": {
-			"identifier": "ii:firework_trail",
+			"identifier": "ii:arrow_trail",
 			"basic_render_parameters": {
 				"material": "particles_add",
 				"texture": "textures/particle/orb"
@@ -17,11 +17,16 @@
 			}
 		},
 		"components": {
-			"minecraft:emitter_rate_manual": {
-				"max_particles": 3084
+			"minecraft:emitter_local_space": {
+				"position": false,
+				"rotation": true
+			},
+			"minecraft:emitter_rate_steady": {
+				"spawn_rate": 64,
+				"max_particles": 512
 			},
 			"minecraft:emitter_lifetime_once": {
-				"active_time": 1
+				"active_time": 1.5
 			},
 			"minecraft:particle_lifetime_events": {
 				"expiration_event": "sparkle"
