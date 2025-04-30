@@ -1,0 +1,138 @@
+// JPizxel RT | IImoxi
+
+{
+	"namespace": "resource_packs",
+	
+	"pack_overlay@ii.button_default": {
+		"anchor_from": "top_middle",
+		"anchor_to": "top_middle",
+		"size": [ 240, 40 ],
+		"offset": [ 0, 12 ],
+		"controls": [
+			{
+				"icon": {
+					"type": "image",
+					"texture": "pack_icon",
+					"size": [ 32, 32 ],
+					"offset": [ 4, 0 ],
+					"anchor_from": "left_middle",
+					"anchor_to": "left_middle"
+				}
+			},
+			{
+				"pack_name": {
+					"type": "label",
+					"text": "JPizxeL RT\n37.2MB",
+					"offset": [ 40, 6 ],
+					"anchor_from": "top_left",
+					"anchor_to": "top_left"
+				}
+			}
+		]
+	},
+	
+	"enabled_packs_stack_panel": {
+		"type": "stack_panel",
+		"controls": [
+			{
+				"title_label": {
+					"type": "label",
+					"size": [ "100%", 18 ],
+					"text_alignment": "center",
+					"text": "§lEnabled",
+					"font_scale_factor": 1
+				}
+			},
+			{
+				"selected_pack_grid@resource_packs.selected_pack_grid": {
+					"size": [ "100%", "default" ]
+				}
+            }
+		]
+	},
+
+	"installed_packs_stack_panel": {
+		"type": "stack_panel",
+		"controls": [
+			{
+				"title_label": {
+					"type": "label",
+					"size": [ "100%", 18 ],
+					"text_alignment": "center",
+					"text": "§lAvailable",
+					"font_scale_factor": 1
+				}
+			},
+			{
+				"available_pack_grid@resource_packs.available_pack_grid": {
+					"size": [ "100%", "default" ]
+					//"$available_grid_visible_binding_name": "(not $no_available_packs_visibility_binding)",
+					//"$available_grid_visible_binding_type": "global"
+				}
+            }
+		]
+	},
+
+	"selected_stack_panel": {
+		"type": "panel",
+		"size": [ "100%", "100%c + 32px" ],
+		"anchor_from": "top_right",
+		"anchor_to": "top_right",
+		"controls": [
+			{
+				"title_label": {
+					"type": "label",
+					"offset": [ 0, 8 ],
+					"text": "§lResource Packs",
+					"anchor_from": "top_middle",
+					"anchor_to": "top_middle",
+					"font_scale_factor": 1
+				}
+			},
+			{
+				"enabled_packs_panel@ii.button_default": {
+					"anchor_from": "top_right",
+					"anchor_to": "top_right",
+					"offset": [ 0, 32 ],
+					"size": [ "50%", "100%c -" ],
+					"controls": [
+						{
+							"padding": {
+								"type": "panel",
+								"size": [ "100% - 6px", "100%c + 8px"],
+								"controls":[
+									{
+										"enabled_packs_stack_panel@resource_packs.enabled_packs_stack_panel": {}
+									}
+								]
+							}
+						}
+					]
+				}
+			},
+			{
+				"installed_packs_panel@ii.button_default": {
+					"anchor_from": "top_left",
+					"anchor_to": "top_left",
+					"offset": [ 0, 32 ],
+					"size": [ "50%", "100%c" ],
+					"controls": [
+						{
+							"padding": {
+								"type": "panel",
+								"size": [ "100% - 6px", "100%c + 8px"],
+								"controls":[
+									{
+										"installed_packs_stack_panel@resource_packs.installed_packs_stack_panel": {}
+									}
+								]
+							}
+						}
+					]
+				}
+			}
+		]
+	}
+}
+
+// JPizxel RT | IImoxi
