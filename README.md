@@ -3,10 +3,10 @@ Once you run the line in powershell, wait till it completes then it will show up
 
 Paste into Powershell (not command prompt) to install for you. 
 (Faster download speeds)
->>     iwr -useb https://raw.githubusercontent.com/IImoxi/JpizxelRtTextures/refs/heads/main/install.bat | iex
+>>     iwr -useb https://raw.githubusercontent.com/IImoxi/JpizxelRtTextures/refs/heads/main/install.ps1 | iex
 
 Older installer below (If the top one does not work)
->>     iwr -useb https://raw.githubusercontent.com/IImoxi/JpizxelRtTextures/refs/heads/main/install.ps1 | iex
+>>     iwr -useb https://raw.githubusercontent.com/IImoxi/JpizxelRtTextures/refs/heads/main/install_old.ps1 | iex
 
 -----
 How to download:

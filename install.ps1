@@ -1,17 +1,28 @@
-$resourcePack = Join-Path "$($env:LOCALAPPDATA)" "Packages\Microsoft.MinecraftUWP_8wekyb3d8bbwe\LocalState\games\com.mojang\resource_packs\JpizxelRtTextures-main";
-$resourcePacks = Join-Path "$($env:LOCALAPPDATA)" "Packages\Microsoft.MinecraftUWP_8wekyb3d8bbwe\LocalState\games\com.mojang\resource_packs";
-Write-Host "[JPizxeL RT] Installer";
+# JPizxeL RT Textures Installer
 
-if (Test-Path -Path $resourcePacks) {
-} else {
-    Write-Host "[JPizxeL RT] Install failed: Cannot find resource pack folder at $resourcePacks";
-	Start-Sleep -Seconds 5
-	exit
+# Set paths
+$RESOURCE_PACK_FOLDER = "$env:LOCALAPPDATA\Packages\Microsoft.MinecraftUWP_8wekyb3d8bbwe\LocalState\games\com.mojang\resource_packs"
+$RESOURCE_PACK = "$RESOURCE_PACK_FOLDER\JpizxelRtTextures-main"
+$RESOURCE_PACK_REPO = "https://github.com/IImoxi/JpizxelRtTextures/archive/refs/heads/main.zip"
+$TEMP = [System.IO.Path]::GetTempPath()
+$TEMP_DESTINATION = Join-Path -Path $TEMP -ChildPath "JpizxelRT.zip"
+
+Write-Host "[JPizxeL RT] Installer"
+
+# Check if resource packs directory exists
+if (-not (Test-Path -Path $RESOURCE_PACK_FOLDER)) {
+    $wshell = New-Object -ComObject WScript.Shell
+    $wshell.Popup("[JPizxeL RT] Installer failed! Cannot find resource pack folder at $RESOURCE_PACK_FOLDER. Make sure Minecraft Bedrock edition is installed!", 0, "Error", 16)
+    exit
 }
 
-iwr -Uri https://github.com/IImoxi/JpizxelRtTextures/archive/refs/heads/main.zip -OutFile ./main.zip
-Expand-Archive -LiteralPath './main.zip' -DestinationPath $resourcePacks -Force
-Remove-Item ./main.zip
-Write-Host "[JPizxeL RT] Resource pack is now installed.";
-Start-Sleep -Seconds 5
-exit
+# Download
+$wc = New-Object net.webclient
+$wc.Downloadfile($RESOURCE_PACK_REPO, $TEMP_DESTINATION)
+Expand-Archive -LiteralPath $TEMP_DESTINATION -DestinationPath $RESOURCE_PACK_FOLDER -Force
+Remove-Item $TEMP_DESTINATION
+
+# Success
+Write-Host "[JPizxeL RT] Complete"
+$wshell = New-Object -ComObject WScript.Shell
+$wshell.Popup("[JPizxeL RT] Installer Complete! Run Minecraft and go to resource packs to enable it.", 0, "Success", 64)
