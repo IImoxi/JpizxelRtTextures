@@ -173,7 +173,7 @@
 		"size": [ "100%", 18 ],
 		"anims": [ "@chat.ii_offset_05-0012-0000" ],
 		"controls": [ 
-			{ "input@chat.text_box_template": {} }
+			{ "text_box@chat.text_box_base": {} }
 		],
 		"bindings": [
 			{
@@ -192,7 +192,7 @@
 		"$multiline": true,
 		"controls": [ 
 			{
-				"expanded_text_box@chat.text_box_template": {
+				"expanded_text_box@chat.text_box_base": {
 					"layer": 20,
 					"anchor_from": "bottom_middle",
 					"anchor_to": "bottom_middle",
@@ -248,7 +248,7 @@
 		]
 	},
 	
-	"text_box_template@common.text_edit_box": {
+	"text_box_base@common.text_edit_box": {
 		"anchor_from": "center", "anchor_to": "center",
 		"size": "$child_size",
 		"enabled_newline": "$multiline",
@@ -303,7 +303,7 @@
 					]
 				}
 			},
-			{ "@chat.chat_input_dialog": {} }
+			{ "input_dialog@chat.chat_input_dialog": {} }
 		],
 		"button_mappings": [
 			{ "from_button_id": "button.menu_select", "to_button_id": "$text_edit_box_selected_to_button_id", "handle_select": true, "handle_deselect": true, "mapping_type": "pressed" },
