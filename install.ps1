@@ -7,7 +7,8 @@ $RESOURCE_PACK_REPO = "https://github.com/IImoxi/JpizxelRtTextures/archive/refs/
 $TEMP = [System.IO.Path]::GetTempPath()
 $TEMP_DESTINATION = Join-Path -Path $TEMP -ChildPath "JpizxelRT.zip"
 
-Write-Host "[JPizxeL RT] Installer"
+Write-Host "[JPizxeL RT] Installer for JPizxelRT"
+Write-Host "___________________________________________________"
 
 # Check if resource packs directory exists
 if (-not (Test-Path -Path $RESOURCE_PACK_FOLDER)) {
@@ -17,9 +18,11 @@ if (-not (Test-Path -Path $RESOURCE_PACK_FOLDER)) {
 }
 
 # Download
+Write-Host "[JPizxeL RT] Starting download... Do not close this window."
 $wc = New-Object net.webclient
 $wc.Downloadfile($RESOURCE_PACK_REPO, $TEMP_DESTINATION)
 Expand-Archive -LiteralPath $TEMP_DESTINATION -DestinationPath $RESOURCE_PACK_FOLDER -Force
+Write-Host "[JPizxeL RT] Download complete!"
 Remove-Item $TEMP_DESTINATION
 
 # Success
