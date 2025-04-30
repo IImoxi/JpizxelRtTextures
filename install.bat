@@ -1,4 +1,6 @@
 @echo off
+setlocal enabledelayedexpansion
+
 :: Fast GitHub ZIP Downloader - JPizxeL RT Textures
 setlocal
 set "RESOURCE_PACK_FOLDER=%LOCALAPPDATA%\Packages\Microsoft.MinecraftUWP_8wekyb3d8bbwe\LocalState\games\com.mojang\resource_packs"
