@@ -1,7 +1,11 @@
 Installation method 1: Powershell
-Paste the line of code into powershell and run and the pack should download and extract to the resource packs folder.
+Once you run the line in powershell, wait till it completes then it will show up in minecraft resource packs. You have to enable it. (Works while minecraft is running)
 
-Or poste this into Powershell (not command prompt) to install for you.
+Paste into Powershell (not command prompt) to install for you. 
+(Faster download speeds)
+>>     iwr -useb https://raw.githubusercontent.com/IImoxi/JpizxelRtTextures/refs/heads/main/install.bat | iex
+
+Older installer below (If the top one does not work)
 >>     iwr -useb https://raw.githubusercontent.com/IImoxi/JpizxelRtTextures/refs/heads/main/install.ps1 | iex
 
 -----
