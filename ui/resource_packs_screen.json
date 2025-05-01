@@ -3,6 +3,27 @@
 {
 	"namespace": "resource_packs",
 	
+	"common_pack_button@common.button": {
+		"sound_volume": 1.0,
+		"size": [ "100%", "100%c" ],
+		"focus_enabled": true
+	}, //general button for a pack
+	
+	  "selected_pack_button@resource_packs.common_pack_button": {
+    "$pressed_button_name": "$button.selected_pack",
+    "controls": [
+      { "default@resource_packs.selected_pack_button_layout": {} },
+      { "pressed@resource_packs.selected_pack_button_layout_hover": {} },
+      { "hover@ii.button_default": {} }
+    ],
+    "bindings": [
+      {
+        "binding_collection_name": "$selected_pack_items",
+        "binding_type": "collection_details"
+      }
+    ]
+  },
+	
 	"pack_overlay@ii.button_default": {
 		"anchor_from": "top_middle",
 		"anchor_to": "top_middle",
