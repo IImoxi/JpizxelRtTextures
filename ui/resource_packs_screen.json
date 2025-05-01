@@ -5,53 +5,18 @@
 	
 	"common_pack_button@common.button": {
 		"sound_volume": 1.0,
-		"size": [ "100%", "100%c" ],
+		"size": [ "100%", 48 ],
 		"focus_enabled": true
 	}, //general button for a pack
 	
-	  "selected_pack_button@resource_packs.common_pack_button": {
-    "$pressed_button_name": "$button.selected_pack",
-    "controls": [
-      { "default@resource_packs.selected_pack_button_layout": {} },
-      { "pressed@resource_packs.selected_pack_button_layout_hover": {} },
-      { "hover@ii.button_default": {} }
-    ],
-    "bindings": [
-      {
-        "binding_collection_name": "$selected_pack_items",
-        "binding_type": "collection_details"
-      }
-    ]
-  },
-	
-	"pack_overlay@ii.button_default": {
-		"anchor_from": "top_middle",
-		"anchor_to": "top_middle",
-		"size": [ 240, 40 ],
-		"offset": [ 0, 12 ],
-		"controls": [
-			{
-				"icon": {
-					"type": "image",
-					"texture": "pack_icon",
-					"size": [ 32, 32 ],
-					"offset": [ 4, 0 ],
-					"anchor_from": "left_middle",
-					"anchor_to": "left_middle"
-				}
-			},
-			{
-				"pack_name": {
-					"type": "label",
-					"text": "JPizxeL RT\n37.2MB",
-					"offset": [ 40, 6 ],
-					"anchor_from": "top_left",
-					"anchor_to": "top_left"
-				}
-			}
-		]
-	},
-	
+	"size_label@resource_packs.white_label": {
+		"anchor_from": "top_left",
+		"anchor_to": "top_left",
+		"text": "#size",
+		"font_type": "default",
+		"font_scale_factor": 0.66
+	}, //pack size text,
+
 	"enabled_packs_stack_panel": {
 		"type": "stack_panel",
 		"controls": [
@@ -114,8 +79,8 @@
 				"enabled_packs_panel@ii.button_default": {
 					"anchor_from": "top_right",
 					"anchor_to": "top_right",
-					"offset": [ 0, 32 ],
-					"size": [ "50%", "100%c -" ],
+					"offset": [ -6, 32 ],
+					"size": [ "50% - 6px", "100%c" ],
 					"controls": [
 						{
 							"padding": {
