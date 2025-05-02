@@ -27,7 +27,7 @@
 			},
 			"minecraft:particle_initial_speed": "query.ground_speed",
 			"minecraft:particle_appearance_billboard": {
-				"size": ["(q.ground_speed * (v.particle_lifetime / v.particle_age)) * 0.9", "(q.ground_speed * (v.particle_lifetime / v.particle_age)) * 0.25"],
+				"size": ["(math.min(q.distance_from_camera, 150) + 40) * (1 - q.is_on_ground)", "(math.min(q.distance_from_camera / 2, 60) + 16) * (1 - q.is_on_ground)"],
 				"facing_camera_mode": "emitter_transform_yz",
 				"uv": {
 					"texture_width": 16,
