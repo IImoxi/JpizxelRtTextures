@@ -46,6 +46,35 @@
 		]
 	},
 	
+	"packinfo_section": {
+		"type": "stack_panel",
+		"size": [ "100%", "100%" ],
+		"anchor_from": "top_left",
+		"anchor_to": "top_left",
+		"bindings": [
+			{
+				"binding_type": "view",
+				"source_control_name": "packinfo_button_toggle",
+				"source_property_name": "#toggle_state",
+				"target_property_name": "#visible"
+			}
+		],
+		"controls": [
+			{
+				"install_guide@ii.install_guide": {
+					"anchor_from": "top_middle",
+					"anchor_to": "top_middle"
+				}
+			},
+			{
+				"features_section@ii.features_section": {
+					"anchor_from": "top_middle",
+					"anchor_to": "top_middle"
+				}
+			}
+		]
+	},
+	
 	"content_area": {
 		"type": "panel",
 		"layer": 1,
@@ -71,20 +100,6 @@
 					"anchor_to": "top_right",
 					"controls": [
 						{
-							"header_panel": {
-								"type": "panel",
-								"layer": 20,
-								"size": [ "100%", "100%c" ],
-								"anchor_from": "top_left",
-								"anchor_to": "top_left",
-								"controls": [
-									{
-										"content@$section_header_panels": {}
-									}
-								]
-							}
-						},
-						{
 							"scrolling_panel@common.scrolling_panel": {
 								"size": [ "100%", "fill" ],
 								"$scrolling_content": "$section_content_panels",
@@ -94,48 +109,7 @@
 							}
 						},
 						{
-							"packinfo_section": {
-								"type": "stack_panel",
-								"size": [ "100%", "100%" ],
-								"anchor_from": "top_left",
-								"anchor_to": "top_left",
-								"bindings": [
-									{
-										"binding_type": "view",
-										"source_control_name": "packinfo_button_toggle",
-										"source_property_name": "#toggle_state",
-										"target_property_name": "#visible"
-									}
-								],
-								"controls": [
-									{
-										"install_guide@ii.install_guide": {
-											"anchor_from": "top_middle",
-											"anchor_to": "top_middle"
-										}
-									},
-									{
-										"features_section@ii.features_section": {
-											"anchor_from": "top_middle",
-											"anchor_to": "top_middle"
-										}
-									}
-								]
-							}
-						},
-						{
-							"footer_panel": {
-								"type": "panel",
-								"layer": 20,
-								"size": [ "100%", "100%c" ],
-								"anchor_from": "bottom_left",
-								"anchor_to": "bottom_left",
-								"controls": [
-									{
-										"content@$section_footer_panels": {}
-									}
-								]
-							}
+							"packinfo_panel@settings_common.packinfo_section": {}
 						}
 					]
 				}

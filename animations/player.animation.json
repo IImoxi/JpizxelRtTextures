@@ -64,8 +64,7 @@
 			},
 			"particle_effects": {
 				"0": {
-					"effect": "indicator",
-					"locator": "head"
+					"effect": "indicator"
 				}
 			}
 		},
