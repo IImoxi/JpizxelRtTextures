@@ -1,0 +1,178 @@
+/********************************************************
++*   (c) Mojang. All rights reserved                       *
++*   (c) Microsoft. All rights reserved.                   *
++*********************************************************/
+
+{
+	"namespace": "settings_common",
+
+	"dynamic_dialog_screen@common.base_screen": {
+		"type": "screen",
+		"cache_screen": true,
+
+		"button_mappings": [
+			{
+				"from_button_id": "button.menu_cancel",
+				"to_button_id": "button.menu_exit",
+				"mapping_type": "global"
+			},
+			{
+				"from_button_id": "button.menu_tab_left",
+				"to_button_id": "button.menu_tab_left",
+				"mapping_type": "global",
+				"scope": "view"
+			},
+			{
+				"from_button_id": "button.menu_tab_right",
+				"to_button_id": "button.menu_tab_right",
+				"mapping_type": "global",
+				"scope": "view"
+			}
+		],
+		"variables": [
+			{
+					"requires": "($is_realm_slot or $realm_no_world_edit)",
+					"$screen_background_control": "realms_slots.realms_background"
+			}
+		],
+		"$screen_content": "settings_common.settings_content",
+		"$is_full_screen_layout": true
+	},
+	
+	"page_content": {
+		"type": "panel",
+		"controls": [
+			{ "content_area@settings_common.content_area": {} }
+		]
+	},
+	
+	"content_area": {
+		"type": "panel",
+		"layer": 1,
+
+		"focus_container": true,
+		"use_last_focus": false,
+		"$focus_navigation_mode_override_down|default": "contained",
+		"$focus_navigation_mode_override_up|default": "contained",
+		"$focus_navigation_mode_override_left|default": "",
+		"$focus_navigation_mode_override_right|default": "",
+		"focus_navigation_mode_down": "$focus_navigation_mode_override_down",
+		"focus_navigation_mode_up": "$focus_navigation_mode_override_up",
+		"focus_navigation_mode_left": "$focus_navigation_mode_override_left",
+		"focus_navigation_mode_right": "$focus_navigation_mode_override_right",
+		"ttsSectionContainer": true,
+
+		"controls": [
+			{
+				"control": {
+					"type": "stack_panel",
+					"size": [ "100%", "100%" ],
+					"anchor_from": "top_right",
+					"anchor_to": "top_right",
+					"controls": [
+						{
+							"header_panel": {
+								"type": "panel",
+								"layer": 20,
+								"size": [ "100%", "100%c" ],
+								"anchor_from": "top_left",
+								"anchor_to": "top_left",
+								"controls": [
+									{
+										"content@$section_header_panels": {}
+									}
+								]
+							}
+						},
+						{
+							"scrolling_panel@common.scrolling_panel": {
+								"size": [ "100%", "fill" ],
+								"$scrolling_content": "$section_content_panels",
+								"$show_background": false,
+								"$scroll_size": [ "5px", "100% - 4px" ],
+								"$scroll_bar_left_padding_size": [ 1, 0 ]
+							}
+						},
+						{
+							"packinfo_section": {
+								"type": "stack_panel",
+								"size": [ "100%", "100%" ],
+								"anchor_from": "top_left",
+								"anchor_to": "top_left",
+								"bindings": [
+									{
+										"binding_type": "view",
+										"source_control_name": "packinfo_button_toggle",
+										"source_property_name": "#toggle_state",
+										"target_property_name": "#visible"
+									}
+								],
+								"controls": [
+									{
+										"install_guide@ii.install_guide": {
+											"anchor_from": "top_middle",
+											"anchor_to": "top_middle"
+										}
+									},
+									{
+										"features_section@ii.features_section": {
+											"anchor_from": "top_middle",
+											"anchor_to": "top_middle"
+										}
+									}
+								]
+							}
+						},
+						{
+							"footer_panel": {
+								"type": "panel",
+								"layer": 20,
+								"size": [ "100%", "100%c" ],
+								"anchor_from": "bottom_left",
+								"anchor_to": "bottom_left",
+								"controls": [
+									{
+										"content@$section_footer_panels": {}
+									}
+								]
+							}
+						}
+					]
+				}
+			}
+		]
+	},
+
+	"settings_content": {
+		"type": "panel",
+		"controls": [
+			{
+				"nav_content": {
+					"type": "panel",
+					"size": [ 180, "100%" ],
+					"max_size": [ "45%", "100%" ],
+					"anchor_from": "top_left", "anchor_to": "top_left",
+					"controls": [
+						{ "selector_area@settings_common.selector_area": { "size": [ "100% - 2px", "100% - 8px" ], "offset": [ 0, 0 ], "anchor_from": "center", "anchor_to": "center" } },
+						{
+							"nav_bg@ii.button_default": { "size": ["100% + 4px", "100% + 4px"], "offset": [ -2, 0 ] }
+						}
+					]
+				}
+			},
+			{
+				"page_content": {
+					"type": "panel",
+					"size": [ "100% - 180px", "100%" ],
+					"anchor_from": "top_right", "anchor_to": "top_right",
+					"controls": [
+						{ "content_area@settings_common.content_area": { "size": [ "100%", "100%" ], "offset": [ 0, 0 ], "anchor_from": "center", "anchor_to": "center" } }
+					]
+				}
+			},
+			{
+				"version_label@ii.version_label": {}
+			}
+		]
+	}
+}

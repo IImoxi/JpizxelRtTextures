@@ -92,6 +92,18 @@
 		]
 	},
 	
+	"version_label": {
+		"type": "label",
+		"alpha": 0.5,
+		"text": "#version",
+		"size": [ "default", 10 ],
+		"anchor_from": "bottom_right",
+		"anchor_to": "bottom_right",
+		"offset": [ -1, 4 ],
+		"font_scale_factor": 0.5,
+		"bindings": [ { "binding_name": "#version" } ]
+	},
+	
 	"left_invisible_button@ii.button_asset": {
 		"layer": 20,
 		"size": [ 32, "100%" ],
@@ -141,6 +153,202 @@
 					"grid_dimensions": [ 9, 1 ],
 					"grid_item_template": "common.grid_item_for_hotbar",
 					"collection_name": "hotbar_items"
+				}
+			}
+		]
+	},
+	
+	// Pack Info
+	
+	"install_guide@ii.button_default": {
+		"size": [ "100%", "100%c + 6px" ],
+		"controls": [
+			{
+				"containter": {
+					"type": "stack_panel",
+					"size": [ "100% - 10px", "100%c" ],
+					"controls": [
+						{
+							"title": {
+								"type": "label",
+								"size": [ "100% - 2px", "default"],
+								"text": "Install / Update", 
+								"text_alignment": "left"
+							}
+						},
+						{
+							"description": {
+								"type": "label",
+								"size": [ "100% - 2px", "default"],
+								"text": "To quickly install or update, open powershell and paste this line...",
+								"text_alignment": "left"
+							}
+						},
+						{
+							"subtitle1": {
+								"type": "label",
+								"size": [ "100% - 2px", "default"],
+								"text": "JPizxel RT",
+								"text_alignment": "left"
+							}
+						},
+						{
+							"code_container@ii.button_highlight": {
+								"size": [ "100%", "100%c + 4px"],
+								"anchor_from": "top_left",
+								"anchor_to": "top_left",
+								"controls": [
+									{
+										"code_label": {
+											"type": "label",
+											"size": [ "100% - 8px", "default"],
+											"text": "iwr -useb https://raw.githubusercontent.com/IImoxi/JpizxelRtTextures/refs/heads/main/install.ps1 | iex",
+											"text_alignment": "left",
+											"layer": 10
+										}
+									}
+								]
+							}
+						},
+						{
+							"subtitle2": {
+								"type": "label",
+								"size": [ "100% - 2px", "default"],
+								"text": "JPizxel Skies",
+								"text_alignment": "left"
+							}
+						},
+						{
+							"skies_container@ii.button_highlight": {
+								"size": [ "100%", "100%c + 4px"],
+								"anchor_from": "top_left",
+								"anchor_to": "top_left",
+								"controls": [
+									{
+										"link_label": {
+											"type": "label",
+											"size": [ "100% - 8px", "default"],
+											"text": "https://github.com/IImoxi/JPizxeL-Skies",
+											"text_alignment": "left",
+											"layer": 10
+										}
+									}
+								]
+							}
+						}
+					]
+				}
+			}
+		]
+	},
+	
+	"features_section@ii.button_default": {
+		"size": [ "100%", "100%c + 6px" ],
+		"controls": [
+			{
+				"containter": {
+					"type": "stack_panel",
+					"size": [ "100% - 10px", "100%c" ],
+					"controls": [
+						{
+							"title": {
+								"type": "label",
+								"size": [ "100% - 2px", "default"],
+								"text": "Pack Features - Base", 
+								"text_alignment": "left"
+							}
+						},
+						{
+							"code_container1@ii.button_highlight": {
+								"size": [ "100%", "100%c + 4px"],
+								"anchor_from": "top_left",
+								"anchor_to": "top_left",
+								"controls": [
+									{
+										"label": {
+											"type": "label",
+											"size": [ "100% - 8px", "default"],
+											"text": "Custom UI\nStart Screen, Pause Screen, Settings Screen, Resource Packs screen, Almost all ingame GUI, Chat screen, Chat settings screen, Brewing stand recipes, HUD screen and more...",
+											"text_alignment": "left",
+											"layer": 10
+										}
+									}
+								]
+							}
+						},
+						{
+							"code_container1@ii.button_highlight": {
+								"size": [ "100%", "100%c + 4px"],
+								"anchor_from": "top_left",
+								"anchor_to": "top_left",
+								"controls": [
+									{
+										"label": {
+											"type": "label",
+											"size": [ "100% - 8px", "default"],
+											"text": "Custom Animations\nLooking, Walking, Bobbing",
+											"text_alignment": "left",
+											"layer": 10
+										}
+									}
+								]
+							}
+						},
+						{
+							"code_container2@ii.button_highlight": {
+								"size": [ "100%", "100%c + 4px"],
+								"anchor_from": "top_left",
+								"anchor_to": "top_left",
+								"controls": [
+									{
+										"label": {
+											"type": "label",
+											"size": [ "100% - 8px", "default"],
+											"text": "Custom Models\nElytra: Fixed thickness, Custom arrow model, Custom bed model, Armor, Fireworks",
+											"text_alignment": "left",
+											"layer": 10
+										}
+									}
+								]
+							}
+						},
+						{
+							"code_container3@ii.button_highlight": {
+								"size": [ "100%", "100%c + 4px"],
+								"anchor_from": "top_left",
+								"anchor_to": "top_left",
+								"controls": [
+									{
+										"label": {
+											"type": "label",
+											"size": [ "100% - 8px", "default"],
+											"text": "Custom Particles\nAll available Particles have java facing direction lookat_xyz -> rotate_xyz\nExplosion effect, Criticals and more",
+											"text_alignment": "left",
+											"layer": 10
+										}
+									}
+								]
+							}
+						},
+						{
+							"code_container4@ii.button_highlight": {
+								"size": [ "100%", "100%c + 4px"],
+								"anchor_from": "top_left",
+								"anchor_to": "top_left",
+								"controls": [
+									{
+										"label": {
+											"type": "label",
+											"size": [ "100% - 8px", "default"],
+											"text": "Special Features\nChat/Anvil screen: Press + to expand textbox to write multiple lines... Press again to send message or rename.",
+											"text_alignment": "left",
+											"layer": 10
+										}
+									}
+								]
+							}
+						}
+					]
 				}
 			}
 		]
