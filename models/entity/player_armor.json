@@ -25,7 +25,10 @@
 				"pivot": [0, 24, 0],
 				"cubes": [
 					{"origin": [-4, 24, -4], "size": [8, 8, 8], "uv": [0, 0], "inflate": 1}
-				]
+				],
+				"locators": {
+					"indicator_locator": [0, 28, 0]
+				}
 			},
 			{
 				"name": "hat",

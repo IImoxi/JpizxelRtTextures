@@ -1,8 +1,8 @@
 {
 	"format_version": "1.16.100",
 	"minecraft:texture_set": {
-		"color": "textures/birch_leaves",
+		"color": "textures/birch_leaves1",
 		"metalness_emissive_roughness": "#0000e0",
-		"normal": "normals/birch_leaves"
+		"normal": "normals/birch_leaves1"
 	}
 }

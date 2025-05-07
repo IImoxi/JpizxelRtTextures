@@ -582,7 +582,7 @@
 					{ "path": "textures/blocks/leaves_spruce2", "weight": 1 } ] },
 				{ "variations": [
 					{ "path": "textures/blocks/leaves_birch", "weight": 1 },
-					{ "path": "textures/blocks/textures/birch_leaves1", "weight": 1 } ] },
+					{ "path": "textures/blocks/leaves_birch1", "weight": 1 } ] },
 				"textures/blocks/leaves_jungle",
 				"textures/blocks/leaves_oak_opaque",
 				"textures/blocks/leaves_spruce_opaque",

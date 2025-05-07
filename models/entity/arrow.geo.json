@@ -87,7 +87,7 @@
 						}
 					],
 					"locators": {
-						"arrow": [0, 0, 14]
+						"indicator_locator": [0, 0, 0]
 					}
 				}
 			]

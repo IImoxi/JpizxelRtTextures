@@ -4,7 +4,7 @@
 		"description": {
 			"identifier": "minecraft:dragon_death_explosion_emitter",
 			"basic_render_parameters": {
-				"material": "particles_alpha",
+				"material": "particles_add",
 				"texture": "textures/particle/particles"
 			}
 		},

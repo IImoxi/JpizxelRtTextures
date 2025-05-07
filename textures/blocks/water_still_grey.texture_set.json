@@ -2,6 +2,7 @@
 	"format_version": "1.16.100",
 	"minecraft:texture_set": {
 		"color": "textures/water_still_grey",
-		"metalness_emissive_roughness": "#dd0000"
+		"metalness_emissive_roughness": "#000000",
+		"normal": "normals/water_still"
 	}
 }
