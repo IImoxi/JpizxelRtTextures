@@ -118,6 +118,14 @@
 				}
 			}
 		]
+	},
+	
+	"resource_packs_section_toggle_base@common_toggles.light_ui_toggle": { 
+		"size": [ "100%", 26 ],
+		"$default_text_color": [ 1, 1, 1 ],
+		"$hover_text_color": [ 1, 1, 1 ],
+		"$default_checked_text_color": [ 1, 1, 1 ],
+		"$hover_checked_text_color": [ 1, 1, 1 ]
 	}
 }
 

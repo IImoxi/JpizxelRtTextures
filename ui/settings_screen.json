@@ -11,7 +11,7 @@
 		"$toggle_view_binding_name": "packinfo_button_toggle",
 		"$glyph_texture": "pack_icon",
 		"$glyph_color_texture": "pack_icon",
-		"$glyph_size": [ 20, 20 ],
+		"$glyph_size": [ 16, 16 ],
 		"$button_text": "JPizxeL",
 		"$toggle_property_bag": {
 			"#panel_title": "options.packinfo.title"
