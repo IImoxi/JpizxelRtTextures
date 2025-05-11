@@ -2,7 +2,7 @@
 	"format_version": "1.16.100",
 	"minecraft:texture_set": {
 		"color": "netherite_1",
-		"metalness_emissive_roughness": "#ff0000",
+		"metalness_emissive_roughness": "mer/netherite_1",
 		"normal": "netherite_1n"
 	}
 }

@@ -1,8 +1,8 @@
 {
 	"format_version": "1.16.100",
 	"minecraft:texture_set": {
-		"color": "diamond_sword",
-		"metalness_emissive_roughness": "mer/diamond_sword",
+		"color": "gold_sword",
+		"metalness_emissive_roughness": "mer/iron_sword",
 		"normal": "normals/sword"
 	}
 }
