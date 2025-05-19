@@ -6,19 +6,19 @@
 		},
 		"distance": {
 			"air": {
-				"fog_start": 0.99,
+				"fog_start": 0.8,
 				"fog_end": 1,
-				"fog_color": "#2c3a4a",
+				"fog_color": "#9ca4bb",
 				"render_distance_type": "render"
 			},
 			"water": {
-				"fog_start": 0.1,
+				"fog_start": 0.01,
 				"fog_end": 32,
 				"fog_color": "#44afb8",
 				"render_distance_type": "fixed"
 			},
 			"weather": {
-				"fog_start": 0.1,
+				"fog_start": 0.01,
 				"fog_end": 0.9,
 				"fog_color": "#303740",
 				"render_distance_type": "render"

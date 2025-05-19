@@ -558,6 +558,53 @@
 
 // Dura Test
 
+	"ii_boss_health_panel": {
+		"type": "stack_panel",
+		"orientation": "vertical",
+		"size": [ "100%", "100%" ],
+		"controls": [
+			{
+				"boss_hud_padding": {
+					"type": "panel",
+					"size": [ "100%", 20 ],
+					"visible": "#boss_hud_padding", //Make this visible to move the boss hud panel down
+					"bindings": [
+						{
+							"binding_name": "#boss_hud_padding",
+							"binding_name_override": "#visible"
+						}
+					]
+				}
+            },
+            {
+				"boss_hud_touch_padding": {
+					"type": "panel",
+					"size": [ "100%", "15%" ],
+					"visible": "#boss_hud_touch_padding", //Make this visible to move the boss hud panel down
+					"bindings": [
+						{
+							"binding_name": "#boss_hud_touch_padding",
+							"binding_name_override": "#visible",
+							"binding_condition": "always"
+						}
+					]
+				}
+            },
+            {
+				"boss_hud_panel": {
+					"type": "panel",
+					"controls": [
+						{
+							"boss_health_grid@boss_health_grid": {
+								"offset": [ 0, 2 ]
+							}
+						}
+					]
+				}
+            }
+        ]
+    },
+
 // Screen
 
 	"root_panel": {
@@ -569,6 +616,7 @@
 			{ "mob_effects_renderer@mob_effects_renderer": { "size": [ "100%", "100%" ], "offset": [ 0, 24 ], "anchor_from": "center", "anchor_to": "center" } },
 			{ "hud_title_text_area": { "type": "panel", "factory": { "name": "hud_title_text_factory", "control_ids": { "hud_title_text": "hud_title_text@hud.hud_title_text" } } } },
 			{ "hud_actionbar_text_area": { "type": "panel", "factory": { "name": "hud_actionbar_text_factory", "control_ids": { "hud_actionbar_text": "hud_actionbar_text@hud.hud_actionbar_text" } } } },
+			{ "ii_boss_health_panel@hud.ii_boss_health_panel": {} },
 			{ "hotbar_panel@hud.hotbar_panel": {} },
 			{ "sidebar@scoreboard.scoreboard_sidebar": {} },
 			{ "chat_panel@hud.ii_chat_panel": {} }
