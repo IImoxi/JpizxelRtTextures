@@ -69,6 +69,11 @@
 		],
 		"controls": [
 			{
+				"max_framerate_slider@general_section.max_framerate_slider": {
+					"ignored": false
+				}
+			},
+			{
 				"install_guide@ii.install_guide": {
 					"anchor_from": "top_middle",
 					"anchor_to": "top_middle"

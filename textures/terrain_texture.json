@@ -265,16 +265,16 @@
 			"textures": [
 				{ "variations": [
 					{ "path": "textures/blocks/tallgrass", "weight": 1 },
-					{ "path": "textures/blocks/textures/tallgrass1", "weight": 1 },
-					{ "path": "textures/blocks/textures/tallgrass2", "weight": 1 },
-					{ "path": "textures/blocks/textures/tallgrass3", "weight": 1 },
-					{ "path": "textures/blocks/textures/tallgrass4", "weight": 1 } ] },
+					{ "path": "textures/blocks/tallgrass1", "weight": 1 },
+					{ "path": "textures/blocks/tallgrass2", "weight": 1 },
+					{ "path": "textures/blocks/tallgrass3", "weight": 1 },
+					{ "path": "textures/blocks/tallgrass4", "weight": 1 } ] },
 				{ "variations": [
 					{ "path": "textures/blocks/tallgrass", "weight": 1 },
-					{ "path": "textures/blocks/textures/tallgrass1", "weight": 1 },
-					{ "path": "textures/blocks/textures/tallgrass2", "weight": 1 },
-					{ "path": "textures/blocks/textures/tallgrass3", "weight": 1 },
-					{ "path": "textures/blocks/textures/tallgrass4", "weight": 1 } ] },
+					{ "path": "textures/blocks/tallgrass1", "weight": 1 },
+					{ "path": "textures/blocks/tallgrass2", "weight": 1 },
+					{ "path": "textures/blocks/tallgrass3", "weight": 1 },
+					{ "path": "textures/blocks/tallgrass4", "weight": 1 } ] },
 				"textures/blocks/fern",
 				"textures/blocks/fern"
 			]
