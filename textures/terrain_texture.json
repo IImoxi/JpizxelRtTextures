@@ -569,7 +569,7 @@
 			
 		"gravel" : { "textures": [ { "variations": [ 
 				{ "path": "textures/blocks/gravel", "weight": 1 },
-				{ "path": "textures/blocks/textures/gravel1", "weight": 1 } ] } ] },
+				{ "path": "textures/blocks/gravel1", "weight": 1 } ] } ] },
 				
 		"ii_leaves": {
 			"textures": [
