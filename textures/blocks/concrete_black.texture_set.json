@@ -2,7 +2,7 @@
 	"format_version": "1.16.100",
 	"minecraft:texture_set": {
 		"color": "textures/black_concrete",
-		"metalness_emissive_roughness": "#0000d0",
+		"metalness_emissive_roughness": "mer/concrete",
 		"normal": "normals/concrete"
 	}
 }

@@ -1,6 +1,7 @@
 {
 	"cherry_leaves" : { "sound" : "cherry_leaves", "textures" : "cherry_leaves", "isotropic" : true },
 	"concretePowder" : { "sound" : "sand", "isotropic" : true, "textures" : "concretePowder" },
+	"concrete" : { "sound" : "stone", "isotropic" : true, "textures" : "concrete" },
 	"gravel" : { "sound" : "gravel", "isotropic" : true, "textures" : "gravel" },
 	"moss_block" : { "sound" : "moss_block", "isotropic" : true, "textures" : "moss_block" },
 	"moss_carpet" : { "sound" : "moss_carpet", "isotropic" : true, "textures" : "moss_block" },
