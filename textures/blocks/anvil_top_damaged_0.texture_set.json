@@ -2,6 +2,7 @@
 	"format_version": "1.16.100",
 		"minecraft:texture_set": {
 		"color": "textures/anvil_top_damaged_0",
-		"metalness_emissive_roughness": "#990077"
+		"metalness_emissive_roughness": "mer/anvil_top_damaged_0",
+		"normal": "normals/anvil_top_damaged_0"
 	}
 }
