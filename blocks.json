@@ -6,6 +6,7 @@
 	"moss_block" : { "sound" : "moss_block", "isotropic" : true, "textures" : "moss_block" },
 	"moss_carpet" : { "sound" : "moss_carpet", "isotropic" : true, "textures" : "moss_block" },
 	"planks" : { "sound" : "wood", "textures" : "planks" },
+	"bookshelf" : { "sound" : "wood", "textures" : { "down" : "bookshelf_top", "side" : "bookshelf", "up" : "bookshelf_top" } },
 	
 	"dirt" : { "isotropic" : true, "sound" : "gravel", "textures" : "ii_dirt" },
 	"stone" : { "sound" : "stone", "textures" : "ii_stone" },

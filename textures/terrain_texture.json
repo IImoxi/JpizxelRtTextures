@@ -8,6 +8,9 @@
 		
 		"crafting_table_bottom" : { "textures" : "textures/blocks/crafting_table_bottom" },
 		
+		"chiseled_bookshelf_top" : { "textures" : "textures/blocks/bookshelf_top" },
+		"bookshelf_top": { "textures": "textures/blocks/bookshelf_top" },
+		
 		"stripped_warped_stem_side" : { "textures" : "textures/blocks/stripped_warped_stem_side" },
 		"stripped_warped_stem_top" : { "textures" : "textures/blocks/stripped_warped_stem_top" },
 		"warped_planks" : { "textures" : "textures/blocks/planks_warped" },
