@@ -22,16 +22,16 @@
 			},
 			"minecraft:particle_motion_dynamic": {
 				"linear_acceleration": [ "variable.particle_age < 0.5 ? 0.0 : Math.random(-0.05, 0.05)", "variable.particle_age < 0.5 ? -9.8 : 1.0", "variable.particle_age < 0.5 ? 0.0 : Math.random(-0.05, 0.05)" ],
-				"linear_drag_coefficient": 2
+				"linear_drag_coefficient": 1
 			},
 			"minecraft:particle_motion_collision": {
 				"collision_drag": 7.5,
 				"coefficient_of_restitution": 0.0,
 				"collision_radius": 0.5,
-				"expire_on_contact": true
+				"expire_on_contact": false
 			},
 			"minecraft:particle_appearance_billboard": {
-				"size": [ "math.min(v.particle_age * 3, 1)", "math.min(v.particle_age * 3, 1)" ],
+				"size": [ "math.min(v.particle_age * 2, 1)", "math.min(v.particle_age * 2, 1)" ],
 				"facing_camera_mode": "lookat_direction",
 				"uv": {
 					"texture_width": 512,
