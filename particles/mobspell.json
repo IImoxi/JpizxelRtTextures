@@ -4,7 +4,7 @@
 		"description": {
 			"identifier": "minecraft:mobspell_emitter",
 			"basic_render_parameters": {
-				"material": "particles_blend",
+				"material": "particles_add",
 				"texture": "textures/particle/swirls"
 			}
 		},
@@ -38,8 +38,8 @@
       },
 
 		"minecraft:particle_appearance_billboard": {
-			"size": [ 0.2, 0.2 ],
-			"facing_camera_mode": "rotate_xyz",
+			"size": [ 1, 1 ],
+			"facing_camera_mode": "lookat_direction",
 
 			"uv": {
 				"texture_width": 64,
@@ -57,8 +57,7 @@
       },
       "minecraft:particle_appearance_tinting": {
         "color": [ "variable.color.r", "variable.color.g", "variable.color.b", "variable.color.a" ]
-      },
-      "minecraft:particle_appearance_lighting": {}
+      }
     }
   }
 }

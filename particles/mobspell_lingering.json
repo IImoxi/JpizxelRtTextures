@@ -4,13 +4,13 @@
 		"description": {
 			"identifier": "minecraft:mobspell_lingering",
 			"basic_render_parameters": {
-				"material": "particles_blend",
+				"material": "particles_add",
 				"texture": "textures/particle/swirls"
 			}
 		},
 		"components": {
 			"minecraft:emitter_rate_instant": {
-				"num_particles": "(Math.pi * variable.cloud_radius * variable.cloud_radius * variable.particle_multiplier) / 2.5"
+				"num_particles": "(Math.pi * variable.cloud_radius * variable.cloud_radius * variable.particle_multiplier) / 5"
 			},
 			"minecraft:emitter_lifetime_once": {
 				"active_time": "variable.cloud_lifetime"
@@ -28,8 +28,8 @@
 				"max_lifetime": "math.random(0.3, 2)"
 			},
 			"minecraft:particle_appearance_billboard": {
-				"size": [ 0.25, 0.25 ],
-				"facing_camera_mode": "facing_xyz",
+				"size": [ 1, 1 ],
+				"facing_camera_mode": "lookat_direction",
 
 				"uv": {
 					"texture_width": 64,
@@ -47,8 +47,7 @@
 			},
 			"minecraft:particle_appearance_tinting": {
 				"color": [ "variable.color.r", "variable.color.g", "variable.color.b", "variable.color.a" ]
-			},
-			"minecraft:particle_appearance_lighting": {}
+			}
 		}
 	}
 }
