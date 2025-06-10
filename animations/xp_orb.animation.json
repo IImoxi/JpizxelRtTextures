@@ -1,0 +1,19 @@
+{
+	"format_version" : "1.8.0",
+	"animations" : {
+		"animation.xp_orb" : {
+			"loop" : true,
+			"bones": {
+				"body": {
+				"rotation": [ "query.camera_rotation(0)", "query.camera_rotation(1)", 0.0 ]
+				}
+			},
+			"particle_effects": {
+				"0": {
+					"effect": "indicator",
+					"locator": "locator"
+				}
+			}
+		}
+	}
+}

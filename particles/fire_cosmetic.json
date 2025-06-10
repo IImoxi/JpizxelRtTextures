@@ -5,7 +5,7 @@
 			"identifier": "ii:fire_cosmetic",
 			"basic_render_parameters": {
 				"material": "particles_add",
-				"texture": "textures/particle/bloom"
+				"texture": "textures/particle/fire"
 			}
 		},
 		"components": {

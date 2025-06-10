@@ -5,7 +5,7 @@
 			"identifier": "ii:blue_fire",
 			"basic_render_parameters": {
 				"material": "particles_add",
-				"texture": "textures/particle/bloom"
+				"texture": "textures/particle/fire"
 			}
 		},
 		"curves": {
