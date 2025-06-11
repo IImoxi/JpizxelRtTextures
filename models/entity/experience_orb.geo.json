@@ -13,10 +13,10 @@
 			"bones": [
 				{
 					"name": "body",
-					"pivot": [8, 8, 0],
+					"pivot": [0, 8, 0],
 					"cubes": [
 						{
-							"origin": [0, 0, 0],
+							"origin": [-8, 0, 0],
 							"size": [16, 16, 0],
 							"uv": {
 								"south": {"uv": [0, 0], "uv_size": [16, 16]}
@@ -24,7 +24,7 @@
 						}
 					],
 					"locators": {
-						"locator": [8, 8, 0.5]
+						"locator": [0, 8, 0.5]
 					}
 				}
 			]
