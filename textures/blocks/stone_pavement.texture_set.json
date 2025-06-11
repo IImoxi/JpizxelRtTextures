@@ -1,0 +1,8 @@
+{
+ 	"format_version": "1.16.100",
+	"minecraft:texture_set": {
+		"color": "textures/stone_pavement",
+		"metalness_emissive_roughness": "#0000e0"
+		//"normal": "normals/acacia_trapdoor"
+	}
+}

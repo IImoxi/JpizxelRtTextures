@@ -283,6 +283,10 @@
 			]
 		},
 		
+		"stone_pavement" : { "textures": [ { "variations": [ 
+			{ "path": "textures/blocks/stone_pavement", "weight": 3 },
+			{ "path": "textures/blocks/stone_pavement1", "weight": 1 } ] } ] },
+		
 		"hardened_clay" : { "textures" : "textures/blocks/hardened_clay" },
 		"clay" : { "textures" : "textures/blocks/clay" },
 		"azalea_plant" : { "textures" : "textures/blocks/azalea_plant" },
@@ -530,6 +534,18 @@
 				{ "path": "textures/blocks/log_spruce2", "weight": 1 } ] }
 			]
 		},
+		
+		"oak_vertical_planks" : { "textures" : "textures/blocks/textures/oak_vertical_planks" },
+		"birch_vertical_planks" : { "textures" : "textures/blocks/textures/birch_vertical_planks" },
+		"spruce_vertical_planks" : { "textures" : "textures/blocks/textures/spruce_vertical_planks" },
+		"jungle_vertical_planks" : { "textures" : "textures/blocks/textures/jungle_vertical_planks" },
+		"cherry_vertical_planks" : { "textures" : "textures/blocks/textures/cherry_vertical_planks" },
+		"acacia_vertical_planks" : { "textures" : "textures/blocks/textures/acacia_vertical_planks" },
+		"warped_vertical_planks" : { "textures" : "textures/blocks/textures/warped_vertical_planks" },
+		"crimson_vertical_planks" : { "textures" : "textures/blocks/textures/crimson_vertical_planks" },
+		"mangrove_vertical_planks" : { "textures" : "textures/blocks/textures/mangrove_vertical_planks" },
+		"pale_oak_vertical_planks" : { "textures" : "textures/blocks/textures/pale_oak_vertical_planks" },
+		"dark_oak_vertical_planks" : { "textures" : "textures/blocks/textures/dark_oak_vertical_planks" },
 		
 		"planks": {
 			"textures": [
