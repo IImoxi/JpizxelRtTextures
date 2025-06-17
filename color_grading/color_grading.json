@@ -1,40 +1,30 @@
 {
-  "format_version": "1.21.40",
-  "minecraft:color_grading_settings": {
-    "description": {
-      "identifier": "minecraft:default_color_grading"
-    },
-    "color_grading": {
-      "midtones": {
-        "contrast": [
-          1.2,
-          1.2,
-          1.2
-        ],
-        "gain": [
-          1.0,
-          1.0,
-          1.0
-        ],
-        "gamma": [
-          2.0,
-          2.0,
-          2.1
-        ],
-        "offset": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "saturation": [
-          0.8,
-          0.8,
-          0.8
-        ]
-      }
-    },
-    "tone_mapping": {
-      "operator": "aces"
-    }
-  }
+	"format_version": "1.21.40",
+	"minecraft:color_grading_settings": {
+		"description": {
+		"identifier": "minecraft:default_color_grading"
+		},
+		"color_grading": {
+			"midtones": {
+				"contrast": 	[ 1.0, 1.0, 1.0 ],
+				"gain":		[ 1.0, 1.0, 1.0 ],
+				"gamma": 	[ 1.0, 1.0, 1.0 ],
+				"offset": 		[ 0.0, 0.0, 0.2 ],
+				"saturation": 	[ 1.0, 1.0, 1.0 ]
+			},
+			"enabled": {
+				"enabled": 		false,
+				"highlightsMin": 	2.0,
+				"gamma": 		[ 1.5, 1.5, 1.5 ],
+			},
+			"temperature": {
+				"enabled": true,
+				"temperature": 6000,
+				"type": "color_temperature"
+			}
+		},
+		"tone_mapping": {
+			"operator": "Reinhard"
+		}
+	}
 }

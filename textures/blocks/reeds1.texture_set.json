@@ -1,7 +1,7 @@
 {
-	"format_version": "1.16.100",
+	"format_version": "1.21.30",
 	"minecraft:texture_set": {
 		"color": "textures/reeds1",
-		"metalness_emissive_roughness": "#000099"
+		"metalness_emissive_roughness_subsurface": "#B0000099"
 	}
 }

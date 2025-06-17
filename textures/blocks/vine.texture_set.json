@@ -1,8 +1,8 @@
 {
-	"format_version": "1.16.100",
+	"format_version": "1.21.30",
 	"minecraft:texture_set": {
 		"color": "textures/vine",
-		"metalness_emissive_roughness": "#0000a0",
+		"metalness_emissive_roughness_subsurface": "#400000a0",
 		"normal": "normals/vine"
 	}
 }

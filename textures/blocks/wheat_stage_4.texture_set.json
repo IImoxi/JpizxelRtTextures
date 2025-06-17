@@ -1,7 +1,7 @@
 {
- "format_version": "1.16.100",
-  "minecraft:texture_set": {
-  "color": "textures/wheat_stage_4",
-  "metalness_emissive_roughness": "#0000e0"
- }
+	"format_version": "1.21.30",
+	"minecraft:texture_set": {
+		"color": "textures/wheat_stage_4",
+		"metalness_emissive_roughness_subsurface": "#FF0000e0"
+	}
 }
