@@ -1,59 +1,60 @@
 {
-  "format_version": "1.21.80",
-  "minecraft:lighting_settings": {
-    "description": {
-      "identifier": "minecraft:default_lighting"
-    },
-    "directional_lights": {
-      "orbital": {
-        "sun": {
-          "illuminance": {
-            "0.65": 0.0,
-            "0.73": 1.0,
-            "0.745": 10.0,
-            "0.75": 130.0,
-            "0.80": 220.0,
-            "1.19": 220.0,
-            "1.2": 0.0,
-          },
-          "color": {
-            "0.60": [ 255, 80, 0 ],
-            "0.72": [ 255, 95, 20 ],
-            "0.75": [ 255, 130, 50 ],
-			"0.82": [ 255, 215, 170 ],
-            "1.18": [ 255, 215, 170 ],
-            "1.25": [ 255, 95, 50 ],
-            "1.28": [ 255, 0, 0 ],
-            "1.40": [ 255, 10, 0 ]
-          }
-        },
-        "moon": {
-          "illuminance": {
-            "0.0": 1,
-            "1.395": 1,
-            "1.4": 100,
-            "1.405": 1,
-          },
-          "color": {
-            "0.0": [ 255, 150, 70 ]
-          }
-        },
-        "orbital_offset_degrees": 15.0
-      },
-      "flash": {
-        "illuminance": 0.4,
-        "color": [ 255, 0, 255 ]
-      }
-    },
-    "emissive": {
-      "desaturation": 0.4
-    },
-    "ambient": {
-      "color": "#FFFFFF",
-      "illuminance": 0.8
-    },
-    "sky": {
-      "intensity": 1.0
-    }
-  }
+	"format_version": "1.21.80",
+	"minecraft:lighting_settings": {
+		"description": {
+			"identifier": "minecraft:default_lighting"
+		},
+		"directional_lights": {
+		"orbital": {
+			"sun": {
+			"illuminance": {
+				"0.125": 220.0,
+				"0.25": 100.0,
+				"0.26": 10.0,
+				"0.29": 0.0,
+				"0.71": 0.0,
+				"0.74": 10.0,
+				"0.75": 100.0,
+				"0.875": 220.0
+			},
+			"color": {
+				"0.18": [ 255, 215, 170 ],
+				"0.25": [ 255, 130, 40 ],
+				"0.26": [ 60, 10, 10 ],
+				"0.60": [ 0, 15, 20 ],
+				"0.60": [ 0, 15, 20 ],
+				"0.73": [ 60, 10, 10 ],
+				"0.75": [ 255, 130, 40 ],
+				"0.82": [ 255, 215, 170 ]
+			}
+			},
+			"moon": {
+				"illuminance": {
+					"0.24": 0.00,
+					"0.25": 1.00,
+					"0.75": 1.00,
+					"0.76": 0.00
+				},
+				"color": {
+					"0.0": [ 200, 220, 255 ]
+				}
+			},
+			"orbital_offset_degrees": 25.0
+		},
+		"flash": {
+			"illuminance": 0.4,
+			"color": [ 255, 0, 255 ]
+			}
+		},
+		"emissive": {
+			"desaturation": 0.4
+		},
+		"ambient": {
+			"color": "#FFFFFF",
+			"illuminance": 0.1
+		},
+		"sky": {
+			"intensity": 0.3
+		}
+	}
 }

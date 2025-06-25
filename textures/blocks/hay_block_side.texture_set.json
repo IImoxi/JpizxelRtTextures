@@ -2,7 +2,7 @@
 	"format_version": "1.21.30",
 	"minecraft:texture_set": {
 		"color": "textures/hay_block_side",
-		"metalness_emissive_roughness": "mer/hay_block_side",
+		"metalness_emissive_roughness_subsurface": "mer/hay_block_side",
 		"normal": "normals/hay_block_side"
 	}
 }

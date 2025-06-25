@@ -1,7 +1,7 @@
 {
- "format_version": "1.21.30",
-  "minecraft:texture_set": {
-  "color": "textures/flower_paeonia",
-  "metalness_emissive_roughness": "#0000a0"
- }
+	"format_version": "1.21.30",
+	"minecraft:texture_set": {
+		"color": "textures/flower_paeonia",
+		"metalness_emissive_roughness": "mer/tallgrass"
+	}
 }

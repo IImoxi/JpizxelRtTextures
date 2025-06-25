@@ -10,7 +10,10 @@
       },
       "minecraft:water_appearance": {
         "surface_color": "#0677ce"
-      }
+      },
+	  "minecraft:atmosphere_identifier": {
+				"atmosphere_identifier": "minecraft:default_atmospherics"
+			}
     }
   }
 }

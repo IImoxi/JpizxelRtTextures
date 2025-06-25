@@ -2,7 +2,7 @@
 	"format_version": "1.21.30",
 	"minecraft:texture_set": {
 		"color": "textures/pale_moss",
-		"metalness_emissive_roughness": "mer/moss_block",
+		"metalness_emissive_roughness_subsurface": "mer/moss_block",
 		"normal": "normals/moss_block"
 	}
 }

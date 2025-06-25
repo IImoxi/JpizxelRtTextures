@@ -2,7 +2,7 @@
 	"format_version": "1.21.30",
 	"minecraft:texture_set": {
 		"color": "textures/oak_leaves",
-		"metalness_emissive_roughness": "mer/oak_leaves",
+		"metalness_emissive_roughness_subsurface": "mer/oak_leaves",
 		"normal": "normals/oak_leaves"
 	}
 }

@@ -2,7 +2,7 @@
 	"format_version": "1.21.30",
 	"minecraft:texture_set": {
 		"color": "textures/pale_hanging_moss_middle",
-		"metalness_emissive_roughness": "#0000ff",
+		"metalness_emissive_roughness_subsurface": "#FF0000ff",
 		"normal": "normals/glass"
 	}
 }

@@ -1,7 +1,7 @@
 {
- "format_version": "1.21.30",
-  "minecraft:texture_set": {
-    "color": "textures/double_plant_grass_bottom",
-    "metalness_emissive_roughness": "mer/double_plant_grass_bottom"
-  }
+	"format_version": "1.21.30",
+	"minecraft:texture_set": {
+		"color": "textures/double_plant_grass_bottom",
+		"metalness_emissive_roughness_subsurface": "mer/double_plant_grass_bottom"
+	}
 }

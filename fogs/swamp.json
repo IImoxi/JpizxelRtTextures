@@ -7,9 +7,14 @@
 		"volumetric": {
 			"density": {
 				"air": {
-					"max_density": 0.005,
+					"max_density": 0.05,
 					"max_density_height": 63,
 					"zero_density_height": 256
+				},
+				"water": {
+					"max_density": 0.5,
+					"max_density_height": 58,
+					"zero_density_height": 70
 				}
 			},
 			"media_coefficients": {

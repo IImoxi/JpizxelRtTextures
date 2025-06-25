@@ -2,7 +2,7 @@
  	"format_version": "1.21.30",
 	"minecraft:texture_set": {
 		"color": "textures/leaf_litter",
-		"metalness_emissive_roughness": "mer/leaf_litter",
+		"metalness_emissive_roughness_subsurface": "mer/leaf_litter",
 		"normal": "normals/leaf_litter"
 	}
 }
