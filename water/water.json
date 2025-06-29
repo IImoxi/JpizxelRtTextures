@@ -5,7 +5,7 @@
       "identifier": "minecraft:default_water"
     },
     "particle_concentrations": {
-      "chlorophyll": 0.05,
+      "chlorophyll": 0.2,
       "suspended_sediment": 0.1,
       "cdom": 0.1
     },
@@ -13,7 +13,7 @@
       "enabled": true,
       "frame_length": 0.09,
       "scale": 0.5,
-      "power": 1
+      "power": 1.0
     },
     "waves": {
       "enabled": true,

@@ -5,17 +5,35 @@
 		"identifier": "ii:pale_garden_grade"
 		},
 		"color_grading": {
-			"midtones": {
-				"contrast": 	[ 1.0, 1.0, 1.0 ],
-				"gain":		[ 1.0, 1.0, 1.0 ],
-				"gamma": 	[ 1.0, 1.0, 1.0 ],
+			"highlights": {
+				"enabled": true,
+				"highlightsMin": 1.8,
+				"contrast": 	[ 1.1, 1.1, 1.1 ],
+				"gain":         [ 1.15, 1.1, 1.05 ],
+				"gamma": 		[ 1.0, 1.0, 1.0 ],
 				"offset": 		[ 0.0, 0.5, 0.8 ],
 				"saturation": 	[ 0.4, 0.4, 0.4 ]
 			},
+			"midtones": {
+				"contrast": 	[ 1.1, 1.1, 1.1 ],
+				"gain":         [ 0.95, 0.97, 1.0 ],
+				"gamma": 		[ 1.0, 1.0, 1.0 ],
+				"offset": 		[ 0.0, 0.5, 0.8 ],
+				"saturation": 	[ 0.4, 0.4, 0.4 ]
+			},
+			"shadows": {
+				"enabled": true,
+				"shadowsMax": 0.25,
+				"contrast": 	[ 1.05, 1.05, 1.05 ],
+				"gain":			[ 0.92, 0.92, 0.92 ],
+				"gamma": 		[ 1.0, 1.0, 1.0 ],
+				"offset": 		[ 0.0, 0.5, 0.8 ],
+				"saturation": 	[ 0.3, 0.3, 0.3 ]
+			},
 			"temperature": {
 				"enabled": true,
-				"temperature": 7000,
-				"type": "color_temperature"
+				"temperature": 8000,
+				"type": "white_balance"
 			}
 		},
 		"tone_mapping": {

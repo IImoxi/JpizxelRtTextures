@@ -7,32 +7,32 @@
 		"color_grading": {
 			"highlights": {
 				"enabled": true,
-				"highlightsMin": 1.8,  // Reduced for softer highlight roll-off
-				"contrast":     [ 1.1, 1.1, 1.1 ],  // Lower contrast for dreamy look
-				"gain":         [ 1.15, 1.1, 1.05 ],  // Slightly boosted with warm bias
-				"gamma":       [ 2.2, 2.2, 2.2 ],  // Softer gamma
-				"offset":       [ 0.02, 0.03, 0.04 ],  // Subtle color offset
-				"saturation":   [ 0.8, 0.8, 0.8 ]  // Desaturated highlights
+				"highlightsMin": 1.8,
+				"contrast":     [ 1.1, 1.1, 1.1 ],
+				"gain":         [ 1.15, 1.1, 1.05 ],
+				"gamma":		[ 2.0, 2.0, 2.0 ],
+				"offset":       [ 0.02, 0.03, 0.04 ],
+				"saturation":   [ 1.0, 1.0, 1.0 ]
 			},
 			"midtones": {
-				"contrast":     [ 1.1, 1.1, 1.1 ],  // Reduced contrast
-				"gain":         [ 0.95, 0.97, 1.0 ],  // Cooler midtones
-				"gamma":       [ 2.3, 2.3, 2.3 ],  // Softened
-				"offset":       [ 0.01, 0.01, 0.0 ],  // Tiny lift
-				"saturation":   [ 0.7, 0.7, 0.7 ]  // Desaturated
+				"contrast":     [ 1.1, 1.1, 1.1 ],
+				"gain":         [ 0.95, 0.97, 1.0 ],
+				"gamma":		[ 2.1, 2.1, 2.1 ],
+				"offset":       [ 0.01, 0.01, 0.0 ],
+				"saturation":   [ 0.9, 0.9, 0.9 ]
 			},
 			"shadows": {
 				"enabled": true,
-				"shadowsMax": 0.25,  // Slightly raised shadows
-				"contrast":     [ 1.05, 1.05, 1.05 ],  // Very low contrast
-				"gain":         [ 0.9, 0.92, 0.95 ],  // Cool shadows
-				"gamma":       [ 2.0, 2.0, 2.0 ],  // Flattened
-				"offset":       [ 0.03, 0.02, 0.01 ],  // Lifted shadows
-				"saturation":   [ 0.3, 0.3, 0.3 ]  // Slightly more saturation than before
+				"shadowsMax": 0.25,
+				"contrast":     [ 1.05, 1.05, 1.05 ],
+				"gain":         [ 0.9, 0.92, 0.95 ],
+				"gamma":		[ 1.8, 1.8, 1.8 ],
+				"offset":       [ 0.03, 0.02, 0.01 ],
+				"saturation":   [ 0.4, 0.4, 0.4 ]
 			},
 			"temperature": {
 				"enabled": true,
-				"temperature": 5500,  // Slightly warmer
+				"temperature": 7000,
 				"type": "color_temperature"
 			}
 		},
