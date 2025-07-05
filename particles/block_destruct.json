@@ -8,18 +8,7 @@
 				"texture": "atlas.terrain"
 			}
 		},
-		"events": {
-				"dust": {
-					"particle_effect": {
-						"effect": "ii:block_dust",
-						"type": "particle"
-					}
-				}
-			},
 		"components": {
-			"minecraft:particle_lifetime_events": {
-				"expiration_event": "dust"
-			},
 			"minecraft:emitter_rate_instant": {
 				"num_particles": "variable.emitter_intensity * variable.emitter_intensity * (variable.emitter_intensity) / 1.5"
 			},
