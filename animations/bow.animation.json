@@ -14,10 +14,13 @@
       "loop": true,
       "bones": {
         "rightitem": {
-          "position": [ -1.0, -1.0, -1.5 ],
-          "rotation": [ -51.0, 8.0, 35.0 ]
+          "position": [ "1 + math.max(variable.charge_amount * -2, -1.0)", "0.2 + math.max(variable.charge_amount * -6, -3.0)", "0.5 + math.min(variable.charge_amount * 2, 1)" ],
+          "rotation": [ "math.max(variable.charge_amount * -102, -51.0)", "math.min(variable.charge_amount * 16, 8.0)", "math.min(variable.charge_amount * 70, 35)" ]
         }
       }
     }
   }
 }
+// variable.charge_amount > 0.3 ? 0 : 1
+//			"position": [ "1 + math.max(variable.charge_amount * -4, -1.0)", "0.2 + math.max(variable.charge_amount * -4, -1.0)", "0.5 + math.max(variable.charge_amount * -6, -1.5)" ],
+//          "rotation": [ "math.max(query.anim_time * -204, -51.0)", "math.min(query.anim_time * 32, 8.0)", "math.min(query.anim_time * 140, 35)" ]
