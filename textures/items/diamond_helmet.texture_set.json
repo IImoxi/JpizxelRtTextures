@@ -1,8 +1,8 @@
 {
-	"format_version": "1.16.100",
+	"format_version": "1.21.30",
 	"minecraft:texture_set": {
 		"color": "diamond_helmet",
-		"metalness_emissive_roughness": "#ff0000",
+		"metalness_emissive_roughness_subsurface": "#FF0000FF",
 		"normal": "normals/diamond_helmet"
 	}
 }

@@ -2,7 +2,7 @@
 	"format_version": "1.16.100",
 	"minecraft:texture_set": {
 		"color": "diamond_1",
-		"metalness_emissive_roughness": "#ff0000",
+		"metalness_emissive_roughness": "mer/diamond_1",
 		"normal": "diamond_1n"
 	}
 }

@@ -2,7 +2,7 @@
 	"format_version": "1.16.100",
 	"minecraft:texture_set": {
 		"color": "gold_sword",
-		"metalness_emissive_roughness": "mer/iron_sword",
+		"metalness_emissive_roughness": "mer/gold_sword",
 		"normal": "normals/sword"
 	}
 }

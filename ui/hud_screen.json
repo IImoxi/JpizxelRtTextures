@@ -102,8 +102,8 @@
 					"anchor_from": "top_middle",
 					"anchor_to": "bottom_middle",
 					"controls": [
-						{ "empty_progress_bar@hud.empty_progress_bar": { "size": [ 182, 5 ], "layer": 1 } },
-						{ "full_progress_bar@hud.full_progress_bar": { "size": [ 182, 5 ], "layer": 2 } },
+						{ "empty_progress_bar@hud.empty_progress_bar": { "size": [ 182, 5 ], "layer": 1, "texture": "textures/ui/xp_bar" } },
+						{ "full_progress_bar@hud.full_progress_bar": { "size": [ 182, 5 ], "layer": 2, "texture": "textures/ui/xp_bar_full", "clip_pixelperfect": true } },
 						{ "progress_text_label@hud.progress_text_label": { "layer": 3, "color": [ 0.9, 0.9, 0.9 ] } }
 					],
 					"bindings": [
