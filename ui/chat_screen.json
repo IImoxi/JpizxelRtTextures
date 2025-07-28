@@ -512,10 +512,6 @@
 	"mute_button_default@ii.iibutton_default": {
 	"controls": [ { "icon": { "type": "image", "size": [ 18, 18 ], "texture": "textures/gui/icons/mute_icon" } } ] },
 	"mute_button_hover@ii.iibutton_highlight": {
-	"controls": [ { "icon": { "type": "image", "size": [ 18, 18 ], "texture": "textures/gui/icons/mute_icon" } } ] },
-	"unmute_button_default@ii.iibutton_default": {
-	"controls": [ { "icon": { "type": "image", "size": [ 18, 18 ], "texture": "textures/gui/icons/unmute_icon" } } ] },
-	"unmute_button_hover@ii.iibutton_highlight": {
 	"controls": [ { "icon": { "type": "image", "size": [ 18, 18 ], "texture": "textures/gui/icons/unmute_icon" } } ] },
 	
 	
@@ -524,9 +520,9 @@
 		"$template_toggle": "ii.toggle",
 		"anchor_from": "top_left",
 		"anchor_to": "top_left",
-		"$unchecked_control": "chat.unmute_button_default",
+		"$unchecked_control": "chat.mute_button_default",
 		"$checked_control": "chat.mute_button_default",
-		"$unchecked_hover_control": "chat.unmute_button_hover",
+		"$unchecked_hover_control": "chat.mute_button_hover",
 		"$checked_hover_control": "chat.mute_button_hover",
 		"$toggle_name": "hide_chat",
 		"$offset": "@ii_mute_button_offset_in",
