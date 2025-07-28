@@ -43,7 +43,7 @@
 			{
 				"root_panel@common.root_panel": {
 					"size": [ 176, 168 ],
-					"layer": 1,
+					"layer": 2,
 					"controls": [
 						{ "common_panel@chest.chest_gui": { "size": [ 176, 168 ] } },
 						{

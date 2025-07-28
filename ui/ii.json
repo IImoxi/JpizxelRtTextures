@@ -7,6 +7,9 @@
 	"iibutton_default": { "type": "image", "texture": "textures/gui/buttons/iibutton_default" },
 	"iibutton_highlight": { "type": "image", "texture": "textures/gui/buttons/iibutton_highlight" },
 	
+	"left_invisible_button_hover": { "type": "image", "size": [ 32, "100%" ], "texture": "textures/gui/buttons/left_invisible_button", "layer": 0 },
+	"right_invisible_button_hover": { "type": "image", "size": [ 32, "100%" ], "texture": "textures/gui/buttons/right_invisible_button", "layer": 0 },
+	
 	"empty": { "type": "panel" },
 	
 	"purple_dialog": { "type": "image", "size": [ "100%", "100%" ], "texture": "textures/ui/purpleBorder", "layer": 0 },
@@ -105,18 +108,28 @@
 	},
 	
 	"left_invisible_button@ii.button_asset": {
-		"layer": 20,
+		"layer": 22,
 		"size": [ 32, "100%" ],
 		"anchor_from": "top_left",
 		"anchor_to": "top_left",
-		"offset": [ 0, 0 ]
+		"offset": [ 0, 0 ],
+		"$hover_state": false,
+		"$locked_alpha": 0.1,
+		"controls": [
+			{ "hover@ii.left_invisible_button_hover": {} }
+		]
 	},
 	"right_invisible_button@ii.button_asset": {
-		"layer": 20,
+		"layer": 22,
 		"size": [ 32, "100%" ],
 		"anchor_from": "top_right",
 		"anchor_to": "top_right",
-		"offset": [ 0, 0 ]
+		"offset": [ 0, 0 ],
+		"$hover_state": false,
+		"$locked_alpha": 0.1,
+		"controls": [
+			{ "hover@ii.right_invisible_button_hover": {} }
+		]
 	},
 
 	"button_asset@common.button": {
@@ -126,6 +139,7 @@
 		"$locked_button_texture|default": "textures/gui/buttons/iibutton_default",
 		"$default_content_alpha": 1,
 		"$hover_content_alpha": 1,
+		"$hover_state": false,
 		"locked_control": "locked",
 		"$default_font|default": "default",
 		"$font_type": "$default_font",

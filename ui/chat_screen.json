@@ -336,6 +336,7 @@
 	"ii_settings_button_offset_in": { "anim_type": "offset", "easing": "out_expo",  "duration": 0.5, "from": [ 3, -9 ], "to": [ 3, 3 ] },
 	"ii_expand_button_offset_in": { "anim_type": "offset", "easing": "out_expo",  "duration": 0.5, "from": [ 21, -9 ], "to": [ 21, 3 ] },
 	"ii_commands_button_offset_in": { "anim_type": "offset", "easing": "out_expo",  "duration": 0.5, "from": [ 39, -9 ], "to": [ 39, 3 ] },
+	"ii_mute_button_offset_in": { "anim_type": "offset", "easing": "out_expo",  "duration": 0.5, "from": [ 57, -9 ], "to": [ 57, 3 ] },
 	// Animations Bottom
 	"ii_alpha_05_00_08":  { "anim_type": "alpha",  "easing": "out_quint", "duration": 0.5, "from": 0, "to": 0.8 },
 	"ii_alpha_05_08_00":  { "anim_type": "alpha",  "easing": "out_quint", "duration": 0.5, "from": 0.8, "to": 0, "play_event": "screen.exit_pop", "end_event": "screen.exit_end" },
@@ -507,6 +508,38 @@
 			{ "$toggle_view_binding_name@$template_toggle": {} }
 		]
 	},
+	
+	"mute_button_default@ii.iibutton_default": {
+	"controls": [ { "icon": { "type": "image", "size": [ 18, 18 ], "texture": "textures/gui/icons/mute_icon" } } ] },
+	"mute_button_hover@ii.iibutton_highlight": {
+	"controls": [ { "icon": { "type": "image", "size": [ 18, 18 ], "texture": "textures/gui/icons/mute_icon" } } ] },
+	"unmute_button_default@ii.iibutton_default": {
+	"controls": [ { "icon": { "type": "image", "size": [ 18, 18 ], "texture": "textures/gui/icons/unmute_icon" } } ] },
+	"unmute_button_hover@ii.iibutton_highlight": {
+	"controls": [ { "icon": { "type": "image", "size": [ 18, 18 ], "texture": "textures/gui/icons/unmute_icon" } } ] },
+	
+	
+	"mute_button": {
+		"type": "panel",
+		"$template_toggle": "ii.toggle",
+		"anchor_from": "top_left",
+		"anchor_to": "top_left",
+		"$unchecked_control": "chat.unmute_button_default",
+		"$checked_control": "chat.mute_button_default",
+		"$unchecked_hover_control": "chat.unmute_button_hover",
+		"$checked_hover_control": "chat.mute_button_hover",
+		"$toggle_name": "hide_chat",
+		"$offset": "@ii_mute_button_offset_in",
+		"$option_binding_name": "#hide_chat",
+		"size": [ 16, 16 ],
+		"propagate_alpha": true,
+		"$focus_id": "mute_all_toggle_focus_id",
+		"$focus_override_up": "reset_button_focus_id",
+		"alpha": "@ii_button_alpha_in",
+		"controls": [
+			{ "$toggle_view_binding_name@$template_toggle": {} }
+		]
+	},
 
 	"exit_button@common_buttons.light_text_button": {
 		"layer": 10,
@@ -531,6 +564,15 @@
 			{ "from_button_id": "button.menu_cancel", "to_button_id": "button.chat_menu_cancel", "mapping_type": "global" }
 		]
 	},
+	
+	"right_invisible_button@ii.button_asset": {
+		"layer": 20,
+		"size": [ 32, "100%" ],
+		"anchor_from": "top_right",
+		"anchor_to": "top_right",
+		"$hover_button_texture": "client/highlight",
+		"offset": [ 0, 0 ]
+	},
 
 	"chat_screen_content": {
 		"type": "panel",
@@ -542,12 +584,14 @@
 			{ "cmd_t@chat.cmd_t": { "layer": 4 } },
 			
 			{ "settings_button@chat.settings_button": {} },
+			{ "mute_button@chat.mute_button": {} },
 			{ "expand_chat_button@chat.expand_chat_button": {} },
 			{ "commands_button@chat.commands_button": {} },
 			
 			{ "host_main_panel@host_options.host_panel": { "layer": 5 } },
 			{ "popup_factory@chat_settings.popup_factory": {} },
-			{ "exit@chat.exit_button": {} }
+			{ "right_invisible_button@ii.right_invisible_button": { "size": [ 32, "100% - 18px"], "$pressed_button_name": "button.menu_exit" } }
+			//{ "exit@chat.exit_button": {} }
 		]
 	}
 }
