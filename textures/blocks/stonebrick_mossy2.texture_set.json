@@ -1,0 +1,8 @@
+{
+	"format_version": "1.21.30",
+	"minecraft:texture_set": {
+		"color": "textures/mossy_stone_bricks2",
+		"metalness_emissive_roughness": "mer/mossy_stone_bricks",
+		"normal": "normals/mossy_stone_bricks"
+	}
+}

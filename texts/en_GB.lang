@@ -31,9 +31,10 @@ options.raytracing.disabled.upsell.unsupported_platform=Unsupported platform or 
 options.fancyskies=Custom Sky	#
 options.fov.toggle=Dynamic FOV	#
 options.uiprofile.classic=Default §8(Recommended)	#
-options.uiprofile.pocket=Pocket §8(Unsupported on this pack)	#
+options.uiprofile.pocket=Pocket §8(May have issues with this UI)	#
 
 accessibility.chat.howtoopen=§7Welcome! Press §6%s §7to open chat. 	#
+gameTip.emote.mouse=§7Press or hold §6:_input_key.emote: §7to emote.	#
 
 disconnectionScreen.cantConnect=Connection refused	#
 disconnectionScreen.serverFull=Server full	#

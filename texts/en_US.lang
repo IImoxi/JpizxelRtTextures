@@ -7,23 +7,23 @@ pauseScreen.playersTitle=%s	#
 deathScreen.message=§cWASTED	#
 deathScreen.quit=Main menu	#
 
-death.attack.anvil=§l§6%1$s §r7was squashed by a falling anvil	#
-death.attack.mob=§l§6%1$s §r§7was slain by §l§6%2$s	#
-death.attack.onFire=§l§6%1$s §r§7burned to death	#
-death.attack.onFire.player=§l§6%1$s §r§7was burnt to a crisp whilst fighting §r§6%2$s	#
-death.fell.accident.generic=§6§l%1$s §r§7fell from a high place	#
-death.attack.outOfWorld=§l§6%1$s §r§7fell out of the world	#
-death.attack.player=§l§6%1$s §r§7was slain by §l§6%2$s	#
-death.attack.player.item=§l§6%1$s §r§7was slain by §l§6%2$s §r§7using §6%3$s	#
-death.attack.generic=§l§6%1$s §r§7died	#
-death.attack.explosion=§l§6%1$s §r§7blew up
+death.attack.anvil=§6%1$s §r7was squashed by a falling anvil	#
+death.attack.mob=§6%1$s §r§7was slain by §6%2$s	#
+death.attack.onFire=§6%1$s §r§7burned to death	#
+death.attack.onFire.player=§6%1$s §r§7was burnt to a crisp whilst fighting §r§6%2$s	#
+death.fell.accident.generic=§6%1$s §r§7fell from a high place	#
+death.attack.outOfWorld=§6%1$s §r§7fell out of the world	#
+death.attack.player=§6%1$s §r§7was slain by §6%2$s	#
+death.attack.player.item=§6%1$s §r§7was slain by §6%2$s §r§7using §6%3$s	#
+death.attack.generic=§6%1$s §r§7died	#
+death.attack.explosion=§6%1$s §r§7blew up
 death.attack.inWall=§6%1$s §r§7suffocated in a wall...	#
 
-death.attack.lava=§l§6%1$s §r§7tried to swim in lava	#
-death.attack.inFire=§l§6%1$s §r§7went up in flames	#
+death.attack.lava=§6%1$s §r§7tried to swim in lava	#
+death.attack.inFire=§6%1$s §r§7went up in flames	#
 
-death.attack.magic=§l§6%1$s §r§7was killed by magic	#
-death.attack.indirectMagic=§l§6%1$s §r§7was killed by §l§6%2$s §r§7using magic	#
+death.attack.magic=§6%1$s §r§7was killed by magic	#
+death.attack.indirectMagic=§6%1$s §r§7was killed by §6%2$s §r§7using magic	#
 
 map.position=§6%s§8, §6%s§8, §6%s	#
 
@@ -31,9 +31,10 @@ options.raytracing.disabled.upsell.unsupported_platform=Unsupported platform or 
 options.fancyskies=Custom Sky	#
 options.fov.toggle=Dynamic FOV	#
 options.uiprofile.classic=Default §8(Recommended)	#
-options.uiprofile.pocket=Pocket §8(Unsupported on this pack)	#
+options.uiprofile.pocket=Pocket §8(May have issues with this UI)	#
 
 accessibility.chat.howtoopen=§7Welcome! Press §6%s §7to open chat. 	#
+gameTip.emote.mouse=§7Press or hold §6:_input_key.emote: §7to emote.	#
 
 disconnectionScreen.cantConnect=Connection refused	#
 disconnectionScreen.serverFull=Server full	#
@@ -71,7 +72,7 @@ multiplayer.player.changeToPersona=§6%s §7edited the character appearance	#
 multiplayer.player.changeToSkin=§6%s §7has changed to %s skin	#
 
 permissions.kickplayer=Kick Out Player	#
-permissions.kickplayer.reason=§cYou have been KICKED from the server!	#
+permissions.kickplayer.reason=§7You have been KICKED from the server :(	#
 permissions.kickplayer.message=§7Are you sure you want to kick %s from the world?	#
 permissions.kickplayer.message.dedicatedserver=§7Are you sure you want to remove %s from the world?	#
 permissions.kickplayer.title=Kick Out Player?	#
@@ -114,59 +115,59 @@ item.cooked_chicken.name=Cooked Chicken	#
 
 commands.kick.no.host=§7You cannot kick the server host!	#
 
-commands.replaceitem.failed=§7Could not replace %s slot §6%d §cwith §l§6%dx %s§r§7.	#
+commands.replaceitem.failed=§7Could not replace %s slot §6%d §cwith §6%dx %s§r§7.	#
 commands.replaceitem.keepFailed=§7There is already an item occupying §6%s §7slot §6%d§7.	#
 commands.replaceitem.noContainer=§7Block at §6%s §7is not a container	#
 commands.replaceitem.badSlotNumber=§7Could not replace slot §6%d§7, must be a value between §6%d §7and §6%d§7.	#
-commands.replaceitem.success=§7Replaced %s slot §6%d §7with §l§6%dx %s§r§7.	#
-commands.replaceitem.success.entity=§7Replaced %s slot §6%d §7of §6§l%s §r§7with §6§l%dx %s§r§7.	#
+commands.replaceitem.success=§7Replaced %s slot §6%d §7with §6%dx %s§r§7.	#
+commands.replaceitem.success.entity=§7Replaced %s slot §6%d §7of §6%s §r§7with §6%dx %s§r§7.	#
 
-commands.help.header=§7Showing help page §l§6%1$d §r§7of §l§6%2$d §r§7| /help <page>	#
-commands.help.footer=§7Use the §l§6<tab> §r§7key while typing a command to auto-complete the command or its arguments.	#
+commands.help.header=§7Showing help page §6%1$d §r§7of §6%2$d §r§7| /help <page>	#
+commands.help.footer=§7Use the §6<tab> §r§7key while typing a command to auto-complete the command or its arguments.	#
 
-commands.gamerule.success=§7Game rule §l§6%1$s §r§7has been updated to §l§6%2$s§r§7.	#
+commands.gamerule.success=§7Game rule §6%1$s §r§7has been updated to §6%2$s§r§7.	#
 
-commands.gamemode.success.other=§7Set %2$s's gamemode to §l§6%1$s§r§7.	#
-commands.gamemode.success.self=§7Set own gamemode to §l§6%1$s§r§7.	#
+commands.gamemode.success.other=§7Set %2$s's gamemode to §6%1$s§r§7.	#
+commands.gamemode.success.self=§7Set own gamemode to §6%1$s§r§7.	#
 commands.gamemode.fail.invalid=§7Unknown gamemode!	#
 commands.generic.disabled=§7You do not have permission to use this command!	#
 
-commands.setmaxplayers.success=§7Set max players to §l§6%1$d§r§7.	#
+commands.setmaxplayers.success=§7Set max players to §6%1$d§r§7.	#
 
 commands.give.block.notFound=§cThere is no such block with name %3$d.	#
 commands.give.item.invalid=§cInvalid command syntax: %s does not exist with that data value.	#
 commands.give.item.notFound=§cUnknown item with name %1$d.	#
 commands.give.map.invalidData=§cInvalid map data provided.	#
 commands.give.map.featureNotFound=§cCould not make exploration map. Feature not found on this dimension.	#
-commands.give.success=§7Gave §6§l%2$dx %1$s §r§7to §l§6%3$s§r§7.	#
-commands.give.successRecipient=§7You have been given §6§l%2$dx %1$s§r§7.	#
+commands.give.success=§7Gave §6%2$dx %1$s §r§7to §6%3$s§r§7.	#
+commands.give.successRecipient=§7You have been given §6%2$dx %1$s§r§7.	#
 commands.give.tagError=§cData tag parsing failed: %1$s.	#
 
 commands.kill.successful.edu=§7Removed %1$s.	#
 commands.kill.successful=§7Killed %1$s.	#
 
 commands.message.display.incoming=%2$s	#
-commands.message.display.outgoing=§r§7[To §6§l%1$s§r§7] %2$s	#
+commands.message.display.outgoing=§r§7[To §6%1$s§r§7] %2$s	#
 commands.message.sameTarget=§cYou can't send a private message to yourself!	#
 
-commands.tp.success=§7Teleported §6%1$s §7to §6§l%2$s§r§7.	#
-commands.tp.successVictim=§7You have been teleported to §l§6%1$s§r§7.	#
+commands.tp.success=§7Teleported §6%1$s §7to §6%2$s§r§7.	#
+commands.tp.successVictim=§7You have been teleported to §6%1$s§r§7.	#
 commands.tp.success.coordinates=§7Teleported §6%1$s §7to §6%2$s§7, §6%3$s§7, §6%4$s§7.	#
 
 commands.xp.failure.widthdrawXp=§cCannot give player negative experience points!	#
-commands.xp.success=§7Gave §6%1$d §7experience to §l§6%2$s§r§7.	#
-commands.xp.success.levels=§7Gave §6%1$d §7levels to §l§6%2$s§r§7.	#
+commands.xp.success=§7Gave §6%1$d §7experience to §6%2$s§r§7.	#
+commands.xp.success.levels=§7Gave §6%1$d §7levels to §6%2$s§r§7.	#
 commands.xp.success.negative.levels=§7Taken §6%1$d §7levels from §6%2$s§7.	#
 
-commands.weather.clear=§7Changing to §6§lClear §r§7weather.§r	#
-commands.weather.rain=§7Changing to §6§lRainy §r§7weather.§r	#
-commands.weather.thunder=§7Changing to §6§lRain and Thunder§r§7.§r	#
+commands.weather.clear=§7Changing to §6Clear §r§7weather.§r	#
+commands.weather.rain=§7Changing to §6Rainy §r§7weather.§r	#
+commands.weather.thunder=§7Changing to §6Rain and Thunder§r§7.§r	#
 
 commands.setblock.success=§7Block placed.§r	#
 
 commands.summon.success=§7Object summoned.§r	#
 
-commands.kick.success=§7Kicked §l§6%1$s §r§7from the game!§r	#
+commands.kick.success=§7Kicked §6%1$s §r§7from the game!§r	#
 
 commands.time.added=§7Added §6%1$d §7to the time.	#
 commands.time.query.day=§7Day is §6%d§7.	#
@@ -175,15 +176,15 @@ commands.time.query.gametime=§7Gametime is §6%d§7.	#
 commands.time.set=§7Set the time to §6%1$d§7.	#
 commands.time.stop=§7Time §6%1$s§7.	#
 
-commands.fill.success=§6§l%1$d §r§7blocks filled.§r	#
+commands.fill.success=§6%1$d §r§7blocks filled.§r	#
 commands.fill.failed=§7No blocks filled.§r	#
 
-commands.clear.failure.no.items=§7Removed no items from §l§6%1$s§r§7.§r	#
-commands.clear.success=§7Removed §6%2$d §7items from §l§6%1$s§r§7.§r	#
+commands.clear.failure.no.items=§7Removed no items from §6%1$s§r§7.§r	#
+commands.clear.success=§7Removed §6%2$d §7items from §6%1$s§r§7.§r	#
 
-commands.enchant.success=§7Enchanting succeeded for §l§6%1$s§r§7.§r	#
-commands.enchant.cantEnchant=§7Enchant failed for §l§6%1$s§c.§r	#
-commands.enchant.noItem=§7Player §l§6%1$s §r§7is not holding an item.§r	#
+commands.enchant.success=§7Enchanting succeeded for §6%1$s§r§7.§r	#
+commands.enchant.cantEnchant=§7Enchant failed for §6%1$s§c.§r	#
+commands.enchant.noItem=§7Player §6%1$s §r§7is not holding an item.§r	#
 commands.enchant.invalidLevel=§7Enchantment level out of range.§r	#
 
 commands.generic.double.tooBig=§7Value §6%.2f§7 exceeds the maximum value of §6%.2f§7!§r	#
@@ -194,54 +195,54 @@ commands.generic.num.tooSmall=§7Value §6%1$d§7 does not exceed the minimum va
 commands.generic.syntax=§7Syntax error: Unexpected '§6%2$s§7' at '§6%1$s%2$s%3$s§7'§r
 commands.generic.noTargetMatch=§7No targets matched selector.§r	#
 
-enchantment.level.1=1	#
-enchantment.level.10=10	#
-enchantment.level.2=2	#
-enchantment.level.3=3	#
-enchantment.level.4=4	#
-enchantment.level.5=5	#
-enchantment.level.6=6	#
-enchantment.level.7=7	#
-enchantment.level.8=8	#
-enchantment.level.9=9	#
+enchantment.level.1=§11	#
+enchantment.level.2=§22	#
+enchantment.level.3=§33	#
+enchantment.level.4=§44	#
+enchantment.level.5=§55	#
+enchantment.level.6=§66	#
+enchantment.level.7=§77	#
+enchantment.level.8=§88	#
+enchantment.level.9=§99	#
+enchantment.level.10=§a10	#
 
-enchantment.arrowDamage=§7Power§6	#
-enchantment.arrowFire=§7Flame§6§6	#
-enchantment.arrowInfinite=§7Infinity§6§6	#
-enchantment.arrowKnockback=§7Punch§6§6	#
-enchantment.crossbowMultishot=§7Multishot§6§6	#
-enchantment.crossbowPiercing=§7Piercing§6§6	#
-enchantment.crossbowQuickCharge=§7Quick Charge§6§6	#
-enchantment.curse.binding=Curse of Binding§6§6	#
-enchantment.curse.vanishing=Curse of Vanishing§6§6	#
-enchantment.damage.all=§7Sharpness§6§6	#
-enchantment.damage.arthropods=§7Bane of Arthropods§6§6	#
-enchantment.damage.undead=§7Smite§6§6	#
-enchantment.digging=§7Efficiency§6§6	#
-enchantment.durability=§7Unbreaking§6§6	#
-enchantment.fire=§7Fire Aspect§6§6	#
-enchantment.fishingSpeed=§7Lure§6§6	#
-enchantment.frostwalker=§7Frost Walker§6§6	#
-enchantment.knockback=§7Knockback§6§6	#
-enchantment.lootBonus=§7Looting§6§6	#
-enchantment.lootBonusDigger=§7Fortune§6§6	#
-enchantment.lootBonusFishing=§7Luck of the Sea§6§6	#
-enchantment.mending=§7Mending§6§6	#
-enchantment.oxygen=§7Respiration§6§6	#
-enchantment.protect.all=§7Protection§6§6	#
-enchantment.protect.explosion=§7Blast Protection§6§6	#
-enchantment.protect.fall=§7Feather Falling§6§6	#
-enchantment.protect.fire=§7Fire Protection§6§6	#
-enchantment.protect.projectile=§7Projectile Protection§6§6	#
-enchantment.soul_speed=§7Soul Speed§6§6	#
-enchantment.thorns=§7Thorns§6§6	#
-enchantment.untouching=§7Silk Touch§6§6	#
-enchantment.waterWalker=§7Depth Strider§6§6	#
-enchantment.waterWorker=§7Aqua Affinity§6§6	#
-enchantment.tridentChanneling=§7Channelling§6§6	#
-enchantment.tridentLoyalty=§7Loyalty§6§6	#
-enchantment.tridentRiptide=§7Riptide§6§6	#
-enchantment.tridentImpaling=§7Impaling§6§6	#
+enchantment.arrowDamage=Power§5	#
+enchantment.arrowFire=Flame§5	#
+enchantment.arrowInfinite=Infinity§5	#
+enchantment.arrowKnockback=Punch§5	#
+enchantment.crossbowMultishot=Multishot§5	#
+enchantment.crossbowPiercing=Piercing§5	#
+enchantment.crossbowQuickCharge=Quick Charge§5	#
+enchantment.curse.binding=Curse of Binding	#
+enchantment.curse.vanishing=Curse of Vanishing	#
+enchantment.damage.all=Sharpness§5	#
+enchantment.damage.arthropods=Bane of Arthropods§5	#
+enchantment.damage.undead=Smite§5	#
+enchantment.digging=Efficiency§5	#
+enchantment.durability=Unbreaking§5	#
+enchantment.fire=Fire Aspect§5	#
+enchantment.fishingSpeed=Lure§5	#
+enchantment.frostwalker=Frost Walker§5	#
+enchantment.knockback=Knockback§5	#
+enchantment.lootBonus=Looting§5	#
+enchantment.lootBonusDigger=Fortune§5	#
+enchantment.lootBonusFishing=Luck of the Sea§5	#
+enchantment.mending=Mending§5	#
+enchantment.oxygen=Respiration§5	#
+enchantment.protect.all=Protection§5	#
+enchantment.protect.explosion=Blast Protection§5	#
+enchantment.protect.fall=Feather Falling§5	#
+enchantment.protect.fire=Fire Protection§5	#
+enchantment.protect.projectile=Projectile Protection§5	#
+enchantment.soul_speed=Soul Speed§5	#
+enchantment.thorns=Thorns§5	#
+enchantment.untouching=Silk Touch§5	#
+enchantment.waterWalker=Depth Strider§5	#
+enchantment.waterWorker=Aqua Affinity§5	#
+enchantment.tridentChanneling=Channelling§5	#
+enchantment.tridentLoyalty=Loyalty§5	#
+enchantment.tridentRiptide=Riptide§5	#
+enchantment.tridentImpaling=Impaling§5	#
 
 potion.potency.0=§61	#
 potion.potency.1=§62	#
@@ -262,7 +263,7 @@ craftingScreen.tab.survival=§7Inventory	#
 craftingScreen.tab.armor=§7Armour	#
 
 gameMode.adventure=Adventure Mode	#
-gameMode.changed=§7Your game mode has been updated to §l§6%s§7.	#
+gameMode.changed=§7Your game mode has been updated to §6%s§7.	#
 gameMode.creative=Creative Mode	#
 gameMode.hardcore=Hardcore Mode	#
 gameMode.spectator=Spectator Mode	#

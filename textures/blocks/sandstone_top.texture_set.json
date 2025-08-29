@@ -1,7 +1,7 @@
 {
  "format_version": "1.21.30",
   "minecraft:texture_set": {
-    "color": "textures/sandstone_top",
+    "color": "textures/smooth_sandstone",
     "metalness_emissive_roughness": "#0000e0",
     "normal": "normals/sandstone_top"
   }

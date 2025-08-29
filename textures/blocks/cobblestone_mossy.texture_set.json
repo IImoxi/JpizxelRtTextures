@@ -2,7 +2,7 @@
 	"format_version": "1.21.30",
 	"minecraft:texture_set": {
 		"color": "textures/mossy_cobblestone",
-		"metalness_emissive_roughness": "#000099",
+		"metalness_emissive_roughness": "mer/stone",
 		"normal": "normals/cobblestone"
 	}
 }
