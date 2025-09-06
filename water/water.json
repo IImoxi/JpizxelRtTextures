@@ -13,7 +13,7 @@
       "enabled": true,
       "frame_length": 0.09,
       "scale": 0.5,
-      "power": 1.0
+      "power": 1
     },
     "waves": {
       "enabled": true,

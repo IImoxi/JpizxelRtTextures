@@ -735,12 +735,31 @@
 			]
 		},
 		
+		"grass_path_top": {
+			"textures" : [
+			{ "variations": [
+				{ "path": "textures/blocks/grass_path_top", "weight": 1 },
+				{ "path": "textures/blocks/grass_path_top1", "weight": 1 },
+				{ "path": "textures/blocks/grass_path_top2", "weight": 1 },
+				{ "path": "textures/blocks/grass_path_top3", "weight": 1 } ] }
+			]
+		},
+		
 		"ii_mossy_stone_bricks": {
 			"textures" : [
 			{ "variations": [
 				{ "path": "textures/blocks/stonebrick_mossy", "weight": 1 },
 				{ "path": "textures/blocks/stonebrick_mossy1", "weight": 1 },
 				{ "path": "textures/blocks/stonebrick_mossy2", "weight": 1 } ] }
+			]
+		},
+		
+		"ii_stone_brick": {
+			"textures" : [
+			{ "variations": [
+				{ "path": "textures/blocks/stonebrick", "weight": 1 },
+				{ "path": "textures/blocks/stonebrick1", "weight": 1 },
+				{ "path": "textures/blocks/stonebrick2", "weight": 1 } ] }
 			]
 		},
 				

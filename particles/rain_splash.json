@@ -42,7 +42,7 @@
         }
       },
       "minecraft:particle_appearance_tinting": {
-        "color": [ 1.0, 1.0, 1.0, 1.0 ]
+        "color": [ 1.0, 1.0, 1.0, 0.23 ]
       },
       "minecraft:particle_expire_if_not_in_blocks": [
         "minecraft:air"
