@@ -32,6 +32,9 @@
 	"cobblestone_wall" : { "textures" : "ii_wall" },
 	"end_stone" : { "sound" : "stone", "textures" : "ii_end_stone" },
 	
+	"diamond_block" : { "sound" : "sapphire"},
+	"emerald_block" : { "sound" : "sapphire" },
+	
 	"sandstone" : {
 		"ambient_occlusion_exponent" : 1.0,
 		"isotropic" : {

@@ -1,6 +1,16 @@
 {
 	"format_version" : "1.14.0",
 	"sound_definitions" : {
+		"break.sapphire" : {
+			"category" : "block",
+			"max_distance" : null,
+			"min_distance" : null,
+			"sounds" : [
+				"sounds/sapphire/sapphire1",
+				"sounds/sapphire/sapphire2",
+				"sounds/sapphire/sapphire3"
+			]
+		},
 		"random.click" : {
 			"__use_legacy_max_distance" : "true",
 			"category" : "ui",

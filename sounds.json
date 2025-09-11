@@ -1,5 +1,39 @@
 {
 	"block_sounds" : {
+		"sapphire" : {
+         "events" : {
+            "break" : {
+               "sound" : "break.sapphire",
+			   "pitch": [ 0.9, 1.10 ],
+               "volume" : 1.0
+            },
+            "default" : "",
+            "hit" : {
+               "sound" : "break.sapphire",
+			   "pitch": [ 2.70, 3.30 ],
+               "volume" : 0.30
+            },
+            "item.use.on" : {
+               "sound" : "break.sapphire",
+			   "pitch": [ 2.70, 3.30 ]
+            },
+            "place" : {
+               "sound" : "break.sapphire",
+			   "pitch": [ 0.9, 1.10 ],
+               "volume" : 1.0
+            },
+			"power.off" : {
+				"pitch" : 0.50,
+				"sound" : "block.click"
+			},
+			"power.on" : {
+				"pitch" : 0.60,
+				"sound" : "block.click"
+			}
+		},
+		"pitch" : 1.0,
+		"volume" : 1.0
+		},
 		"stone" : {
 			"events" : {
 				"break":
