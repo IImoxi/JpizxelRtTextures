@@ -1,0 +1,15 @@
+{
+	"format_version": "1.21.40",
+	"minecraft:color_grading_settings": {
+		"description": {
+		"identifier": "ii:desert_color_grading"
+		},
+		"color_grading": {
+			"temperature": {
+				"enabled": true,
+				"temperature": 5000,
+				"type": "color_temperature"
+			}
+		}
+	}
+}
