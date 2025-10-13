@@ -1,5 +1,194 @@
 {
-  "namespace": "common",
+	"namespace": "common",
+
+	"slider_border@ii.empty": {},
+	"slider_button_layout@ii.slider_button_default": { "size": [ 8, 11 ] },
+	"slider_button_hover_layout@ii.slider_button_highlight": { "size": [ 8, 11 ] },
+	"slider_button_locked_layout@ii.empty": {},
+	"slider_button_indent_layout@ii.empty": {},
+	"slider_step@ii.black": { "size": [ 1, 3 ], "alpha": 0.2, "offset": "$step_offset" },
+	"slider_step_hover@ii.black": { "size": [ 1, 3 ], "alpha": 0.2, "offset": "$step_offset" },
+	"slider_step_progress@ii.highlight": { "size": [ 1, 3 ], "alpha": 0.3, "offset": "$step_offset" },
+	"slider_step_progress_hover@ii.highlight": { "size": [ 1, 3 ], "alpha": 0.3, "offset": "$step_offset" },
+	"slider_background@ii.button_default": { "size": [ "100% + 6px", 7 ] },
+	"slider_background_hover@ii.button_default": { "size": [ "100% + 6px", 7 ] },
+	"slider_progress@ii.slider_progress": { "size": [ "100% + 6px", 7 ] },
+	"slider_progress_hover@ii.slider_progress": { "size": [ "100% + 6px", 7 ] },
+	
+	"slider_bar_default@common.slider_border": {
+    "$background_control|default": "common.slider_background",
+    "$progress_control|default": "common.slider_progress",
+    "$background_control_name|default": "slider_background",
+    "$progress_control_name|default": "slider_progress",
+    "$progress_clip_direction|default": "left",
+
+    "controls": [
+		{
+        "sizing_panel": {
+          "type": "panel",
+          "size": [ "100% - 2px", "100% - 2px" ],
+          "controls": [
+            { "$background_control_name@$background_control": { "layer": 1 } },
+            {
+              "$progress_control_name@$progress_control": {
+                "layer": 3,
+                "clip_direction": "$progress_clip_direction",
+                "clip_pixelperfect": false
+              }
+            }
+          ]
+        }
+      },
+      {
+        "transparent_grey": {}
+      }
+    ]
+	},
+	
+	"slider_box": {
+		"type": "slider_box",
+		"layer": 4,
+		"size": "$slider_box_size",
+		"anchor_to": "center",
+		"anchor_from": "center",
+		"default_control": "default",
+		"hover_control": "hover",
+		"locked_control": "locked",
+		"indent_control": "indent",
+		"controls": [
+			{ "default@$slider_box_layout": { "layer": 2 } },
+			{ "hover@$slider_box_hover_layout": { "layer": 3 } },
+			{ "indent@$slider_box_indent_layout": { "layer": 4 } },
+			{ "locked@$slider_box_locked_layout": {} }
+		]
+	},
+	
+	
+	"static_tooltip_popup_with_image_and_text@common.tooltip_background": {
+    "$override_tooltip_popup_image|default": false,
+    "$tooltip_popup_image|default": "",
+    "$ignore_tooltip_popup_image|default": false,
+    "$ignore_tooltip_popup_chevron|default": false,
+    "$tooltip_popup_visible_binding|default": "",
+    "$tooltip_panel_offset|default": [ 0, "-100%c - 2px" ],
+    "$tooltip_panel_size|default": [ "100%", "100%cm + 8px" ],
+
+    "size": "$tooltip_panel_size",
+    "offset": "$tooltip_panel_offset",
+    "layer": 200, // always on top
+    "anchor_to": "top_middle",
+    "anchor_from": "top_middle",
+    "controls": [
+      {
+        "image_and_text_stack_panel": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
+          "size": [ "100% - 10px", "100%cm" ],
+          "layer": 2,
+          "controls": [
+            {
+              "tooltip_text_image_panel": {
+                "ignored": "$ignore_tooltip_popup_image",
+                "type": "panel",
+                "size": [ "100%y", "100%sm" ],
+                "min_size": [ 8, 8 ],
+                // The max y is 200 due to the fact that we have no way to say use inherited max sibling height
+                //   - 200 was used in thoughts that whatever text was used would not need more that 200px
+                //     allowing the image to grow and string with the height of the text object
+                "max_size": [ 12, 200 ],
+                "controls": [
+                  {
+                    "tooltip_image_panel": {
+                      "type": "panel",
+                      "size": [ "100%", "100%x" ],
+                      "$tooltip_popup_image_control_array|default": [
+                        {
+                          "tooltip_popup_image_panel": {
+                            "type": "image",
+                            "bilinear": true,
+                            "texture": "$tooltip_popup_image"
+                          }
+                        }
+                      ],
+                      "variables": [
+                        {
+                          "requires": "$override_tooltip_popup_image",
+                          "$tooltip_popup_image_control_array": [
+                            {
+                              "tooltip_popup_override_image_panel@$tooltip_popup_override_image_panel": {
+                                "size": [ "100%", "100%" ]
+                              }
+                            }
+                          ]
+                        }
+                      ],
+                      "controls": "$tooltip_popup_image_control_array"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "padding": {
+                "ignored": "$ignore_tooltip_popup_image",
+                "type": "panel",
+                "size": [ 3, 0 ]
+              }
+            },
+            {
+              "tooltip_text": {
+                "type": "label",
+				"font_scale_factor": 0.667,
+                "size": [ "fill", "default" ],
+                "$tooltip_text_binding_name|default": "#tooltip_text",
+                "text": "$tooltip_text_binding_name",
+                "$tooltip_text_color|default": "$f_color_format",
+                "color": "$tooltip_text_color",
+                "$tooltip_text_font_type|default": "default",
+                "font_type": "$tooltip_text_font_type",
+                "$tooltip_text_binding_type|default": "$tooltip_button_binding_type",
+                "$tooltip_text_bindings|default": [
+                  {
+                    "binding_name": "$tooltip_text_binding_name",
+                    "binding_collection_name": "$tooltip_button_collection_name",
+                    "binding_type": "$tooltip_text_binding_type",
+                    "binding_condition": "visibility_changed"
+                  }
+                ],
+                "bindings": "$tooltip_text_bindings"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "tooltip_chevron": {
+          "ignored": "$ignore_tooltip_popup_chevron",
+          "type": "image",
+          "layer": 2,
+          "bilinear": true,
+          "$tooltip_popup_chevron_size|default": [ 19, 13 ],
+          "size": "$tooltip_popup_chevron_size",
+          "$tooltip_popup_chevron_offset|default": [ "30%x", "100%y - 3px" ],
+          "offset": "$tooltip_popup_chevron_offset",
+          "$tooltip_chevron_anchor|default": "bottom_left",
+          "anchor_to": "$tooltip_chevron_anchor",
+          "anchor_from": "$tooltip_chevron_anchor",
+          "$tooltip_popup_chevron_texture|default": "textures/ui/tooltip_default_chevron",
+          "texture": "$tooltip_popup_chevron_texture"
+        }
+      }
+    ],
+    "bindings": [
+      {
+        "binding_name": "$tooltip_popup_visible_binding",
+        "binding_name_override": "#visible",
+        "binding_collection_name": "$tooltip_button_collection_name",
+        "binding_type": "$tooltip_button_binding_type"
+      }
+    ]
+	},
+	
   
 	"inventory_selected_icon@common.item_renderer": {
 		"layer": 50,
@@ -39,54 +228,68 @@
     ]
   },
   
-    "inventory_selected_stack_size_text": {
-    "type": "label",
-    "offset": [ 1, 2 ],
-    "anchor_to": "bottom_right",
-    "anchor_from": "bottom_right",
-    "layer": 53,
-    "shadow": true,
-    "color": "$selected_item_stack_count_color",
-    "text": "#inventory_selected_item_stack_count",
-    "bindings": [
-      {
-        "binding_name": "#inventory_selected_item_stack_count",
-        "binding_condition": "always_when_visible"
-      }
-    ]
-  },
+
+	"inventory_selected_stack_size_text": {
+		"type": "label",
+		"offset": [1, 2],
+		"anchor_to": "bottom_right",
+		"anchor_from": "bottom_right",
+		"layer": 53,
+		"shadow": true,
+		"color": "$ii_stack_count_color",
+		"text": "#inventory_selected_item_stack_count",
+		"variables": [
+			{
+				"binding_name": "#inventory_selected_item_stack_count",
+				"binding_condition": "always",
+				"binding_name_override": "$stack_count_temp"
+			},
+			{
+				"binding_condition": "always",
+				"binding_name": "$stack_count_temp < 10 ? [1, 0, 0] : [1, 1, 1]",
+				"binding_name_override": "$ii_stack_count_color"
+			}
+		],
+		"bindings": [
+			{
+				"binding_name": "#inventory_selected_item_stack_count",
+				"binding_condition": "always_when_visible"
+			}
+		]
+	},
+
   
     "inventory_hold_icon": {
-    "type": "custom",
-    "renderer": "progress_bar_renderer",
-    "variables": [
-      {
-        "requires": "$desktop_screen",
-        "$bar_offset": [ 0, 0 ]
-      },
-      {
-        "requires": "$pocket_screen",
-        "$bar_offset": [ 0, -18 ]
-      }
-    ],
-    "layer": 70,
-    "offset": "$bar_offset",
-    "size": [ 15, 3 ],
-    "bindings": [
-      {
+		"type": "custom",
+		"renderer": "progress_bar_renderer",
+		"variables": [
+		{
+			"requires": "$desktop_screen",
+			"$bar_offset": [ 0, 0 ]
+		},
+		{
+			"requires": "$pocket_screen",
+			"$bar_offset": [ 0, -18 ]
+		}
+		],
+		"layer": 70,
+		"offset": "$bar_offset",
+		"size": [ 15, 3 ],
+		"bindings": [
+		{
         "binding_name": "#progress_bar_visible",
         "binding_condition": "always"
-      },
-      {
+		},
+		{
         "binding_name": "#progress_bar_total_amount",
         "binding_condition": "always_when_visible"
-      },
-      {
+		},
+		{
         "binding_name": "#progress_bar_current_amount",
         "binding_condition": "always_when_visible"
-      }
-    ]
-  },
+		}
+		]
+	},
 	"durability_bar": {
 		"ignored": "(not $durability_bar_required)",
 		"type": "custom",
@@ -99,7 +302,7 @@
 			"is_durability": true,
 			"round_value": false
 		}
-  },
+	},
   
     "anim_item_details_alpha": {
     "anim_type": "alpha",
@@ -110,20 +313,18 @@
     "to": 0
   },
 
-  "durability_bar_grabbed@durability_bar": {
-    "layer": 61,
-    "offset": [ 0, 5 ],
-    "size": [ 12, 1 ]
-  },
+	"durability_bar_grabbed@durability_bar": {
+		"layer": 61,
+		"offset": [ 0, 5 ],
+		"size": [ 12, 1 ]
+	},
   
-  "flying_item_renderer": {
-    "property_bag": {
-      "#flying_item_renderer": false
-    }
-  },
+	"flying_item_renderer": {
+		"property_bag": { "#flying_item_renderer": false }
+	},
   
     "inventory_screen_common@base_screen": {
-    "cache_screen": false,
+    "cache_screen": true,
 
     "$gamepad_cursor|default": true,
     "gamepad_cursor": "$gamepad_cursor",

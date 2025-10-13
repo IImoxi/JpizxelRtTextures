@@ -9,17 +9,35 @@
 	
 	"packinfo_button@settings_common.section_toggle_base": {
 		"$toggle_view_binding_name": "packinfo_button_toggle",
+		"$default_texture": "textures/gui/buttons/button_top_default",
+		"$hover_texture": "textures/gui/buttons/button_top_highlight",
+		"$pressed_texture": "textures/gui/buttons/button_top_highlight",
+		"$pressed_no_hover_texture": "textures/gui/buttons/button_top_highlight",
 		"$glyph_texture": "pack_icon",
 		"$glyph_color_texture": "pack_icon",
 		"$glyph_size": [ 16, 16 ],
 		"$button_text": "JPizxeL",
 		"$toggle_property_bag": {
-			"#panel_title": "options.packinfo.title"
+			"#panel_title": "options.packinfo.Title"
+		}
+	},
+	
+	"ii_graphics_button@settings_common.section_toggle_base": {
+		"$toggle_view_binding_name": "ii_graphics_button_toggle",
+		"$default_texture": "textures/gui/buttons/button_bottom_default",
+		"$hover_texture": "textures/gui/buttons/button_bottom_highlight",
+		"$pressed_texture": "textures/gui/buttons/button_bottom_highlight",
+		"$pressed_no_hover_texture": "textures/gui/buttons/button_bottom_highlight",
+		"$glyph_texture": "textures/ui/video_glyph",
+		"$glyph_color_texture": "textures/ui/video_glyph_color",
+		"$glyph_size": [ 16, 16 ],
+		"$button_text": "Graphics",
+		"$toggle_property_bag": {
+			"#panel_title": "options.graphics.Title"
 		}
 	},
 	
 	"selector_stack_panel": {
-		"$spatialPatternsPadding": [ "100%", 0 ],
 		"modifications": [
 			{
 				"array_name": "controls",
@@ -32,181 +50,275 @@
 			}
 		],
 		"controls": [
-		  {
-			"accessibility_button@general_section.accessibility_button": {
-			  "$toggle_group_forced_index": "$accessibility_forced_index",
-			  "ignored": "(not $include_controls_and_settings_sections)"
-			}
-		  },
-		  {
-			"how_to_play_button@general_section.how_to_play_button": {
-			  "$toggle_group_forced_index": "$how_to_play_index",
-			  "ignored": "(not $include_controls_and_settings_sections)"
-			}
-		  },
+			{
+				"accessibility_button@settings_common.section_toggle_base": {
+					"ignored": "(not $include_controls_and_settings_sections)",
+					"$toggle_group_forced_index": "$accessibility_forced_index",
+					"$toggle_view_binding_name": "accessibility_button_toggle",
+					"$glyph_texture": "textures/ui/accessibility_glyph",
+					"$glyph_color_texture": "textures/ui/accessibility_glyph_color",
+					"$glyph_size": [ 19, 20 ],
+					"$button_text": "options.accessibility",
+					"$default_texture": "textures/gui/buttons/button_middle_default",
+					"$hover_texture": "textures/gui/buttons/button_middle_highlight",
+					"$pressed_texture": "textures/gui/buttons/button_middle_highlight",
+					"$pressed_no_hover_texture": "textures/gui/buttons/button_middle_highlight",
+					"$toggle_property_bag": {
+						"#panel_title": "options.accessibility.title"
+					}
+				}
+			},
+			{
+				"ii_graphics_button@settings.ii_graphics_button": {}
+			},
 
-		  // the list of selection toggle buttons, add yours here...
-		  {
-			"world_selector_pane@world_section.selector_pane_content": {
-			  "ignored": "(not $include_world_section)"
-			}
-		  },
-		  {
-			"realm_selector_pane@realms_settings.selector_panel": {
-			  "ignored": "(not $include_realm_section)",
-			  "$world_toggle_index": "$world_forced_index",
-			  "$members_toggle_index": "$members_forced_index",
-			  "$subscription_toggle_index": "$subscription_forced_index",
-			  "$backup_toggle_index": "$backup_forced_index",
-			  "$dev_options_toggle_index": "$dev_options_forced_index",
-			  "$invite_links_toggle_index": "$invite_links_forced_index"
-			}
-		  },
-		  {
-			"controls_and_settings_selector_pane": {
-			  "type": "stack_panel",
-			  "ignored": "(not $include_controls_and_settings_sections)",
-			  "$controls_section_header": "options.group.input",
-			  "$social_section_header": "options.social",
-			  "$general_section_header": "stat.generalButton",
-			  "$debug_section_header": "options.debug",
-			  "$spatialPatternsPadding": [ "100%", 25 ],
-			  "controls": [
+			{
+              "selector_group_label_0@settings_common.selector_group_label": {
+                "ignored": "($is_pregame)",
+                "text": "options.category.server"
+              }
+            },
+			{
+				"server_settings_button@world_section.server_settings_button": {
+					"$default_texture": "textures/gui/buttons/button_top_default",
+					"$hover_texture": "textures/gui/buttons/button_top_highlight",
+					"$pressed_texture": "textures/gui/buttons/button_top_highlight",
+					"$pressed_no_hover_texture": "textures/gui/buttons/button_top_highlight",
+					"$glyph_color_texture": "textures/ui/icon_recipe_nature",
+					"$button_text": "options.category.server",
+					"ignored": "($is_pregame)",
+					"$toggle_group_forced_index": "$server_forced_index"
+				}
+			},
+			{
+				"game_button@world_section.game_button": {
+					"$default_texture": "textures/gui/buttons/button_bottom_default",
+					"$hover_texture": "textures/gui/buttons/button_bottom_highlight",
+					"$pressed_texture": "textures/gui/buttons/button_bottom_highlight",
+					"$pressed_no_hover_texture": "textures/gui/buttons/button_bottom_highlight",
+					"ignored": "($is_pregame)",
+					"$toggle_group_forced_index": "$game_forced_index"
+					
+				}
+			},
+			{
+				"realm_selector_pane@realms_settings.selector_panel": {
+					"ignored": "(not $include_realm_section)",
+					"$world_toggle_index": "$world_forced_index",
+					"$members_toggle_index": "$members_forced_index",
+					"$subscription_toggle_index": "$subscription_forced_index",
+					"$backup_toggle_index": "$backup_forced_index",
+					"$dev_options_toggle_index": "$dev_options_forced_index",
+					"$invite_links_toggle_index": "$invite_links_forced_index"
+				}
+			},
+			{
+				"controls_and_settings_selector_pane": {
+					"type": "stack_panel",
+					"ignored": "(not $include_controls_and_settings_sections)",
+					"$controls_section_header": "options.group.input",
+					"$social_section_header": "options.social",
+					"$general_section_header": "stat.generalButton",
+					"$debug_section_header": "options.debug",
+					"$spatialPatternsPadding": [ "100%", 25 ],
+					"controls": [
 
-				// Controls Section //
-				{
-				  "selector_group_label_1@settings_common.selector_group_label": {
-					"text": "$controls_section_header"
-				  }
+					// Controls Section //
+					{
+					"selector_group_label_1@settings_common.selector_group_label": {
+						"text": "$controls_section_header"
+					}
 				},
 				{
-				  "keyboard_and_mouse_button@controls_section.keyboard_and_mouse_button": {
-					"ignored": "(not $keyboard_and_mouse_supported)",
-					"$toggle_group_forced_index": "$keyboard_and_mouse_forced_index",
-					"$tts_section_header": "$controls_section_header"
-				  }
+					"keyboard_and_mouse_button@controls_section.keyboard_and_mouse_button": {
+						"$default_texture": "textures/gui/buttons/button_top_default",
+						"$hover_texture": "textures/gui/buttons/button_top_highlight",
+						"$pressed_texture": "textures/gui/buttons/button_top_highlight",
+						"$pressed_no_hover_texture": "textures/gui/buttons/button_top_highlight",
+						"$toggle_group_forced_index": "$keyboard_and_mouse_forced_index",
+						"$tts_section_header": "$controls_section_header"
+					}
 				},
 				{
-				  "controller_button@controls_section.controller_button": {
-					"ignored": "(not $gamepad_supported or $nx_os)",
-					"$toggle_group_forced_index": "$controller_and_switch_forced_index",
-					"$tts_section_header": "$controls_section_header"
-				  }
+					"controller_button@controls_section.controller_button": {
+						"$default_texture": "textures/gui/buttons/button_middle_default",
+						"$hover_texture": "textures/gui/buttons/button_middle_highlight",
+						"$pressed_texture": "textures/gui/buttons/button_middle_highlight",
+						"$pressed_no_hover_texture": "textures/gui/buttons/button_middle_highlight",
+						"ignored": "(not $gamepad_supported or $nx_os)",
+						"$toggle_group_forced_index": "$controller_and_switch_forced_index",
+						"$tts_section_header": "$controls_section_header"
+					}
 				},
 				{
-				  "switch_controller_button@controls_section.controller_button": {
-					"ignored": "(not $gamepad_supported or not $nx_os)",
-					"$toggle_group_forced_index": "$controller_and_switch_forced_index",
-					"$glyph_texture": "textures/ui/controller_glyph_switch",
-					"$glyph_color_texture": "textures/ui/controller_glyph_color_switch",
-					"$tts_section_header": "$controls_section_header"
-				  }
+					"switch_controller_button@controls_section.controller_button": {
+						"ignored": "(not $gamepad_supported or not $nx_os)",
+						"$default_texture": "textures/gui/buttons/button_top_default",
+						"$hover_texture": "textures/gui/buttons/button_middle_highlight",
+						"$pressed_texture": "textures/gui/buttons/button_middle_highlight",
+						"$pressed_no_hover_texture": "textures/gui/buttons/button_middle_highlight",
+						"$toggle_group_forced_index": "$controller_and_switch_forced_index",
+						"$glyph_texture": "textures/ui/controller_glyph_switch",
+						"$glyph_color_texture": "textures/ui/controller_glyph_color_switch",
+						"$tts_section_header": "$controls_section_header"
+					}
 				},
 				{
-				  "touch_button@controls_section.touch_button": {
-					"ignored": "(not $touch_supported or $nx_os)",
-					"$toggle_group_forced_index": "$touch_forced_index",
-					"$tts_section_header": "$controls_section_header"
-				  }
+					"touch_button@controls_section.touch_button": {
+						"$default_texture": "textures/gui/buttons/button_bottom_default",
+						"$hover_texture": "textures/gui/buttons/button_bottom_highlight",
+						"$pressed_texture": "textures/gui/buttons/button_bottom_highlight",
+						"$pressed_no_hover_texture": "textures/gui/buttons/button_bottom_highlight",
+						"$toggle_group_forced_index": "$touch_forced_index",
+						"$tts_section_header": "$controls_section_header"
+					}
 				},
 				// Social Section //
 				{
-				  "selector_group_label_2@settings_common.selector_group_label": {
-					"text": "$social_section_header",
-					"ignored": "($education_edition or not $party_settings_enabled)"
-				  }
+					"selector_group_label_2@settings_common.selector_group_label": {
+						"$default_texture": "textures/gui/buttons/button_top_default",
+						"$hover_texture": "textures/gui/buttons/button_top_highlight",
+						"$pressed_texture": "textures/gui/buttons/button_top_highlight",
+						"$pressed_no_hover_texture": "textures/gui/buttons/button_top_highlight",
+						"text": "$social_section_header",
+						"ignored": "($education_edition or not $party_settings_enabled)"
+					}
 				},
 				{
-				  "party_button@social_section.party_button": {
-					"ignored": "($education_edition or not $party_settings_enabled)",
-					"$toggle_group_forced_index": "$party_forced_index",
-					"$tts_section_header": "$social_section_header"
-				  }
+					"party_button@social_section.party_button": {
+						"$default_texture": "textures/gui/buttons/button_bottom_default",
+						"$hover_texture": "textures/gui/buttons/button_bottom_highlight",
+						"$pressed_texture": "textures/gui/buttons/button_bottom_highlight",
+						"$pressed_no_hover_texture": "textures/gui/buttons/button_bottom_highlight",
+						"ignored": "($education_edition or not $party_settings_enabled)",
+						"$toggle_group_forced_index": "$party_forced_index",
+						"$tts_section_header": "$social_section_header"
+					}
 				},
 				// General Section //
 				{
-				  "selector_group_label_3@settings_common.selector_group_label": {
-					"text": "$general_section_header"
-				  }
+					"selector_group_label_3@settings_common.selector_group_label": {
+						"text": "$general_section_header"
+					}
 				},
 				{
-				  "general_button@general_section.general_button": {
-					"$toggle_group_forced_index": "$general_forced_index",
-					"$tts_section_header": "$general_section_header"
-				  }
+					"general_button@general_section.general_button": {
+						"$default_texture": "textures/gui/buttons/button_top_default",
+						"$hover_texture": "textures/gui/buttons/button_top_highlight",
+						"$pressed_texture": "textures/gui/buttons/button_top_highlight",
+						"$pressed_no_hover_texture": "textures/gui/buttons/button_top_highlight",
+						"$toggle_group_forced_index": "$general_forced_index",
+						"$tts_section_header": "$general_section_header"
+					}
 				},
 				{
-				  "video_button@general_section.video_button": {
-					"$toggle_group_forced_index": "$video_forced_index",
-					"$tts_section_header": "$general_section_header"
-				  }
+					"video_button@general_section.video_button": {
+						"$default_texture": "textures/gui/buttons/button_middle_default",
+						"$hover_texture": "textures/gui/buttons/button_middle_highlight",
+						"$pressed_texture": "textures/gui/buttons/button_middle_highlight",
+						"$pressed_no_hover_texture": "textures/gui/buttons/button_middle_highlight",
+						"$toggle_group_forced_index": "$video_forced_index",
+						"$tts_section_header": "$general_section_header"
+					}
 				},
 				{
-				  "sound_button@general_section.sound_button": {
-					"$toggle_group_forced_index": "$sound_forced_index",
-					"$tts_section_header": "$general_section_header"
-				  }
+					"sound_button@general_section.sound_button": {
+						"$default_texture": "textures/gui/buttons/button_middle_default",
+						"$hover_texture": "textures/gui/buttons/button_middle_highlight",
+						"$pressed_texture": "textures/gui/buttons/button_middle_highlight",
+						"$pressed_no_hover_texture": "textures/gui/buttons/button_middle_highlight",
+						"$toggle_group_forced_index": "$sound_forced_index",
+						"$tts_section_header": "$general_section_header"
+					}
 				},
 				{
-				  "account_button@general_section.account_button": {
-					"$toggle_group_forced_index": "$account_forced_index",
-					"$tts_section_header": "$general_section_header"
-				  }
+					"account_button@general_section.account_button": {
+						"$default_texture": "textures/gui/buttons/button_middle_default",
+						"$hover_texture": "textures/gui/buttons/button_middle_highlight",
+						"$pressed_texture": "textures/gui/buttons/button_middle_highlight",
+						"$pressed_no_hover_texture": "textures/gui/buttons/button_middle_highlight",
+						"$toggle_group_forced_index": "$account_forced_index",
+						"$tts_section_header": "$general_section_header"
+					}
 				},
 				{
-				  "view_subscriptions_button@general_section.view_subscriptions_button": {
-					"ignored": "$is_editor_mode_enabled",
-					"$toggle_group_forced_index": "$view_subscriptions_forced_index",
-					"$tts_section_header": "$general_section_header",
-					"bindings": [
-					  {
-						"binding_name": "#should_show_subscription_tab",
-						"binding_name_override": "#visible"
-					  }
-					]
-				  }
+					"view_subscriptions_button@general_section.view_subscriptions_button": {
+						"$default_texture": "textures/gui/buttons/button_middle_default",
+						"$hover_texture": "textures/gui/buttons/button_middle_highlight",
+						"$pressed_texture": "textures/gui/buttons/button_middle_highlight",
+						"$pressed_no_hover_texture": "textures/gui/buttons/button_middle_highlight",
+						"ignored": "$is_editor_mode_enabled",
+						"$toggle_group_forced_index": "$view_subscriptions_forced_index",
+						"$tts_section_header": "$general_section_header",
+							"bindings": [
+								{
+									"binding_name": "#should_show_subscription_tab",
+									"binding_name_override": "#visible"
+								}
+							]
+					}
 				},
 				{
-				  "global_texture_pack_button@general_section.global_texture_pack_button": {
-					"ignored": "$ignore_global_resources_section",
-					"$toggle_group_forced_index": "$global_texture_pack_forced_index",
-					"visible": "($is_global_texture_packs_visible)",
-					"$tts_section_header": "$general_section_header"
-				  }
+					"global_texture_pack_button@general_section.global_texture_pack_button": {
+						"ignored": "$ignore_global_resources_section",
+						"$default_texture": "textures/gui/buttons/button_middle_default",
+						"$hover_texture": "textures/gui/buttons/button_middle_highlight",
+						"$pressed_texture": "textures/gui/buttons/button_middle_highlight",
+						"$pressed_no_hover_texture": "textures/gui/buttons/button_middle_highlight",
+						"$toggle_group_forced_index": "$global_texture_pack_forced_index",
+						"visible": "($is_global_texture_packs_visible)",
+						"$tts_section_header": "$general_section_header"
+					}
 				},
 				{
-				  "storage_management_button@general_section.storage_management_button": {
-					"ignored": "$ignore_storage_section",
-					"$toggle_group_forced_index": "$storage_management_forced_index",
-					"$tts_section_header": "$general_section_header"
-				  }
+					"storage_management_button@general_section.storage_management_button": {
+						"ignored": "$ignore_storage_section",
+						"$default_texture": "textures/gui/buttons/button_middle_default",
+						"$hover_texture": "textures/gui/buttons/button_middle_highlight",
+						"$pressed_texture": "textures/gui/buttons/button_middle_highlight",
+						"$pressed_no_hover_texture": "textures/gui/buttons/button_middle_highlight",
+						"$toggle_group_forced_index": "$storage_management_forced_index",
+						"$tts_section_header": "$general_section_header"
+					}
 				},
 				{
 				  "edu_cloud_storage_button@general_section.edu_cloud_storage_button": {
-					"ignored": "(not $education_edition or not $edu_save_to_cloud_on)",
-					"$toggle_group_forced_index": "$edu_cloud_storage_forced_index",
-					"$tts_section_header": "$general_section_header"
+						"$default_texture": "textures/gui/buttons/button_middle_default",
+						"$hover_texture": "textures/gui/buttons/button_middle_highlight",
+						"$pressed_texture": "textures/gui/buttons/button_middle_highlight",
+						"$pressed_no_hover_texture": "textures/gui/buttons/button_middle_highlight",
+						"ignored": "(not $education_edition or not $edu_save_to_cloud_on)",
+						"$toggle_group_forced_index": "$edu_cloud_storage_forced_index",
+						"$tts_section_header": "$general_section_header"
 				  }
 				},
 				{
 				  "language_button@general_section.language_button": {
-					"ignored": "(not $is_pregame)",
-					"$toggle_group_forced_index": "$language_forced_index",
-					"$tts_section_header": "$general_section_header"
-				  }
+						"$default_texture": "textures/gui/buttons/button_middle_default",
+						"$hover_texture": "textures/gui/buttons/button_middle_highlight",
+						"$pressed_texture": "textures/gui/buttons/button_middle_highlight",
+						"$pressed_no_hover_texture": "textures/gui/buttons/button_middle_highlight",
+						"ignored": "(not $is_pregame)",
+						"$toggle_group_forced_index": "$language_forced_index",
+						"$tts_section_header": "$general_section_header"
+					}
 				},
 				{
 				  "creator_button@general_section.creator_button": {
-					"$toggle_group_forced_index": "$creator_forced_index",
-					"$tts_section_header": "$general_section_header"
-				  }
+						"$default_texture": "textures/gui/buttons/button_bottom_default",
+						"$hover_texture": "textures/gui/buttons/button_bottom_highlight",
+						"$pressed_texture": "textures/gui/buttons/button_bottom_highlight",
+						"$pressed_no_hover_texture": "textures/gui/buttons/button_bottom_highlight",
+						"$toggle_group_forced_index": "$creator_forced_index",
+						"$tts_section_header": "$general_section_header"
+					}
 				},
 				{
-				  "preview_button@general_section.preview_button": {
-					"ignored": "(not $show_preview_button)",
-					"$toggle_group_forced_index": "$preview_forced_index",
-					"$tts_section_header": "$general_section_header"
-				  }
+					"preview_button@general_section.preview_button": {
+						"ignored": "(not $show_preview_button)",
+						"$toggle_group_forced_index": "$preview_forced_index",
+						"$tts_section_header": "$general_section_header"
+					}
 				},
 
 				// Debug Section //
