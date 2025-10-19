@@ -6,27 +6,27 @@
 	
 	"single_chat_panel": {
 		"type": "panel",
-		"size": [ 270, "100%c" ],
+		"size": [ "100%", "100%c" ],
 		"controls": [
 			{
 				"background@ii.background": {
 					"layer": 1,
-					"anims": [ "@hud.ii_bg_alpha_in", "@hud.ii_offset_in" ],
+					"anims": [ "@hud.ii_bg_alpha_in" ],
 					"propagate_alpha": false,
-					"size": [ 270, "100%c" ],
+					"size": [ "100%", "100%c" ],
 					"controls": [
 						{ 
 							"text": {
 								"type": "label",
 								"layer": 10,
 								"text": "#text",
-								"size": [ 268, "default" ],
+								"size": [ "100% - 2px", "default" ],
 								"shadow": true,
 								"enable_profanity_filter": false,
 								"localize": true,
 								"font_scale_factor": "$subpackscale_chat",
 								"color": "$chat_text_color",
-								"anims": [ "@hud.ii_text_alpha_in" ]
+								"anims": [ "@hud.ii_text_alpha_in", "@hud.ii_offset_in" ]
 							}
 						}
 					]
@@ -40,7 +40,7 @@
 		"clips_children": false,
 		"anchor_from": "bottom_left",
 		"anchor_to": "bottom_left",
-		"size": [ 270, "30%" ],
+		"size": [ "50% - 93px", "30%" ],
 		"offset": [ 1, -31 ],
 		"controls": [
 			{
