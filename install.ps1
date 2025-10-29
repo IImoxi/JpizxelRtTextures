@@ -1,7 +1,7 @@
 # JPizxeL RT Textures Installer
 
 # Set paths
-$RESOURCE_PACK_FOLDER = "$env:LOCALAPPDATA\Packages\Microsoft.MinecraftUWP_8wekyb3d8bbwe\LocalState\games\com.mojang\resource_packs"
+$RESOURCE_PACK_FOLDER = "$env:APPDATA\Roaming\Minecraft Bedrock\Users\Shared\games\com.mojang\resource_packs"
 $RESOURCE_PACK = "$RESOURCE_PACK_FOLDER\JpizxelRtTextures-main"
 $RESOURCE_PACK_REPO = "https://github.com/IImoxi/JpizxelRtTextures/archive/refs/heads/main.zip"
 $TEMP = [System.IO.Path]::GetTempPath()
