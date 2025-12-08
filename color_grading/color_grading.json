@@ -19,7 +19,7 @@
 				"gain":         [ 1.1, 1.1, 1.1 ],
 				"gamma":		[ 2.0, 2.0, 2.0 ],
 				"offset":       [ 0.0, 0.0, 0.0 ],
-				"saturation":   [ 1.1, 1.1, 1.1 ]
+				"saturation":   [ 1.0, 1.0, 1.0 ]
 			},
 			"shadows": {
 				"enabled": true,
@@ -28,11 +28,11 @@
 				"gain":         [ 1.0, 1.0, 1.0 ],
 				"gamma":		[ 1.8, 1.8, 1.8 ],
 				"offset":       [ 0.0, 0.0, 0.0 ],
-				"saturation":   [ 0.4, 0.4, 0.4 ]
+				"saturation":   [ 0.7, 0.7, 0.7 ]
 			},
 			"temperature": {
 				"enabled": true,
-				"temperature": 6500,
+				"temperature": 6600,
 				"type": "color_temperature"
 			}
 		},
