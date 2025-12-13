@@ -18,7 +18,7 @@
 		},
 		"components": {
 			"minecraft:emitter_local_space": {
-				"position": false,
+				"position": true,
 				"rotation": true
 			},
 			"minecraft:emitter_rate_steady": {

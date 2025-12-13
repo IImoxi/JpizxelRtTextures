@@ -651,7 +651,7 @@
 		"texture_width": 256,
 		"texture_height": 256,
 		"uv": [ 0, 0 ],
-		"uv_size": [ 176, 166 ] 
+		"uv_size": [ 176, 166 ]
 	},
 	
 	"crafting_table_gui": {

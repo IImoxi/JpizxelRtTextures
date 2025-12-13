@@ -50,7 +50,6 @@
 	},
 	
 	"smooth_quartz" : { "sound" : "stone", "textures" : "smooth_quartz" },
-	"quartz_block" : { "sound" : "stone", "textures" : "quartz_block" },
 	"quartz_stairs" : { "sound" : "stone", "textures" : "quartz_block" },
 	"quartz_slab" : { "sound" : "stone", "textures" : "quartz_block" },
 	"quartz_pillar" : {
@@ -59,14 +58,6 @@
 			"down" : "quartz_pillar_top",
 			"side" : "quartz_pillar_side",
 			"up" : "quartz_pillar_top"
-		}
-	},
-	"chiseled_quartz_block" : {
-		"sound" : "stone",
-		"textures" : {
-			"down" : "chiseled_quartz_block_top",
-			"side" : "chiseled_quartz_block_side",
-			"up" : "chiseled_quartz_block_top"
 		}
 	},
 	

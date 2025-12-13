@@ -1,6 +1,6 @@
 {
-	"num_mip_levels" : 4,
-	"padding" : 8,
+	"num_mip_levels" : 1,
+	"padding" : 1,
 	"resource_pack_name" : "ii",
 	"texture_name" : "atlas.terrain",
 	"texture_data": {
@@ -645,6 +645,15 @@
 				{ "path": "textures/blocks/quartz_block", "weight": 1 },
 				{ "path": "textures/blocks/quartz_block1", "weight": 1 },
 				{ "path": "textures/blocks/quartz_block2", "weight": 1 } ] } ] },
+				
+		"quartz_block_top": {
+			"textures": [
+				"textures/blocks/quartz_block_top",
+				"textures/blocks/quartz_block_chiseled_top",
+				"textures/blocks/quartz_block_lines_top",
+				"textures/blocks/quartz_block_bottom"
+			]
+		},
 				
 		"ii_leaves": {
 			"textures": [

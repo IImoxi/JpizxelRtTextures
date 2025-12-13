@@ -22,10 +22,10 @@
 	"chest_gui": {
 		"type": "image",
 		"texture": "textures/gui/container/chest",
-		"texture_width": 256,
-		"texture_height": 256,
+		"texture_width": 1024,
+		"texture_height": 1024,
 		"uv": [ 0, 0 ],
-		"uv_size": [ 176, 168 ]
+		"uv_size": [ 704, 672 ]
 	},
 
 	"small_chest_panel": {
