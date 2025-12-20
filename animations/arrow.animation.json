@@ -3,10 +3,17 @@
 	"animations": {
 		"animation.arrow.move": {
 			"loop": true,
-			"animation_length": 0.0417,
+			"animation_length": 600,
 			"bones": {
 				"body": {
-					"rotation" : [ "-query.target_x_rotation", "-query.target_y_rotation", 0.0 ],
+					"rotation" : [ "-query.target_x_rotation", "-query.target_y_rotation", 0.0 ]
+				},
+				"offset": {
+					"position": {
+						"0.0": [ 0, 0, 0 ],
+						"0.166": [ 0, 0, -80 ],
+						"0.2": [ 0, 0, "q.ground_speed ? -80 : 0" ]
+					},
 					"scale": [0.7, 0.7, 0.9]
 				}
 			}
