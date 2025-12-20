@@ -2,7 +2,7 @@
 	"format_version" : "1.8.0",
 	"animations" : {
 		"animation.projectile" : {
-			"animation_length": 15.0,
+			"animation_length": 60.0,
 			"loop" : true,
 			"bones": {
 				"body": {
@@ -10,8 +10,8 @@
 				},
 				"offset": {
 					"position": {
-						"0.0": [ 0, 0, 0 ],
-						"0.16": [ 0, 0, -60 ]
+						"0.0": [ 0, -1, 2 ],
+						"0.176": [ 0, 0, -60 ]
 					}
 				}
 			},

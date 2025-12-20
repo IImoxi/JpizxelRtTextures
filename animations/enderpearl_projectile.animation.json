@@ -1,8 +1,8 @@
 {
 	"format_version" : "1.8.0",
 	"animations" : {
-		"animation.projectile" : {
-			"animation_length": 60,
+		"animation.enderpearl_projectile" : {
+			"animation_length": 60.0,
 			"loop" : true,
 			"bones": {
 				"body": {
@@ -10,18 +10,15 @@
 				},
 				"offset": {
 					"position": {
-						"0.0": [ 0, 0, 0 ],
-						"0.176": [ 0, 0, -60 ]
+						"0.0": [ 0, -1, 2.5 ],
+						"0.176": [ 0, -6, -60 ],
+						"0.5": [ 0, -8, -60 ]
 					}
 				}
 			},
 			"particle_effects": {
 				"0.0": {
-					"effect": "snowball",
-					"locator": "indicator_locator"
-				},
-				"0.01": {
-					"effect": "egg",
+					"effect": "enderpearl",
 					"locator": "indicator_locator"
 				}
 			}
