@@ -2,28 +2,30 @@
 	"format_version": "1.10.0",
 	"minecraft:client_entity": {
 		"description": {
-			"identifier": "minecraft:snowball",
+			"identifier": "minecraft:xp_bottle",
 			"materials": {
-				"default": "snowball"
+				"default": "xp_bottle"
 			},
 			"textures": {
-				"default": "textures/items/snowball"
+				"default": "textures/items/experience_bottle",
+				"enchanted": "textures/misc/enchanted_item_glint"
 			},
 			"geometry": {
 				"default": "geometry.projectile_sprite"
 			},
 			"render_controllers": [
-				"controller.render.item_sprite"
+				"controller.render.experience_bottle"
 			],
 			"animations": {
 				"flying": "animation.projectile"
 			},
 			"particle_effects": {
-				"indicator": "ii:throwable_indicator",
-				"projectile": "ii:snowball"
+				"projectile": "ii:exp_bottle"
 			},
 			"scripts": {
-				"animate": [ "flying" ]
+				"animate": [
+				"flying"
+				]
 			}
 		}
 	}

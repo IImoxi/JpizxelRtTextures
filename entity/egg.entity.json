@@ -22,12 +22,11 @@
 			},
 			"particle_effects": {
 				"indicator": "ii:throwable_indicator",
-				"egg": "ii:egg"
+				"projectile": "ii:egg"
 			},
 			"scripts": {
 				"animate": [
-					"flying",
-					"egg"
+					"flying"
 				],
 				"pre_animation": [
 					"t.variant = query.property('minecraft:climate_variant');",

@@ -19,13 +19,11 @@
 				"flying": "animation.enderpearl_projectile"
 			},
 			"particle_effects": {
+				"indicator": "ii:tp_indicator",
 				"enderpearl": "ii:enderpearl"
 			},
 			"scripts": {
-				"animate": [
-					"flying",
-					"enderpearl"
-				]
+				"animate": [ "flying" ]
 			}
 		}
 	}

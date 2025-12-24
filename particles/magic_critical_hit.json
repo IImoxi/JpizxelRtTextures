@@ -39,13 +39,13 @@
 				"color": {
 					"interpolant": "v.particle_age / v.particle_lifetime",
 					"gradient": {
-						"0.0": "#FFEDFFF9",
-						"0.38": "#FF00FFA5",
-						"0.55": "#0000FFD8",
-						"0.69": "#FF00FFD8",
-						"0.82": "#0000D2FF",
-						"0.92": "#FF00D2FF",
-						"1.0": "#0000D2FF"
+						"0.0": [ 0.92, 1, 0.976, "math.clamp(-0.2 + q.distance_from_camera, 0, 1)" ],
+						"0.38": [ 0.0, 1, 0.647, "math.clamp(-0.2 + q.distance_from_camera, 0, 1)" ],
+						"0.55": [ 0.0, 1, 0.847, 0.0 ],
+						"0.69": [ 0.0, 1, 0.847, "math.clamp(-0.2 + q.distance_from_camera, 0, 1)" ],
+						"0.82": [ 0.0, 0.82, 1.0, 0.0 ],
+						"0.92": [ 0.0, 0.82, 1.0, "math.clamp(-0.2 + q.distance_from_camera, 0, 1)" ],
+						"1.0": [ 0.0, 0.82, 1.0, 0.0 ]
 					}
 				}
 			}

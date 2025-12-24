@@ -20,6 +20,10 @@
 				"0.0": {
 					"effect": "enderpearl",
 					"locator": "indicator_locator"
+				},
+				"0.01": {
+					"effect": "indicator",
+					"locator": "indicator_locator"
 				}
 			}
 		}
