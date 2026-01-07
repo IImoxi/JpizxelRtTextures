@@ -654,26 +654,98 @@
 				"textures/blocks/quartz_block_bottom"
 			]
 		},
-				
-		"ii_leaves": {
+		
+		"ii_oak_leaves": {
 			"textures": [
 				{ "variations": [
 					{ "path": "textures/blocks/leaves_oak", "weight": 1 },
 					{ "path": "textures/blocks/leaves_oak1", "weight": 1 } ] },
+				"textures/blocks/leaves_oak_opaque"
+			]
+		},
+		
+		"ii_dark_oak_leaves": {
+			"textures": [
+				{ "variations": [
+					{ "path": "textures/blocks/leaves_oak", "weight": 1 },
+					{ "path": "textures/blocks/leaves_oak1", "weight": 1 } ] },
+				"textures/blocks/leaves_oak_opaque"
+			]
+		},
+		
+		"ii_spruce_leaves": {
+			"textures": [
 				{ "variations": [
 					{ "path": "textures/blocks/leaves_spruce", "weight": 1 },
 					{ "path": "textures/blocks/leaves_spruce1", "weight": 1 },
 					{ "path": "textures/blocks/leaves_spruce2", "weight": 1 } ] },
+				"textures/blocks/textures/spruce_leaves_opaque"
+			]
+		},
+		
+		"ii_birch_leaves": {
+			"textures": [
 				{ "variations": [
 					{ "path": "textures/blocks/leaves_birch", "weight": 1 },
 					{ "path": "textures/blocks/leaves_birch1", "weight": 1 } ] },
-				"textures/blocks/leaves_jungle",
-				"textures/blocks/leaves_oak_opaque",
-				"textures/blocks/leaves_spruce_opaque",
-				"textures/blocks/leaves_birch_opaque",
-				"textures/blocks/leaves_jungle_opaque"
+				"textures/blocks/textures/birch_leaves_opaque"
 			]
 		},
+		
+		"ii_jungle_leaves": {
+			"textures": [
+				"textures/blocks/leaves_jungle",
+				"textures/blocks/textures/jungle_leaves_opaque"
+			]
+		},
+		
+		"ii_acacia_leaves": {
+			"textures": [
+				"textures/blocks/leaves_acacia",
+				"textures/blocks/textures/acacia_leaves_opaque"
+			]
+		},
+		
+		"ii_azalea_leaves": {
+			"textures": [
+				"textures/blocks/azalea_leaves",
+				"textures/blocks/textures/azalea_leaves_opaque"
+			]
+		},
+		
+		"ii_flowering_azalea_leaves": {
+			"textures": [
+				"textures/blocks/azalea_leaves_flowers",
+				"textures/blocks/textures/azalea_leaves_flowers_opaque"
+			]
+		},
+		
+		"ii_cherry_leaves": {
+			"textures": [
+				"textures/blocks/cherry_leaves",
+				"textures/blocks/cherry_leaves_opaque"
+			]
+		},
+				
+		//"ii_leaves": {
+		//	"textures": [
+		//		{ "variations": [
+		//			{ "path": "textures/blocks/leaves_oak", "weight": 1 },
+		//			{ "path": "textures/blocks/leaves_oak1", "weight": 1 } ] },
+		//		{ "variations": [
+		//			{ "path": "textures/blocks/leaves_spruce", "weight": 1 },
+		//			{ "path": "textures/blocks/leaves_spruce1", "weight": 1 },
+		//			{ "path": "textures/blocks/leaves_spruce2", "weight": 1 } ] },
+		//		{ "variations": [
+		//			{ "path": "textures/blocks/leaves_birch", "weight": 1 },
+		//			{ "path": "textures/blocks/leaves_birch1", "weight": 1 } ] },
+		//		"textures/blocks/leaves_jungle",
+		//		"textures/blocks/leaves_oak_opaque",
+		//		"textures/blocks/leaves_spruce_opaque",
+		//		"textures/blocks/leaves_birch_opaque",
+		//		"textures/blocks/leaves_jungle_opaque"
+		//	]
+		//},
 		
 		"netherrack" : { "textures": [  {  "variations": [ 
 				{ "path": "textures/blocks/netherrack", "weight": 1 },
@@ -691,7 +763,9 @@
 				
 		"ii_reeds" : { "textures": [  {  "variations": [ 
 				{ "path": "textures/blocks/reeds", "weight": 1 },
-				{ "path": "textures/blocks/reeds1", "weight": 1 } ] } ] },
+				{ "path": "textures/blocks/reeds1", "weight": 1 } ] },
+				"textures/blocks/reeds_opaque"
+		] },
 				
 		"deepslate_tiles" : { "textures": [  {  "variations": [ 
 				{ "path": "textures/blocks/deepslate_tiles", "weight": 1 },

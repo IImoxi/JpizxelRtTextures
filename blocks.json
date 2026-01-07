@@ -76,8 +76,55 @@
 	"dark_oak_double_slab" : { "sound" : "wood", "textures" : { "down" : "dark_oak_planks", "side" : "dark_oak_vertical_planks", "up" : "dark_oak_planks" } },
 	"mangrove_double_slab" : { "sound" : "wood", "textures" : { "down" : "mangrove_planks", "side" : "mangrove_vertical_planks", "up" : "mangrove_planks" } },
 	"cracked_stone_bricks" : { "sound" : "stone", "textures" : "stonebrick_cracked" },
-	"leaves" : {
-		"brightness_gamma" : 0.80, "carried_textures" : "leaves_carried", "isotropic" : { "down" : true, "up" : true },
-		"sound" : "grass", "textures" : "ii_leaves"
+	"oak_leaves" : {
+		"ambient_occlusion_exponent" : 0.60,
+		"carried_textures" : "oak_leaves_carried",
+		"isotropic" : { "down" : true, "up" : true }, "sound" : "moss_block",
+		"textures" : "ii_oak_leaves"
+	},
+	"dark_oak_leaves" : {
+		"ambient_occlusion_exponent" : 0.60,
+		"carried_textures" : "big_oak_leaves_carried",
+		"isotropic" : { "down" : true, "up" : true }, "sound" : "moss_block",
+		"textures" : "ii_dark_oak_leaves"
+	},
+	"spruce_leaves" : {
+		"ambient_occlusion_exponent" : 0.60,
+		"carried_textures" : "spruce_leaves_carried",
+		"isotropic" : { "down" : true, "up" : true }, "sound" : "moss_block",
+		"textures" : "ii_spruce_leaves"
+	},
+	"birch_leaves" : {
+		"ambient_occlusion_exponent" : 0.60,
+		"carried_textures" : "birch_leaves_carried",
+		"isotropic" : { "down" : true, "up" : true }, "sound" : "moss_block",
+		"textures" : "ii_birch_leaves"
+	},
+	"acacia_leaves" : {
+		"ambient_occlusion_exponent" : 0.60,
+		"carried_textures" : "acacia_leaves_carried",
+		"isotropic" : { "down" : true, "up" : true }, "sound" : "moss_block",
+		"textures" : "ii_acacia_leaves"
+	},
+	"jungle_leaves" : {
+		"ambient_occlusion_exponent" : 0.60,
+		"carried_textures" : "jungle_leaves_carried",
+		"isotropic" : { "down" : true, "up" : true }, "sound" : "moss_block",
+		"textures" : "ii_jungle_leaves"
+	},
+	"azalea_leaves" : {
+		"ambient_occlusion_exponent" : 0.60,
+		"isotropic" : { "down" : true, "up" : true }, "sound" : "moss_block",
+		"textures" : "ii_azalea_leaves"
+	},
+	"azalea_leaves_flowered" : {
+		"ambient_occlusion_exponent" : 0.60,
+		"isotropic" : { "down" : true, "up" : true }, "sound" : "moss_block",
+		"textures" : "ii_flowering_azalea_leaves"
+	},
+	"cherry_leaves" : {
+		"ambient_occlusion_exponent" : 0.60,
+		"isotropic" : { "down" : true, "up" : true }, "sound" : "cherry_leaves",
+		"textures" : "ii_cherry_leaves"
 	}
 }
