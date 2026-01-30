@@ -23,6 +23,9 @@
 			"minecraft:emitter_lifetime_once": {
 				"active_time": 60
 			},
+			"minecraft:emitter_lifetime_events": {
+				"expiration_event": ["expire"]
+			},
 			"minecraft:emitter_shape_point": {
 				"direction": [0, 0, -1]
 			},
@@ -30,16 +33,12 @@
 				"max_lifetime": 60,
 				"expiration_expression": "variable.expired"
 			},
-			"minecraft:emitter_lifetime_events": {
-				"expiration_event": "expire"
-			},
 			"minecraft:particle_initial_speed": 25.9,
 			"minecraft:particle_motion_dynamic": {
-				"linear_acceleration": [0, -12, 0],
-				"linear_drag_coefficient": 0
+				"linear_acceleration": [0, -12, 0]
 			},
 			"minecraft:particle_appearance_billboard": {
-				"size": [ "v.particle_age >= 0.02 ? 0.3 : 0", "v.particle_age >= 0.02 ? 0.3 : 0" ],
+				"size": ["v.particle_age >= 0.02 ? 0.3 : 0", "v.particle_age >= 0.02 ? 0.3 : 0"],
 				"facing_camera_mode": "rotate_xyz",
 				"uv": {
 					"texture_width": 16,

@@ -32,7 +32,7 @@
 				"linear_drag_coefficient": 2.5
 			},
 			"minecraft:particle_appearance_billboard": {
-				"size": ["math.clamp((v.particle_lifetime - v.particle_age) / 2, 0, 0.08) * 4", "math.clamp((v.particle_lifetime - v.particle_age) / 2, 0, 0.08) * 4"],
+				"size": ["math.clamp((v.particle_lifetime - v.particle_age) / 2, 0, 0.08) * 4", "q.distance_from_camera < 24 ? math.clamp((v.particle_lifetime - v.particle_age) / 2, 0, 0.08) * 4 : 0"],
 				"facing_camera_mode": "rotate_xyz"
 			},
 			"minecraft:particle_appearance_tinting": {

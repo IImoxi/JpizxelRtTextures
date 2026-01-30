@@ -456,10 +456,10 @@
 								"type": "panel",
 								"layer": 2,
 								"controls": [
-									{ "top_half_panel@anvil.top_half_panel": {} },
-									{ "inventory_panel_bottom_half@common.inventory_panel_bottom_half": {
+									{ "top_half_panel@anvil.top_half_panel": { "$background_images": "ii.empty" } },
+									{ "inventory_panel_bottom_half@common.inventory_panel_bottom_half": { "$background_images": "ii.empty",
 										"bindings": [ { "binding_type": "view", "source_control_name": "expand_text_edit_panel",  "source_property_name": "(not #toggle_state)", "target_property_name": "#visible" } ] } },
-									{ "hotbar_grid@common.hotbar_grid_template": {
+									{ "hotbar_grid@common.hotbar_grid_template": { "$background_images": "ii.empty",
 										"bindings": [ { "binding_type": "view", "source_control_name": "expand_text_edit_panel",  "source_property_name": "(not #toggle_state)", "target_property_name": "#visible" } ] } },
 									{ "inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {} },
 									{

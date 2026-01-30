@@ -1,0 +1,30 @@
+{
+	"format_version" : "1.8.0",
+	"animations" : {
+		"animation.humanoid.look_at_target.default" : {
+			"loop" : true,
+			"bones" : {
+				"head": {
+					"relative_to" : {
+						"rotation" : "entity"
+					},
+					"rotation" : [ "query.target_x_rotation", "query.target_y_rotation", 0.0 ]
+				}
+			},
+			"particle_effects": {
+				"0.0": {
+					"effect": "indicator"
+				},
+				"0.01": {
+					"effect": "healthbar"
+				},
+				"0.02": {
+					"effect": "indicator_reach"
+				},
+				"0.03": {
+					"effect": "indicator_immunity"
+				}
+			}
+		}
+	}
+}

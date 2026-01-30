@@ -110,9 +110,9 @@
 					{
 					"furnace_screen_inventory": { "type": "panel", "layer": 5,
 						"controls": [
-							{ "furnace_panel_top_half@furnace.furnace_panel_top_half": {} },
-							{ "inventory_panel_bottom_half_with_label@common.inventory_panel_bottom_half": {} },
-							{ "hotbar_grid@common.hotbar_grid_template": {} },
+							{ "furnace_panel_top_half@furnace.furnace_panel_top_half": { "$background_images": "ii.empty" } },
+							{ "inventory_panel_bottom_half_with_label@common.inventory_panel_bottom_half": { "$background_images": "ii.empty" } },
+							{ "hotbar_grid@common.hotbar_grid_template": { "$background_images": "ii.empty" } },
 							{ "inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {} }
 						]
 					}

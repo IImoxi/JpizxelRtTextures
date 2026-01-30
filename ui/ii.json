@@ -167,6 +167,7 @@
 					"size": [ 162, 54 ],
 					"grid_dimensions": [ 9, 3 ],
 					"grid_item_template": "common.grid_item_for_inventory",
+					"$background_images": "ii.empty",
 					"collection_name": "inventory_items"
 				}
 			},
@@ -177,6 +178,7 @@
 					"offset": [ 0, 40 ],
 					"grid_dimensions": [ 9, 1 ],
 					"grid_item_template": "common.grid_item_for_hotbar",
+					"$background_images": "ii.empty",
 					"collection_name": "hotbar_items"
 				}
 			}

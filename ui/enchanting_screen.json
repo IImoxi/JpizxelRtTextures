@@ -407,8 +407,8 @@
               "enchanting_screen_inventory": { "type": "panel", "layer": 5,
                 "controls": [
                   { "enchanting_panel_top_half@enchanting.enchanting_panel_top_half": {} },
-                  { "inventory_panel_bottom_half_with_label@common.inventory_panel_bottom_half": {} },
-                  { "hotbar_grid@common.hotbar_grid_template": {} },
+                  { "inventory_panel_bottom_half_with_label@common.inventory_panel_bottom_half": { "$background_images": "ii.empty" } },
+                  { "hotbar_grid@common.hotbar_grid_template": { "$background_images": "ii.empty" } },
                   { "inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {} }
                 ]
               }

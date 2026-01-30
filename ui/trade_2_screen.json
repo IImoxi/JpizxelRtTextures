@@ -324,14 +324,17 @@
   },
 
   "trade_item_1@trade2.single_item_grid": {
+	  "$background_images": "ii.empty",
     "collection_name": "trade_item_1"
   },
 
   "trade_item_2@trade2.single_item_grid": {
+	  "$background_images": "ii.empty",
     "collection_name": "trade_item_2"
   },
 
   "sell_item@trade2.single_item_grid": {
+	  "$background_images": "ii.empty",
     "collection_name": "sell_item"
   },
 

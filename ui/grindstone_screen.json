@@ -192,9 +192,9 @@
 						{ "grindstone_gui@grindstone.grindstone_gui": {} },
 						{ "inventory_selected_icon_button@common.inventory_selected_icon_button": {} },
 						{ "gamepad_cursor@common.gamepad_cursor_button": {} },
-						{ "top_half_panel@grindstone.top_half_panel": { "offset": [ 0, -1 ] } },
-						{ "inventory_panel_bottom_half@common.inventory_panel_bottom_half": { "offset": [ 0, -1 ] } },
-						{ "hotbar_grid@common.hotbar_grid_template": { "offset": [ 0, -8 ] } },
+						{ "top_half_panel@grindstone.top_half_panel": { "offset": [ 0, -1 ], "$background_images": "ii.empty" } },
+						{ "inventory_panel_bottom_half@common.inventory_panel_bottom_half": { "offset": [ 0, -1 ], "$background_images": "ii.empty" } },
+						{ "hotbar_grid@common.hotbar_grid_template": { "offset": [ 0, -8 ], "$background_images": "ii.empty" } },
 						{ "inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {} }
 					]
 				}

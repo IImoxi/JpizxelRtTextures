@@ -29,6 +29,7 @@
 	"hopper_inventory@common.root_panel": {
 		"size": [ 176, 134 ],
 		"offset": [ 0, -39 ],
+		"$background_images": "ii.empty",
 		"controls": [
 			{
 				"redstone_input_grid": {
@@ -64,6 +65,7 @@
 	"dispenser_inventory@common.root_panel": {
 		"size": [ 176, 166 ],
 		"offset": [ 0, -40 ],
+		"$background_images": "ii.empty",
 		"controls": [
 			{
 				"redstone_input_grid": {
