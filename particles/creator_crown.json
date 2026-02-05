@@ -30,7 +30,7 @@
 				"size": 
 				[
 					"q.distance_from_camera > 32 || query.is_invisible || !query.is_alive || q.distance_from_camera < 1.5 ? 0 : 0.3", 
-					"query.is_name_any('IImoxi','§fIImoxi','§7IImoxi','§8IImoxi', '§cIImoxi', '§eIImoxi', '§aIImoxi', '§c[1] IImoxi', '§c[2] IImoxi', '§c[3] IImoxi', '§c[4] IImoxi', '§a[1] IImoxi', '§a[2] IImoxi', '§a[3] IImoxi', '§a[4] IImoxi', ' §eIImoxi', ' §4IImoxi', ' §6IImoxi', ' §fIImoxi', '§aIImoxi§8 [§a+§8]') ? 0.3 : 0"
+					"query.is_name_any('IImoxi', '§fIImoxi', '§7IImoxi', '§8IImoxi', '§cIImoxi', '§eIImoxi', '§aIImoxi', ' §eIImoxi', ' §4IImoxi', ' §6IImoxi', ' §fIImoxi', '§aIImoxi§8 [§a+§8]') ? 0.3 : 0"
 				],
 				"facing_camera_mode": "rotate_xyz",
 				"uv": {
