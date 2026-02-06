@@ -2,313 +2,289 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, <initial-scale=1.0">
-    <title>Spinning 3D Cube</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JPizxeL Texture Pack</title>
     <style>
+        /* Reset and base styles */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-family: 'Rajdhani', 'Arial', sans-serif;
         }
         
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            overflow: hidden;
-            color: white;
+            background-color: #000;
+            color: #fff;
+            line-height: 1.6;
+            overflow-x: hidden;
         }
         
-        .container {
-            text-align: center;
-            z-index: 10;
-            position: relative;
+        /* Typography */
+        h1, h2, h3 {
+            font-weight: 400;
+            letter-spacing: 1px;
         }
         
         h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            font-size: 3.5rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+        
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
         
         p {
             font-size: 1.1rem;
-            margin-bottom: 2rem;
-            max-width: 600px;
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+        
+        /* Layout */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        /* Header styles */
+        header {
+            padding: 30vh 0;
+            text-align: center;
+            position: relative;
+            min-height: 70vh;
+        }
+        
+        .hero-text {
+            margin-top: 2rem;
+            font-size: 1.5rem;
+            font-weight: 300;
+            max-width: 700px;
             margin-left: auto;
             margin-right: auto;
         }
         
-        .cube-container {
-            width: 200px;
-            height: 200px;
-            margin: 0 auto;
-            perspective: 800px;
-            position: relative;
+        /* Download section */
+        .download-section {
+            padding: 3rem 0;
+            text-align: center;
+            background-color: #111;
         }
         
-        .cube {
-            width: 100%;
-            height: 100%;
-            position: relative;
-            transform-style: preserve-3d;
-            animation: rotate 10s infinite linear;
-            transform: rotateX(-15deg) rotateY(-15deg);
-        }
-        
-        .face {
-            position: absolute;
-            width: 200px;
-            height: 200px;
-            background: rgba(255, 255, 255, 0.1);
-            border: 2px solid rgba(255, 255, 255, 0.5);
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 24px;
-            font-weight: bold;
-            color: white;
-            text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-            backdrop-filter: blur(5px);
-            border-radius: 5px;
-            transition: transform 0.5s;
-        }
-        
-        .front {
-            transform: translateZ(100px);
-            background: rgba(33, 150, 243, 0.8);
-        }
-        
-        .back {
-            transform: rotateY(180deg) translateZ(100px);
-            background: rgba(255, 50, 50, 0.8);
-        }
-        
-        .right {
-            transform: rotateY(90deg) translateZ(100px);
-            background: rgba(50, 205, 50, 0.8);
-        }
-        
-        .left {
-            transform: rotateY(-90deg) translateZ(100px);
-            background: rgba(255, 165, 0, 0.8);
-        }
-        
-        .top {
-            transform: rotateX(90deg) translateZ(100px);
-            background: rgba(255, 192, 203, 0.8);
-        }
-        
-        .bottom {
-            transform: rotateX(-90deg) translateZ(100px);
-            background: rgba(138, 43, 226, 0.8);
-        }
-        
-        .controls {
+        .download-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
             margin-top: 2rem;
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
         }
         
-        button {
-            padding: 12px 24px;
-            background: rgba(255, 255, 255, 0.2);
-            border: 2px solid rgba(255, 255, 255, 0.5);
-            color: white;
-            border-radius: 30px;
+        .download-card {
+            background-color: #000;
+            border: 1px solid #fff;
+            padding: 2rem;
+            border-radius: 2px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+        }
+        
+        .download-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+        }
+        
+        .download-button {
+            background-color: #fff;
+            color: #000;
+            border: none;
+            padding: 1rem 2rem;
             font-size: 1rem;
+            font-weight: 400;
+            letter-spacing: 1px;
             cursor: pointer;
             transition: all 0.3s ease;
-            backdrop-filter: blur(5px);
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            display: inline-block;
+            margin-top: 1.5rem;
+            border-radius: 2px;
+            text-transform: uppercase;
+            text-decoration: none;
         }
-        
-        button:hover {
-            background: rgba(255, 255, 255, 0.3);
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-        }
-        
-        .speed-control {
-            margin-top: 1rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-        }
-        
-        input[type="range"] {
-            width: 200px;
-            height: 8px;
-            -webkit-appearance: none;
-            background: rgba(255, 255, 255, 0.2);
-            border-radius: 5px;
-            outline: none;
-        }
-        
-        input[type="range"]::-webkit-slider-thumb {
-            -webkit-appearance: none;
-            width: 20px;
-            height: 20px;
-            background: white;
-            border-radius: 50%;
+		
+		.download-button-disabled {
+            background-color: #777;
+            color: #000;
+            border: none;
+            padding: 1rem 2rem;
+            font-size: 1rem;
+            font-weight: 400;
+            letter-spacing: 1px;
             cursor: pointer;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            display: inline-block;
+            margin-top: 1.5rem;
+            border-radius: 2px;
+            text-transform: uppercase;
+            text-decoration: none;
         }
         
-        @keyframes rotate {
-            0% {
-                transform: rotateX(-15deg) rotateY(0deg);
-            }
-            100% {
-                transform: rotateX(-15deg) rotateY(360deg);
-            }
+        .download-button:hover {
+            background-color: #f5f5f5;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
         }
         
+        /* GitHub button */
+        .github-button {
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            background-color: #000;
+            color: #fff;
+            border: none;
+            padding: 0.7rem 1.2rem;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border-radius: 2px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .github-button:hover {
+            background-color: #fff;
+            color: #000;
+            transform: translateY(-3px);
+        }
+        
+        /* Features section */
+        .features-section {
+            padding: 8rem 0;
+            background-color: #111;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            margin-top: 4rem;
+        }
+        
+        .feature-card {
+            background-color: #000;
+            border: 1px solid #fff;
+            padding: 2rem;
+            border-radius: 2px;
+            transition: transform 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: #fff;
+        }
+        
+        /* Footer */
+        footer {
+            padding: 4rem 0;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #777;
+        }
+        
+        /* Media queries */
         @media (max-width: 768px) {
             h1 {
-                font-size: 2rem;
+                font-size: 2.5rem;
             }
             
-            p {
-                font-size: 0.9rem;
+            h2 {
+                font-size: 1.5rem;
             }
             
-            .cube-container {
-                width: 150px;
-                height: 150px;
-            }
-            
-            .face {
-                width: 150px;
-                height: 150px;
-                font-size: 18px;
+            .download-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Interactive 3D Cube</h1>
-        <p>Watch as this cube rotates in 3D space. Control the rotation speed or pause the animation.</p>
-        
-        <div class="cube-container">
-            <div class="cube">
-                <div class="face front">Front</div>
-                <div class="face back">Back</div>
-                <div class="face right">Right</div>
-                <div class="face left">Left</div>
-                <div class="face top">Top</div>
-                <div class="face bottom">Bottom</div>
+    <header>
+        <div class="container">
+            <h1>JPIzxeL</h1>
+            <p>A selections of packs to download here! By IImoxi</p>
+        </div>
+        <a href="https://github.com/iimoxi/JPizxelRtTextures" class="github-button">GitHub Repository</a>
+    </header>
+    
+    <section class="download-section">
+        <div class="container">
+            <h2>Downloads (Bedrock)</h2>
+            <div class="download-grid">
+                <div class="download-card">
+                    <h3>Bedrock Base</h3>
+                    <p>Base texture pack with custom UI, vanilla edit blocks, items, entities and some quality of life features.</p>
+                    <a href="https://github.com/IImoxi/JpizxelRtTextures/archive/refs/heads/main.zip" class="download-button">Download JPizxel RT Textures (~8MB)</a>
+                </div>
+                
+                <div class="download-card">
+                    <h3>Skies</h3>
+                    <p>Subpacks for various selections + Vibrant visual HDR skies. Up to 4k * 4k resolution.</p>
+                    <a href="https://github.com/IImoxi/JPizxeL-Skies/archive/refs/heads/main.zip" class="download-button">Download JPizxeL Skies (~500MB)</a>
+                </div>
+                
+                <div class="download-card">
+                    <h3>Animations</h3>
+                    <p>Fancy and cute animations that are subtle and not distracting.</p>
+                    <a href="#" class="download-button-disabled">Download Animations (~80KB)</a>
+                </div>
+                
+                <div class="download-card">
+                    <h3>Projectiles+</h3>
+                    <p>Lag free projectile throwing, subpack for indicators. (Meant for CubeCraft so may be broken on other servers.)</p>
+                    <a href="#" class="download-button-disabled">Download Projectiles+ (~800KB) </a>
+                </div>
+            </div>
+			<h2>Downloads (Java)</h2>
+            <div class="download-grid">
+                <div class="download-card">
+                    <h3>Java base</h3>
+                    <p>If bedrock becomes so bad I move to java..</p>
+                    <a href="#" class="download-button-disabled">Doesnt exist (Yet?)</a>
+                </div>
             </div>
         </div>
-        
-        <div class="controls">
-            <button id="pauseBtn">Pause</button>
-            <button id="playBtn">Play</button>
-            <button id="resetBtn">Reset</button>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <p>JPizxel &copy; 2026 All rights reserved.</p>
         </div>
-        
-        <div class="speed-control">
-            <span>Speed:</span>
-            <input type="range" id="speedControl" min="1" max="20" value="10">
-        </div>
-    </div>
-
+    </footer>
+    
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const cube = document.querySelector('.cube');
-            const pauseBtn = document.getElementById('pauseBtn');
-            const playBtn = document.getElementById('playBtn');
-            const resetBtn = document.getElementById('resetBtn');
-            const speedControl = document.getElementById('speedControl');
-            const faces = document.querySelectorAll('.face');
-            
-            let isPaused = false;
-            let animationSpeed = 10;
-            
-            // Update cube animation speed based on slider
-            speedControl.addEventListener('input', function() {
-                animationSpeed = this.value;
-                cube.style.animationDuration = `${10 / animationSpeed}s`;
-            });
-            
-            // Pause button functionality
-            pauseBtn.addEventListener('click', function() {
-                if (isPaused) {
-                    cube.style.animationPlayState = 'running';
-                    pauseBtn.textContent = 'Pause';
-                } else {
-                    cube.style.animationPlayState = 'paused';
-                    pauseBtn.textContent = 'Play';
-                }
-                isPaused = !isPaused;
-            });
-            
-            // Play button functionality
-            playBtn.addEventListener('click', function() {
-                cube.style.animationPlayState = 'running';
-                pauseBtn.textContent = 'Pause';
-                isPaused = false;
-            });
-            
-            // Reset button functionality
-            resetBtn.addEventListener('click', function() {
-                cube.style.animationPlayState = 'running';
-                cube.style.animationDuration = `${10 / animationSpeed}s`;
-                pauseBtn.textContent = 'Pause';
-                isPaused = false;
-            });
-            
-            // Add hover effect to faces
-            faces.forEach(face => {
-                face.addEventListener('mouseover', function() {
-                    this.style.transform = this.style.transform.replace('translateZ(100px)', 'translateZ(120px)');
-                    this.style.transform += ' scale(1.1)';
-                });
-                
-                face.addEventListener('mouseout', function() {
-                    this.style.transform = this.style.transform.replace('translateZ(120px) scale(1.1)', 'translateZ(100px)');
-                    this.style.transform = this.style.transform.replace('scale(1.1)', '');
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
                 });
             });
-            
-            // Add touch controls for mobile devices
-            if ('ontouchstart' in window) {
-                let touchStartX, touchStartY;
-                
-                document.addEventListener('touchstart', function(e) {
-                    touchStartX = e.touches[0].clientX;
-                    touchStartY = e.touches[0].clientY;
-                });
-                
-                document.addEventListener('touchmove', function(e) {
-                    if (!touchStartX || !touchStartY) return;
-                    
-                    const touchX = e.touches[0].clientX;
-                    const touchY = e.touches[0].clientY;
-                    
-                    const deltaX = touchX - touchStartX;
-                    const deltaY = touchY - touchStartY;
-                    
-                    // Rotate based on touch movement
-                    if (Math.abs(deltaX) > 10 || Math.abs(deltaY) > 10) {
-                        const rotationX = (deltaY / 100) * 90;
-                        const rotationY = (deltaX / 100) * 90;
-                        
-                        cube.style.transform = `rotateX(${rotationX}deg) rotateY(${rotationY}deg)`;
-                        
-                        touchStartX = touchX;
-                        touchStartY = touchY;
-                    }
-                });
-            }
         });
+        
+        // Simple animation for feature cards on scroll
     </script>
 </body>
 </html>
