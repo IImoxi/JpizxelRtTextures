@@ -11,11 +11,6 @@
 		"pbr",
 		"raytraced" 
 	],
-	"subpacks": [
-		{ "folder_name": "chat 50", "name": "§r§7§l50%% chat scale§r", "memory_tier": 1 },
-		{ "folder_name": "chat 66", "name": "§r§7§l66%% Chat scale§r", "memory_tier": 1 },
-		{ "folder_name": "chat 100", "name": "§r§7§lDefault chat scale§r", "memory_tier": 0 }
-	],
 	"modules": [
 		{
 			"description": "§4II§1mox§4i",

@@ -4,6 +4,151 @@
   //---------------------------------------------------------------------------
   // Common
   //---------------------------------------------------------------------------
+
+// \/ Recipe Book Sidebar
+
+	"ii_sidebar@ii.dark_dialog": {
+		"alpha": 0.3,
+		"anchor_from": "top_right",
+		"anchor_to": "top_right",
+		"size":[ 176, "100%"],
+		"max_size":[ "50% - 89px", "100%"],
+		"bindings": [
+			{
+				"binding_type": "view", "source_control_name": "enable_sidebar",
+				"source_property_name": "#toggle_state", "target_property_name": "#visible"
+			}
+		],
+		"controls": [
+			//{
+			//	"tab_navigation_panel@crafting.tab_navigation_panel_layout": {
+			//		"layer": 5,
+			//		"size": [ "100%", 23 ],
+			//		"anchor_from": "top_middle",
+			//		"anchor_to": "top_middle"
+			//	}
+			//},
+			{
+				"tab_content_panel@crafting.ii_tab_content": {
+					"size": [ "100%", "100% - 25px" ],
+					"anchor_from": "top_left",
+					"anchor_to": "top_left",
+					"layer": 8,
+					"$scrolling_pane_control": "crafting.recipe_book_scroll_panel"
+				}
+			},
+			{
+				"text_panel": {
+					"type": "stack_panel",
+					"orientation": "horizontal",
+					"size": [ "100% - 35px", 16 ],
+					"anchor_from": "bottom_right",
+					"anchor_to": "bottom_right",
+					"offset": [ -5, -5 ],
+					"controls": [
+						{
+							"text_edit_control@common.text_edit_box": {
+								"size": [ "fill", 16 ],
+
+								"property_bag": {
+								"#property_field": "#item_name"
+								},
+
+								"max_length": 30,
+								"$text_background_default": "ii.dark_dialog",
+								"$text_background_hover": "ii.dark_dialog",
+								"$text_edit_binding_name": "#text_box_item_name",
+								"$text_edit_box_label_size": [ "default", 10 ],
+								"$text_edit_box_label_offset": [ 0, 0 ],
+								"$text_edit_box_hovered_button_id": "button.search_bar_hovered",
+								"$text_edit_box_clear_to_button_id": "button.search_bar_clear",
+								"$text_edit_box_selected_to_button_id": "button.search_bar_selected",
+								"$text_edit_box_deselected_to_button_id": "button.search_bar_deselected",
+
+								"$text_clear_button_enabled" : false, // true crashes game lol : ctrl + del instead cuz PC
+								"$magnifying_glass_enabled" : false,
+
+								"focus_wrap_enabled": false,
+
+								"$focus_id": "recipe_search_bar",
+								"$focus_override_right": "craftable_toggle",
+								"$focus_override_up": "construction_tab"
+							}
+						},
+						{
+							"filter_toggle@crafting.filter_toggle": {
+								"size": [ 32, 16 ],
+								"anchor_from": "bottom_right",
+								"anchor_to": "bottom_right",
+
+								"$focus_id": "craftable_toggle",
+								"$focus_override_left": "recipe_search_bar",
+								"$default_border_visible": false,
+								"$hover_border_visible": false,
+								"bindings": [
+									{
+										"binding_name": "#is_creative_mode"
+									},
+									{
+										"binding_type": "view",
+										"source_property_name": "(not #is_creative_mode)",
+										"target_property_name": "#visible"
+									}
+								]
+							}
+						}
+					]
+				}
+			},
+			{
+				"ii_search_tab_holder": {
+					"type": "panel",
+					"anchor_from": "bottom_left",
+					"anchor_to": "bottom_left",
+					"offset": [ 8, -5 ],
+					"size": [ 16, 16 ],
+					"controls": [
+						{
+							"search_tab_end_creative@crafting.search_tab": {
+								"$focus_override_right": "creative_layout_toggle"
+							}
+                        }
+					]
+				}
+			}
+		]
+	},
+
+// Content for sidebar
+
+
+	"ii_tab_content": {
+    "type": "panel",
+    "layer": 1,
+    "controls": [
+      {
+        "tab_content_search_bar_panel": {
+          "type": "stack_panel",
+          "size": [ "100% - 4px", "100%" ],
+          "orientation": "vertical",
+
+          "controls": [
+            {
+              "vertical_padding_3@crafting.tab_content_padding": {
+                "size": [ 0, 2 ]
+              }
+            },
+            {
+              "scroll_pane@$scrolling_pane_control": {
+                "size": [ "100%", "fill" ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
   
 // \/ Toolbar
 
@@ -352,201 +497,72 @@
 // /\         Armor            /\
 // \/ Inventory Content \/
 
+	"expand_button_default@ii.empty": { "size": [ 20, 20 ],
+	"controls": [ { "icon": { "type": "image", "size": [ 16, 16 ], "texture": "textures/gui/icons/recipe_book" } } ] },
+	"expand_button_highlight@ii.button_highlight": { "size": [ 20, 20 ],
+	"controls": [ { "icon": { "type": "image", "size": [ 16, 16 ], "texture": "textures/gui/icons/recipe_book" } } ] },
+
 	"recipe_inventory_screen_content": {
 		"type":"panel",
 		"controls":[
 			{ "left_invisible_button@ii.left_invisible_button": { "$pressed_button_name": "button.menu_exit" } },
-			{ "right_invisible_button@ii.right_invisible_button": { "$pressed_button_name": "button.menu_exit" } },
+			{ "player_inventory@crafting.player_inventory": {} },
+			{ "player_sidebar@crafting.ii_sidebar": {} },
 			{
-				"content_stack_panel": {
-					"type":"stack_panel",
-					"size": [ 326, 166 ],
-					"orientation":"horizontal",
-					"controls":[
-						{
-							"recipe_book@crafting.recipe_book":{
-								"size":[
-									"fill",
-									"100%"
-								],
-								"bindings":[
-									{
-										"binding_type":"global",
-										"binding_name":"(not #is_survival_layout)",
-										"binding_name_override":"#visible"
-									}
-								]
-							}
-						},
-						{
-							"center_fold@crafting.center_fold":{
-								"size":[
-									4,
-									166
-								],
-								"bindings":[
-									{
-										"binding_type":"global",
-										"binding_name":"#is_recipe_book_layout",
-										"binding_name_override":"#visible"
-									}
-								]
-							}
-						},
-						{
-							"survival_padding":{
-								"type":"panel",
-								"size":[
-									75,
-									"100%"
-								],
-								"bindings":[
-									{
-										"binding_type":"global",
-										"binding_name":"#is_survival_layout",
-										"binding_name_override":"#visible"
-									}
-								]
-							}
-						},
-						{
-							"player_inventory@crafting.player_inventory": {
-								"bindings":[
-									{
-										"binding_type":"global",
-										"binding_name":"(not #is_creative_layout)",
-										"binding_name_override":"#visible"
-									}
-								]
-							}
-						},
-						{
-							"toolbar_anchor": {
-								"type": "panel",
-								"size": [ 0, "100%" ],
-								"controls": [ {
-									"toolbar_panel@crafting.toolbar_panel": {
-										"anchor_from": "top_right",
-										"anchor_to": "bottom_right",
-										"layer": 30,
-										"offset": [ -22, -2 ]
-									}
-								} ]
-							}
-						}
+				"sidebar_button": {
+					"type": "panel",
+					"layer": 10,
+					"$template_toggle": "ii.toggle",
+					"offset": [ 72, -13 ],
+					"$unchecked_control": "crafting.expand_button_default",
+					"$checked_control": "crafting.expand_button_highlight",
+					"$unchecked_hover_control": "crafting.expand_button_highlight",
+					"$checked_hover_control": "crafting.expand_button_highlight",
+					"$toggle_name": "sidebar_toggle",
+					"size": [ 16, 16 ],
+					"propagate_alpha": true,
+					"$toggle_view_binding_name": "enable_sidebar",
+					"controls": [
+						{ "$toggle_view_binding_name@$template_toggle": {} }
 					]
 				}
 			},
-			{
-				"inventory_selected_icon_button@common.inventory_selected_icon_button":{}
-			},
-			{
-				"hold_icon@common.inventory_take_progress_icon_button":{}
-			}
+			{ "inventory_selected_icon_button@common.inventory_selected_icon_button":{} },
+			{ "hold_icon@common.inventory_take_progress_icon_button":{} }
 		]
 	},
 
 // /\    Inventory Content     /\
 // \/ Crafting Table content \/
 
+
 	 "recipe_crafting_table_screen_content":{
 		"type":"panel",
 		"controls":[
 			{ "left_invisible_button@ii.left_invisible_button": { "$pressed_button_name": "button.menu_exit" } },
-			{ "right_invisible_button@ii.right_invisible_button": { "$pressed_button_name": "button.menu_exit" } },
+			{ "player_crafting_table@crafting.player_crafting_table": {} },
+			{ "player_sidebar@crafting.ii_sidebar": {} },
 			{
-				"content_stack_panel":{
-					"type":"stack_panel",
-					"size":[
-						326,
-						166
-					],
-					"orientation":"horizontal",
-					"controls":[
-						{
-							"recipe_book@crafting.recipe_book":{
-								"size":[
-									"fill",
-									"100%"
-								],
-								"bindings":[
-									{
-										"binding_type":"global",
-										"binding_name":"(not #is_survival_layout)",
-										"binding_name_override":"#visible"
-									}
-								]
-							}
-						},
-						{
-							"center_fold@crafting.center_fold":{
-								"size":[
-									4,
-									166
-								],
-								"bindings":[
-									{
-										"binding_type":"global",
-										"binding_name":"#is_recipe_book_layout",
-										"binding_name_override":"#visible"
-									}
-								]
-							}
-						},
-						{
-							"survival_padding":{
-								"type":"panel",
-								"size":[
-									75,
-									"100%"
-								],
-								"bindings":[
-									{
-										"binding_type":"global",
-										"binding_name":"#is_survival_layout",
-										"binding_name_override":"#visible"
-									}
-								]
-							}
-						},
-						{
-							"player_crafting_table@crafting.player_crafting_table":{
-								"bindings":[
-									{
-										"binding_type":"global",
-										"binding_name":"(not #is_creative_layout)",
-										"binding_name_override":"#visible"
-									}
-								]
-							}
-						},
-						{
-							"toolbar_anchor": {
-								"type": "panel",
-								"size": [ 0, "100%" ],
-								"controls": [ {
-									"toolbar_panel@crafting.toolbar_panel": {
-										"anchor_from": "top_right",
-										"anchor_to": "bottom_right",
-										"layer": 30,
-										"offset": [ -22, -2 ]
-									}
-								} ]
-							}
-						}
+				"sidebar_button": {
+					"type": "panel",
+					"layer": 10,
+					"$template_toggle": "ii.toggle",
+					"offset": [ 72, -13 ],
+					"$unchecked_control": "crafting.expand_button_default",
+					"$checked_control": "crafting.expand_button_highlight",
+					"$unchecked_hover_control": "crafting.expand_button_highlight",
+					"$checked_hover_control": "crafting.expand_button_highlight",
+					"$toggle_name": "sidebar_toggle",
+					"size": [ 16, 16 ],
+					"propagate_alpha": true,
+					"$toggle_view_binding_name": "enable_sidebar",
+					"controls": [
+						{ "$toggle_view_binding_name@$template_toggle": {} }
 					]
 				}
 			},
-			{
-				"inventory_selected_icon_button@common.inventory_selected_icon_button":{
-					
-				}
-			},
-			{
-				"hold_icon@common.inventory_take_progress_icon_button":{
-					
-				}
-			}
+			{ "inventory_selected_icon_button@common.inventory_selected_icon_button": {} },
+			{ "hold_icon@common.inventory_take_progress_icon_button":{ } }
 		]
 	},
   

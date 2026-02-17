@@ -175,7 +175,7 @@
 			{ "bottom_panel@start.bottom_panel": {} },
 			{ "skin_viewer@start.skin_viewer_panel": {} },
 			{ "pack_name_label@start.pack_name_label": {} },
-			{ "pack_setting_label@start.pack_setting_label": {} },
+			//{ "pack_setting_label@start.pack_setting_label": {} },
 			{ "version_label@ii.version_label": {} }
 		]
 	}

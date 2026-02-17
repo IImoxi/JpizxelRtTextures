@@ -19,457 +19,12 @@
 		"texture": "textures/ui/dropdown_background"
 	},
 
-  
-  "dropdown": {
-    "type": "panel",
-
-    "$dropdown_content|default": "common.empty_panel",
-    "$dropdown_toggle|default": "common.checkbox",
-    "$dropdown_name|default": "dropdown_control",
-    "$dropdown_scroll_content_size|default": [ "100%", "500%" ],
-    "$dropdown_toggle_name|default": "($dropdown_name + '_toggle')",
-    "$dropdown_background|default": "start.iibutton0",
-
-    "controls": [
-      {
-        "$dropdown_name@$dropdown_toggle": {
-          "type": "dropdown",
-          "$toggle_view_binding_name": "$dropdown_name",
-          "anchor_from": "top_left",
-          "anchor_to": "top_left",
-          "dropdown_name": "$dropdown_name",
-          "dropdown_content_control": "dropdown_content",
-          "dropdown_area": "$dropdown_area",
-          "$toggle_name": "$dropdown_name",
-          "$toggle_state_binding_name": "('#' + $dropdown_name)",
-          "$toggle_tts_name": "accessibility.dropdown.tts.title",
-          "$toggle_tts_toggle_on_text": "",
-          "$toggle_tts_toggle_off_text": "",
-          "tts_control_type_order_priority": -1 // This should happen before labels whose default starts at 0
-        }
-      },
-      {
-        "dropdown_content": {
-          "type": "input_panel",
-          // we really want this on top of everything
-          "layer": 42,
-          "size": "$dropdown_scroll_content_size",
-          "$anchor_dropdown_content_from|default": "top_left",
-          "$anchor_dropdown_content_to|default": "top_left",
-          "anchor_from": "$anchor_dropdown_content_from",
-          "anchor_to": "$anchor_dropdown_content_to",
-          "modal": true,
-          "property_bag": {
-            "#is_dropdown": true
-          },
-          "ttsSectionContainer": true,
-          "$dropdown_content_controls|default": [
-            {
-              "scroll@common.scrolling_panel": {
-                "layer": 2,
-                "size": [ "100%", "100%" ],
-                "$scrolling_pane_size": [ "100%", "100%" ],
-                "$scrolling_content": "$dropdown_content",
-                "$scroll_view_port_size": [ "100% - 4px", "100% - 4px" ],
-                "$scroll_view_port_size_touch": [ "100% - 4px", "100% - 4px" ],
-                "$scroll_view_port_offset": [ 2, 2 ],
-                "$scroll_view_port_offset_touch": [ 2, 2 ],
-                "$scroll_size": [ 5, "100%-2px" ],
-                "$scroll_size_touch": [ 5, "100%-2px" ],
-                "$scroll_background_image_control": "$dropdown_background",
-                "$background_size": [ "100%", "100%" ],
-                "$background_size_touch": [ "100%", "100%" ],
-                "$show_background": true,
-                "$scroll_bar_contained": true,
-                "$scroll_bar_contained_touch": true
-              }
-            }
-          ],
-          "controls": "$dropdown_content_controls",
-          "bindings": [
-            {
-              "binding_type": "view",
-              "source_control_name": "($dropdown_name)",
-              "source_property_name": "#toggle_state",
-              "target_property_name": "#visible",
-              "resolve_sibling_scope": true
-            }
-          ],
-          "button_mappings": [
-            {
-              "from_button_id": "button.menu_cancel",
-              "to_button_id": "button.dropdown_exit",
-              "mapping_type": "global"
-            },
-            {
-              "from_button_id": "button.menu_ok",
-              "to_button_id": "button.dropdown_exit",
-              "mapping_type": "global"
-            },
-            {
-              "from_button_id": "button.menu_select",
-              "to_button_id": "button.dropdown_exit",
-              "mapping_type": "global"
-            },
-            {
-              "from_button_id": "button.menu_up",
-              "to_button_id": "button.menu_up",
-              "mapping_type": "global",
-              "scope": "view"
-            },
-            {
-              "from_button_id": "button.menu_down",
-              "to_button_id": "button.menu_down",
-              "mapping_type": "global",
-              "scope": "view"
-            },
-            {
-              "from_button_id": "button.menu_left",
-              "to_button_id": "button.menu_left",
-              "mapping_type": "global",
-              "scope": "view"
-            },
-            {
-              "from_button_id": "button.menu_right",
-              "to_button_id": "button.menu_right",
-              "mapping_type": "global",
-              "scope": "view"
-            }
-          ]
-        }
-      }
-    ]
-  },
-
-  //---------------------------------------------------------------------------
-  // Toggles
-  //---------------------------------------------------------------------------
-
-  "mute_all_toggle@settings_common.option_toggle": {
-    "$one_line_layout": true,
-    "$option_label": "chat.settings.muteAll",
-
-    "$option_binding_name": "#hide_chat",
-    "$toggle_name": "hide_chat",
-    "$focus_id": "mute_all_toggle_focus_id",
-    "$focus_override_up": "reset_button_focus_id"
-  },
-
-  "chat_tts_toggle@settings_common.option_toggle": {
-    "$one_line_layout": true,
-    "$option_label": "chat.settings.tts",
-
-    "$option_binding_name": "#toggle_tts",
-    "$toggle_name": "toggle_tts",
-    "bindings": [
-      {
-        "binding_name": "(not #hide_chat)",
-        "binding_name_override": "#enabled"
-      }
-    ]
-  },
-
-  //---------------------------------------------------------------------------
-  // Buttons
-  //---------------------------------------------------------------------------
-
-  "reset_button@start.ii_text_button": {
-    "size": [ 100, 16 ],
-    "$pressed_button_name": "button.reset_chat_settings",
-    "$ii_text_button_text": "options.resetSettings",
-    "$focus_id": "reset_button_focus_id",
-    "$focus_override_down": "mute_all_toggle_focus_id"
-  },
-
-  //---------------------------------------------------------------------------
-  // Dropdowns
-  //---------------------------------------------------------------------------
-
-  // Typeface //
-  
-	"iibutton0": {
-		"type": "image",
-		"layer": 5,
-		"size": [ "100%", 16 ],
-		"texture": "client/iibutton0"
-	},
-	
-	"iibutton1": {
-		"type": "image",
-		"layer": 5,
-		"size": [ "100%", 16 ],
-		"texture": "client/iibutton1"
-	},
-	
-	"dropdown_button_hover": {
-		"type": "image",
-		"size": [ "100% - 4px", 16 ],
-		"texture": "client/divider",
-		"alpha": 0.15,
-		"controls": [{
-			"dropdown_label": {
-				"type": "label",
-				"alpha": 0.8,
-				"text": "$radio_label_text",
-				"$ii_text_button_font|default": "default",
-				"font_type": "$ii_text_button_font"
-			}
-		}]
-	},
-	
-	"dropdown_button_selected": {
-		"type": "image",
-		"size": [ "100% - 4px", 16 ],
-		"texture": "client/divider",
-		"alpha": 0.3,
-		"controls": [{
-			"dropdown_label": {
-				"type": "label",
-				"alpha": 0.8,
-				"text": "$radio_label_text",
-				"$ii_text_button_font|default": "default",
-				"font_type": "$ii_text_button_font"
-			}
-		}]
-	},
-	
-	"dropdown_button": {
-		"type": "panel",
-		"size": [ "100% - 4px", 16 ],
-		"controls": [{
-			"dropdown_label": {
-				"type": "label",
-				"alpha": 0.8,
-				"text": "$radio_label_text",
-				"$ii_text_button_font|default": "default",
-				"font_type": "$ii_text_button_font"
-			}
-		}]
-	},
-
-	"typeface_dropdown_content": {
-		"type": "stack_panel",
-		"size": [ "100%", "100%c" ],
-		"controls": [
-			{
-				"top_padding@common.empty_panel": {
-					"size": [ "100%", 2 ]
-				}
-			},
-			{
-				"mojangles@settings_common.radio_item_with_label_and_content": {
-					"$toggle_state_binding_name": "#typeface_radio_mojangles",
-					"$unchecked_hover_control": "chat_settings.dropdown_button_hover",
-					"$checked_hover_control": "chat_settings.dropdown_button_selected",
-					"$checked_control": "chat_settings.dropdown_button_selected",
-					"$unchecked_control": "chat_settings.dropdown_button",
-					"$unchecked_locked_control": "chat_settings.dropdown_button",
-					"$radio_label_text": "typeface.mojangles"
-				}
-			},
-			{
-				"noto_sans@settings_common.radio_item_with_label_and_content": {
-					"$toggle_state_binding_name": "#typeface_radio_notoSans",
-					"$unchecked_hover_control": "chat_settings.dropdown_button_hover",
-					"$checked_hover_control": "chat_settings.dropdown_button_selected",
-					"$checked_control": "chat_settings.dropdown_button_selected",
-					"$unchecked_control": "chat_settings.dropdown_button",
-					"$unchecked_locked_control": "chat_settings.dropdown_button",
-					"$radio_label_text": "typeface.notoSans",
-					"$ii_text_button_font": "smooth"
-				}
-			},
-			{
-				"bottom_padding@common.empty_panel": {
-					"size": [ "100%", 2 ]
-				}
-			}
-		]
-	},
-
-	"font_type_setting@start.iibutton0": {
-		"size": [ "100%", "100%c" ],
-		"controls": [
-			{
-				"font_type_settings_content@chat_settings.typeface_dropdown_content": {}
-			}
-		]
-	},
-  
-	"option_dropdown_no_scroll@settings_common.option_generic": {
-		"$control_name": "chat_settings.option_dropdown_control_no_scroll"
-	},
-	"option_dropdown_control_no_scroll@settings_common.option_dropdown_control": {
-		"$option_dropdown_type": "chat_settings.dropdown_no_scrollpanel"
-	},
-  
-   "dropdown_no_scrollpanel@common.dropdown": {
-		"$dropdown_scroll_content_size": [ "100%", "100%c" ],
-		"$dropdown_content_controls": [ {
-			"background@start.iibutton0": {
-				"layer": 1,
-				"size": "$dropdown_scroll_content_size",
-				"controls": [ {
-					"content@$dropdown_content": {
-						"layer": 1
-					}
-				}]
-			}
-		}]
-	},
-
-
-  // Font Colors //
-
-  "chat_color_dropdown_content": {
-    "type": "stack_panel",
-    "size": [ "100%", "100%c" ],
-    "collection_name": "font_colors",
-    "controls": [
-      {
-        "top_padding@common.empty_panel": {
-          "size": [ "100%", 2 ]
-        }
-      },
-      {
-        "0@settings_common.radio_item_with_label_and_content": {
-          "collection_index": 0,
-          "$toggle_state_binding_name": "('#' + $color_prefix + '_0'",
-          "$focus_id": "($color_prefix + 'option_0')",
-          "$focus_override_up": "($color_prefix + 'option_6')",
-          "$focus_override_down": "($color_prefix + 'option_1')"
-        }
-      },
-      {
-        "1@settings_common.radio_item_with_label_and_content": {
-          "collection_index": 1,
-          "$toggle_state_binding_name": "('#' + $color_prefix + '_1'",
-          "$focus_id": "($color_prefix + 'option_1')",
-          "$focus_override_up": "($color_prefix + 'option_0')",
-          "$focus_override_down": "($color_prefix + 'option_2')"
-        }
-      },
-      {
-        "2@settings_common.radio_item_with_label_and_content": {
-          "collection_index": 2,
-          "$toggle_state_binding_name": "('#' + $color_prefix + '_2'",
-          "$focus_id": "($color_prefix + 'option_2')",
-          "$focus_override_up": "($color_prefix + 'option_1')",
-          "$focus_override_down": "($color_prefix + 'option_3')"
-        }
-      },
-      {
-        "3@settings_common.radio_item_with_label_and_content": {
-          "collection_index": 3,
-          "$toggle_state_binding_name": "('#' + $color_prefix + '_3')",
-          "$focus_id": "($color_prefix + 'option_3')",
-          "$focus_override_up": "($color_prefix + 'option_2')",
-          "$focus_override_down": "($color_prefix + 'option_4')"
-        }
-      },
-      {
-        "4@settings_common.radio_item_with_label_and_content": {
-          "collection_index": 4,
-          "$toggle_state_binding_name": "('#' + $color_prefix + '_4'",
-          "$focus_id": "($color_prefix + 'option_4')",
-          "$focus_override_up": "($color_prefix + 'option_3')",
-          "$focus_override_down": "($color_prefix + 'option_5')"
-        }
-      },
-      {
-        "5@settings_common.radio_item_with_label_and_content": {
-          "collection_index": 5,
-          "$toggle_state_binding_name": "('#' + $color_prefix + '_5'",
-          "$focus_id": "($color_prefix + 'option_5')",
-          "$focus_override_up": "($color_prefix + 'option_4')",
-          "$focus_override_down": "($color_prefix + 'option_6')"
-        }
-      },
-      {
-        "6@settings_common.radio_item_with_label_and_content": {
-          "collection_index": 6,
-          "$toggle_state_binding_name": "('#' + $color_prefix + '_6'",
-          "$focus_id": "($color_prefix + 'option_6')",
-          "$focus_override_up": "($color_prefix + 'option_5')",
-          "$focus_override_down": "($color_prefix + 'option_0')"
-        }
-      },
-      {
-        "bottom_padding@common.empty_panel": {
-          "size": [ "100%", 2 ]
-        }
-      }
-    ]
-  },
-
-  "colors_dropdown_base@settings_common.option_dropdown_no_scroll": {
-    "$dropdown_area": "chat_settings_content_area",
-    "$dropdown_name": "($color_prefix + '_color_dropdown')",
-    "$option_enabled_binding_name": "('#' + $color_prefix + '_color_dropdown_enabled')",
-    "$options_dropdown_toggle_label_binding": "('#' + $color_prefix + '_color_dropdown_label')",
-
-    // Dropdown toggle button //
-    "$option_dropdown_size": [ "100%", 22 ],
-    "$options_dropdown_toggle_button_state_content": [ "100%", "100%" ],
-
-    "$options_dropdown_toggle_left_padding": [ 3, "100%" ],
-    "$options_dropdown_toggle_prelabel_content": "chat_settings.paintbrush",
-    "$options_dropdown_toggle_prelabel_content_size": [ "100%y", "100%" ],
-    "$options_dropdown_toggle_prelabel_content_padding": [ 3, "100%" ],
-
-    // Dropdown contents //
-    "$dropdown_content": "chat_settings.chat_color_dropdown_content",
-
-    "$no_radio_content": false,
-    "$radio_content_control": "chat_settings.colored_icon_panel",
-    "$icon_texture": "textures/ui/text_color_paintbrush",
-    "$icon_overlay_texture": "textures/ui/text_color_paintbrush_overlay",
-    "$icon_color_binding": "#font_color",
-    "$icon_color_binding_type": "collection",
-    "$icon_color_collection_name": "font_colors",
-
-    "$radio_label_text": "#font_color_label",
-    "$radio_label_color": "#font_color",
-    "$options_dropdown_toggle_label_shadow": true,
-    "$radio_label_bindings": [
-      {
-        "binding_name": "$radio_label_text",
-        "binding_collection_name": "$icon_color_collection_name",
-        "binding_type": "collection"
-      },
-      {
-        "binding_name": "$radio_label_color",
-        "binding_collection_name": "$icon_color_collection_name",
-        "binding_name_override": "#color",
-        "binding_type": "collection"
-      }
-    ]
-  },
-
-  "chat_color_dropdown@chat_settings.colors_dropdown_base": {
-    "$option_label": "chat.settings.chatColor",
-    "$color_prefix": "chat",
-    "$paintbrush_color_binding": "#chat_toggle_color"
-  },
-
-  "mentions_color_dropdown@chat_settings.colors_dropdown_base": {
-    "$option_label": "chat.settings.mentionsColor",
-    "$color_prefix": "mentions",
-    "$paintbrush_color_binding": "#mentions_toggle_color"
-  },
-
   //---------------------------------------------------------------------------
   // Sliders
   //---------------------------------------------------------------------------
 
-	"font_size_label": {
-		"type": "label",
-		"max_size": [ "100%", "default" ],
-		"text": "Font size can only be changed within resource pack settings."
-	},
-
-  "line_spacing_slider@settings_common.option_slider": {
-    "$option_label": "#chat_line_spacing_slider_label",
+  "font_scale_slider@settings_common.option_slider": {
+    "$option_label": "Font Scale",
     "$slider_name": "chat_line_spacing",
     "$slider_value_binding_name": "#chat_line_spacing",
     "$option_enabled_binding_name": "#chat_line_spacing_enabled",
@@ -486,67 +41,6 @@
     ]
   },
 
-  //---------------------------------------------------------------------------
-  // Misc Elements
-  //---------------------------------------------------------------------------
-
-  "colored_icon_panel": {
-    "type": "panel",
-    "size": [ "100%y", "100%" ],
-    "$icon_size|default": [ "100%", "100%" ],
-    "$icon_color_binding|default": "",
-    "$icon_color_binding_type|default": "none",
-    "$icon_color_collection_name|default": "",
-    "controls": [
-      {
-        "icon": {
-          "type": "image",
-          "size": "$icon_size",
-          "texture": "$icon_texture"
-        }
-      },
-      {
-        "icon_overlay": {
-          "type": "image",
-          "size": "$icon_size",
-          "texture": "$icon_overlay_texture",
-          "layer": 1,
-          "bindings": [
-            {
-              "binding_name": "$icon_color_binding",
-              "binding_name_override": "#color",
-              "binding_type": "$icon_color_binding_type",
-              "binding_collection_name": "$icon_color_collection_name"
-            }
-          ]
-        }
-      }
-    ]
-  },
-
-  "paintbrush@chat_settings.colored_icon_panel": {
-    "$icon_texture": "textures/ui/text_color_paintbrush",
-    "$icon_overlay_texture": "textures/ui/text_color_paintbrush_overlay",
-    "$icon_color_binding": "$paintbrush_color_binding",
-    "$icon_color_binding_type": "global"
-  },
-
-  "line_break": {
-    "type": "panel",
-    "size": [ "100%", 7 ],
-    "controls": [
-      {
-        "line_break_image": {
-          "type": "image",
-          "texture": "textures/ui/list_item_divider_line_light",
-          "size": [ "100%", 1 ],
-          "color": [ 0.37, 0.4, 0.41 ],
-          "anchor_from": "center",
-          "anchor_to": "center"
-        }
-      }
-    ]
-  },
 
   //---------------------------------------------------------------------------
   // Main Content
@@ -562,24 +56,61 @@
           "type": "stack_panel",
           "size": [ "100%", "100%c" ],
           "controls": [
-				{ "mute_all_toggle@chat_settings.mute_all_toggle": {} },
-            { "chat_tts_toggle@chat_settings.chat_tts_toggle": {} },
-
-
-            { "toggles_to_font_shape@chat_settings.line_break": {} },
-
-			{ "typeface_dropdown@chat_settings.font_type_setting": {} },
-			{ "font_size_padding@common.empty_panel": { "size": [ "100%", 2 ] } },
-            { "font_size@chat_settings.font_size_label": {} },
-            { "line_spacing@chat_settings.line_spacing_slider": {} },
-
-
-            { "font_shape_to_font_colors@chat_settings.line_break": {} },
-
-            { "chat_color@chat_settings.chat_color_dropdown": {} },
-            { "mentions_color@chat_settings.mentions_color_dropdown": {} },
-
-            { "reset_button@chat_settings.reset_button": {} }
+            //{ "mute_all_toggle@chat_settings.mute_all_toggle": {} },
+            {
+              "spacer@ii.button_default": {
+                "size": [ "100%", 40 ],
+                "controls": [
+                  {
+                    "chat_tts_toggle@chat_settings.chat_tts_toggle": {}
+                  }
+                ]
+              }
+            },
+            {
+              "spacer@ii.button_default": {
+                "size": [ "100%", 40 ],
+                "controls": [
+                  {
+                    "typeface_dropdown@chat_settings.typeface_dropdown": {}
+                  }
+                ]
+              }
+            },
+            {
+              "spacer@ii.button_default": {
+                "size": [ "100%", 40 ],
+                "controls": [
+                  {
+                     "Font_scaling@chat_settings.font_scale_slider": {}
+                  }
+                ]
+              }
+            },
+            {
+              "spacer@ii.button_default": {
+                "size": [ "100%", "100%c" ],
+                "controls": [
+                  { "chat_color@chat_settings.chat_color_dropdown": {} }
+                ]
+              }
+            },
+            {
+              "spacer@ii.button_default": {
+                "size": [ "100%", "100%c" ],
+                "controls": [
+                  { "mentions_color@chat_settings.mentions_color_dropdown": {} }
+                ]
+              }
+            },
+            {
+              "spacer@ii.button_default": {
+                "size": [ "100%", "100%c" ],
+                "controls": [
+                  { "reset_button@chat_settings.reset_button": {} }
+                ]
+              }
+            }
           ]
         }
       }

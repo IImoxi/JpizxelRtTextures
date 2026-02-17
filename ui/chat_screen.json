@@ -9,7 +9,7 @@
 		"size": [ "100%", "100%c" ],
 		"propagate_alpha": false,
 		"controls": [
-			{ 
+			{
 				"text": {
 					"type": "label",
 					"layer": 10,
@@ -19,7 +19,7 @@
 					"enable_profanity_filter": false,
 					"localize": true,
 					"font_type": "$chat_font_type",
-					"font_scale_factor": "$subpackscale_chat",
+					"font_scale_factor": "(($chat_line_spacing + 2 * 1) / 6 * 1)",
 					"color": "$chat_text_color"
 				}
 			}
@@ -31,7 +31,7 @@
 			}
 		]
 	},
-	
+
 	"chat_panel_stack": {
 		"type": "stack_panel",
 		"orientation": "vertical",
@@ -91,14 +91,14 @@
 		"$show_background": false,
 		"$scroll_box_visible": false,
 		"size": [ "100%", "100% - 40px" ],
-		"$scroll_size": [ 100, "100%" ],
+		"$scroll_size": [ 50, "100%" ],
 		"offset": [ 0, -20 ],
 		"anchor_from": "bottom_left",
 		"anchor_to": "bottom_left",
 		"$scrolling_content": "chat.auto_complete_panel_child",
 		"bindings": [ { "binding_type": "view", "source_control_name": "expand_chat_input",  "source_property_name": "(not #toggle_state)", "target_property_name": "#visible" } ]
 	},
-	
+
 	"auto_complete_panel_child": {
 		"type": "panel",
 		"size": [ "100%", 5000 ],
@@ -128,42 +128,7 @@
 		]
 	},
 
-	
-	"auto_complete_panel_contents_with_item": {
-		"type": "panel",
-		"anchor_from": "top_left",
-		"anchor_to": "top_left",
-		"size": [ "100%", 10 ],
-		"controls": [
-			{
-				"auto_complete_item_renderer@common.item_renderer": {
-					"size": [ 8, 8 ],
-					"offset": [ 2, 0 ],
-					"anchor_from": "left_middle",
-					"anchor_to": "left_middle",
-					"bindings": [ { "binding_name": "#auto_complete_item", "binding_type": "collection", "binding_name_override": "#item_id_aux", "binding_collection_name": "auto_complete" } ]
-				}
-			},
-			{
-				"text": {
-					"type": "label",
-					"size": [ "100%", "default" ],
-					"color": "$chat_text_color",
-					"font_scale_factor": "$subpackscale_chat",
-					"offset": [ 2, 0 ],
-					"anchor_from": "left_middle",
-					"anchor_to": "left_middle",
-					"shadow": true,
-					"text": "#text",
-					"localize": false,
-					"bindings": [ { "binding_type": "collection", "binding_name": "#auto_complete_text", "binding_name_override": "#text", "binding_collection_name": "auto_complete" } ],
-					"controls": [
-					]
-				}
-			}
-		]
-	},
-	
+
 // Chat Input
 
 	"text_box_panel": {
@@ -257,6 +222,7 @@
 		"$child_clip_size|default": [ "100% - 2px", 14 ],
 		"$text_anchor|default": "left_middle",
 		"$multiline|default": false,
+		"$font_type": "$chat_font_type",
 		"max_length": 11001,
 
 		"always_listening": true,

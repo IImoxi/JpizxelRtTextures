@@ -32,6 +32,7 @@
 	"button1": { "type": "image", "texture": "client/iibutton1" },
 	"button0h": { "type": "image", "texture": "client/iibutton0_horizontal" },
 	"button1h": { "type": "image", "texture": "client/iibutton1_horizontal" },
+	"button0v": { "type": "image", "texture": "textures/gui/iibutton0_vertical" },
 	
 	"slider_bar": { "type": "image", "size": [ "100%", 2 ], "texture": "client/iislider0" },
 	"slider_bar1": { "type": "image", "size": [ "100%", 2 ], "texture": "client/iislider1" },
@@ -748,7 +749,7 @@
         "binding_condition": "$toggle_enabled_binding_condition",
         "binding_collection_name": "$toggle_grid_collection_name",
         "binding_name": "$toggle_enabled_binding_name",
-        "binding_name_override": "#enabled"
+        "binding_name_override": "#enabled"default
       },
       {
         "binding_type": "$toggle_collection_details_type",
