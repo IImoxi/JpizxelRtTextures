@@ -379,7 +379,7 @@
 		"controls": [
 			{
 				"background_divider@common.common_panel": {
-					"$dialog_background": "common.dialog_background_hollow_3",
+					"$dialog_background": "common.dialog_background_opaque",
 					"$fill_alpha": 1.0,
 					"size": [ 360, 200 ]
 				}

@@ -394,11 +394,36 @@
 		{ "left_invisible_button@ii.left_invisible_button": { "$pressed_button_name": "button.menu_exit" } },
 		{ "right_invisible_button@ii.right_invisible_button": { "$pressed_button_name": "button.menu_exit" } },
 		{ "container_gamepad_helpers@common.container_gamepad_helpers": {} },
-		{ "flying_item_renderer@common.flying_item_renderer": { "layer": 11 }
-		},
+		{ "flying_item_renderer@common.flying_item_renderer": { "layer": 11 } },
 		{ "selected_item_details_factory@common.selected_item_details_factory": {} },
 		{ "item_lock_notification_factory@common.item_lock_notification_factory": {} },
 		{
+				"player_renderer_hud": {
+					"type": "image",
+					"size": [ 30, 54 ],
+					"offset": [ 104, -56 ],
+					"texture": "textures/ui/dialog_background_opaque",
+					"controls": [
+						{
+							"mini_player_renderer": {
+								"type": "custom",
+								"renderer": "live_player_renderer",
+								"size": [ 20, 20 ],
+								"offset": [ 0, -8 ],
+								"layer": 1,
+								"bindings": [
+									{
+										"binding_name": "#paper_doll_visible",
+										"binding_name_override": "#visible"
+									}
+								]
+							}
+						}
+					]
+				}
+			},
+		{
+
         "root_panel@common.root_panel": {
           "layer": 1,
           "controls": [

@@ -5,7 +5,7 @@
 			"identifier": "minecraft:default_atmospherics"
 		},
 		"sky_zenith_color": {
-			"0.125":	[ 82, 103, 172 ]
+			"0.125":	[ 82, 103, 172 ],
 			"0.25":		[ 115, 135, 180 ],
 			"0.29":		[ 0, 0, 0 ],
 			

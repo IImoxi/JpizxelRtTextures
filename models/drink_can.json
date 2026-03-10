@@ -1,0 +1,73 @@
+{
+	"format_version": "1.21.20",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.drink_can",
+				"texture_width": 16,
+				"texture_height": 16,
+				"visible_bounds_width": 4,
+				"visible_bounds_height": 2.5,
+				"visible_bounds_offset": [0, 0.75, 0]
+			},
+			"bones": [
+				{
+					"name": "bb_main",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-2, 0.5, -2],
+							"size": [4, 6, 4],
+							"uv": {
+								"north": {"uv": [0, 0], "uv_size": [4, 6]},
+								"east": {"uv": [12, 0], "uv_size": [4, 6]},
+								"south": {"uv": [8, 0], "uv_size": [4, 6]},
+								"west": {"uv": [4, 0], "uv_size": [4, 6]},
+								"up": {"uv": [4, 14], "uv_size": [-4, -4]},
+								"down": {"uv": [4, 14], "uv_size": [-4, -4]}
+							}
+						},
+						{
+							"origin": [-1.5, 0, -1.5],
+							"size": [3, 1, 3],
+							"uv": {
+								"north": {"uv": [0, 6], "uv_size": [3, 1]},
+								"east": {"uv": [3, 6], "uv_size": [-3, 1]},
+								"south": {"uv": [0, 6], "uv_size": [3, 1]},
+								"west": {"uv": [3, 6], "uv_size": [-3, 1]},
+								"down": {"uv": [6, 10], "uv_size": [-3, -3]}
+							}
+						},
+						{
+							"origin": [-1.5, 6, -1.5],
+							"size": [3, 1, 3],
+							"uv": {
+								"north": {"uv": [12, 6], "uv_size": [3, 1]},
+								"east": {"uv": [9, 6], "uv_size": [3, 1]},
+								"south": {"uv": [6, 6], "uv_size": [3, 1]},
+								"west": {"uv": [3, 6], "uv_size": [3, 1]},
+								"up": {"uv": [3, 10], "uv_size": [-3, -3]}
+							}
+						}
+					]
+				}
+			],
+			"item_display_transforms": {
+				"thirdperson_righthand": {
+					"rotation": [37, 45, 0],
+					"translation": [0, 4.25, 3.25],
+					"scale": [1, 1, 1],
+					"rotation_pivot": [0, 0, 0],
+					"scale_pivot": [0, 0, 0]
+				},
+				"firstperson_righthand": {
+					"rotation": [12, 34, 0],
+					"translation": [1.75, 5.5, -1],
+					"scale": [1, 1, 1],
+					"rotation_pivot": [0, 0, 0],
+					"scale_pivot": [0, 0, 0]
+				}
+			}
+		}
+	]
+}
