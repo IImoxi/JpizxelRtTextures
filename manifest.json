@@ -4,19 +4,23 @@
 		"description": "§rIImoxi | Default edit PVP pack with PBR + Custom UI. Check pack settings before using RTX §7(Mouse & Keyboard recommended UI)",
 		"name": "§r§6JPizxeL RT",
 		"uuid": "bd3398a9-0fe7-4195-8a6b-6334b76fc5fb",
-		"version": [ 3, 2, 0 ],
+		"version": [ 3, 3, 0 ],
 		"min_engine_version": [ 1, 16, 0 ]
 	},
 	"capabilities": [ 
 		"pbr",
 		"raytraced" 
 	],
+	"subpacks": [
+		{ "folder_name": "no_sky", "name": "§r§6No Sky§r", "memory_tier": 1 },
+		{ "folder_name": "def_sky", "name": "§r§6Default Skys§r", "memory_tier": 0 }
+	],
 	"modules": [
 		{
 			"description": "§4II§1mox§4i",
 			"type": "resources",
 			"uuid": "62fd1c95-57a2-4e33-bd30-fb708c16db0e",
-			"version": [ 3, 1, 0 ]
+			"version": [ 3, 3, 0 ]
 		}
 	]
 }
