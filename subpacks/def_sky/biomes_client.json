@@ -2,8 +2,8 @@
 	"biomes" : {
 		"default" : {
 			"fog_color" : "#999999",
-			"water_fog_color" : "#ffffff",
-			"water_fog_distance" : 15,
+			"water_fog_color" : "#31403f",
+			"water_fog_distance" : 20,
 			"water_surface_color" : "#ffffff",
 			"water_surface_transparency" : 0.9
 		}
