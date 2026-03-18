@@ -10,6 +10,14 @@
 				"rightitem" : {
 					"rotation" : [ "math.min(-20 - (query.target_x_rotation * 0.3), -16) - (query.target_y_rotation * 0.2)", 0, 0 ]
 				}
+			},
+			"particle_effects": {
+				"0.0": {
+					"effect": "indicator_use"
+				},
+				"0.1": {
+					"effect": "indicator_use2"
+				}
 			}
 		}
 	}

@@ -328,6 +328,25 @@
 	"ii_wait_offset": { "anim_type": "wait", "duration": 0.5, "next": "@hud.ii_exit_offset" },
 	"ii_exit_offset": { "anim_type": "offset", "easing": "out_expo",  "duration": 1, "from": [ 0, -4 ], "to": [ 0, 6 ] },
 
+// HUD Eat Indicator
+
+	"eat_indicator": {
+		"renderer": "live_player_renderer",
+		"size": [ 17.5, 17.5 ],
+		"anchor_from": "top_middle",
+		"anchor_to": "top_middle",
+		"layer": 2,
+		"type": "custom",
+		"offset": "$offset",
+		"$offset|default": [ 0, -750 ],
+		"variables": [
+			{
+			"requires": "$pocket_edition",
+			"$offset": [ 0, -730 ]
+			}
+		]
+	},
+
 // HUD Item name
 
 // Actionbar & Title
@@ -627,6 +646,7 @@
 		"type": "panel", "size": [ "100%", "100%" ],
 		"controls": [
 			{ "crosshair": { "type": "custom", "size": [ 16, 16 ], "renderer": "cursor_renderer", "layer": 8 } },
+			{ "hud_eat_indicator@hud.eat_indicator": {} },
 			{ "durability_value@durability_value_panel": {} },
 			{ "player_position@hud.player_position": { "anchor_from": "top_left", "anchor_to": "top_left" } },
 			{ "mob_effects_renderer@mob_effects_renderer": { "size": [ "100%", "100%" ], "offset": [ 0, 24 ], "anchor_from": "center", "anchor_to": "center" } },
