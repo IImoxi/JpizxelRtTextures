@@ -1,7 +1,7 @@
 {
 	"format_version": 2,
 	"header": {
-		"description": "§rIImoxi | Default edit PVP pack with PBR + Custom UI. Check pack settings before using RTX §7(Mouse & Keyboard recommended UI)",
+		"description": "§rIImoxi §6| §fDefa§7ult §fed§7it §fPV§7P §fpa§7ck §fwi§7th §fPB§7R §6+ §fCus§7tom §fU§7I §6(§fMou§7se §6& §fKeyb§7oard §frecom§7mended §fInp§7ut)\n\nPick a subpack for the sky to work before loading..\n\n§fAmb§7iennt §6- §fCon§7sume §fIndic§7ator",
 		"name": "§r§6JPizxeL RT",
 		"uuid": "bd3398a9-0fe7-4195-8a6b-6334b76fc5fb",
 		"version": [ 3, 3, 0 ],

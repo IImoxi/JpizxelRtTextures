@@ -7,7 +7,6 @@
     "size": [ "default", "default" ],
     "text": "#player_score_sidebar",
 	"alpha": 0.8,
-	"font_scale_factor": "$subpackscale_chat",
     "anchor_from": "top_right",
     "anchor_to": "top_right",
     "locked_alpha": 1.0,
@@ -26,7 +25,6 @@
 	//"shadow": true,
     "layer": 2,
     "text": "#player_name_sidebar",
-	"font_scale_factor": "$subpackscale_chat",
     "size": [ "default", "default" ],
 	"locked_alpha": 1,
     "color": "$player_name_color",
@@ -39,26 +37,24 @@
     ]
   },
 
-  "scoreboard_sidebar": {
-    "type": "panel",
-    "size": [ "100%cm", "100%c" ],
+  "scoreboard_sidebar@ii.dark_dialog": {
+    "size": [ "100%c + 4px", "100%c + 2px" ],
+    "alpha": 0.6,
     "anchor_from": "right_middle",
     "anchor_to": "right_middle",
     "controls": [
       {
-        "main@ii.dark_dialog": {
-          "size": [ "100%cm + 4px", "100%c + 2px" ],
-		  "alpha": 0.6,
+        "stack": {
+          "type": "stack_panel",
+          "size": [ "100%cm", "100%c" ],
           "controls": [
             {
               "displayed_objective": {
                 "type": "label",
-				//"shadow": true,
                 "size": [ "default", "default" ],
                 "text": "#objective_sidebar_name",
-				"font_scale_factor": "$subpackscale_chat",
-                "anchor_from": "top_middle",
-                "anchor_to": "top_middle",
+                //"anchor_from": "top_middle",
+                //"anchor_to": "top_middle",
 				"offset": [ 0, 1 ],
                 "text_alignment": "center",
                 "inherit_max_sibling_width": true,
@@ -76,8 +72,8 @@
             {
               "lists": {
                 "type": "panel",
-                "anchor_from": "top_middle",
-                "anchor_to": "top_middle",
+                //"anchor_from": "top_middle",
+                //"anchor_to": "top_middle",
                 "offset": "$scoreboard_padding",
                 "size": [ "100%c + 4px", "100%cm" ],
                 "controls": [

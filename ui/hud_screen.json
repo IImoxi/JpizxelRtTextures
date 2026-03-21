@@ -333,8 +333,8 @@
 	"eat_indicator": {
 		"renderer": "live_player_renderer",
 		"size": [ 17.5, 17.5 ],
-		"anchor_from": "top_middle",
-		"anchor_to": "top_middle",
+		"anchor_from": "center",
+		"anchor_to": "center",
 		"layer": 2,
 		"type": "custom",
 		"offset": "$offset",

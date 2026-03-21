@@ -4,7 +4,7 @@
 		"description": {
 			"identifier": "minecraft:breaking_item_icon",
 			"basic_render_parameters": {
-				"material": "particles_alpha",
+				"material": "particles_blend",
 				"texture": "atlas.items"
 			}
 		},
@@ -27,7 +27,7 @@
 			},
 			"minecraft:particle_appearance_billboard": {
 				"size": [ "(variable.particle_random_1 * 0.05 + 0.04) * variable.size_modifier + 0.014", "(variable.particle_random_1 * 0.05 + 0.04) * variable.size_modifier + 0.014" ],
-				"facing_camera_mode": "rotate_xyz",
+				"facing_camera_mode": "lookat_xyz",
 				"uv": {
 					"texture_width": 1,
 					"texture_height": 1,
@@ -36,6 +36,9 @@
 				}
 			},
 			"minecraft:particle_appearance_lighting": {},
+			"minecraft:particle_appearance_tinting": {
+				"color": [ 1, 1, 1, "math.clamp(query.distance_from_camera, 0, 1)" ]
+			},
 			"minecraft:particle_motion_collision": {
 				"collision_drag": 5
 			}

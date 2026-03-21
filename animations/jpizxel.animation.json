@@ -1,0 +1,167 @@
+// Global animations :: IImoxi //
+
+{
+    "format_version": "1.8.0",
+    "animations": {
+        "animation.humanoid.look_at_target.default" : {
+			"loop" : true,
+			"bones" : {
+				"head": {
+					"relative_to" : {
+						"rotation" : "entity"
+					},
+					"rotation" : [ "query.target_x_rotation", "query.target_y_rotation", 0.0 ]
+				}
+			},
+			"particle_effects": {
+				"0.0": {
+					"effect": "indicator"
+				},
+				"0.01": {
+					"effect": "healthbar"
+				},
+				"0.02": {
+					"effect": "indicator_reach"
+				},
+				"0.03": {
+					"effect": "indicator_immunity"
+				}
+			}
+		},
+
+        // Use progress indicator
+        "animation.hud_use_item_progress": {
+            "loop": true,
+            "bones": {
+                "hud_eat_indicator": {
+                    "position": [ -8, "-730 + (2 * (1 - math.pow(2, -5 * math.min(1, query.item_in_use_duration / 120))))", 0 ],
+                    "scale": [ "q.is_using_item ? (query.get_equipped_item_name == 'bow' ? math.clamp(query.item_in_use_duration * 0.05 / 20, 0, 1) : (1 - math.clamp(query.main_hand_item_use_duration / query.main_hand_item_max_duration, 0, 1))) * (query.is_swimming ? 0 : 2) : 0", 1, 1 ]
+                },
+                "hud_eat_indicator_full": {
+                    "position": [ -8, "-730 + (2 * (1 - math.pow(2, -5 * math.min(1, query.item_in_use_duration / 120))))", 0 ],
+                    "scale": [ "query.is_swimming || query.get_equipped_item_name == 'trident' ? 0 : (query.is_using_item ? 2 : 0)", 1, 1 ]
+                }
+            }
+        },
+
+
+        "animation.humanoid.use_item_progress" : {
+			"loop" : true,
+			"bones" : {
+				"rightarm" : {
+					"rotation" : [ "math.cos((math.min(0.5 + variable.use_item_startup_progress, 1.0)) * 180) * 72 + (query.target_x_rotation * 0.7)", "math.cos((math.min(0.5 + variable.use_item_startup_progress, 1.0)) * 180) * 30", "math.cos((math.min(0.5 + variable.use_item_startup_progress, 1.0)) * 180) * -25" ] // -72
+				},
+				"rightitem" : {
+					"rotation" : [ "math.min(-20 - (query.target_x_rotation * 0.3), -16) - (query.target_y_rotation * 0.2)", 0, 0 ]
+				}
+			},
+			"particle_effects": {
+				"0.0": {
+					"effect": "indicator_use"
+				},
+				"0.1": {
+					"effect": "indicator_use2"
+				}
+			}
+		},
+
+        // Bow animation etc
+        "animation.bow.wield": {
+            "loop": true,
+            "bones": {
+                "rightitem": {
+                    "position": [ "c.is_first_person ? -5.0 : -0.5", "c.is_first_person ? -3.0 : -2.5", "c.is_first_person ? -4.0 : 1.0" ],
+                    "rotation": [ "c.is_first_person ? 38.0 : 0.0", "c.is_first_person ? -120.0 : 0.0", "c.is_first_person ? -63.0 : 0.0" ]
+                }
+            }
+        },
+        "animation.bow.wield_first_person_pull": {
+            "loop": true,
+            "bones": {
+                "rightitem": {
+                    "position": [ "1 + math.cos((math.min(0.5 + variable.charge_amount, 1.0)) * 180)", "0.2 + (math.cos((math.min(0.5 + variable.charge_amount, 1.0)) * 180) * 3)", "0.5 + (math.cos((math.min(0.5 + variable.charge_amount, 1.0)) * 180) * -1)" ],
+                "rotation": [ "math.cos((math.min(0.5 + variable.charge_amount, 1.0)) * 180) * 51", "math.cos((math.min(0.5 + variable.charge_amount, 1.0)) * 180) * -8", "math.cos((math.min(0.5 + variable.charge_amount, 1.0)) * 180) * -35" ]
+                }
+            }
+        },
+
+        // Crossbow etc
+        "animation.crossbow.wield": {
+            "loop": true,
+            "bones": {
+                "rightitem": {
+                    "position": [ "c.is_first_person ? 13.0 : 0.5", "c.is_first_person ? 7.0 : -0.5", "c.is_first_person ? 2.0 : -1.5" ],
+                    "rotation": [ "c.is_first_person ? -9.0 : 0.0", "c.is_first_person ? 60.0 : -3.0", "c.is_first_person ? -47.0 : 3.25" ]
+                }
+            }
+		},
+		"animation.crossbow.wield_first_person_pull": {
+			"loop": true,
+			"bones": {
+				"rightitem": {
+					"position": [
+						"(math.cos((math.min(0.5 + variable.charge_amount, 1.0)) * 180) * 3)",
+						0,
+						"(math.cos((math.min(0.5 + variable.charge_amount, 1.0)) * 180) * 4)"
+					]
+				}
+			}
+		},
+
+        // Arrow offset
+        "animation.arrow.move": {
+			"loop": true,
+			"animation_length": 600,
+			"bones": {
+				"body": {
+					"rotation" : [ "-query.target_x_rotation", "-query.target_y_rotation", 0.0 ]
+				},
+				"offset": {
+					"position": {
+						"0.0": [ -4, -0.5, 20 ],
+						"0.167": [ 0, 0, -80 ],
+						"0.2": [ 0, 0, "q.ground_speed ? -80 : 0" ]
+					},
+					"scale": [0.7, 0.7, 0.9]
+				}
+			}
+		},
+		"animation.arrow.particle": {
+			"loop": true,
+			"particle_effects": {
+				"0.0": {
+					"effect": "particle",
+					"locator": "indicator_locator"
+				}
+			}
+		},
+
+		// Enderpearl Indicators
+		"animation.enderpearl_projectile" : {
+			"animation_length": 60.0,
+			"loop" : true,
+			"bones": {
+				"body": {
+					"rotation": [ "-q.target_x_rotation", "-q.body_y_rotation", 0.0 ]
+				},
+				"offset": {
+					"position": {
+						"0.0": [ 0, -1, 2.5 ],
+						"0.176": [ 0, -6, -60 ],
+						"0.5": [ 0, -8, -60 ]
+					}
+				}
+			},
+			"particle_effects": {
+				"0.0": {
+					"effect": "enderpearl",
+					"locator": "indicator_locator"
+				},
+				"0.01": {
+					"effect": "indicator",
+					"locator": "indicator_locator"
+				}
+			}
+		}
+    }
+}

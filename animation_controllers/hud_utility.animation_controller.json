@@ -1,15 +1,15 @@
 {
-  "format_version": "1.10.0",
-  "animation_controllers": {
-    "controller.animation.hud_utility": {
-      "initial_state": "default",
-      "states": {
-        "default": {
-          "animations":[
-            "hud_use_item_progress"
-          ]
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.hud_utility": {
+            "initial_state": "default",
+            "states": {
+                "default": {
+                    "animations":[
+                        "hud_use_item_progress"
+                    ]
+                }
+            }
         }
-      }
     }
-  }
 }

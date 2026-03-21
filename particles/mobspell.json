@@ -15,7 +15,6 @@
 			"minecraft:emitter_lifetime_once": {
 			},
 			"minecraft:emitter_shape_point": {
-				"offset": [ 0.0, 2.0, 0.0 ],
 				"direction": [ 0, 0.1, 0 ]
 			},
 			"minecraft:particle_initial_speed": 1,
@@ -50,7 +49,7 @@
 				}
 			},
 			"minecraft:particle_appearance_tinting": {
-				"color": [ "variable.color.r", "variable.color.g", "variable.color.b", "variable.color.a" ]
+				"color": [ "variable.color.r", "variable.color.g", "variable.color.b", "math.clamp(query.distance_from_camera - 2, 0, 1)" ]
 			}
 		}
 	}
