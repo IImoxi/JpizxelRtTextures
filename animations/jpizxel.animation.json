@@ -135,6 +135,21 @@
 				}
 			}
 		},
+		
+		"animation.actor.billboard" : {
+			"loop" : true,
+			"bones": {
+				"body": {
+					"rotation": [ "query.camera_rotation(0)", "query.camera_rotation(1)", 0.0 ]
+				}
+			},
+			"particle_effects": {
+				"0.0": {
+					"effect": "projectile",
+					"locator": "indicator_locator"
+				}
+			}
+		},
 
 		// Enderpearl Indicators
 		"animation.enderpearl_projectile" : {

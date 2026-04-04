@@ -18,7 +18,7 @@
 				"controller.render.egg"
 			],
 				"animations": {
-				"flying": "animation.projectile"
+				"flying": "animation.actor.billboard"
 			},
 			"particle_effects": {
 				"indicator": "ii:throwable_indicator",

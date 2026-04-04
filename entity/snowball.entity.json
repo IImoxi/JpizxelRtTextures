@@ -16,7 +16,7 @@
 				"controller.render.item_sprite"
 			],
 			"animations": {
-				"flying": "animation.projectile"
+				"flying": "animation.actor.billboard"
 			},
 			"particle_effects": {
 				"indicator": "ii:throwable_indicator",

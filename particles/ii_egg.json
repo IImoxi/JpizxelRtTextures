@@ -5,7 +5,7 @@
 			"identifier": "ii:egg",
 			"basic_render_parameters": {
 				"material": "particles_alpha",
-				"texture": "textures/items/egg"
+				"texture": "textures/particle/eggs"
 			}
 		},
 		"events": {
@@ -42,7 +42,7 @@
 				"size": [ "v.particle_age >= 0.02 ? 0.3 : 0", "v.particle_age >= 0.02 ? 0.3 : 0" ],
 				"facing_camera_mode": "rotate_xyz",
 				"uv": {
-					"texture_width": 16,
+					"texture_width": 48,
 					"texture_height": 16,
 					"uv": [0, 0],
 					"uv_size": [16, 16]
