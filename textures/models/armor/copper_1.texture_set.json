@@ -1,8 +1,8 @@
 {
 	"format_version": "1.16.100",
 	"minecraft:texture_set": {
-		"color": "gold_1",
+		"color": "copper_1",
 		"metalness_emissive_roughness": "mer/diamond_1",
-		"normal": "gold_1n"
+		"normal": "copper_1n"
 	}
 }

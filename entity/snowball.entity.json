@@ -20,7 +20,7 @@
 			},
 			"particle_effects": {
 				"indicator": "ii:throwable_indicator",
-				"projectile": "ii:snowball"
+				"sprite": "ii:snowball"
 			},
 			"scripts": {
 				"animate": [ "flying" ]

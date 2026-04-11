@@ -82,7 +82,7 @@
 			{
 				"mini_player_renderer": {
 					"type": "custom",
-					"renderer": "live_player_renderer",
+					"renderer": "hud_player_renderer",
 					"size": [ 16, 16 ],
 					"offset": [ 100, -9 ],
 					"layer": 1,

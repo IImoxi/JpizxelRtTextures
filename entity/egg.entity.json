@@ -22,7 +22,7 @@
 			},
 			"particle_effects": {
 				"indicator": "ii:throwable_indicator",
-				"projectile": "ii:egg"
+				"sprite": "ii:egg"
 			},
 			"scripts": {
 				"animate": [
