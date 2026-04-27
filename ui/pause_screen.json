@@ -12,7 +12,7 @@
 			{
 				"world_name@pause.players_label": {
 					"size": [ "default", 10 ],
-					"offset": [ 0, -27 ],
+					"offset": [ 0, -17 ],
 					"text_alignment": "center"
 				}
 			},
@@ -20,7 +20,7 @@
 				"return@ii.button_asset": {
 					"layer": 10,
 					"size": [ 150, 16 ],
-					"offset": [ 0, -10 ],
+					"offset": [ 0, 0 ],
 					"$pressed_button_name": "button.menu_continue",
 					"controls": [
 						{ "default@ii.iibutton_default": {} },
@@ -34,40 +34,6 @@
 								"text": "menu.returnToGame"
 							}
 						}
-					]
-				}
-			},
-			{
-				"quit@ii.button_asset": {
-					"layer": 10,
-					"size": [ 150, 16 ],
-					"offset": [ 0, 11 ],
-					"$pressed_button_name": "button.menu_quit",
-					"controls": [
-						{ "default@ii.iibutton_default": {} },
-						{ "hover@ii.iibutton_highlight": {} },
-						{ "pressed@ii.iibutton_highlight": {} },
-						{
-							"text": {
-								"type": "label",
-								"font_type": "MinecraftTen",
-								"offset": [ 0, -1 ],
-								"text": "pauseScreen.quit"
-							}
-						}
-					]
-				}
-			},
-			//{ "invite_players_button@pause.invites": { "offset": [ 0, 30 ] } },
-			{
-				"invite_button@ii.button_asset": {
-					"size": [ 80, 16 ],
-					"offset": [ 0, 30 ],
-					"$pressed_button_name": "button.menu_invite_players",
-					"controls": [
-						{ "default@pause.invite_button_text": { "alpha": 0.4 } },
-						{ "hover@pause.invite_button_text": {} },
-						{ "pressed@pause.invite_button_text": {} }
 					]
 				}
 			}
@@ -392,7 +358,41 @@
 			{ "feedback@ii.icon_tip_button": { "offset": [ -25, 0 ], "$pressed_button_name": "button.menu_settings", "$icon_button_texture": "textures/gui/icons/feedback_icon", "$icon_button_text": "options.group.feedback", "$icon_button_font": "smooth" } },
 			{ "settings@ii.icon_tip_button": { "$pressed_button_name": "button.menu_settings", "$icon_button_texture": "textures/gui/icons/settings_icon", "$icon_button_text": "menu.settings", "$icon_button_font": "smooth" } },
 			{ "achievements@ii.icon_tip_button": { "offset": [ 25, 0 ], "$pressed_button_name": "button.menu_achievements", "$icon_button_texture": "textures/gui/icons/achievements_icon", "$icon_button_text": "gui.achievements", "$icon_button_font": "smooth" } },
-			{ "profile@ii.icon_tip_button": { "offset": [ 50, 0 ], "$pressed_button_name": "button.to_profile_or_skins_screen", "$icon_button_texture": "textures/gui/icons/profile_icon", "$icon_button_text": "menu.skins", "$icon_button_font": "smooth" } }
+			{ "profile@ii.icon_tip_button": { "offset": [ 50, 0 ], "$pressed_button_name": "button.to_profile_or_skins_screen", "$icon_button_texture": "textures/gui/icons/profile_icon", "$icon_button_text": "menu.skins", "$icon_button_font": "smooth" } },
+			{
+				"quit@ii.button_asset": {
+					"layer": 10,
+					"size": [ 118, 16 ],
+					"offset": [ 0, -30 ],
+					"$pressed_button_name": "button.menu_quit",
+					"controls": [
+						{ "default@ii.iibutton_default": {} },
+						{ "hover@ii.iibutton_highlight": {} },
+						{ "pressed@ii.iibutton_highlight": {} },
+						{
+							"text": {
+								"type": "label",
+								"font_type": "MinecraftTen",
+								"offset": [ 0, -1 ],
+								"text": "pauseScreen.quit"
+							}
+						}
+					]
+				}
+			},
+			//{ "invite_players_button@pause.invites": { "offset": [ 0, 30 ] } },
+			{
+				"invite_button@ii.button_asset": {
+					"size": [ 80, 16 ],
+					"offset": [ 0, -50 ],
+					"$pressed_button_name": "button.menu_invite_players",
+					"controls": [
+						{ "default@pause.invite_button_text": { "alpha": 0.4 } },
+						{ "hover@pause.invite_button_text": {} },
+						{ "pressed@pause.invite_button_text": {} }
+					]
+				}
+			}
 		]
 	},
   
