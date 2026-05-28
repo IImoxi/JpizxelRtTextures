@@ -44,18 +44,6 @@
             }
         },
 
-        "animation.player.move.legs_d" : {
-			"loop" : true,
-			"bones" : {
-				"leftleg" : {
-					"rotation" : [ "(math.sin(q.life_time * (q.is_sneaking ? 240 : 650)) * -math.clamp((q.ground_speed - (q.vertical_speed > 0 ? q.vertical_speed / 2 : -q.vertical_speed / 2)) * 12, 0, 70))", 0.0, 0.0 ]
-				},
-				"rightleg" : {
-					"rotation" : [ "(math.sin(q.life_time * (q.is_sneaking ? 240 : 650)) * math.clamp((q.ground_speed - (q.vertical_speed > 0 ? q.vertical_speed / 2 : -q.vertical_speed / 2)) * 12, 0, 70))", 0.0, 0.0 ]
-				}
-			}
-		},
-
 		"animation.player.move.arms" : {
 			"loop" : true,
 			"bones" : {
@@ -63,7 +51,7 @@
 					"rotation" : [ "variable.tcos0", 0.0, 0.0 ]
 				},
 				"rightarm" : {
-					"rotation" : [ "query.get_equipped_item_name != '' ? -variable.tcos0 / 3 : -variable.tcos0", 0.0, 0.0 ]
+					"rotation" : [ "query.get_equipped_item_name != '' ? -variable.tcos0 / 5 : -variable.tcos0", 0.0, 0.0 ]
 				}
 			}
 		},

@@ -3,6 +3,6 @@
 	"minecraft:texture_set": {
 		"color": "textures/end_bricks",
 		"metalness_emissive_roughness": "#000077",
-		"normal": "normals/stone_bricks"
+		"normal": "normals/end_bricks"
 	}
 }
