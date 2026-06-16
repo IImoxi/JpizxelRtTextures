@@ -337,14 +337,7 @@
 		"anchor_to": "center",
 		"layer": 2,
 		"type": "custom",
-		"offset": "$offset",
-		"$offset|default": [ 0, -750 ],
-		"variables": [
-			{
-			"requires": "$pocket_edition",
-			"$offset": [ 0, -730 ]
-			}
-		]
+		"offset": [ 0, -745 ]
 	},
 
 // HUD Item name

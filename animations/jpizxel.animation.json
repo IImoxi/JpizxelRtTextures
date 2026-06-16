@@ -44,18 +44,6 @@
             }
         },
 
-		"animation.player.move.arms" : {
-			"loop" : true,
-			"bones" : {
-				"leftarm" : {
-					"rotation" : [ "variable.tcos0", 0.0, 0.0 ]
-				},
-				"rightarm" : {
-					"rotation" : [ "query.get_equipped_item_name != '' ? -variable.tcos0 / 5 : -variable.tcos0", 0.0, 0.0 ]
-				}
-			}
-		},
-
 
         "animation.humanoid.use_item_progress" : {
 			"loop" : true,
@@ -121,23 +109,23 @@
 		},
 
         // Arrow offset
-        "animation.arrow.move": {
-			"loop": true,
-			"animation_length": 600,
-			"bones": {
-				"body": {
-					"rotation" : [ "-query.target_x_rotation", "-query.target_y_rotation", 0.0 ]
-				},
-				"offset": {
-					"position": {
-						"0.0": [ -4, -0.5, 20 ],
-						"0.167": [ 0, 0, -80 ],
-						"0.2": [ 0, 0, "q.ground_speed ? -80 : 0" ]
-					},
-					"scale": [0.7, 0.7, 0.9]
-				}
-			}
-		},
+        //"animation.arrow.move": {
+		//	"loop": true,
+		//	"animation_length": 600,
+		//	"bones": {
+		//		"body": {
+		//			"rotation" : [ "-query.target_x_rotation", "-query.target_y_rotation", 0.0 ]
+		//		},
+		//		"offset": {
+		//			"position": {
+		//				"0.0": [ -4, -0.5, 20 ],
+		//				"0.167": [ 0, 0, -80 ],
+		//				"0.2": [ 0, 0, "q.ground_speed ? -80 : 0" ]
+		//			},
+		//			"scale": [0.7, 0.7, 0.9]
+		//		}
+		//	}
+		//},
 		"animation.arrow.particle": {
 			"loop": true,
 			"particle_effects": {
