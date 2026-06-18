@@ -9,7 +9,7 @@
 		"size": [ "100%", "100%c" ],
 		"controls": [
 			{
-				"background@ii.background": {
+				"background@ii.empty": {
 					"layer": 1,
 					"anims": [ "@hud.ii_bg_alpha_in" ],
 					"propagate_alpha": false,

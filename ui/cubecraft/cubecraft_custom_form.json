@@ -1,0 +1,116 @@
+{
+  "namespace": "cubecraft_custom_form",
+  "custom_form": {
+    "type": "panel",
+    "controls": [
+      {
+        "custom_form_panel@cubecraft_scroll.scrolling_panel": {
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "$show_background": false,
+          "$scroll_bar_side": "right",
+          "$scrolling_content": "cubecraft_custom_form.custom_form_scrolling_content",
+          "$scroll_size": [
+            6,
+            "100%"
+          ],
+          "$scrolling_pane_size": [
+            "100% + 12px",
+            "100% - 2px"
+          ],
+          "$scrolling_pane_offset": [
+            8,
+            0
+          ],
+          "$scroll_bar_right_padding_size": [
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "rounded_box@cubecraft_common.rounded_box_dark": {
+          "anchor_to": "top_middle",
+          "anchor_from": "top_middle",
+          "offset": [
+            1,
+            0
+          ],
+          "size": [
+            "100% + 5px",
+            "100% - 1px"
+          ]
+        }
+      }
+    ]
+  },
+  "custom_form_scrolling_content": {
+    "type": "stack_panel",
+    "size": [
+      "100% - 4px",
+      "100%c + 6px"
+    ],
+    "offset": [
+      2,
+      0
+    ],
+    "orientation": "vertical",
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "$button_text_binding_type": "collection",
+    "$button_text_grid_collection_name": "form_buttons",
+    "controls": [
+      {
+        "padding": {
+          "type": "panel",
+          "size": [
+            "100%",
+            2
+          ]
+        }
+      },
+      {
+        "generated_form@server_form.generated_contents": {}
+      },
+      {
+        "cube_submit_button@cubecraft_buttons.light_text_button": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "size": [
+            "100%",
+            32
+          ],
+          "$button_text": "gui.submit",
+          "$pressed_button_name": "button.submit_custom_form",
+          "$button_text_collection_details": "unused",
+          "$button_text_grid_collection_name": "unused",
+          "$button_text_collection_prefix": "unused",
+          "$button_text_control": "cubecraft_custom_form.cube_submit_button_text",
+          "bindings": [
+            {
+              "binding_name": "#submit_button_visible",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "cube_submit_button_text@common_buttons.new_ui_binding_button_label": {
+    "$text_color": [
+      1,
+      1,
+      1
+    ],
+    "$button_text_size": [
+      "100% - 2px",
+      "default"
+    ],
+    "layer": 10,
+    "bindings": []
+  }
+}

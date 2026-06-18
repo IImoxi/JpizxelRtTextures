@@ -1,0 +1,648 @@
+{
+    "namespace": "cubecraft_common",
+    "rounded_box": {
+        "type": "image",
+        "texture": "textures/ui/rounded_box_white"
+    },
+    "rounded_box_dark@ii.dark_dialog": {},
+    "rounded_box_blue@ii.dark_dialog": {},
+
+    "rounded_textbox_blue": {
+        "type": "panel",
+        "size": [
+            "100%",
+            "100%cm"
+        ],
+        "$image_size|default": [
+            "100% - 8px",
+            "100%sm + 12px"
+        ],
+        "$image_anchor|default": "center",
+        "$image_offset|default": [
+            -1,
+            0
+        ],
+        "$text_size|default": [
+            "100% - 20px",
+            "default"
+        ],
+        "$text_anchor|default": "center",
+        "$text_offset|default": [
+            0,
+            0
+        ],
+        "$content_text|default": "",
+        "$content_text_color|default": "$main_header_text_color",
+        "$additional_label_bindings|default": "",
+        "controls": [
+            {
+                "label$additional_label_bindings": {
+                    "type": "label",
+                    "text": "$content_text",
+                    "anchor_from": "$text_anchor",
+                    "anchor_to": "$text_anchor",
+                    "offset": "$text_offset",
+                    "color": "$content_text_color",
+                    "size": "$text_size",
+                    "layer": 30,
+                    "localize": false
+                }
+            },
+            {
+                "image": {
+                    "type": "image",
+                    "anchor_from": "$image_anchor",
+                    "anchor_to": "$image_anchor",
+                    "offset": "$image_offset",
+                    "texture": "textures/gui/dialog_background",
+                    "size": "$image_size"
+                }
+            }
+        ]
+    },
+    "nested_form_details_bindings": {
+        "bindings": [
+            {
+                "binding_type": "view",
+                "source_control_name": "form_details",
+                "source_property_name": "#form_content_text",
+                "target_property_name": "#form_content_text"
+            }
+        ]
+    },
+    "cube_button_factory": {
+        "type": "stack_panel",
+        "orientation": "vertical",
+        "$panel_size|default": [
+            36,
+            36
+        ],
+        "$factory_control_name|default": "cubecraft_common.cube_selective_button_panel",
+        "factory": {
+            "name": "cubecraft_buttons",
+            "control_name": "$factory_control_name"
+        },
+        "collection_name": "form_buttons",
+        "bindings": [
+            {
+                "binding_condition": "once",
+                "binding_name": "#form_button_length",
+                "binding_name_override": "#collection_length"
+            }
+        ]
+    },
+    "cube_selective_button_panel_no_image@cubecraft_common.cube_selective_button_panel": {
+        "controls": [
+            {
+                "$button_control_name": {
+                    "size": "$button_size",
+                    "anchor_from": "$button_anchor",
+                    "anchor_to": "$button_anchor",
+                    "$pressed_button_name|default": "button.form_button_click",
+                    "$button_text|default": "#form_button_text",
+                    "$button_text_max_size": [
+                        "100%",
+                        "100%"
+                    ],
+                    "bindings": [
+                        {
+                            "binding_type": "collection_details",
+                            "binding_collection_name": "form_buttons"
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "cube_selective_button_panel": {
+        "type": "panel",
+        "$panel_size|default": [
+            36,
+            36
+        ],
+        "size": "$panel_size",
+        "$panel_max_size|default": [
+            0,
+            0
+        ],
+        "max_size": "$panel_max_size",
+        "$panel_anchor|default": "center",
+        "anchor_from": "$panel_anchor",
+        "anchor_to": "$panel_anchor",
+        "$button_font_size|default": "normal",
+        "$button_size|default": "$panel_size",
+        "$button_anchor|default": "center",
+        "$button_offset|default": [
+            0,
+            0
+        ],
+        "$image_size|default": "$panel_size",
+        "$image_anchor|default": "center",
+        "$image_offset|default": [
+            0,
+            0
+        ],
+        "$image_clipping|default": "",
+        "bindings": [
+            {
+                "binding_condition": "once",
+                "binding_type": "collection",
+                "binding_collection_name": "form_buttons",
+                "binding_name": "(not ((#form_button_text - $button_to_show) = #form_button_text))",
+                "binding_name_override": "#visible"
+            }
+        ],
+        "$button_control_name|default": "form_button@cubecraft_buttons.blue_button",
+        "controls": [
+            {
+                "image@cubecraft_common.button_image": {
+                    "size": "$image_size",
+                    "anchor_from": "$image_anchor",
+                    "anchor_to": "$image_anchor",
+                    "offset": "$image_offset"
+                }
+            },
+            {
+                "$button_control_name": {
+                    "size": "$button_size",
+                    "anchor_from": "$button_anchor",
+                    "anchor_to": "$button_anchor",
+                    "$pressed_button_name|default": "button.form_button_click",
+                    "$button_text|default": "#form_button_text",
+                    "$button_text_max_size": [
+                        "100%",
+                        "100%"
+                    ],
+                    "bindings": [
+                        {
+                            "binding_type": "collection_details",
+                            "binding_collection_name": "form_buttons"
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "button_image": {
+        "type": "image",
+        "$image_layer|default": 4,
+        "layer": "$image_layer",
+        "fill": true,
+        "bindings": [
+            {
+                "binding_name": "#form_button_texture",
+                "binding_name_override": "#texture",
+                "binding_type": "collection",
+                "binding_collection_name": "form_buttons"
+            },
+            {
+                "binding_name": "#form_button_texture_file_system",
+                "binding_name_override": "#texture_file_system",
+                "binding_type": "collection",
+                "binding_collection_name": "form_buttons"
+            },
+            {
+                "binding_type": "view",
+                "source_property_name": "(not ((#texture = '') or (#texture = 'loading')))",
+                "target_property_name": "#visible"
+            }
+        ]
+    },
+    "header_panel": {
+        "type": "stack_panel",
+        "orientation": "horizontal",
+        "size": [
+            "100%",
+            20
+        ],
+        "controls": [
+            {
+                "header_text": {
+                    "type": "panel",
+                    "size": [
+                        "fill",
+                        "100%"
+                    ],
+                    "controls": [
+                        {
+                            "text_white@cubecraft_common.legacy_mineten_header_label": {
+                                "offset": [
+                                    0,
+                                    -9
+                                ],
+                                "layer": 2
+                            }
+                        },
+                        {
+                            "underline": {
+                                "type": "image",
+                                "texture": "textures/ui/brand_blue_box",
+                                "anchor_from": "bottom_left",
+                                "anchor_to": "bottom_left",
+                                "size": [
+                                    "100% - 3px",
+                                    3
+                                ],
+                                "offset": [
+                                    1,
+                                    -7
+                                ]
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "header_button_factory@cubecraft_common.cube_button_factory": {
+                    "orientation": "horizontal",
+                    "$factory_control_name": "cubecraft_common.header_button_panel"
+                }
+            },
+            {
+                "close_button@cubecraft_common.header_button_panel": {
+                    "$pressed_button_name": "button.menu_exit",
+                    "$button_icon_control": "@cubecraft_common.close_button_icon",
+                    "$button_text": "",
+                    "$hover_text_control": "@cubecraft_common.cube_empty_panel",
+                    "ignored": "($is_console)",
+                    "bindings": [
+                        {
+                            "binding_name": "(not #is_using_gamepad)",
+                            "binding_name_override": "#visible"
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "header_button_panel": {
+        "type": "panel",
+        "size": [
+            20,
+            12
+        ],
+        "anchor_from": "right_middle",
+        "anchor_to": "right_middle",
+        "$default_header_button_texture|default": "textures/ui/button_header",
+        "$hover_header_button_texture|default": "textures/ui/button_header_hover",
+        "$button_to_show|default": "header_button",
+        "$header_button_visibility_binding|default": "(not ((#form_button_text - $button_to_show) = #form_button_text))",
+        "bindings": [
+            {
+                "binding_condition": "once",
+                "binding_type": "collection",
+                "binding_collection_name": "form_buttons",
+                "binding_name": "#form_button_text",
+                "binding_name_override": "#form_button_text"
+            },
+            {
+                "binding_type": "view",
+                "source_property_name": "$header_button_visibility_binding",
+                "target_property_name": "#visible"
+            }
+        ],
+        "$button_icon_control|default": "@cubecraft_common.form_button_icon",
+        "controls": [
+            {
+                "header_button@cubecraft_buttons.blue_button": {
+                    "$default_button_size": [
+                        18,
+                        18
+                    ],
+                    "$hover_button_size": [
+                        20,
+                        20
+                    ],
+                    "$default_button_texture": "$default_header_button_texture",
+                    "$hover_button_texture": "$hover_header_button_texture",
+                    "$pressed_button_texture": "$hover_header_button_texture",
+                    "$hover_text_forced": true,
+                    "$pressed_button_name|default": "button.form_button_click",
+                    "$button_text|default": "#form_button_text",
+                    "$focus_id": "form_button_header",
+                    "$default_focus_precedence": -10,
+                    "$focus_magnet_enabled": false,
+                    "focus_change_up": "FOCUS_OVERRIDE_STOP"
+                }
+            },
+            {
+                "$button_icon_control": {
+                    "size": [
+                        16,
+                        16
+                    ],
+                    "layer": 10
+                }
+            }
+        ]
+    },
+    "form_button_icon": {
+        "type": "image",
+        "bindings": [
+            {
+                "binding_type": "collection",
+                "binding_collection_name": "form_buttons",
+                "binding_name": "#form_button_texture",
+                "binding_name_override": "#texture"
+            }
+        ]
+    },
+    "submit_button_icon": {
+        "type": "image",
+        "texture": "textures/ui/icon_search"
+    },
+    "close_button_icon": {
+        "type": "image",
+        "texture": "textures/ui/icon_close"
+    },
+    "legacy_mineten_header_label@cubecraft_common.mineten_header_label": {
+        "$mineten_header_label_text": "#modified_text",
+        "$mineten_header_label_bindings": [
+            {
+                "binding_name": "#title_text"
+            },
+            {
+                "binding_type": "view",
+                "source_property_name": "(#title_text-'&long_form'-'&is_dynamic'-'&big_button'-'&small_grid'-'&search_bar'-'&grid_text'-'&stack_text'-'&side_text'-'§l')",
+                "target_property_name": "#modified_text"
+            }
+        ]
+    },
+    "mineten_header_label": {
+        "type": "label",
+        "$mineten_header_label_offset|default": [
+            0,
+            0
+        ],
+        "offset": "$mineten_header_label_offset",
+        "$mineten_header_label_text|default": "",
+        "text": "$mineten_header_label_text",
+        "size": [
+            "100%",
+            20
+        ],
+        "max_size": [
+            "default",
+            "100%"
+        ],
+        "anchor_from": "top_left",
+        "anchor_to": "top_left",
+        "color": [
+            1,
+            1,
+            1
+        ],
+        "font_type": "MinecraftTen",
+        "font_size": "large",
+        "$mineten_header_label_scale_factor|default": 1,
+        "font_scale_factor": "$mineten_header_label_scale_factor",
+        "shadow": false,
+        "$mineten_header_label_bindings|default": [],
+        "bindings": "$mineten_header_label_bindings",
+        "localize": false
+    },
+    "cube_empty_panel": {
+        "type": "panel"
+    },
+    "screen_entrance_animation_push_fade": {
+        "anim_type": "alpha",
+        "easing": "in_cubic",
+        "duration": 0.2,
+        "from": 1,
+        "to": 1,
+        "play_event": "screen.entrance_push",
+        "end_event": "screen.entrance_end"
+    },
+    "screen_exit_animation_pop_fade": {
+        "anim_type": "alpha",
+        "easing": "out_quart",
+        "duration": 0.2,
+        "from": 1,
+        "to": 1,
+        "play_event": "screen.exit_pop",
+        "end_event": "screen.exit_end"
+    },
+    "screen_entrance_animation_push_offset": {
+        "anim_type": "offset",
+        "easing": "out_back",
+        "duration": 0.2,
+        "from": [
+            0,
+            -4
+        ],
+        "to": [
+            0,
+            0
+        ],
+        "play_event": "screen.entrance_push",
+        "end_event": "screen.entrance_end"
+    },
+    "screen_exit_animation_pop_offset": {
+        "anim_type": "offset",
+        "easing": "out_cubic",
+        "duration": 0.2,
+        "from": [
+            0,
+            0
+        ],
+        "to": [
+            0,
+            -4
+        ],
+        "play_event": "screen.exit_pop",
+        "end_event": "screen.exit_end"
+    },
+    "background": {
+        "type": "image",
+        "texture": "textures/ui/hud_tip_text_background",
+        "alpha": 0.3
+    },
+    "chest_header_panel": {
+        "type": "stack_panel",
+        "orientation": "horizontal",
+        "size": [
+            "100% + 4px",
+            20
+        ],
+        "$panel_title|default": "$container_title",
+        "controls": [
+            {
+                "header_text": {
+                    "type": "panel",
+                    "size": [
+                        "fill",
+                        "100%"
+                    ],
+                    "controls": [
+                        {
+                            "text_white@cubecraft_common.mineten_header_label": {
+                                "layer": 2
+                            }
+                        },
+                        {
+                            "underline": {
+                                "type": "image",
+                                "texture": "textures/ui/brand_blue_box",
+                                "anchor_from": "bottom_left",
+                                "anchor_to": "bottom_left",
+                                "size": [
+                                    "100% - 3px",
+                                    3
+                                ],
+                                "offset": [
+                                    1,
+                                    2
+                                ],
+                                "layer": 1
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "close_button@cubecraft_common.header_button_panel": {
+                    "$pressed_button_name": "button.menu_exit",
+                    "$button_icon_control": "@cubecraft_common.close_button_icon",
+                    "$button_text": "",
+                    "$hover_text_control": "@cubecraft_common.cube_empty_panel",
+                    "$default_header_button_texture": "textures/ui/button_header",
+                    "$hover_header_button_texture": "textures/ui/button_header_hover",
+                    "bindings": []
+                }
+            }
+        ]
+    },
+    "chest_header_tooltip@cubecraft_common.header_tooltip": {
+        "$header_tooltip_text": "#hover_text",
+        "$header_tooltip_text_bindings": [
+            {
+                "binding_name": "#hover_text",
+                "binding_name_override": "#hover_text",
+                "binding_type": "collection",
+                "binding_collection_name": "container_items"
+            }
+        ]
+    },
+    "header_tooltip": {
+        "type": "panel",
+        "size": [
+            0,
+            16
+        ],
+        "$header_tooltip_offset|default": [
+            -3,
+            -2
+        ],
+        "anchor_from": "right_middle",
+        "anchor_to": "right_middle",
+        "$header_tooltip_text|default": "",
+        "$header_tooltip_text_bindings|default": [],
+        "controls": [
+            {
+                "background": {
+                    "type": "image",
+                    "size": [
+                        "100%cm + 6px",
+                        "100%"
+                    ],
+                    "texture": "textures/ui/hud_tip_text_background",
+                    "offset": "$header_tooltip_offset",
+                    "anchor_from": "top_right",
+                    "anchor_to": "top_right",
+                    "alpha": 0.3,
+                    "layer": 2,
+                    "controls": [
+                        {
+                            "text": {
+                                "type": "label",
+                                "text": "$header_tooltip_text",
+                                "size": [
+                                    "default",
+                                    "100% - 4px"
+                                ],
+                                "anchor_from": "center",
+                                "anchor_to": "center",
+                                "text_alignment": "center",
+                                "offset": [
+                                    0,
+                                    3
+                                ],
+                                "color": [
+                                    1,
+                                    1,
+                                    1
+                                ],
+                                "font_type": "default",
+                                "font_size": "normal",
+                                "font_scale_factor": 0.75,
+                                "shadow": false,
+                                "layer": 10,
+                                "bindings": "$header_tooltip_text_bindings",
+                                "localize": false
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "force_panel_offset": {
+        "type": "panel",
+        "size": [
+            "100%cm",
+            "100%cm"
+        ],
+        "$force_panel_offset_controls|default": "",
+        "$force_panel_offset_offset|default": [
+            0,
+            0
+        ],
+        "controls": [
+            {
+                "force_panel_offset_controls@$force_panel_offset_controls": {
+                    "offset": "$force_panel_offset_offset"
+                }
+            }
+        ]
+    },
+    "grid_item_for_chest@common.container_item": {
+        "$item_collection_name": "container_items"
+    },
+    "armor_overlay": {
+        "type": "image",
+        "layer": 2,
+        "$armor_overlay_size|default": [
+            16,
+            16
+        ],
+        "size": "$armor_overlay_size",
+        "bindings": [
+            {
+                "binding_name": "#hover_text",
+                "binding_type": "collection",
+                "binding_collection_name": "container_items",
+                "binding_condition": "always"
+            },
+            {
+                "binding_type": "view",
+                "source_property_name": "(#hover_text = '')",
+                "target_property_name": "#visible"
+            }
+        ]
+    },
+    "armor_overlay_helmet@armor_overlay": {
+        "texture": "textures/ui/empty_armor_slot_helmet"
+    },
+    "armor_overlay_chest@armor_overlay": {
+        "texture": "textures/ui/empty_armor_slot_chestplate"
+    },
+    "armor_overlay_legs@armor_overlay": {
+        "texture": "textures/ui/empty_armor_slot_leggings"
+    },
+    "armor_image_feet@armor_overlay": {
+        "texture": "textures/ui/empty_armor_slot_boots"
+    },
+    "armor_overlay_shield@armor_overlay": {
+        "texture": "textures/ui/empty_armor_slot_shield"
+    }
+}
