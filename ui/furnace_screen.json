@@ -93,8 +93,10 @@
 		]
 	},
 
-	"furnace_panel": {
-		"type": "panel",
+	"furnace_screen": {
+		"type": "screen",
+		"close_on_player_hurt": false,
+		"force_render_below": true,
 		"controls": [
 			{ "background@ii.background": {} },
 			{ "left_invisible_button@ii.left_invisible_button": { "$pressed_button_name": "button.menu_exit" } },
@@ -114,29 +116,14 @@
 							{ "inventory_panel_bottom_half_with_label@common.inventory_panel_bottom_half": { "$background_images": "ii.empty" } },
 							{ "hotbar_grid@common.hotbar_grid_template": { "$background_images": "ii.empty" } },
 							{ "inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {} }
-						]
-					}
-				},
-            { "inventory_selected_icon_button@common.inventory_selected_icon_button": {} },
-            { "gamepad_cursor@common.gamepad_cursor_button": {} }
-          ]
-        }
-      }
-    ]
-  },
-  "furnace_screen@common.inventory_screen_common": {
-	  "force_render_below": true,
-    "$close_on_player_hurt|default": false,
-    "close_on_player_hurt": "$close_on_player_hurt",
-    "variables": [
-      {
-        "requires": "$desktop_screen",
-        "$screen_content": "furnace.furnace_panel"
-      },
-      {
-        "requires": "$pocket_screen",
-        "$screen_content": "furnace_pocket.furnace_panel"
-      }
-    ]
-  }
+							]
+						}
+					},
+					{ "inventory_selected_icon_button@common.inventory_selected_icon_button": {} },
+					{ "gamepad_cursor@common.gamepad_cursor_button": {} }
+				]
+			}
+			}
+		]
+	}
 }

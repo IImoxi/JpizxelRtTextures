@@ -1,0 +1,196 @@
+{
+    "namespace": "cubecraft_scroll",
+    "scrolling_panel@common.scrolling_panel": {
+        "controls": [
+            {
+                "scroll_touch@cubecraft_scroll.scrollpanel_base": {
+                    "ignored": "(not $touch)",
+                    "size": "$scrolling_pane_size",
+                    "offset": "$scrolling_pane_offset",
+                    "$use_touch_mode": true
+                }
+            },
+            {
+                "scroll_mouse@cubecraft_scroll.scrollpanel_base": {
+                    "ignored": "$touch",
+                    "size": "$scrolling_pane_size",
+                    "offset": "$scrolling_pane_offset"
+                }
+            }
+        ]
+    },
+    "scrollpanel_base@common.scrolling_panel": {
+        "controls": [
+            {
+                "$scroll_view_name@cubecraft_scroll.brand_blue_scroll_view_control": {}
+            }
+        ]
+    },
+    "brand_blue_scroll_view_control@common.scroll_view_control": {
+        "$scroll_background_image_control|default": "cubecraft_scroll.scrollbar_rail_image",
+        "$scroll_track_image_control|default": "cubecraft_scroll.scrollbar_rail_image",
+        "$scroll_bar_contained|default": false,
+        "controls": [
+            {
+                "stack_panel": {
+                    "type": "stack_panel",
+                    "orientation": "horizontal",
+                    "$scroll_view_stack_panel_size|default": [
+                        "100%",
+                        "100%"
+                    ],
+                    "size": "$scroll_view_stack_panel_size",
+                    "$scroll_bar_side|default": "right",
+                    "controls": [
+                        {
+                            "bar_and_track_wrapper_left": {
+                                "type": "panel",
+                                "size": [
+                                    14,
+                                    "100%"
+                                ],
+                                "ignored": "(not ($scroll_bar_side = 'left'))",
+                                "controls": [
+                                    {
+                                        "bar_and_track@cubecraft_scroll.brand_blue_scroll_bar_and_track": {
+                                            "ignored": "(not ($scroll_bar_side = 'left'))"
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "background_and_viewport@common.scroll_background_and_viewport": {}
+                        },
+                        {
+                            "bar_and_track_wrapper_right": {
+                                "type": "panel",
+                                "size": [
+                                    14,
+                                    "100%"
+                                ],
+                                "ignored": "(not ($scroll_bar_side = 'right'))",
+                                "controls": [
+                                    {
+                                        "bar_and_track@cubecraft_scroll.brand_blue_scroll_bar_and_track": {
+                                            "ignored": "(not ($scroll_bar_side = 'right'))"
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "brand_blue_scroll_bar_and_track@common.scroll_bar_and_track": {
+        "controls": [
+            {
+                "stack_panel": {
+                    "type": "stack_panel",
+                    "orientation": "horizontal",
+                    "anchor_from": "center",
+                    "anchor_to": "center",
+                    "size": [
+                        "default",
+                        "100%"
+                    ],
+                    "controls": [
+                        {
+                            "empty_panel_0@common.empty_panel": {
+                                "ignored": "$scroll_bar_contained",
+                                "size": "$scroll_bar_left_padding_size"
+                            }
+                        },
+                        {
+                            "panel@cubecraft_scroll.brand_blue_scroll_bar": {}
+                        },
+                        {
+                            "empty_panel_1@common.empty_panel": {
+                                "size": "$scroll_bar_right_padding_size"
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "brand_blue_scroll_bar": {
+        "type": "panel",
+        "size": "$scroll_size",
+        "$scroll_track_anchor|default": "center",
+        "anchor_from": "$scroll_track_anchor",
+        "anchor_to": "$scroll_track_anchor",
+        "$scroll_track_offset|default": [
+            0,
+            0
+        ],
+        "offset": "$scroll_track_offset",
+        "controls": [
+            {
+                "track@common.scrollbar_track": {
+                    "layer": 2,
+                    "anchor_from": "center",
+                    "anchor_to": "center"
+                }
+            },
+            {
+                "scroll_handle@cubecraft_scroll.brand_blue_scroll_handle": {
+                    "layer": 5,
+                    "anchor_from": "center",
+                    "anchor_to": "center"
+                }
+            }
+        ]
+    },
+    "brand_blue_scroll_handle": {
+        "type": "panel",
+        "controls": [
+            {
+                "box": {
+                    "type": "scrollbar_box",
+                    "anchor_to": "top_left",
+                    "anchor_from": "top_left",
+                    "layer": 1,
+                    "visible": "$scroll_box_visible",
+                    "contained": true,
+                    "draggable": "vertical",
+                    "$scroll_box_mouse_image_control|default": "cubecraft_scroll.scrollbar_handle_image",
+                    "$scroll_box_touch_image_control|default": "cubecraft_scroll.scrollbar_handle_image",
+                    "button_mappings": [
+                        {
+                            "from_button_id": "button.menu_select",
+                            "to_button_id": "button.menu_select",
+                            "mapping_type": "pressed",
+                            "button_up_right_of_first_refusal": true
+                        }
+                    ],
+                    "controls": [
+                        {
+                            "mouse_box@$scroll_box_mouse_image_control": {}
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "scrollbar_rail_image": {
+        "type": "image",
+        "texture": "textures/ui/scrollrail",
+        "size": [
+            3,
+            "100% - 4px"
+        ],
+        "layer": 1
+    },
+    "scrollbar_handle_image": {
+        "type": "image",
+        "$scroll_handle_image_texture|default": "textures/ui/scrollhandle",
+        "texture": "$scroll_handle_image_texture",
+        "size": [
+            5, "100% - 2px"
+        ],
+        "layer": 4
+    }
+}
