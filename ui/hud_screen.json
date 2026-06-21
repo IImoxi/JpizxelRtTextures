@@ -639,6 +639,29 @@
 		"type": "panel", "size": [ "100%", "100%" ],
 		"controls": [
 			{ "crosshair": { "type": "custom", "size": [ 16, 16 ], "renderer": "cursor_renderer", "layer": 8 } },
+			{
+				"locator_panel": {
+					"type": "panel",
+					"size": [ 182, 5 ],
+					"offset": [ 0, 5 ],
+					"anchor_from": "top_middle",
+					"anchor_to": "top_middle",
+					"controls": [
+						{
+							"locator_bar": {
+								"type": "custom",
+								"renderer": "locator_bar"
+							}
+						}
+					],
+					"bindings": [
+						{
+						"binding_name": "#hotbar_with_locator_bar",
+						"binding_name_override": "#visible"
+						}
+					]
+				}
+			},
 			{ "hud_eat_indicator@hud.eat_indicator": {} },
 			{ "durability_value@durability_value_panel": {} },
 			{ "player_position@hud.player_position": { "anchor_from": "top_left", "anchor_to": "top_left" } },

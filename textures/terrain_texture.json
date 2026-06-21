@@ -761,7 +761,7 @@
 				{ "path": "textures/blocks/quartz_bricks2", "weight": 1 },
 				{ "path": "textures/blocks/quartz_bricks3", "weight": 1 } ] } ] },
 				
-		"ii_reeds" : { "textures": [  {  "variations": [ 
+		"ii_reeds" : { "textures": [  {  "variations": [
 				{ "path": "textures/blocks/reeds", "weight": 1 },
 				{ "path": "textures/blocks/reeds1", "weight": 1 } ] },
 				"textures/blocks/reeds_opaque"
