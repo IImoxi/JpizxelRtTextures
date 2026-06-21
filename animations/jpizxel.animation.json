@@ -29,6 +29,33 @@
 			}
 		},
 
+
+		"animation.hud_lowhp_indicator": {
+            "loop": true,
+            "bones": {
+                "h1": {
+                    "position": [ 16, -729, 0 ],
+                    "scale": [ "q.health >= 2 && q.health <= 10 ? 1.5 : ( q.health <= 10 ? 0.2 : 0)", 1, 1 ]
+                },
+                "h2": {
+                    "position": [ 16, -729, 0 ],
+                    "scale": [ "q.health >= 4 && q.health <= 10 ? 1.5 : ( q.health <= 10 ? 0.2 : 0)", 1, 1 ]
+                },
+                "h3": {
+                    "position": [ 16, -729, 0 ],
+                    "scale": [ "q.health >= 6 && q.health <= 10 ? 1.5 : ( q.health <= 10 ? 0.2 : 0)", 1, 1 ]
+                },
+                "h4": {
+                    "position": [ 16, -729, 0 ],
+                    "scale": [ "q.health >= 8 && q.health <= 10 ? 1.5 : ( q.health <= 10 ? 0.2 : 0)", 1, 1 ]
+                },
+                "h5": {
+                    "position": [ 16, -729, 0 ],
+                    "scale": [ "q.health == 10 ? 1.5 : ( q.health <= 10 ? 0.2 : 0)", 1, 1 ]
+                }
+            }
+        },
+
         // Use progress indicator
         "animation.hud_use_item_progress": {
             "loop": true,

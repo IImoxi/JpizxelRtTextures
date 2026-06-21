@@ -6,7 +6,8 @@
             "states": {
                 "default": {
                     "animations":[
-                        "hud_use_item_progress"
+                        "hud_use_item_progress",
+                        "hud_lowhp_indicator"
                     ]
                 }
             }

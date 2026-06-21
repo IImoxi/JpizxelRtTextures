@@ -16,11 +16,13 @@
 			"textures": {
 				"default": "textures/entity/steve",
 				"cape": "textures/entity/cape_invisible",
+				"lowhp_indicator": "textures/gui/lowhp_indicator",
 				"eat_indicator": "textures/gui/eat_indicator"
 			},
 			"geometry": {
 				"default": "geometry.humanoid.custom",
 				"cape": "geometry.cape",
+				"hud_lowhp_indicator": "geometry.hud_lowhp_indicator",
 				"hud_eat_indicator": "geometry.hud_eat_indicator"
 			},
 			"scripts": {
@@ -56,6 +58,7 @@
 				"use_item_progress": "animation.humanoid.use_item_progress",
 
 				"hud_utility": "controller.animation.hud_utility",
+				"hud_lowhp_indicator": "animation.hud_lowhp_indicator",
 				"hud_use_item_progress": "animation.hud_use_item_progress"
 			},
 			"render_controllers": [
@@ -67,7 +70,8 @@
 				{ "controller.render.player.map": "variable.map_face_icon" },
 				// Vanilla //
 
-				{ "controller.render.hud_eat_indicator": "1.0" }
+				{ "controller.render.hud_eat_indicator": "1.0" },
+				{ "controller.render.hud_lowhp_indicator": "1.0" }
 			],
 			"enable_attachables": true
 		}
