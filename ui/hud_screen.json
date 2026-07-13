@@ -638,7 +638,8 @@
 	"root_panel": {
 		"type": "panel", "size": [ "100%", "100%" ],
 		"controls": [
-			{ "crosshair": { "type": "custom", "size": [ 16, 16 ], "renderer": "cursor_renderer", "layer": 8 } },
+			//{ "crosshair_gui": { "type": "image", "size": [ 16, 16 ], "texture": "textures/gui/crosshair", "layer": 7, "alpha": 1 } },
+			//{ "crosshair": { "type": "custom", "size": [ 16, 16 ], "renderer": "cursor_renderer", "layer": 8 } },
 			{
 				"locator_panel": {
 					"type": "panel",
