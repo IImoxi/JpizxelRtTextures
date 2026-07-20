@@ -16,50 +16,17 @@
 			"textures": {
 				"default": "textures/entity/steve",
 				"cape": "textures/entity/cape_invisible",
-				"lowhp_indicator": "textures/gui/lowhp_indicator",
-				"eat_indicator": "textures/gui/eat_indicator"
+				"lowhp_indicator": "textures/gui/lowhp_indicator",  // * Breaks custom item anim for some reason if removed
+				"eat_indicator": "textures/gui/eat_indicator"       // *
 			},
 			"geometry": {
 				"default": "geometry.humanoid.custom",
 				"cape": "geometry.cape",
-				"hud_lowhp_indicator": "geometry.hud_lowhp_indicator",
-				"hud_eat_indicator": "geometry.hud_eat_indicator"
+				"hud_lowhp_indicator": "geometry.hud_lowhp_indicator",  // *
+				"hud_eat_indicator": "geometry.hud_eat_indicator"       // *
 			},
 			"scripts": {
-				"scale": "0.91",
-				"initialize": [
-					"variable.is_holding_right = 0.0;",
-					"variable.is_blinking = 0.0;",
-					"variable.last_blink_time = 0.0;",
-					"variable.hand_bob = 0.0;",
-
-					"v.should_render_hud = 0.0;",
-					"v.should_render_hud_use_item_progress = 0.0;",
-					"q.is_in_ui ? { v.should_render_hud = 0.0; };",
-					"v.hud_use_item_progress_normalized = 1.0;"
-				],
-				"animate": [
-					"root",
-					"hud_utility"
-				],
-				"variables": {
-					"variable.fp_melee_spear_use_attachable_rotation_z": "public",
-					"variable.tp_melee_spear_use_attachable_rotation_z": "public",
-					"variable.fp_melee_spear_attack_attachable_rotation_z": "public",
-					"variable.tp_melee_spear_attack_attachable_position_z": "public",
-					"variable.attack_time": "public",
-					"variable.item_use_normalized": "public"
-				}
-			},
-			"animations": {
-				"root": "controller.animation.player.root",
-				"base_controller": "controller.animation.player.base",
-				"hudplayer": "controller.animation.player.hudplayer",
-				"use_item_progress": "animation.humanoid.use_item_progress",
-
-				"hud_utility": "controller.animation.hud_utility",
-				"hud_lowhp_indicator": "animation.hud_lowhp_indicator",
-				"hud_use_item_progress": "animation.hud_use_item_progress"
+				"scale": "0.91"
 			},
 			"render_controllers": [
 				// Vanilla //
@@ -70,10 +37,11 @@
 				{ "controller.render.player.map": "variable.map_face_icon" },
 				// Vanilla //
 
-				{ "controller.render.hud_eat_indicator": "1.0" },
-				{ "controller.render.hud_lowhp_indicator": "1.0" }
+				{ "controller.render.hud_eat_indicator": "1.0" },       // *
+				{ "controller.render.hud_lowhp_indicator": "1.0" }      // *
 			],
 			"enable_attachables": true
 		}
 	}
 }
+
