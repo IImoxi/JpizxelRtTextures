@@ -96,6 +96,7 @@
 	},
 	"birch_leaves" : {
 		"ambient_occlusion_exponent" : 0.60,
+		"tint_method": "",
 		"carried_textures" : "birch_leaves_carried",
 		"isotropic" : { "down" : true, "up" : true }, "sound" : "moss_block",
 		"textures" : "ii_birch_leaves"

@@ -638,8 +638,6 @@
 	"root_panel": {
 		"type": "panel", "size": [ "100%", "100%" ],
 		"controls": [
-			//{ "crosshair_gui": { "type": "image", "size": [ 16, 16 ], "texture": "textures/gui/crosshair", "layer": 7, "alpha": 1 } },
-			//{ "crosshair": { "type": "custom", "size": [ 16, 16 ], "renderer": "cursor_renderer", "layer": 8 } },
 			{
 				"locator_panel": {
 					"type": "panel",
@@ -673,6 +671,15 @@
 			{ "hotbar_panel@hud.hotbar_panel": {} },
 			{ "sidebar@scoreboard.scoreboard_sidebar": {} },
 			{ "chat_panel@hud.ii_chat_panel": {} }
+		]
+	},
+
+	"hud_content": {
+		"type": "panel", "size": [ "100%", "100%" ],
+		"controls": [
+			{
+				"root_panel@hud.root_panel": {}
+			}
 		],
 		"bindings": [
 			{ "binding_name": "#hud_visible", "binding_name_override": "#visible", "binding_type": "global" },
@@ -688,7 +695,7 @@
 		"low_frequency_rendering": false,
 		"absorbs_input": false,
 		"send_telemetry": false,
-		"$screen_content": "hud.root_panel"
+		"$screen_content": "hud.hud_content"
 	}
 }
 
