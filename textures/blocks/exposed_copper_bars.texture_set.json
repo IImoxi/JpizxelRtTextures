@@ -1,0 +1,8 @@
+{
+	"format_version": "1.21.30",
+	"minecraft:texture_set": {
+		"color": "textures/exposed_copper_bars",
+		"metalness_emissive_roughness": "mer/exposed_copper",
+		"normal": "normals/copper_block"
+	}
+}

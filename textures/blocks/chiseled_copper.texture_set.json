@@ -2,7 +2,7 @@
 	"format_version": "1.21.30",
 	"minecraft:texture_set": {
 		"color": "textures/chiseled_copper",
-		"metalness_emissive_roughness": "#FF0040",
+		"metalness_emissive_roughness": "#B00040",
 		"normal": "normals/chiseled_copper"
 	}
 }

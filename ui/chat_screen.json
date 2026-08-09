@@ -39,7 +39,7 @@
 		"$scrolling_content_anchor_to": "bottom_left",
 		"factory": {
 			"name": "messages_factory",
-			"max_children_size": 384,
+			"max_children_size": 8192,
 			"control_ids": {
 				"chat_screen_messages": "single_chat_panel@chat.single_chat_panel"
 			}

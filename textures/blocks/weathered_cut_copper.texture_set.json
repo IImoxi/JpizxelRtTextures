@@ -3,6 +3,6 @@
 		"minecraft:texture_set": {
 		"color": "textures/weathered_cut_copper",
 		"metalness_emissive_roughness": "mer/weathered_cut_copper",
-		"normal": "normals/cut_copper"
+		"normal": "normals/weathered_cut_copper"
 	}
 }

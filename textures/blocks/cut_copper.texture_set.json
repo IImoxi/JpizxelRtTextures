@@ -2,7 +2,7 @@
 	"format_version": "1.21.30",
 	"minecraft:texture_set": {
 		"color": "textures/cut_copper",
-		"metalness_emissive_roughness": "mer/cut_copper",
+		"metalness_emissive_roughness": "mer/copper_block",
 		"normal": "normals/cut_copper"
 	}
 }

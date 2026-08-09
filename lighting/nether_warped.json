@@ -1,0 +1,18 @@
+{
+	"format_version": "1.21.80",
+	"minecraft:lighting_settings": {
+		"description": {
+			"identifier": "minecraft:nether_warped_lighting"
+		},
+		"emissive": {
+			"desaturation": 0.0
+		},
+		"ambient": {
+			"color": "#0080ff",
+			"illuminance": 0.2
+		},
+		"sky": {
+			"intensity": 0.275
+		}
+	}
+}

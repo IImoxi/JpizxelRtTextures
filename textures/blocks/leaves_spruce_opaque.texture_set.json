@@ -2,7 +2,6 @@
 	"format_version": "1.21.30",
 	"minecraft:texture_set": {
 		"color": "textures/spruce_leaves_opaque",
-		"metalness_emissive_roughness_subsurface": "#0000ff",
-		"normal": "normals/spruce_leaves"
+		"metalness_emissive_roughness_subsurface": "#0000ff"
 	}
 }
