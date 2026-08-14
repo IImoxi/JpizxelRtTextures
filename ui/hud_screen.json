@@ -114,8 +114,8 @@
 				"xp_bar": {
 					"type": "panel",
 					"size": [ 182, 5 ],
-					"offset": [ 0, -2 ],
-					"anchor_from": "top_middle",
+					"offset": [ 0, -23 ],
+					"anchor_from": "bottom_middle",
 					"anchor_to": "bottom_middle",
 					"controls": [
 						{ "empty_progress_bar@hud.empty_progress_bar": { "size": [ 182, 5 ], "layer": 1, "texture": "textures/ui/xp_bar" } },
